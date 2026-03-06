@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>AI長編小説の創作モデル - 失敗者の告白 — AI小説オープン共創プロジェクト</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-2459343d.css">
+        <link rel="stylesheet" href="css/chrome-ae938929.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-0f03ee5e.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-d5ed1544.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">失敗者の告白 — AI小説オープン共創プロジェクト</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="ai長編小説の創作モデル"><a class="header" href="#ai長編小説の創作モデル">AI長編小説の創作モデル</a></h1>
+<p>馬場祐平です。</p>
+<p>このページでは、制作の技術的な仕組みを書いています。</p>
+<p>AI小説の作り方に興味がある方、特に「どうやって一貫性を保つのか」という疑問を持っている方に向けています。制作の経緯が気になる方は先に<a href="01_behind.html">②制作の舞台裏</a>を読んでいただくと、なぜこういう設計になったかが分かりやすいと思います。</p>
+<hr>
+<h2 id="spmモデルとは"><a class="header" href="#spmモデルとは">SPMモデルとは</a></h2>
+<p>この小説の制作は、ソフトウェア開発の**MVC（Model-View-Controller）**の概念にヒントを得た、<strong>データ駆動型のパイプライン</strong>として設計しています。設定（S）→プロット（P）→原稿（M）という順方向の生成パイプラインです。それを小説制作用に命名したのが <strong>SPMモデル（Settings → Plots → Manuscripts）</strong> です。</p>
+<table style="width:100%; border-collapse: collapse;">
+<tr><td style="border: 1px solid #aaa; padding: 10px;"><strong>S: Settings（設計図）</strong><br>storyline / os_theory / characters 等<br>→ 物語の憲法。Single Source of Truth</td></tr>
+
+<tr><td style="text-align: center; padding: 4px; border: none;">↓</td></tr>
+
+<tr><td style="border: 1px solid #aaa; padding: 10px;"><strong>P: Plots（中間生成物）</strong><br>シーンサマリー・伏線マップ<br>→ Sを具体化する中間言語</td></tr>
+
+<tr><td style="text-align: center; padding: 4px; border: none;">↓</td></tr>
+
+<tr><td style="border: 1px solid #aaa; padding: 10px;"><strong>M: Manuscripts（原稿）</strong><br>各章の原稿ファイル（1シーン1ファイル）<br>→ 読者が目にする最終アウトプット</td></tr>
+
+</table>
+
+<p>上の層が変わると下の層を生成し直します。S → P → M の順に情報の解像度が上がります。推敲フェーズでは逆方向にも伝播し、M層の矛盾をP→Sへ遡って修正します。これを23回繰り返しました。</p>
+<hr>
+<h2 id="s-settings設計図"><a class="header" href="#s-settings設計図">S: Settings（設計図）</a></h2>
+<p>設定ファイルは5つです。<a href="05_spm_files.html">SPMファイル実物</a>にすべて公開しています。</p>
+<p><strong>通常の小説に必須の3要素:</strong></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">ファイル</th><th style="text-align: left">役割</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><a href="../settings/storyline.html">storyline.md</a></td><td style="text-align: left">作品コンセプト・核心メッセージ・全体構成</td></tr>
+<tr><td style="text-align: left"><a href="../settings/characters.html">characters.md</a></td><td style="text-align: left">各キャラクターのOS・形成背景・変容プロセス</td></tr>
+<tr><td style="text-align: left"><a href="../settings/style_guide.html">style_guide.md</a></td><td style="text-align: left">文体ルール・NG表現・キャラクター別口調設計</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>ビジネス小説特有の2要素:</strong></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">ファイル</th><th style="text-align: left">役割</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><a href="../settings/os_theory.html">os_theory.md</a></td><td style="text-align: left">OS理論の体系（自分本位↔他者本位、思考型↔行動型の4象限）</td></tr>
+<tr><td style="text-align: left"><a href="../settings/app_design.html">app_design.md</a></td><td style="text-align: left">学習フレームワーク（PDCA・GROW等）の埋め込み設計</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>読み順:</strong></p>
+<pre><code>storyline.md → os_theory.md → characters.md → style_guide.md → app_design.md
+</code></pre>
+<p><strong>設計の核心:</strong> <code>storyline.md</code> をS層に置く決断が最大の肝です。ストーリーラインを「静的な仕様」として固定することで、物語の背骨がAIに振り回されるのを防いでいます。</p>
+<h3 id="いちばん苦労したのはcharactersmdです"><a class="header" href="#いちばん苦労したのはcharactersmdです">いちばん苦労したのはcharacters.mdです</a></h3>
+<p>設定ファイルの中で、設計に最も時間がかかったのがcharacters.mdです。</p>
+<p>初期バージョン（v3〜v4）で学んだのは、「キャラクターの行動原理（OS）だけ書いても機能しない」という事実でした。登場人物が原理に基づいて、具体的にどんな行動を起こすのかが、AIに分からないんです。</p>
+<p>そこで「OSと形成背景を必ず結びつける」設計にしました。たとえば主人公の行動原理のひとつは、高校サッカーで「覚悟のある者に負けた経験」を「身体能力のせい」と合理化してきた歴史から来ています。この背景をファイルに書き込んで初めて、AIがセリフや行動の「なぜ」を推測できるようになりました。</p>
+<hr>
+<h2 id="p-plots中間生成物"><a class="header" href="#p-plots中間生成物">P: Plots（中間生成物）</a></h2>
+<p><a href="../plots/scene_summaries_part1.html">plots/</a> フォルダに、全シーンのサマリーを置いています。P層は内部でさらに3段階の粒度に分かれます。</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">粒度</th><th style="text-align: left">内容</th><th style="text-align: left">例</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><strong>Scenario</strong></td><td style="text-align: left">作品全体または部単位の大まかな流れとテーマ</td><td style="text-align: left"><code>scenario.md</code>、<code>scenario_part1.md</code></td></tr>
+<tr><td style="text-align: left"><strong>Chapters</strong></td><td style="text-align: left">章単位の構成・登場人物・転換点</td><td style="text-align: left"><code>chapter_01.md</code></td></tr>
+<tr><td style="text-align: left"><strong>Scenes</strong></td><td style="text-align: left">シーン単位のビート・PDCA層・伏線</td><td style="text-align: left"><code>scene_summaries_part1.md</code></td></tr>
+</tbody>
+</table>
+</div>
+<p>各シーンのサマリー形式はこんな感じです。</p>
+<pre><code class="language-markdown">## Scene XX_XX: シーン名
+
+### あらすじ（3-5文）
+### 登場人物
+### 時系列
+### ビート（シーンの転換点）  ← 全体構成における位置情報
+### PDCA層                    ← 学習フレームワークのどの段階か
+### 伏線・接続                ← 前後のシーンとの関係
+</code></pre>
+<p>「ビート」と「PDCA層」という位置情報が重要で、これがないとAIは毎シーン独立した起承転結を書いてしまいます。「このシーンは物語全体の『転』に当たる」という地図情報が、プロットの崩壊を防いでいます。</p>
+<p>plots層はほぼ完全にAI自動生成です。characters.mdとstoryline.mdを投入し、Claudeにシーン設計を生成させました。その後、K氏とのMTGで「このシーンは弱い」「この伏線は前の章で張るべき」というフィードバックを重ねながら精緻化しています。</p>
+<hr>
+<h2 id="m-manuscripts原稿"><a class="header" href="#m-manuscripts原稿">M: Manuscripts（原稿）</a></h2>
+<p>原稿は<strong>1シーン1ファイル</strong>で管理しています（例：<code>03_manuscripts/01_01_四月の営業フロア.md</code>）。</p>
+<h3 id="コーチングシーンlシーンの8ステップ構造"><a class="header" href="#コーチングシーンlシーンの8ステップ構造">コーチングシーン（[L]シーン）の8ステップ構造</a></h3>
+<p>佐伯が翼にコーチングを行う場面は特に重要で、内容的に機能するように8ステップの構造が定義されています。</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">#</th><th style="text-align: left">ステップ</th><th style="text-align: left">内容</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">①</td><td style="text-align: left">切実な問題</td><td style="text-align: left">翼が直面している具体的な壁</td></tr>
+<tr><td style="text-align: left">②</td><td style="text-align: left">問いかけ</td><td style="text-align: left">佐伯が核心に向かう質問を投げる</td></tr>
+<tr><td style="text-align: left">③</td><td style="text-align: left">間違い・反発</td><td style="text-align: left">翼が的外れな回答や抵抗を示す（読者の典型的誤解を代弁）</td></tr>
+<tr><td style="text-align: left">④</td><td style="text-align: left">What</td><td style="text-align: left">概念の正体を提示する</td></tr>
+<tr><td style="text-align: left">⑤</td><td style="text-align: left">Why</td><td style="text-align: left">なぜそれが重要か、構造的に説明する</td></tr>
+<tr><td style="text-align: left">⑥</td><td style="text-align: left">How</td><td style="text-align: left">どうすれば実践できるか</td></tr>
+<tr><td style="text-align: left">⑦</td><td style="text-align: left">実践・失敗</td><td style="text-align: left">翼が試してうまくいかない</td></tr>
+<tr><td style="text-align: left">⑧</td><td style="text-align: left">統合</td><td style="text-align: left">気づきが定着し、次の壁へ向かう</td></tr>
+</tbody>
+</table>
+</div>
+<p>詳細は<a href="../settings/app_design.html">アプリ設計書</a>に書いています。</p>
+<hr>
+<h2 id="推敲フローバックプロパゲーション"><a class="header" href="#推敲フローバックプロパゲーション">推敲フロー（バックプロパゲーション）</a></h2>
+<p>S → P → M の順方向だけでなく、推敲フェーズでは逆方向にも伝播します。</p>
+<pre><code>M層で矛盾・品質問題を発見
+  ↓
+P層（シーンサマリー）を修正
+  ↓
+S層（設定）まで影響するか判断
+  ↓
+S層修正 → P層再生成 → M層再生成
+</code></pre>
+<p>この「上位レイヤーへの遡り → 下位への伝播」をソフトウェア開発のリファクタリングと同じように運用し、23バージョンにわたって繰り返しました。</p>
+<hr>
+<h2 id="コンテクストウィンドウという制約"><a class="header" href="#コンテクストウィンドウという制約">コンテクストウィンドウという制約</a></h2>
+<p>AIには「コンテクストウィンドウ」と呼ばれる短期記憶の上限があります。Claude の場合、128K トークンが上限です。日本語は英語より文字あたりのトークン消費が大きいため、実用的には設定ファイルだけで数万字を超え、小説本文を1部まるごと読み込ませることはできません。</p>
+<p>この制約が、AI長編小説の創作モデルの設計理由の一つです。</p>
+<ul>
+<li>**Layer 1（settings）**は変わらない設計図なので、AIは毎回全体を読む必要がある</li>
+<li>**Layer 2（plots）**は粒度を分けて管理する——物語全体・部単位・章単位・シーン単位のプロットを別々のファイルにしておき、あるシーンを書くときは「そのシーンに必要な情報だけ」を渡す</li>
+<li>**Layer 3（manuscripts）**は1シーン1ファイルにして、AIが一度に処理する量を絞る</li>
+</ul>
+<p>こうすることで、コンテクストウィンドウをできるだけ消費せず、AIに「今書くべきシーン」に集中させられます。変更があった場合は、AIが関連するプロットファイル自体も更新する、という方法で一貫性を保っています。</p>
+<hr>
+<h2 id="23回書き直した理由"><a class="header" href="#23回書き直した理由">23回書き直した理由</a></h2>
+<p>なぜ23回も、という疑問があるかもしれません。</p>
+<p>1回のイテレーションは「設定変更 → サマリー更新 → 原稿再生成 → フィードバック」のサイクルです。v1が2月初旬、v23が3月3日。約1ヶ月で23回。平均すると1〜2日に1バージョンです。</p>
+<p>失敗したバージョンも消していません。<code>OLD/</code> フォルダに全部残してあります。「これが機能しなかった」という実験記録が、次の設計判断の根拠になるからです。</p>
+<p>AIを使う側に回ることで判断は速くなります。ただ、それは「AIに任せる」ということではなく、「何が機能して何が機能しないかを、繰り返し判断し続ける」ということです。この設計全体の前提です。</p>
+<hr>
+<h2 id="1日の作業サイクル"><a class="header" href="#1日の作業サイクル">1日の作業サイクル</a></h2>
+<p>このプロジェクトを28日間続けられたのは、日々のサイクルが確立できていたからだと思っています。</p>
+<pre><code>早朝（20時就寝、3時起床）
+  ↓ 前夜のAI出力を確認・軽くフィードバック
+朝のMTG
+  ↓ Gemini議事録が数分後に生成される
+即座に議事録をMarkdownに変換してClaudeに投入
+  ↓ 設計ファイル更新・改稿の指示を出す
+日中はAIに作業してもらう（VS Code Agentモード）
+  ↓
+夕方（仕事上がり前）に進捗確認・方向修正
+  ↓
+夜就寝後もAIが作業を続ける
+  ↓
+翌朝、出来上がったものを確認して次のサイクルへ
+</code></pre>
+<p>ポイントは2点あります。</p>
+<p><strong>プランをしっかり立てる</strong>。VS Code のAgentモードは、計画が曖昧だと意図しない方向に作業が進んで、数時間後に「全部やり直し」になる。改稿の規模・対象・制約をMarkdownのプランとして明示してからAIに渡すことが、時間ロスを避ける最大のポイントです。</p>
+<p><strong>確認タイミングを絞る</strong>。毎回の出力を都度確認しようとすると、AI小説制作は著者の作業時間で詰まります。朝と夕方の2回を「編集確認タイム」と決めて、その間は基本的にAIに動いてもらう。この設計が、日中は通常の仕事を進めながら、28日間で23バージョンを回せた理由の一つです。</p>
+<hr>
+<ul>
+<li><a href="00_intro.html">①なぜ作ったか</a> — プロジェクトの動機と経緯</li>
+<li><a href="01_behind.html">②制作の舞台裏</a> — MTGの記録と試行錯誤のプロセス</li>
+<li><a href="02_current.html">③AIを使った長編小説の現在地</a> — 「日本初」の根拠について</li>
+<li><a href="04_advanced.html">⑤フォークして参加する</a> — GitHubでの参加方法</li>
+<li><a href="05_spm_files.html">SPMファイル実物</a> — 実際に使用した設定・プロットファイルの一覧</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="02_current.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="04_advanced.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="02_current.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="04_advanced.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-c2a407aa.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

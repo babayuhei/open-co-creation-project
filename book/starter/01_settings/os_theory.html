@@ -1,0 +1,475 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>S: OS理論体系 - 失敗者の告白 — AI小説オープン共創プロジェクト</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../../searchindex-0f03ee5e.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc-d5ed1544.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">失敗者の告白 — AI小説オープン共創プロジェクト</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <blockquote>
+<p><strong>ライセンス:</strong> このファイルは <a href="https://github.com/babayuhei/confession-of-a-loser/blob/main/LICENSE-MIT">MIT License</a> で公開されています。</p>
+</blockquote>
+<hr>
+<h1 id="os理論体系書-os-theory-framework"><a class="header" href="#os理論体系書-os-theory-framework">OS理論体系書 (OS Theory Framework)</a></h1>
+<p>本書は、『失敗者の告白』における <strong>変容の理論体系 (Transformation System)</strong> を定義する設計図である。キャラクター設定や各チャプタープロットは、本設計図に従って記述される。</p>
+<p>本作では、人間の成長を <strong>「OS（基盤）」</strong> と <strong>「アプリ（機能）」</strong> の2層構造で捉える。
+OSが変わらなければ高度なアプリは動かせないが、あえて高度なアプリを「無理やり動かす」実践を通じて、OSが書き換わっていく相互作用（Update Loop）を描く。本物語におけるキャラクターの成長（OSアップデート）は、以下の2つの理論体系の統合モデルに基づく。</p>
+<h2 id="a-osの基本構造-basic-framework"><a class="header" href="#a-osの基本構造-basic-framework">A. OSの基本構造 (Basic Framework)</a></h2>
+<h3 id="軸の設定"><a class="header" href="#軸の設定">軸の設定</a></h3>
+<ul>
+<li><strong>第1軸:認知OS:「自分本位 (Self)」 vs 「他者本位 (Other)」</strong>
+<ul>
+<li><strong>理論背景:</strong> 成人発達理論（ロバート・キーガン等）をベースとした独自の成熟モデル。</li>
+<li>自我の確立（自分軸）と、他者との関係性（社会適応）のバランスと統合を扱う。</li>
+</ul>
+</li>
+<li><strong>第2軸:意思決定OS:「思考型 (Thinking/Causal)」 vs 「行動型 (Acting/Execution)」</strong>
+<ul>
+<li><strong>理論背景:</strong> エフェクチュエーション理論（サラス・サラスバシー等）をベースとした独自の成熟モデル。</li>
+<li>「予測と計画（思考）」と「機転と行動（実践）」の統合レベルを扱う。</li>
+<li><strong>思考型の2つのベクトル:</strong>
+<ul>
+<li><strong>外向き分析型（涼太型）:</strong> データ・論理・構造を分析する思考。自分本位と組み合さると、共感を伴わない冷徹な分析になりやすい</li>
+<li><strong>内向き共感シミュレーション型（沙織型）:</strong> 相手の内面・感情を推測する思考。他者本位と組み合さると、シミュレーションが暴走して行動のブレーキになるが、ブレーキが外れると「相手を想像する力」として武器に変わる</li>
+</ul>
+</li>
+<li>両者は「思考型」という同じラベルだが質が異なる。翼（行動型）のレンズではどちらも「動かない」と映るが、涼太は「考えた末に動けない」、沙織は「考えること自体が他者への配慮で埋まっている」という根本的な違いがある</li>
+</ul>
+</li>
+</ul>
+<h2 id="b-成熟と統合のプロセス-growth-process"><a class="header" href="#b-成熟と統合のプロセス-growth-process">B. 成熟と統合のプロセス (Growth Process)</a></h2>
+<h3 id="1-認知os-cognitive-os-の成熟モデル"><a class="header" href="#1-認知os-cognitive-os-の成熟モデル">1. 認知OS (Cognitive OS) の成熟モデル</a></h3>
+<p>成人発達理論をベースに、ビジネス現場における「生存戦略のアップグレード」として定義する。</p>
+<p><strong>&lt;3つの意識段階 (Mindset Levels)&gt;</strong></p>
+<ul>
+<li><strong>Level 1: 環境依存段階 (Dependence Stage)</strong>
+<ul>
+<li><strong>定義:</strong> 判断基準が自分の外側（環境・他者・勝ち負けのルール）にある状態。</li>
+<li><strong>反抗型 (Anti-Conformist):</strong> 環境に反発することで自我を保とうとする（翼タイプ）。</li>
+<li><strong>順応型 (Conformist):</strong> 環境の期待に応えることで生存しようとする（結衣タイプ）。</li>
+</ul>
+</li>
+<li><strong>Level 2: 自己主導段階 (Self-Authoring Stage)</strong>
+<ul>
+<li><strong>定義:</strong> 自分の内側に独自の価値基準を持ち、自分で判断・選択できる状態。</li>
+<li><strong>Pattern A (自分本位優位):</strong> 「自分の価値観」で世界をジャッジし、コントロールしようとする。</li>
+<li><strong>Pattern B (他者本位優位):</strong> 「良い子」や「献身」を自分の意志として選択している。</li>
+</ul>
+</li>
+<li><strong>Level 3: 自己変容段階 (Self-Transforming Stage)</strong>
+<ul>
+<li><strong>定義:</strong> 自分と他者の矛盾を受け入れ、互いに変わり続けることができる状態。</li>
+</ul>
+</li>
+</ul>
+<p><strong>&lt;変容のプロセス: 現場での葛藤 (Transition Process)&gt;</strong></p>
+<ul>
+<li><strong>Step 1: Lv.1からLv.2への移行 (The First Conflict)</strong>
+<ul>
+<li><strong>壁:</strong> 自分のOS（反抗/順応）だけでは通用しない現実に直面する。</li>
+<li><strong>到達点:</strong> 無自覚な依存からの脱却。「大人の自我」の確立。</li>
+</ul>
+</li>
+<li><strong>Step 2: Lv.2における継続的な葛藤 (Ongoing Conflict)</strong>
+<ul>
+<li><strong>壁:</strong> 「自分の正義」と「他者の正義」が衝突する。</li>
+<li>統合に失敗すればLv.1に退行しそうになるが、それを踏みとどまる強さを養う期間。</li>
+</ul>
+</li>
+<li><strong>Step 3: Lv.2からLv.3への移行 (The Transformation)</strong>
+<ul>
+<li><strong>壁:</strong> 自分を支えてきた生存戦略を相対化し、手放す痛みを受け入れる。</li>
+<li>「導き手（コーチ）」の介入による鏡のような対話が必要不可欠。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-意思決定os-decision-os-の成熟モデル"><a class="header" href="#2-意思決定os-decision-os-の成熟モデル">2. 意思決定OS (Decision OS) の成熟モデル</a></h3>
+<ul>
+<li><strong>Level 1: 依存段階 (Dependence Stage) - 「型」への埋没</strong>
+<ul>
+<li><strong>思考依存 (Thinking Dependent):</strong> 予測できない状況で足がすくむ（佐伯タイプ）</li>
+<li><strong>行動依存 (Action Dependent):</strong> 立ち止まれない。同じ失敗を繰り返す（翼タイプ）</li>
+</ul>
+</li>
+<li><strong>Level 2: 自律段階 (Self-Authoring Stage) - 「型」の相対化と拡張</strong>
+<ul>
+<li>思考型が「あえて動く」、行動型が「あえて止まる」。違和感と戦うフェーズ。</li>
+</ul>
+</li>
+<li><strong>Level 3: 統合段階 (Self-Transforming Stage) - 「型」からの自由</strong>
+<ul>
+<li>「走りながら考える」が自然に行える。エフェクチュエーションの境地。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-重心と能力の分離-dominant--capability"><a class="header" href="#3-重心と能力の分離-dominant--capability">3. 重心と能力の分離 (Dominant &amp; Capability)</a></h3>
+<ul>
+<li>「重心（OSの癖＝無意識の初動パターン）」と「能力（後天的に獲得したスキル）」は別物。</li>
+<li><strong>結衣の例:</strong> 重心は行動型だが、能力は行動も思考もどちらも一定高い。家庭環境で生き延びるために「空気を読む＝構造分析」を磨いた結果、直感的な思考も含め両面で成果を出す。翼はCh.2で「結衣の型は単純に分類できない」と感じるが、これは重心と能力を混同しているため。</li>
+<li><strong>沙織の例:</strong> 初期は「思考も行動も下手」に見える。実際には思考は回っているが、他者への配慮に全力消費されている（内向き共感シミュレーション型）。行動はOS（「迷惑をかけない」）がブレーキとして作用。翼（行動型×自分本位）のレンズでは沙織の思考は「見えない」し行動は「足りない」ので「両方下手」に映るが、これは翼のOSのフィルターの問題でもある。
+<ul>
+<li><strong>変容プロセス:</strong> 結衣の共感（安全基地）＋チームの「待つ」習慣 → 行動への抵抗感が薄れる → 思考型の武器（相手を想像する力）＋他者本位の武器（信頼される力）が嚙み合って成果に結実 → 小さな「自分本位」の芽生え（「提案があるんですけど」）</li>
+</ul>
+</li>
+<li>読者が「行動型なのに思考力が高い」のを矛盾と感じないよう、物語内で佐伯が重心と能力の違いを語る必要がある。</li>
+<li><strong>物語上の導入設計（2段階）:</strong>
+<ul>
+<li>Ch.5（4象限提示直後）：翼がCh.2の疑問（結衣の型が分類できない）を提示 → 佐伯が「重心と能力は別だ」と概念的に回答 → 翼は頭で理解</li>
+<li>Ch.7-8（沙織の成果が見え始める頃）：翼が沙織の「能力が低い」という認識を改め、重心がブレーキとして全体を抑圧していただけだと体験的に理解する</li>
+</ul>
+</li>
+<li>得意な側をどれだけ高めても突破できない「人生の難所」が訪れ、苦手な側との統合が必要になる。</li>
+</ul>
+<h2 id="c-アプリケーション-applications---具体的なスキル"><a class="header" href="#c-アプリケーション-applications---具体的なスキル">C. アプリケーション (Applications) - 具体的なスキル</a></h2>
+<h3 id="1-統合型パッケージpdca-the-engine-of-growth"><a class="header" href="#1-統合型パッケージpdca-the-engine-of-growth">1. 統合型パッケージ：PDCA (The Engine of Growth)</a></h3>
+<p>第1部のメインテーマ。</p>
+<h4 id="pdcaの3階層モデル"><a class="header" href="#pdcaの3階層モデル">PDCAの3階層モデル</a></h4>
+<ol>
+<li><strong>タスクのPDCA:</strong> 目の前の仕事の成果を出すためのサイクル。</li>
+<li><strong>スキルのPDCA:</strong> 「PDCA力」そのものを習得するサイクル。</li>
+<li><strong>OSのPDCA:</strong> 自分の行動原理のバグに気づき、書き換えるサイクル。</li>
+</ol>
+<h4 id="pdcaの構成要素"><a class="header" href="#pdcaの構成要素">PDCAの構成要素</a></h4>
+<ul>
+<li><strong>Plan (仮説・計画):</strong> 仮説思考、因数分解、ロジカルシンキング</li>
+<li><strong>Do (実行):</strong> 習慣化、タスク管理、即断即決</li>
+<li><strong>Check (検証・振り返り):</strong> 結果と仮説のズレの認識</li>
+<li><strong>Action (改善・定着):</strong> フィードバックの還流</li>
+</ul>
+<h4 id="os変容時に使えるアプリ-willcanmust"><a class="header" href="#os変容時に使えるアプリ-willcanmust">OS変容時に使えるアプリ: WILL/CAN/MUST</a></h4>
+<ul>
+<li>OSのPDCAにおいて自分の内面を客観視するための思考整理ツール（R社発）。</li>
+<li><strong>WILL:</strong> 何がしたいか（動機・欲求・価値観）</li>
+<li><strong>CAN:</strong> 何ができるか（スキル・経験・強み）</li>
+<li><strong>MUST:</strong> 何を求められているか（環境・役割・期待）</li>
+<li>WILL/CAN/MUSTが自分の個人史（親・世代・時代背景）とどうつながっているかを理解することで、OS変容の方向性に納得感が生まれる。</li>
+</ul>
+<h3 id="2-対人系パッケージ-growモデル--ジョンホイットモア準拠"><a class="header" href="#2-対人系パッケージ-growモデル--ジョンホイットモア準拠">2. 対人系パッケージ (GROWモデル — ジョン・ホイットモア準拠)</a></h3>
+<p>第2部のメインテーマ。部下育成から上司・組織との調整までをカバーする統合フレームワーク。</p>
+<h4 id="基本構造-growサイクル"><a class="header" href="#基本構造-growサイクル">基本構造: GROWサイクル</a></h4>
+<ul>
+<li><strong>G (Goal): 目標の合意</strong> — 「どうなりたいか」を引き出す / 方針と個人目標のすり合わせ</li>
+<li><strong>R (Reality): 現状の直視</strong> — 主観を排し、客観的な事実を直視させる</li>
+<li><strong>O (Options): 選択肢の探索</strong> — ティーチングとコーチングの統合。引き出しつつ、知見を提示し、相手に選ばせる</li>
+<li><strong>W (Will): 意志の決定</strong> — 「いつまでにやるか」を約束する。行動（PDCA）への接続</li>
+</ul>
+<h4 id="マインドセット-the-engine"><a class="header" href="#マインドセット-the-engine">マインドセット (The Engine)</a></h4>
+<ul>
+<li><strong>Growth Mindset:</strong> 「人の能力は拡張可能である」という信念。GROWが機能するための前提条件であり、GROW実践を通じて育まれる（詳細は <code>app_design.md</code> 3-5 参照）。</li>
+</ul>
+<h2 id="d-変容マトリクス-the-transformation-matrix"><a class="header" href="#d-変容マトリクス-the-transformation-matrix">D. 変容マトリクス (The Transformation Matrix)</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">フェーズ</th><th style="text-align: left">ステージ</th><th style="text-align: left">OSレベルの変容課題</th><th style="text-align: left">習得すべきアプリ</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><strong>第1部</strong></td><td style="text-align: left"><strong>個の確立</strong></td><td style="text-align: left">認知: 環境依存（Lv1）からの脱却 / 意思決定: 思考/行動依存の自覚（Lv1→Lv2）</td><td style="text-align: left"><strong>統合型PDCA</strong> — 3階層PDCA、仮説思考、メタ認知</td></tr>
+<tr><td style="text-align: left"><strong>第2部</strong></td><td style="text-align: left"><strong>他者との協働</strong></td><td style="text-align: left">認知: 自己主導（Lv2）の限界 / 意思決定: 異なるタイプとの対話</td><td style="text-align: left"><strong>GROWモデル</strong> — 育成、対話、合意形成、成長マインドセット</td></tr>
+<tr><td style="text-align: left"><strong>第3部</strong></td><td style="text-align: left"><strong>組織の変革</strong></td><td style="text-align: left">認知: 自己変容（Lv3）/ 意思決定: エフェクチュエーション実践</td><td style="text-align: left"><strong>組織OSの実装</strong> — Vulnerability、学習する組織、AI共創</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="e-第3部組織レベルのos変容"><a class="header" href="#e-第3部組織レベルのos変容">E. 第3部：組織レベルのOS変容</a></h2>
+<h3 id="1-組織変容の難所"><a class="header" href="#1-組織変容の難所">1. 組織変容の難所</a></h3>
+<ul>
+<li>認知OSの壁: 既存の勝ちパターンへの固執</li>
+<li>意思決定OSの壁: 計画と実行の乖離</li>
+</ul>
+<h3 id="2-変容へのアプローチ"><a class="header" href="#2-変容へのアプローチ">2. 変容へのアプローチ</a></h3>
+<ul>
+<li><strong>トップの役割:</strong> 自らのOS変容をさらけ出し、変化を受け入れる仕組みを設計する</li>
+<li><strong>ボトムの役割:</strong> 自律的に動き、小さな変革の実績を作る</li>
+</ul>
+<h3 id="3-真の学習する組織"><a class="header" href="#3-真の学習する組織">3. 真の「学習する組織」</a></h3>
+<p>トップとボトムのOS変容が共鳴し合う状態。</p>
+<h2 id="f-ai時代におけるos理論の拡張"><a class="header" href="#f-ai時代におけるos理論の拡張">F. AI時代におけるOS理論の拡張</a></h2>
+<h3 id="1-個人レベルpdcaとai"><a class="header" href="#1-個人レベルpdcaとai">1. 個人レベル：PDCAとAI</a></h3>
+<ul>
+<li>AIはDoとCheckを加速するが、Plan（方向性の判断）は人間のOSに依存する。</li>
+<li>OSが未熟な状態でAIを使うと、間違った方向で高速にPDCAを回し続ける危険。</li>
+</ul>
+<h3 id="2-集団レベル他者はaiではない"><a class="header" href="#2-集団レベル他者はaiではない">2. 集団レベル：他者はAIではない</a></h3>
+<ul>
+<li>人間同士の協働において、相手のOSを理解し信頼関係を築く能力はAIでは代替できない。</li>
+</ul>
+<h3 id="3-組織レベルai共創と信頼"><a class="header" href="#3-組織レベルai共創と信頼">3. 組織レベル：AI共創と信頼</a></h3>
+<ul>
+<li>集団としてAIを活用して良い社会を作るには、不信ではなく信頼に基づいた組織文化が前提。</li>
+<li>Lv.3の組織文化があって初めて「AIと人間の共創」が可能になる。</li>
+</ul>
+<h3 id="vulnerabilityとの接続第3部"><a class="header" href="#vulnerabilityとの接続第3部">Vulnerabilityとの接続（第3部）</a></h3>
+<ul>
+<li><strong>機能する条件:</strong>
+<ol>
+<li>信頼関係が育まれている少人数グループ</li>
+<li>メンバーがLv.2以上の自律性を持つ</li>
+<li>メンバー側からの「さらけ出し」が先行している</li>
+</ol>
+</li>
+<li><strong>機能しない条件:</strong>
+<ul>
+<li>従属性の高いチーム（Lv.1支配）では弱さを見せることは崩壊を招く</li>
+</ul>
+</li>
+<li><strong>物語への反映:</strong> 第3部クライマックスで、翼と佐伯が互いにさらけ出す対話（Vulnerability実践）を描く。信頼関係が育まれた少人数の関係性の中でのみ機能する構造。</li>
+</ul>
+<h3 id="empathyとの構造的接続"><a class="header" href="#empathyとの構造的接続">Empathyとの構造的接続</a></h3>
+<ul>
+<li><strong>VulnerabilityとEmpathyは表裏一体:</strong>
+<ul>
+<li>Vulnerability = 弱さを出す＝自分の井戸の底を見せる行為</li>
+<li>Empathy = 相手の弱さの場所まで降りていく行為</li>
+<li><strong>近しい存在ほど、両方が同時に要求され、同時に困難になる。</strong> これが共同経営・パートナーシップ・家族関係に通底する構造</li>
+</ul>
+</li>
+<li><strong>近接性がEmpathyを阻害するメカニズム:</strong> 近しい相手には「分かっているはず」という前提が無自覚に生まれ、相手のOS構造を改めて探求することを怠る。感謝や愛情が「遠慮」に転じ、本気の対話を回避する。佐伯と黒沢の関係がこの典型</li>
+<li><strong>物語への反映:</strong> 佐伯が第3部で翼にEmpathyの難しさ（特に近しい存在に対して）を自身の実体験として告白する。これにより、経営レベルでのVulnerabilityとEmpathyの相互的な重要性に構造的深みが生まれる</li>
+<li><strong>詳細設計:</strong> <code>app_design.md</code> 3-5b 参照</li>
+</ul>
+<hr>
+<p><em>Created: 2026-02-17</em>
+<em>Updated: 2026-02-21</em>
+<em>Version: v17 (壁打ち確定)</em></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../starter/01_settings/characters.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../../starter/01_settings/storyline.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../starter/01_settings/characters.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../../starter/01_settings/storyline.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
+
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-abc7f01d.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

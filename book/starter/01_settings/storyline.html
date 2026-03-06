@@ -1,0 +1,837 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>S: ストーリーライン設計書 - 失敗者の告白 — AI小説オープン共創プロジェクト</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../../searchindex-0f03ee5e.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc-d5ed1544.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">失敗者の告白 — AI小説オープン共創プロジェクト</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <blockquote>
+<p><strong>ライセンス:</strong> このファイルは <a href="https://github.com/babayuhei/confession-of-a-loser/blob/main/LICENSE-MIT">MIT License</a> で公開されています。</p>
+</blockquote>
+<hr>
+<h1 id="ストーリーライン設計書"><a class="header" href="#ストーリーライン設計書">ストーリーライン設計書</a></h1>
+<blockquote>
+<p><strong>このファイルの役割:</strong> 物語の「前提条件・テーマ・構造・ルール」を定義する設定ファイルです。具体的なストーリー展開（各章の概要・ビート・台詞候補等）は <code>02_plots/scenario.md</code> に記述します。本ファイルを固定した上で、P層・M層の生成への入力として使用してください。</p>
+</blockquote>
+<hr>
+<h2 id="1-作品コンセプト"><a class="header" href="#1-作品コンセプト">1. 作品コンセプト</a></h2>
+<p>「失敗者の告白」は、佐伯零一——20年間のビジネス人生で成功と失敗を重ねてきた男が、自らの経験から気づいた「成功と失敗の法則」を、翼たちとの実践を通じて検証し、物語として書き上げた一冊である。</p>
+<p>佐伯はこの本の中で、自分こそが「失敗者」だと告白する。ビジネスでは成果を出しながら、大切な仲間との関係を壊し、家庭を顧みず、「成功のパターン」だけを追いかけた結果、本当に大切なものを失った。その「失敗」の意味に気づいたのは、翼や結衣と出会い、彼らの成長を間近で見たからだった。</p>
+<p>読者は、人材紹介会社「ネクスト・キャリア」を舞台に、翼が個人としての成長、チームマネジメントの苦闘、そして起業と挫折を経験する姿を追体験する。その物語の中に、「噛み砕かれたビジネス書」として実践的なフレームワーク（PDCA・OS理論・GROW等）が埋め込まれている。佐伯はコーチとして翼に寄り添いながら、自分自身の過去の失敗とも向き合っていく。</p>
+<hr>
+<h2 id="2-核心メッセージ"><a class="header" href="#2-核心メッセージ">2. 核心メッセージ</a></h2>
+<ol>
+<li><strong>「頑張れば成功する」は真実ではない。</strong> 成功と失敗には共通の法則がある。</li>
+<li><strong>成功は多面的である。</strong> ビジネスで成功してもプライベートで失敗している事例は数多い。</li>
+<li><strong>失敗そのものは悪ではない。</strong> 失敗を乗り越え、統合に至る葛藤のプロセスに学びがある。</li>
+<li><strong>人生は短い。</strong> だからこそ佐伯は「失敗者の告白」として書いた。</li>
+<li><strong>ビジネスはワクワクするものだ。</strong> この本を読むことで、読者がビジネスにワクワクし、学習や変容に対してポジティブになってほしい。どんな段階の、どんな状況にいる人であれ、そのメッセージを心で感じてもらえる小説にする。これは著者としての最重要ゴールであり、作品全体の設計前提とする。</li>
+</ol>
+<hr>
+<h2 id="3-タイトルの意味"><a class="header" href="#3-タイトルの意味">3. タイトルの意味</a></h2>
+<p>「失敗者の告白」の「失敗者」とは<strong>佐伯零一自身</strong>のことである。</p>
+<h3 id="作品の執筆目的佐伯の動機"><a class="header" href="#作品の執筆目的佐伯の動機">作品の執筆目的（佐伯の動機）</a></h3>
+<ul>
+<li>佐伯自身の<strong>人生の総括</strong></li>
+<li>過去の仲間たち（黒沢を含む）への<strong>メッセージ</strong></li>
+<li>翼や結衣が経験を振り返り<strong>学びに変える</strong>機会</li>
+<li>会社内で上司・同僚・部下に読ませながら活用できる<strong>共通言語（フレームワーク）</strong></li>
+</ul>
+<hr>
+<h2 id="4-全体構成"><a class="header" href="#4-全体構成">4. 全体構成</a></h2>
+<h3 id="三層構造"><a class="header" href="#三層構造">三層構造</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">層</th><th style="text-align: left">パート</th><th style="text-align: left">語り手</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><strong>著者の声（外枠）</strong></td><td style="text-align: left">はじめに</td><td style="text-align: left">著者＝馬場祐平</td></tr>
+<tr><td style="text-align: left"><strong>物語（内枠）</strong></td><td style="text-align: left">プロローグ〜エピローグ</td><td style="text-align: left">三人称一元視点（佐伯/翼/結衣）</td></tr>
+<tr><td style="text-align: left"><strong>著者の声（外枠）</strong></td><td style="text-align: left">あとがき</td><td style="text-align: left">著者＝馬場祐平</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="各パートの設計方針"><a class="header" href="#各パートの設計方針">各パートの設計方針</a></h3>
+<h4 id="はじめに著者馬場祐平"><a class="header" href="#はじめに著者馬場祐平">はじめに（著者＝馬場祐平）</a></h4>
+<blockquote>
+<p><strong>参照モデル:</strong> 「成功者の告白」プロローグ
+<strong>設計思想:</strong> 50行→15行に圧縮。九階の映像から入り、著者の声で読者を物語に送り出す。馬場＝佐伯のモデルであることは「はじめに」では匂わせるだけ（「私自身がそうだった」）。明確な開示はあとがきで初めて行う。</p>
+</blockquote>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">#</th><th style="text-align: left">ブロック</th><th style="text-align: left">内容</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">A</td><td style="text-align: left"><strong>翼の予告（九階映像）</strong></td><td style="text-align: left">二十八歳、営業トップ→起業→三ヶ月で全壊。十二月深夜、九階のベランダに裸足で立つ男の映像。プロローグの「九階」と接続</td></tr>
+<tr><td style="text-align: left">B</td><td style="text-align: left"><strong>希望の一文</strong></td><td style="text-align: left">「しかし、この物語はそこで終わらない」——読者に先を読む動機を与える</td></tr>
+<tr><td style="text-align: left">C</td><td style="text-align: left"><strong>著者登場＋パターン</strong></td><td style="text-align: left">「私はこのパターンを知っている」。二十年以上のビジネス経験から、頑張るほど大切なものが壊れる構造。「私自身がそうだった」と匂わせるだけ</td></tr>
+<tr><td style="text-align: left">D</td><td style="text-align: left"><strong>型の理論＋物語化</strong></td><td style="text-align: left">型を知れば型から抜け出せる。しかし知識では人は変わらない。だから物語にした</td></tr>
+<tr><td style="text-align: left">E</td><td style="text-align: left"><strong>フレームワーク＋送り出し</strong></td><td style="text-align: left">FWが埋め込まれている。一度目は物語として。二度目に同じ場面が違って見える。「それでは——物語をはじめよう」——プロローグへ接続</td></tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><strong>トーンと長さ:</strong> 約15行。成功者の告白プロローグの3分の1程度。正直で飾らないトーン。圧縮された密度で読者を掴む</li>
+</ul>
+<h4 id="プロローグ九階翼視点三人称"><a class="header" href="#プロローグ九階翼視点三人称">プロローグ「九階」（翼視点・三人称）</a></h4>
+<blockquote>
+<p><strong>設計思想:</strong> 離脱防止。読者はここで「この物語を読み続けるか」を決める。翼の最悪の瞬間（第3部クライマックス直後）を冒頭に配置し、「なぜこうなったのか」を読みたくさせる。<strong>1シーンに凝縮（2,000〜3,000字目標）</strong>。</p>
+</blockquote>
+<ul>
+<li><strong>視点:</strong> 翼の三人称一元視点</li>
+<li><strong>場所:</strong> 九階のマンションのベランダ。深夜の東京。裸足。十二月</li>
+<li><strong>構成:</strong> ①九階のベランダに立つ翼の映像（新宿、東京タワー、眼下27m）→ ②美咲の不在（靴箱が空、テーブルに手紙と鍵）→ ③会社の崩壊（三ヶ月で全壊、AIに置き換えられた）→ ④繋がりの喪失（自分で切った）→ ⑤手すりの向こう側への視線・「楽になれる」の思考 → ⑥記憶が四月へ巻き戻る（生存は明示しない——「この人は死ぬのか？」の緊張を読者に残す）</li>
+<li><strong>フック:</strong> 冒頭で「九階に裸足で立つ男」→ 中盤で「全て自分の選択だった」→ 末尾で記憶が四月に巻き戻る → 第1部第1章へ接続（回想構造）</li>
+<li><strong>はじめにとの接続:</strong> はじめにのブロックAで九階の映像を予告 → プロローグで同じシーンを翼視点で展開</li>
+<li><strong>エピローグとの対比:</strong> プロローグ＝翼の最悪の夜（九階・十二月・死の淵）↔ エピローグ＝佐伯の書斎の朝（春・再出発）。円環ではなく「落下→上昇」の構造</li>
+</ul>
+<h4 id="本編三人称一元視点"><a class="header" href="#本編三人称一元視点">本編（三人称一元視点）</a></h4>
+<ul>
+<li>**第1部は翼を主軸（~70%）**とし、佐伯は対話相手として登場。<strong>結衣は第1部から二重主人公として登場（~30%）</strong>。翼と同じチームに所属し、各章に結衣の視点シーンを配置。営業成績の直接比較と蓮との関係を伏線的に描く</li>
+<li>第2部ではほぼ対等（翼~55%/結衣~45%）</li>
+<li>佐伯の視点はエピローグに限定（プロローグはv20で翼視点に変更済み）</li>
+</ul>
+<h4 id="エピローグ春佐伯視点三人称"><a class="header" href="#エピローグ春佐伯視点三人称">エピローグ「春」（佐伯視点・三人称）</a></h4>
+<blockquote>
+<p><strong>設計思想:</strong> 第3部通過後の到達点。プロローグの「九階の夜」との対比としての「春の朝」。語りすぎない美学。</p>
+</blockquote>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">#</th><th style="text-align: left">ビート</th><th style="text-align: left">内容</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">1</td><td style="text-align: left">朝の書斎</td><td style="text-align: left">デスクランプのオレンジ色の光。午前五時。佐伯は四週間かけて原稿を書き終えた。傍らのマグカップから湯気——<strong>温かいコーヒー</strong>。冬が明けた白い光</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left">原稿の送信</td><td style="text-align: left">PDFに変換。メッセンジャーで黒沢に送信。「読んでくれ」の一行だけ。既読はつかない。朝の五時だから</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left">母のメッセージ</td><td style="text-align: left">「今日はお父さんの命日よ」。佐伯は命日を忘れていた。原稿を書いていて。母は「空から見守ってくれてる」——もう恨んでいない。佐伯は母にもPDFを送る。「親父のこと、書いてみた」</td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left">法人設立届と春</td><td style="text-align: left">書斎の横に法人設立届出書。三社目。鞄に入れる。書斎の電気を消す。靴を履く。ドアノブの金属——もう冬の冷たさではない。「外は、春だった」</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="あとがき著者馬場祐平-おわりにと統合"><a class="header" href="#あとがき著者馬場祐平-おわりにと統合">あとがき（著者＝馬場祐平）— おわりにと統合</a></h4>
+<blockquote>
+<p><strong>設計思想:</strong> 「はじめに」では匂わせるだけだった「佐伯＝私自身」を冒頭で開示。知的な種明かしは最小限に留め、著者の個人的な告白と読者への語りかけに重心を置く。</p>
+</blockquote>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">#</th><th style="text-align: left">ビート</th><th style="text-align: left">内容</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">1</td><td style="text-align: left"><strong>告白</strong></td><td style="text-align: left"><strong>冒頭一行で開示:</strong> 「この物語の『失敗者』は、私自身です」。佐伯に私の経験が色濃く投影されている。フィクションだが、佐伯に関しては根底にあるものは全て本当のこと</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left"><strong>執筆動機</strong></td><td style="text-align: left">正直に書くのは難しかった。小説という形だからこそ素直に書けた。若い人たちのもがきを知識では伝えられなかった。だから物語にした</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left"><strong>FW種明かし（簡潔）</strong></td><td style="text-align: left">実在するビジネスFWが埋め込まれている。読み返すたびに違う読み方ができる——それはあなた自身の経験が深まっている証。短く</td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left"><strong>感謝と過去への区切り</strong></td><td style="text-align: left">関わった全員への感謝。失敗で多くの人を失望させた。言い訳はできない。しかし失敗から学び未来に活かすなら全てに意味がある。この物語を過去の仲間への手紙として。過去に区切りをつけ、自分の生き方で意味を表現したい</td></tr>
+<tr><td style="text-align: left">5</td><td style="text-align: left"><strong>読者へのメッセージ</strong></td><td style="text-align: left">次に進むべき道が見えた。あなたと出会えたら感想と物語を聞かせてほしい。読むインプット→伝えるアウトプットで経験は深まる。「最後まで読んでいただき、ありがとうございました」</td></tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><strong>トーンと長さ:</strong> 正直で飾らない一人称。旧7ビート構成から5ビートに圧縮。「種明かし」の比重を下げ「告白」と「語りかけ」に重心</li>
+</ul>
+<hr>
+<h2 id="5-3部構成"><a class="header" href="#5-3部構成">5. 3部構成</a></h2>
+<blockquote>
+<p><strong>章数について:</strong> 各部4章を目安とする。シナリオ生成時に章数の増減が必要と判断された場合は、提案すること。具体的な章タイトルはscenario.mdで決定する。</p>
+</blockquote>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">部</th><th style="text-align: left">テーマ</th><th style="text-align: left">核心の問い</th><th style="text-align: left">アプリ（スキル）</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><strong>第1部「自分という壁」</strong></td><td style="text-align: left">自分のパターンに気づき、変える痛みを引き受ける</td><td style="text-align: left">「なぜ同じ失敗を繰り返すのか？」</td><td style="text-align: left"><strong>PDCA + 自分のOS</strong> — 仮説思考、3階層モデル（タスク→スキル→OS）、パターンの認識。<strong>OS理論（行動型/思考型の概論）は第1部の前半で、翼の行動様式と絡めて導入する</strong></td></tr>
+<tr><td style="text-align: left"><strong>第2部「他者という壁」</strong></td><td style="text-align: left">異なるOSを持つ他者を理解し、チームとして成果を出す。<strong>Managerとしての成功</strong></td><td style="text-align: left">「なぜ自分のやり方が通用しないのか？」</td><td style="text-align: left"><strong>OS理論（チーム応用）+ GROW</strong> — 4象限の異なるOSを持つ部下のマネジメント。GROWはチームコーチング文脈で運用</td></tr>
+<tr><td style="text-align: left"><strong>第3部「世界という壁と統合」</strong></td><td style="text-align: left">自分の限界と向き合い、仕事と人生を統合する。<strong>Leaderとしての萌芽</strong></td><td style="text-align: left">「成功したはずなのに、なぜ全てを失ったのか？」</td><td style="text-align: left">エフェクチュエーション・成人発達理論（Vulnerability＋Empathy含む）—— 詳細はapp_design.md 3-6参照</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="セッション空間の設計"><a class="header" href="#セッション空間の設計">セッション空間の設計</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">シーン種別</th><th style="text-align: left">場所</th><th style="text-align: left">五感素材</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">佐伯セッション（第1〜3部）</td><td style="text-align: left"><strong>カフェ</strong></td><td style="text-align: left">コーヒーの香り、他の客の会話、雨音、マグカップの温度</td></tr>
+<tr><td style="text-align: left">部下との1on1（第2部）</td><td style="text-align: left">社内フリースペース（コーヒーマシン横のソファ等）</td><td style="text-align: left">周囲の雑音、オープンな空気感</td></tr>
+<tr><td style="text-align: left">リモート対話</td><td style="text-align: left">翼: オフィス個別ブース / 相手: 自宅</td><td style="text-align: left">画面越しの表情、カメラオフの沈黙、通知音</td></tr>
+<tr><td style="text-align: left">非公式な対話</td><td style="text-align: left">ランチ、帰り道、エレベーター内</td><td style="text-align: left">短時間での一言が転換点になる緊張感</td></tr>
+</tbody>
+</table>
+</div>
+<p>佐伯はカフェでナプキンにフレームワークを書き、翼がスマホで撮る——この「物理的教具」が講義シーンの没入感を高める。ペン＋革ノートも補助的に使用。</p>
+<h3 id="第1部の設計方針"><a class="header" href="#第1部の設計方針">第1部の設計方針</a></h3>
+<ul>
+<li><strong>翼が主人公（~70%）</strong>。佐伯はコーチとしてカフェで対話</li>
+<li><strong>結衣が二重主人公（~30%）</strong>。各章に結衣の視点シーンを1つ配置。蓮との関係（DVサイクル）を伏線的に描く</li>
+<li><strong>翼と結衣は同じチームに所属</strong>。営業成績の直接比較（件数型の翼 vs 打率型の結衣）がPDCA学習の渇望を駆動する</li>
+<li><strong>結衣のポストイット＝「仮説」の具体例</strong>。翼が結衣の営業手法を観察→佐伯セッションで「あれは仮説だったのか」と閃く構造</li>
+<li><strong>DVサイクルの段階的描写:</strong> ハネムーン期→コントロール開始→攻撃フェーズ初出→放置+ケア回収。結衣視点シーンで各章1段階ずつ進行</li>
+<li><strong>認知の非対称性:</strong> Part 1終了時点で、翼は結衣を「成績の良い同僚」としか認知していない。結衣は翼の変化過程を日常の解像度で観察しているが自分事とは捉えていない。この非対称がPart 2の緊張の土台</li>
+<li>**翼の彼女（転職前からの既存パートナー）**が日常描写に自然に登場する</li>
+<li>OS理論（行動型/思考型のフレーム）を<strong>第1部の前半</strong>で佐伯が翼に提示。読者が人の行動パターンを見る「レンズ」を早期に獲得する</li>
+<li>PDCAをタスク→スキル→OSの3階層で段階的に深める構造はv15を踏襲</li>
+<li><strong>PDCA段階:</strong> Stage 0→1。翼が「回していなかった」ことに気づく過程を描く</li>
+<li>テーマの二重構造: 翼「一人で勝つ」OS ↔ 結衣「他人のために自分を消す」OS。同じ「行動型」でありながら軸が正反対</li>
+</ul>
+<h3 id="第2部の設計方針"><a class="header" href="#第2部の設計方針">第2部の設計方針</a></h3>
+<ul>
+<li><strong>翼がマネージャーに昇格（~55%）</strong>。Part 1で同じチームだった結衣（既存メンバー）に加え、涼太・沙織が新規配属。<strong>OS 4象限の異なる部下3人を率いる</strong>チームマネジメントが主軸。打率で負けていた結衣を管理する構造的皮肉が出発点</li>
+<li><strong>結衣は二重主人公として~45%の比重</strong>を持つ。翼のマネジメント線と結衣のOS変容線が交錯
+<ul>
+<li>結衣（他者本位×行動型）：翼の方法論が通用しない。管理外で成果を出す</li>
+<li>涼太（自分本位×思考型）：翼と正面から論理的に対立。乗り越えて思考×行動のパートナーに</li>
+<li>沙織（他者本位×思考型、能力低め）：どの方法でも成果が出ない最難課題</li>
+</ul>
+</li>
+<li><strong>ダブル絶望①</strong>を前半で描く（Section 6参照）</li>
+<li>マネージャーとしての<strong>成功</strong>で第2部を締める。ただし<strong>Leaderとしてはまだ未完</strong>——自分のAuthorshipが不完全（父問題未解決）なまま他者を導いている構造的限界を内包</li>
+<li>ただし<strong>父との統合は果たされておらず</strong>、問題を内包したまま第3部へ接続する</li>
+<li>翼は第1部末（八月下旬）に彼女と<strong>同棲</strong>を開始済み。父に彼女を会わせる展開がダブル絶望①の私生活側の起点</li>
+<li><strong>結衣の視点シーン</strong>を段階的に増やす。蓮との関係の悪化を結衣視点で直接描写。翼の成長が二重の証拠（翼自身の実感 + 結衣の目から見た変化）で裏付けられる</li>
+<li>佐伯は<strong>翼との1on1対話が基本</strong>。結衣や涼太との直接1on1コーチングは行わない。ただしチームミーティングの観察（1回程度）は許容（app_design.md Section 4 参照）</li>
+<li>起業という翼の目標は第1部・第2部を通じて描かれる。第2部の終わりに起業準備の予兆を描くが、具体的なエピソードは第3部で展開する</li>
+<li><strong>佐伯の「失敗の予言」:</strong> 翼が独立を決断するタイミング（第2部終盤）で、佐伯が「何か隠していないか。どこかでつまずく予感がする」と告げる。佐伯は自身の起業失敗を重ねている。この予言がPart 3で的中する</li>
+<li><strong>PDCA段階:</strong> Stage 1→2。翼自身の能動化＋マネージャーとしてチームのPDCAを駆動する課題</li>
+<li><strong>文字数目標:</strong> 55,000〜60,000字</li>
+</ul>
+<h3 id="第3部の設計方針"><a class="header" href="#第3部の設計方針">第3部の設計方針</a></h3>
+<h4 id="核心構造"><a class="header" href="#核心構造">核心構造</a></h4>
+<p>翼はPart 1-2で獲得したOS型・PDCAを武器に起業するが、<strong>根源的な父親問題が未解決</strong>のため、無自覚に「勝ちパターン」（=生存戦略）に固執する。初期は成功するが、勝ちパターン外のアクシデントに対応できず崩壊。真のテーマは<strong>Vulnerability（弱さを出せる力）とEmpathy（相手の場所まで降りる力）の統合</strong>。</p>
+<ul>
+<li><strong>PDCA段階:</strong> Stage 2→3への萌芽。自分の人生にPDCAを向ける＝Authorship。Part 3はManagerの肩書きも組織も失った翼が、個人としてAuthorshipを獲得し直すプロセス＝Leadershipの本当の出発点</li>
+</ul>
+<p>これはドラッカー的な「強みを発揮せよ」の限界でもある。Part 1-2で翼は強みを発見し活かした。しかし<strong>強みだけでは済まない世界</strong>がPart 3で立ち上がる。避けてきたもの（父親問題、弱さ）と向き合うことでしか到達できない統合がある。</p>
+<p><strong>＜ドラッカー引用の原稿演出指針＞</strong></p>
+<ul>
+<li><strong>Part 2終盤（起業決断前後）:</strong> 翼が起業の根拠として「強みを活かせ」を引く。本やビジネス常識として自然に言及する程度。翼にとっての自己正当化の武器。佐伯は何かを言いかけるが飲み込む（「失敗の予言」と接続）</li>
+<li><strong>Part 3（佐伯との対話）:</strong> 佐伯が「強みを活かすのは正しい。だがドラッカーは同時に、自分の弱みを正確に認識しろとも書いていた。お前はそっちを読まなかった」と返す。都合の良い部分だけ採用していた翼の認知バイアスを鏡として映す構造</li>
+<li><strong>使用上の制約:</strong> ドラッカーの名前は<strong>物語全体で2回以内</strong>。権威に寄りかかる印象を避ける。設定レベルの参照（app_design 3-6のLeadership等）はドラッカー名を使うが、原稿内では最小限。一般読者に伝わる表現（「ビジネスの本に書いてあった」等）で代替可能な場面ではそちらを優先</li>
+</ul>
+<h4 id="ストーリーフロー4章想定"><a class="header" href="#ストーリーフロー4章想定">ストーリーフロー（4章想定）</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">章（相対）</th><th style="text-align: left">タイトル案</th><th style="text-align: left">概要</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">Part 3 Ch.1</td><td style="text-align: left">飛び立つ鳥</td><td style="text-align: left">翼が起業。<strong>高城の恩義を裏切らない別業態</strong>で独立。涼太が同行。結衣は翼離脱後のチームでマネージャーとして成長を開始</td></tr>
+<tr><td style="text-align: left">Part 3 Ch.2</td><td style="text-align: left">崩壊</td><td style="text-align: left"><strong>ダブル絶望②（物語最大の谷底）</strong>。勝ちパターン固執→起業3ヶ月で崩壊。パートナー（美咲）が我慢の限界→手紙を残し失踪。翼は全てを失い、連絡を絶つ</td></tr>
+<tr><td style="text-align: left">Part 3 Ch.3</td><td style="text-align: left">手中の鳥</td><td style="text-align: left"><strong>クライマックス。</strong> 翼が連絡を絶った後、涼太→結衣・沙織に連絡→<strong>旧チーム3人が結束</strong>。必死に考えるが「自分たちだけでは翼の核心に届かない」と判断し、佐伯にバトンを渡す。佐伯が翼のもとを訪問。翼が佐伯に隠していた全て（父問題の核心）を告白する**「真の告白」<strong>。佐伯も自身の起業失敗・黒沢との決裂の全容を開示（Vulnerability実践）。佐伯は</strong>近しい存在にこそEmpathyが困難だった**自身の痛みを語り、VulnerabilityとEmpathyの相互性を体現する。感情的統合</td></tr>
+<tr><td style="text-align: left">Part 3 Ch.4</td><td style="text-align: left">失敗者の告白</td><td style="text-align: left">統合の章。感情的統合の後に<strong>構造的理解</strong>（エフェクチュエーション、成人発達理論）で失敗を客観視。父との和解の始まり。会社復帰（経営幹部として）。美咲との復縁</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="重要な設計ポイント"><a class="header" href="#重要な設計ポイント">重要な設計ポイント</a></h4>
+<p><strong>① 佐伯の「失敗の予言」（Part 2→Part 3伏線）</strong>
+翼が独立を決断するタイミング（Part 2終盤）で、佐伯が「何か隠していないか。どこかでつまずく予感がする」と告げる。</p>
+<p><strong>② 涼太のPart 3アーク</strong>
+涼太が翼に同行し起業するのは「忠誠」だけではない。元メガバンク法人営業→人材紹介RAと来た涼太にとって、WINGSの「AI×人材開発プラットフォーム」業態は「これなら自分の分析力が活きる」という<strong>打算</strong>がある。翼が情熱で突っ走るのに対し、涼太は事業計画を精査した上で参画を決める計算づくの決断。</p>
+<ul>
+<li><strong>起業中:</strong> COO的ポジション（数値管理・オペ設計）。入金ベースで危機を最も早く認識するが、翼に「もう無理だ」を突きつけきれない——パートナー関係が「言えない」枷になる</li>
+<li><strong>崩壊後:</strong> 翼が連絡を絶った際に結衣・沙織に連絡し、旧チーム結束の起点になる。最終的に佐伯へのバトン渡し（⑧参照）を経て、佐伯が翼のもとへ向かう</li>
+<li><strong>復帰:</strong> 涼太は高城の「負けたら戻ってこい」を受け取り、ネクスト・キャリアに復帰する。起業経験で「思考だけでは動かせない世界」を身体で覚え、Part 2とは質的に異なる行動力を持っている。Part 3終盤〜エピローグで示される</li>
+</ul>
+<p><strong>③ 結衣のPart 3アーク</strong>
+翼が会社を抜けたことで結衣がマネージャーに昇格。「他者本位×行動型」のOSに囚われていた結衣が、自分の判断で動く立場を得て、WILLへの問いに改めて向き合う。蓮との関係の清算。</p>
+<p><strong>④ パートナー離脱の描き方</strong>
+美咲の離脱は「対立・喧嘩」ではなく「<strong>我慢の限界→突然の失踪（手紙を残して）</strong>」。
+<strong>⑩ WINGSの崩壊＝余裕ゼロの帰結</strong></p>
+<ul>
+<li>翼はPart 1-2で「生産性向上→余裕→PDCA好循環」を身体で覚えたはずだが、起業時に「許容可能な損失」を無視し全額投入＝自ら余裕をゼロにした</li>
+<li>余裕ゼロ → 勝ちパターン以外を試す余地がない → PDCAの前提条件が崩壊</li>
+<li>これがCh.12佐伯セッション（エフェクチュエーション）での「許容可能な損失」の伏線回収になる</li>
+</ul>
+<p><strong>⑪ 「重心と能力の分離」の導入</strong></p>
+<ul>
+<li><strong>Ch.5（4象限提示直後）：</strong> 翼がCh.2での違和感（「結衣の型は単純に分類できない」）を佐伯にぶつける → 佐伯が「重心と能力は別だ」と概念的に伝える → 翼は頭で理解するが実感には至らない</li>
+<li><strong>Ch.7-8（沙織の成果が見え始める頃）：</strong> 翼が沙織の「能力が低い」という見立てが誤りだったと悟る。重心（思考型×他者本位）がブレーキとして作用していただけで、沙織が小さな一歩を踏み出した時に翼は佐伯の概念を体験的に理解する</li>
+<li>PDCA段階設計のStage 1→2（頭の理解→体の理解）と構造的に呼応させる
+<strong>⑤’ ネクスト・キャリアの業態注記</strong>
+ネクスト・キャリアの業態は<strong>人材紹介（有料職業紹介事業）</strong>。</li>
+<li>Part 1 での翼の業務は純粋な人材紹介（求職者と企業のマッチング→成約報酬）</li>
+<li>Part 2 後半（ch08以降）で翼チームが法人向けに採用パイプラインの分析・提案を行うようになるのは、**人材紹介営業の延長としての「高度な法人対応」**であり、別途コンサル契約を結んでいるわけではない
+<ul>
+<li>翼がPDCA＋涼太のデータ分析を活用して、法人顧客の採用課題を深く掌む中で自発的に始めた動き（偶然性＋自発性）</li>
+<li>高城はこの動きを容認（むしろ奨励）している</li>
+<li>この「紹介だけでなく採用全体を設計できる」経験が、WINGS起業（AI×組織開発SaaS）の原体験になる</li>
+</ul>
+</li>
+</ul>
+<p><strong>⑤’-a ネクスト・キャリアの業界設定</strong></p>
+<p><strong>会社の特徴:</strong></p>
+<ul>
+<li><strong>メインターゲット:</strong> 第二新卒</li>
+<li><strong>こだわり:</strong> 他社エージェントが扱いにくい案件も拾ってマッチングする泥臭い支援。大手がスクリーニングで弾く人材にも向き合う→高城の思想・佐伯の姿勢と通底。一方で泥臭い＝利益率は高くない＝売上圧力との矛盾が物語の葛藤を駆動</li>
+</ul>
+<p><strong>評価制度:</strong></p>
+<ul>
+<li><strong>最重要指標:</strong> 売上金額</li>
+<li><strong>報酬体系:</strong> 基本給＋売上金額連動インセンティブ</li>
+<li><strong>基準目標:</strong> 一人あたりの決定金額はコントロールしきれないため、月間決定数3件が基準目標</li>
+<li><strong>年収格差:</strong> 非常に数字が良い人は影響度も含めて年収3倍以上の差がつく</li>
+<li><strong>結衣の実績:</strong> 毎月4件コンスタント＝「非常に良い」</li>
+<li><strong>歪みの核心:</strong> 「売上金額」が最重要＝求職者の年収が高い案件を決めた方が評価される。「寄り添い」と「高額案件・短期決定優先」の構造的矛盾。この矛盾が翼の業界葛藤の種になる</li>
+</ul>
+<p><strong>ポートフォリオ構造（＝担当領域の割り当て）:</strong></p>
+<blockquote>
+<p><strong>用語注記:</strong> 「ポートフォリオ」は人材紹介業界特有の用語。原稿内では**「担当する業界・職種の組み合わせ」「担当領域」**等、読者に分かる表現に噛み砕く。業界用語としてそのまま使う場合は、初出時に必ず説明を入れること。</p>
+</blockquote>
+<ul>
+<li>業界×職種×レイヤーで担当を分ける。配属はマネージャー判断</li>
+<li>高城の設計思想: 「合わないポートフォリオに人を閉じ込めない」——半年ごとに振り返り、移動可能。業界では珍しい柔軟性</li>
+<li>結衣はポートフォリオ変更経験あり（アパレル→IT）→沙織へのアドバイスに活用。翼は変更なしで伸びた＝「たまたま」合っていた幸運</li>
+</ul>
+<p><strong>業界のブラック面（背景描写用）:</strong></p>
+<ul>
+<li>スカウト架電: 1日50〜100件。新人の離脱率が最も高い作業</li>
+<li>3ヶ月退職返金: 紹介した人が3ヶ月以内に辞めると手数料返金。営業にとってのリスク</li>
+<li>離職率: 業界内でも高い方のエージェント会社では入社1年以内で3割近く辞める。ネクスト・キャリアは高城の設計で15%程度（それでも社会平均より高い）</li>
+<li>「案件ゴリ押し」の構造: 月末に決定数が足りない→求職者の希望度が低い案件も推す→業界の信頼低下の悪循環</li>
+<li>「心臓を売り切った人が評価される」: 良心を捨てて数字を稼ぐ人間が社内で評価される構造。葛藤する部下を追い越して数字ゴリ押しの同期が昇進する</li>
+</ul>
+<p><strong>業界葛藤×キャラ対比（Part 1 章別設計）:</strong></p>
+<ul>
+<li><strong>Ch.1:</strong> 翼の転職者体験の記憶＋入社初日の理想（「求職者の人生に向き合いたい」）。結衣は初日から「数字は数字」とドライ</li>
+<li><strong>Ch.2:</strong> 面談で求職者に寄り添おうとして時間をかけすぎ→決定数が足りない。結衣は効率的に決定数を稼ぐ（「人生相談じゃないんだから」）</li>
+<li><strong>Ch.3:</strong> ポートフォリオ内で「本当にこの会社を薦めていいのか」と悩む案件。結衣は「どの案件が決まりやすいか」で判断し悩まない</li>
+<li><strong>Ch.4:</strong> 佐伯との対話で「数字と向き合いの両立」を考え始める。翼なりの答えの萌芽</li>
+</ul>
+<p><strong>マネージャー層の葛藤（Part 2 設計）:</strong></p>
+<ul>
+<li>翼はCh.5〜起業退職まで一貫してチームリーダー（＝マネージャーレイヤーの最初の段階）</li>
+<li>涼太の葛藤: 元メガバンク的な「仕組みで解決」アプローチが通じない。架電が嫌いだが合理的に割り切ろうとする→割り切れない</li>
+<li>沙織の葛藤: 架電恐怖。「間違った案件を薦めたらどうしよう」→動けない。翼がかつての自分（寄り添いたいのに数字が求められる）を重ねる</li>
+<li>翼のジレンマ: 「心臓を売れ」とは言えないが、数字は出さないとチームが持たない。かつて自分が嫌だった評価構造を、今度は自分が運用する側になる</li>
+</ul>
+<p><strong>⑤ 起業業態の方針</strong>
+AI時代のブーム × 翼の強み（人のOS理解・PDCA・チーム運営知見）を掛け合わせた、前職とは異なる業界のスタートアップ。</p>
+<ul>
+<li><strong>制約条件:</strong>
+<ol>
+<li>人材紹介ではない（高城への恩義）</li>
+<li>翼が「Part 1-2の武器（PDCA＋OS理論）をAIでスケールさせる」という発想で起業 → 勝ちパターン固執の象徴</li>
+<li>自己資金（貯蓄）＋涼太が共同創業。VC投資・融資・補助金は受けない</li>
+<li>「許容可能な損失」を考えず、結婚での支出もあった上で手元資金を全額会社に注ぎ込む → エフェクチュエーション原則の対比</li>
+<li>市場環境の急変（AI業界特有の不確実性）により事業計画の前提が覆る</li>
+</ol>
+</li>
+<li><strong>崩壊の構造:</strong> 想定売上が立たず、会社の資金が尽きる。1月の役員報酬が払えない＝二人とも生活できない。他に収入も貯蓄もないため、起業を止めて就職しなければならない</li>
+<li><strong>会社名: WINGS（仮）。</strong> 具体的な業態はscenario生成時に確定する。storylineでは上記制約条件のみ定義</li>
+</ul>
+<p><strong>⑤-a 資金設計</strong></p>
+<ul>
+<li><strong>法人格:</strong> 株式会社（将来のVC投資想定）</li>
+<li><strong>資本金:</strong> 500万円（翼400万＋涼太100万）。設立時に一括拠出。<strong>追加拠出なし</strong></li>
+<li><strong>設立費用:</strong> 約55万円（登記・定款認証・会計ソフト・税理士初期費用等）</li>
+<li><strong>SaaS MVP外注費:</strong> 約100万円（副業期間に仕様策定→設立直後に外注）</li>
+<li><strong>運営開始時の実質キャッシュ:</strong> 約345万円</li>
+<li><strong>月額固定費:</strong> 約100万円
+<ul>
+<li>翼の役員報酬＋生活費 ~32万、涼太 ~25万、オフィス ~8万、サーバー/AI API ~20万、保守外注 ~10万、その他 ~5万</li>
+</ul>
+</li>
+<li><strong>売上モデル（見込み vs 入金の乖離 ＋ 稟議パイプライン）:</strong>
+<ul>
+<li>10月: 契約2社/見込み20万/入金10万（1社トライアル中）</li>
+<li>11月: 契約5社/見込み50万/入金25万（キャンセル・支払い遅延・トライアル延長）</li>
+<li>11月時点で<strong>稟議中・最終検討中の案件が複数あり</strong>、翼はこれを「成約見込み」として頼みの綱にしていた</li>
+<li>12月: AI大手参入→稟議中案件が全て凍結・却下、既存契約も全社解約/入金0万</li>
+</ul>
+</li>
+<li><strong>改修外注:</strong> 約60万円（11月末に翼が「差別化」に固執して発注→12月支払い）</li>
+<li><strong>崩壊時（12月末）:</strong> 残存キャッシュ約20万、来月固定費100万、売上見込みゼロ。1月の役員報酬が払えない</li>
+<li><strong>結婚時（ch09_s04）:</strong> 追加拠出シーンは削除。代わりに美咲が全額拠出の事実を結婚後に知る構造</li>
+<li><strong>「SaaSの死」:</strong> 2025年12月中旬、大手IT企業CEOが「SaaSは死んだ。AIエージェントがSaaSを置き換える」と発言し世界的に話題に。改修リリース後の止めの一撃として配置（実名は出さない）</li>
+<li><strong>WINGSの構造的限界:</strong> 翼はAIを標榜しているが、本質は営業マンの延長線上の起業であり、AIネイティブな起業家ではない。MVPは外注、技術的優位性なし。「SaaSの死」宣言が示すAIエージェント時代には、WINGSのような「フレームワークをUI化しただけのSaaS」は太刀打ちできない。これが「勝ちパターン（営業力×PDCA）だけでは届かない世界」の象徴</li>
+<li><strong>涼太のスプレッドシート:</strong> 「見込み売上」と「入金済み」の2列。翼は見込みを見て「計画通り」、涼太は入金を見て危機を認識——OSの差をデータで可視化</li>
+</ul>
+<p><strong>⑥ 統合プロセスの順序</strong>
+感情的統合（告白・受容）→ 生存戦略の自覚（「愚かだったのではなく、やむを得なかった」と自分を責めることをやめる）→ 構造的理解（エフェクチュエーション・成人発達理論で失敗を客観視）→ 行動。
+勝ちパターンへの固執を「否定」するのではなく、「それは生存戦略だった。強みでもあった。でもそれだけでは届かない世界がある」と受容することが、Stage 5萌芽への扉を開く。</p>
+<p><strong>⑦ 高城→佐伯の育成プログラム（Part 3終盤で明かす）</strong>
+高城が佐伯に「若手育成のプログラム作成とコーチング」を意図的に依頼していた背景構造。高城と佐伯は定期的にMTGしてプログラムの内容を深め、状況を共有していた。佐伯はその実践を引き受け、翼のコーチングを通じて自身も学習を進めていた。Part 3の終盤でこの構造を明かすことで、高城の経営者としての器の大きさと、佐伯の「応援型コーチ」の組織的バックボーンが立ち上がる。</p>
+<p><strong>⑧ 旧チームの結束→佐伯へのバトン渡し（Part 3 Ch.3前半）</strong>
+翼が連絡を絶った後、涼太が結衣・沙織に連絡。旧翼チーム3人が結束して翼を助けようとする。しかし「自分たちでは翼の核心（父問題）に届かない」と認識し、佐伯にバトンを渡す判断をする。</p>
+<ul>
+<li><strong>Part 2チームビルディングの成果証明:</strong> 翼が育てたチームが、翼自身のために動く</li>
+<li><strong>佐伯の見せ場の準備:</strong> 3人が「この人しかいない」と佐伯を選ぶことで、佐伯の準主人公としての重みが立ち上がる</li>
+<li><strong>結衣・沙織のPart 3存在感:</strong> 個別アーク（③）に加え、集合動線としてもPart 3に貢献する</li>
+</ul>
+<p><strong>⑨ FW積層の最終段</strong></p>
+<pre><code>Part 1: PDCA等 → 個人の武器を手に入れる
+Part 2: GROW等 → 他者を育てる技術を獲得する
+Part 3: エフェクチュエーション + 成人発達理論（Vulnerability含む）
+       → 「武器では戦えない世界がある」ことを学ぶ
+</code></pre>
+<h3 id="時間軸"><a class="header" href="#時間軸">時間軸</a></h3>
+<ul>
+<li><strong>物語内時間:</strong> 約2年間（2024年4月〜2026年3月）</li>
+<li><strong>第1部:</strong> 入社〜6ヶ月目（2024年4月〜9月、春〜秋）
+<ul>
+<li>前半3ヶ月: 入社、佐伯との出会い、PDCA・OS学習</li>
+<li>後半3ヶ月: 実践→成果→6ヶ月目にマネージャー打診</li>
+</ul>
+</li>
+<li><strong>第2部:</strong> 7ヶ月目〜12ヶ月目（2024年10月〜2025年3月、秋〜春）
+<ul>
+<li>マネージャー実践、GROW、チームビルディング</li>
+<li>Ch.8: チームの結実（2025年1月〜3月末）</li>
+</ul>
+</li>
+<li><strong>第3部:</strong> 13ヶ月目〜24ヶ月目（2025年4月〜2026年3月）
+<ul>
+<li>2025年6月: 起業アイデア段階・事業計画策定開始</li>
+<li>2025年7〜9月: 副業としてWINGS本格始動。涌太と組んで営業開始（土日・夜）
+<ul>
+<li>ネクスト・キャリアは副業をオープンに認めている会社（ベンチャー気質）。高城自身がバー経営（副業）をしており、社内での副業は自然な文化 **</li>
+<li>翼は副業を隠しておらず、佐伯も副業を始めたことは耳にしている（起業するかもと感づいている程度）。ただし起業の意思決定は翼が自分で行い、決定後に高城に直接告げる</li>
+<li>高城の反応: 「負けたら戻ってこい。席は空けておく」（快く送り出す。翼は社交辞令と受け取るが、Part 3で本気だったと判明）</li>
+</ul>
+</li>
+<li>2025年9月: 法人4社・売上目標80%到達 → 退職決心・退職届（Ch.9_01「秋」）</li>
+<li>2025年10月: 結婚式・新居・WINGS正式始動（Ch.9_03〜04）</li>
+<li>2025年11月: 市場急変（Ch.10_01〜02）</li>
+<li>2025年12月上旬: 崩壊・美咲退去・連絡断絶（Ch.10_03〜05）</li>
+<li>2025年12月下旬: 【プロローグ】ベランダ → 佐伯訪問・告白・育成PG開示（Ch.11）</li>
+<li>2025年12月末〜2026年1月: 生存戦略の受容・カフェセッション・父和解・復帰・復縁（Ch.12）</li>
+</ul>
+</li>
+<li><strong>エピローグ:</strong> 2026年3月（佐伯の執筆完了直後の朝。「外は、春だった」）</li>
+</ul>
+<hr>
+<h2 id="6-シーソー原則仕事--私生活"><a class="header" href="#6-シーソー原則仕事--私生活">6. シーソー原則（仕事 × 私生活）</a></h2>
+<p>物語全体を通じて「仕事面」と「私生活面」が対比的に動く<strong>シーソー構造</strong>を維持する。</p>
+<h3 id="ルール"><a class="header" href="#ルール">ルール</a></h3>
+<ul>
+<li>仕事が上がれば私生活が下がる（またはその逆）</li>
+<li>各部の前半に<strong>ダブル絶望</strong>（仕事↓↓ + 私生活↓↓）を配置し、後半で回復させる</li>
+<li>第2部→第3部で絶望の度合いを<strong>エスカレート</strong>させる</li>
+<li><strong>物語最大の谷底:</strong> 第3部前半（ダブル絶望②）</li>
+<li><strong>統合:</strong> 第3部終盤（仕事↑↑ / 私生活↑↑）</li>
+</ul>
+<h3 id="ダブル絶望の設計"><a class="header" href="#ダブル絶望の設計">ダブル絶望の設計</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left"></th><th style="text-align: left">仕事面</th><th style="text-align: left">私生活面</th><th style="text-align: left">位置</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><strong>ダブル絶望①</strong></td><td style="text-align: left">チームマネジメント失敗（部下3人が各々の問題を起こす）</td><td style="text-align: left">父に彼女を会わせて衝突→彼女とのトラブルに発展（父との未統合が起点）</td><td style="text-align: left"><strong>第2部の前半</strong></td></tr>
+<tr><td style="text-align: left"><strong>ダブル絶望②</strong></td><td style="text-align: left">起業→即崩壊</td><td style="text-align: left">結婚→父との衝突→パートナーが出ていく</td><td style="text-align: left"><strong>第3部の前半</strong></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="各部のシーソー推移"><a class="header" href="#各部のシーソー推移">各部のシーソー推移</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">区間</th><th style="text-align: left">仕事</th><th style="text-align: left">私生活</th><th style="text-align: left">備考</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">第1部前半</td><td style="text-align: left">↑</td><td style="text-align: left">→</td><td style="text-align: left">個人の勢い。彼女との安定した日常</td></tr>
+<tr><td style="text-align: left">第1部後半</td><td style="text-align: left">↑→↓→↑</td><td style="text-align: left">↓</td><td style="text-align: left">成果は出るが方向性の空虚さ。OS直面の痛み。最終的にマネージャー昇格決断</td></tr>
+<tr><td style="text-align: left">第2部前半</td><td style="text-align: left">↓↓</td><td style="text-align: left">↓↓</td><td style="text-align: left"><strong>ダブル絶望①</strong></td></tr>
+<tr><td style="text-align: left">第2部後半</td><td style="text-align: left">↑↑</td><td style="text-align: left">→（問題含み）</td><td style="text-align: left">マネージャー成功。ただし父との未統合が残る</td></tr>
+<tr><td style="text-align: left">第3部前半</td><td style="text-align: left">↓↓↓</td><td style="text-align: left">↓↓↓</td><td style="text-align: left"><strong>ダブル絶望②（物語最大の谷底）</strong></td></tr>
+<tr><td style="text-align: left">第3部後半</td><td style="text-align: left">↑↑</td><td style="text-align: left">↑↑</td><td style="text-align: left"><strong>統合</strong></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="仕事私生活の波及構造補足f連動"><a class="header" href="#仕事私生活の波及構造補足f連動">仕事→私生活の波及構造（補足F連動）</a></h3>
+<blockquote>
+<p>シーソーは単なる「上下の対比」ではなく、<strong>仕事で学んだことが私生活の関係性を照射する</strong>因果チェーンを持つ。</p>
+</blockquote>
+<ul>
+<li><strong>結衣:</strong> チーム内での対話文化の変化を「観察」→蓮との関係を客体視するきっかけ。仕事での「人との向き合い方」の学びが、蓮の支配構造からの離脱に繋がる（characters.md DV覚醒段階3-4に対応）</li>
+<li><strong>翼:</strong> 佐伯セッションで学ぶGROWモデル・OS直面が、美咲との会話や父との対峙に波及。「問いを投げて待つ」姿勢が私生活にも転写される</li>
+<li><strong>設計原則:</strong> この波及は<strong>描写として自然に起きる</strong>もの。キャラクターが「仕事で学んだことを私生活に持ち込もう」と意識的に行動するのではなく、読者が遡及的に「ああ、あの経験が効いているのか」と気づく構造</li>
+</ul>
+<h4 id="それぞれの夜での具体化指針"><a class="header" href="#それぞれの夜での具体化指針">「それぞれの夜」での具体化指針</a></h4>
+<blockquote>
+<p>Part 1-2の「それぞれの夜」パート（章末）は、<strong>その章でのビジネス上の変化がプライベートに波及する小さな場面</strong>を毎回1つ具体的に描く場として設計する。</p>
+</blockquote>
+<ul>
+<li><strong>描写の道具:</strong> 翼も結衣もパートナーがいるため、<strong>パートナーとの会話の内容・仕方・受け止め方</strong>の変化で波及を表現できる。言葉遣い、沈黙の質、リアクションの微差が積層する</li>
+<li><strong>Part 1（変化の萌芽）:</strong> 仕事で少し学んだことが、パートナーとのやり取りに<strong>ごく小さく</strong>滲む。翼なら帰宅後に美咲の話を一瞬だけ「聞ける」瞬間がある（が、すぐに元に戻る）。結衣なら成約後の高揚が蓮からの一言で消える、の繰り返し</li>
+<li><strong>Part 2前半:</strong> 仕事でのOS転換は進むが、プライベートでは変化が<strong>適用できない</strong>ことを意識的に描く。翼は「教えるな。聞け」が部下には機能するのに美咲/父には一切使えない。結衣はチームで声を出し始めるが蓮の前では沈黙する。この<strong>落差</strong>が読者にとっての嫌な予感になる</li>
+<li><strong>Part 2後半〜Part 3（積層の帰結）:</strong> 小さな波及の蓄積が閾値を超え、行動に転化する。結衣の場合は沙織との関係や仕事の成功体験の積層がDV覚醒に繋がる。翼の場合は全てを失った後に初めて「聞く」姿勢が父に向かう</li>
+</ul>
+<hr>
+<h2 id="7-サブストーリー"><a class="header" href="#7-サブストーリー">7. サブストーリー</a></h2>
+<h3 id="a-翼と父権威との和解-全編を貫くコアテーマ"><a class="header" href="#a-翼と父権威との和解-全編を貫くコアテーマ">A. 翼と父（権威との和解）— 全編を貫くコアテーマ</a></h3>
+<ul>
+<li><strong>テーマ:</strong> 父の「評価も否定もしない沈黙」への反発。サッカー部の挫折と父の関係がリンクしている</li>
+<li><strong>第1部:</strong> 父の着信を無視。フラッシュバック。パターンの根源として認知が始まる</li>
+<li><strong>第2部:</strong> 彼女を父に会わせて衝突（ダブル絶望①の私生活側の起点）。未統合のまま問題が内包される</li>
+<li><strong>第3部:</strong> 起業の崩壊・パートナー離脱と同時期に父との本質的な葛藤が再燃し衝突（ダブル絶望②の一要素）。最終的に和解の始まり</li>
+<li><strong>到達点:</strong> 「ごめん。ありがとう」。完了ではなく始まり</li>
+</ul>
+<h3 id="b-翼と彼女パートナーとの関係"><a class="header" href="#b-翼と彼女パートナーとの関係">B. 翼と彼女（パートナーとの関係）</a></h3>
+<ul>
+<li><strong>テーマ:</strong> 仕事の成功・変化がパートナーシップに及ぼす影響。父との未統合がパートナーとの関係を壊す構造</li>
+<li><strong>前提:</strong> 転職前から付き合っている既存のパートナー</li>
+<li><strong>第1部:</strong> 日常描写に自然に登場。翼の「帰る場所」としての安定</li>
+<li><strong>第2部:</strong> 第1部末（八月下旬）に同棲開始済み。父に会わせて衝突→二人の関係にもトラブルが波及</li>
+<li><strong>第3部:</strong> 結婚→起業のストレスと父問題の再燃→パートナーが出ていく（手紙を残して）</li>
+<li><strong>到達点:</strong> 翼が自身の行動（父問題のパートナーへの転嫁）を深く反省。美咲も自分を見つめ直す。第3部後半で復縁</li>
+</ul>
+<h4 id="伏線の種蒔き回収-対応表"><a class="header" href="#伏線の種蒔き回収-対応表">伏線の種蒔き↔回収 対応表</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">#</th><th style="text-align: left">種蒔き（Part 1）</th><th style="text-align: left">回収（Part 2-3）</th><th style="text-align: left">設計意図</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">F1</td><td style="text-align: left">01_04: LINEの後「電話しようか→明日でいい」</td><td style="text-align: left">09_05: 肉じゃがにラップ→「先に食べてきた」→3日後に捨てる</td><td style="text-align: left">「先送り」が日常の不在に変質する構造</td></tr>
+<tr><td style="text-align: left">F2</td><td style="text-align: left">02_04: 美咲の写真に「いいね」スタンプだけ</td><td style="text-align: left">10_02: 「美咲が作ってくれていた夕食のラップはもうない」</td><td style="text-align: left">「言葉を届けない」パターンが関係の消滅に至る</td></tr>
+<tr><td style="text-align: left">F3</td><td style="text-align: left">03_04: 美咲の電話に出ない（「後で折り返す」が来ない）</td><td style="text-align: left">10_04: 美咲の手紙「私のことを聞いてくれたのはいつだっけ」</td><td style="text-align: left">「後回し」が「不在」になり、手紙で突きつけられる</td></tr>
+<tr><td style="text-align: left">F4</td><td style="text-align: left">04_05: 「信頼してるんだね」→翼の即否定→美咲が引き下がる</td><td style="text-align: left">06_05: 「壁を作ってない？」→再び引き下がり→以降踏み込まなくなる</td><td style="text-align: left">引き下がりパターンの初出→反復→固着</td></tr>
+<tr><td style="text-align: left">F5</td><td style="text-align: left">Part 1-2全体: 翼は壁に気づかない（読者だけが見る）</td><td style="text-align: left">11_03〜12_01: 手紙＋佐伯の「型」→「俺は美咲にも同じパターンをやっていた」</td><td style="text-align: left">推理小説的遡及——翼の自覚はPart 3統合プロセスの一部</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><strong>引き下がりパターン3段階:</strong> ①踏み込み→引き下がり（優しさ）＝Part 1後半〜Part 2前半 → ②踏み込み→引き下がり（諦め）＝Part 2後半〜Part 3前半 → ③踏み込まない→退去（手紙）＝Part 3中盤。詳細はcharacters.md美咲セクション参照</p>
+</blockquote>
+<h3 id="c-佐伯と黒沢贖罪と再出発"><a class="header" href="#c-佐伯と黒沢贖罪と再出発">C. 佐伯と黒沢（贖罪と再出発）</a></h3>
+<ul>
+<li><strong>テーマ:</strong> 2社目の共同創業者・黒沢との決裂。佐伯が「正しいこと」を言い続けた結果、黒沢を失った</li>
+<li><strong>到達点:</strong> 第3部で全容告白、手紙を完成。「和解は届かなくてもいい。自分が変わったことが答えだ」</li>
+</ul>
+<h3 id="d-結衣と蓮共依存からの自覚"><a class="header" href="#d-結衣と蓮共依存からの自覚">D. 結衣と蓮（共依存からの自覚）</a></h3>
+<ul>
+<li><strong>テーマ:</strong> 「いい子でいること」の生存戦略が生んだ共依存関係</li>
+<li><strong>扱い:</strong> <strong>第1部から結衣視点で伏線的に描写</strong>（各章1シーン程度）。DVサイクルの兆候を読者が察知できるレベルで。第2部では仕事の成長が蓮の支配欲を刺激する構造を結衣視点で直接描写</li>
+<li><strong>到達点:</strong> 第3部で結衣がマネージャーとして自立し、蓮との関係を清算。「他者のために生きる」から「自分のWILLで生きる」への転換</li>
+</ul>
+<h3 id="翼と佐伯の信頼構築設計方針"><a class="header" href="#翼と佐伯の信頼構築設計方針">翼と佐伯の信頼構築（設計方針）</a></h3>
+<ul>
+<li>サブストーリーではないが、翼が佐伯を信頼するに至る<strong>心の変遷</strong>を段階的に描く</li>
+<li>第1部前半: 不信・反発（「コーチング？ いらねえよ」）</li>
+<li>第1部中盤: 佐伯の問いかけが「当たっている」と感じる体験を通じて、警戒が緩む</li>
+<li>第1部後半: 自分のOS（パターン）に向き合う時、佐伯にだけは本音が出る</li>
+<li>第2部以降: マネージャーとして困った時に自ら佐伯を頼る関係へ</li>
+<li><strong>ルール:</strong> 信頼は「佐伯が正しいから」ではなく「佐伯が自分を裁かないから」を軸に描く</li>
+</ul>
+<hr>
+<h2 id="8-osの扱い方"><a class="header" href="#8-osの扱い方">8. OSの扱い方</a></h2>
+<h3 id="原則"><a class="header" href="#原則">原則</a></h3>
+<ul>
+<li>OS理論は<strong>物語全編のバックボーン</strong>（設計ツール）であり、<strong>物語のテーマ</strong>ではない</li>
+<li>メインテーマは<strong>人生の「成功と失敗」</strong></li>
+<li>ビジネス（メインストーリー）とプライベート（サブストーリー）の両面から描く</li>
+</ul>
+<h3 id="具体的な指針"><a class="header" href="#具体的な指針">具体的な指針</a></h3>
+<ol>
+<li>「OS」「OSの書き換え」「Lv.1→Lv.2」等の用語が<strong>作中で頻出しない</strong>こと</li>
+<li>学びは<strong>具体的なビジネスノウハウ</strong>として伝わり、その背後にOS理論的な構造がある、という設計</li>
+<li>読者が物語を読んで「面白い」「役に立つ」と感じた後に、「実はこれがOS理論だった」と気づく構造が理想</li>
+<li><strong>行動型・思考型のフレームは第1部の前半で導入する。</strong> 翼の行動様式（行動型）を佐伯が名指しすることで、読者が「人の行動パターンには型がある」というレンズを早期に獲得する。ただし理論の全体像（4象限等）は第2部以降で段階的に展開する</li>
+</ol>
+<hr>
+<h2 id="9-ai活用の学習コンテンツ設計"><a class="header" href="#9-ai活用の学習コンテンツ設計">9. AI活用の学習コンテンツ設計</a></h2>
+<blockquote>
+<p><strong>詳細設計はapp_design.md 3-7を参照。</strong> 本セクションでは物語構造上の位置づけのみ定義する。</p>
+</blockquote>
+<ul>
+<li><strong>目的:</strong> 「自分のOSの癖は自分では見えない」というOS型成長の根本的困難を、AI対話で補助する</li>
+<li><strong>方法論:</strong> 汎用AIツール＋佐伯のメソッド的ガイダンス。①AI対話（壁打ち）、②録音聞き返し、③リアル行動PDCAの3点セット</li>
+<li><strong>FW積層上の位置:</strong> PDCA機能の拡張（C=Checkの精度向上）。Growth Mindsetの実践ツール</li>
+<li><strong>展開:</strong> Part 1後半で佐伯がガイダンス→Part 2でチーム実践（共創マネジメント）→Part 3では「学び残し」としてAIの限界を描く</li>
+<li><strong>Part 3接続:</strong> AIが届くのは表層の行動パターンまで。見たくない深層の内面（構造的パターン、父との関係等）にはAIだけでは到達しない。この学び残しが起業失敗の根因。ただし失敗を否定的に描き切らず、佐伯・高城はポジティブに受け止める</li>
+<li><strong>大原則:</strong> AIは「Checkの精度を上げるツール」。AIの応答 × 自分の実感 → 本物の気づき。「AIに聴けば全部解決」は絶対にNG</li>
+</ul>
+<hr>
+<h2 id="10-佐伯の執筆設定事実ベース"><a class="header" href="#10-佐伯の執筆設定事実ベース">10. 佐伯の執筆設定（事実ベース）</a></h2>
+<ul>
+<li>執筆期間：約1ヶ月間の集中執筆</li>
+<li>方法：最新のAIを活用し、自身の経験を統合して物語として執筆</li>
+<li>20日間：毎日ゼロから企画・設定をブラッシュアップし、全て読み返し修正</li>
+<li>10日間：初稿に対するブラッシュアップ</li>
+<li>強調点：「AIに適当に書かせた」のではなく、「想いが込められ、人の手がかかった手作りの作品」</li>
+<li>佐伯の「元CTO・技術者」バックグラウンドは序盤では出さない。エピローグ以降で自然に触れる</li>
+</ul>
+<hr>
+<h2 id="11-確定事項"><a class="header" href="#11-確定事項">11. 確定事項</a></h2>
+<ul>
+<li>翼の年齢: <strong>28歳</strong></li>
+<li>「失敗者」: <strong>佐伯零一自身</strong></li>
+<li>メインテーマ: <strong>成功と失敗の法則</strong>（OSは設計ツール）</li>
+<li>章構成: <strong>はじめに + プロローグ + 全3部 + エピローグ + あとがき</strong></li>
+<li>エピローグ時点: 翼は<strong>社内で後輩を指導する立場</strong>。涼太も<strong>ネクスト・キャリアに復帰</strong>（起業失敗を経て）。結衣は<strong>社内に在籍しながらヤングケアラー支援のプロボノ活動をリーダー的に推進</strong>。佐伯が起業（社名未定）。独立等は予見的描写のみ</li>
+<li>第1部の視点: <strong>翼を主軸（~70%）</strong>。<strong>結衣は二重主人公として~30%で登場</strong>（各章に結衣視点シーンを配置。蓮との関係を伏線的に描く）。翼の彼女は日常描写に自然に登場</li>
+<li>佐伯との対話: <strong>翼との1on1が基本</strong>。結衣・涼太との直接1on1コーチングは行わない。チーム観察1回は許容（app_design.md Section 4 参照）</li>
+<li>佐伯の技術バックグラウンド: <strong>序盤では出さない</strong></li>
+<li>物語内時間: <strong>約2年間</strong></li>
+<li><strong>チームダイナミクスの描き方:</strong> 6ペア関係性マトリクスのような網羅的設計は不要。翼以外の関係性（結衣-沙織、涼太-翼のパートナー関係、涼太と結衣・沙織の距離感）を<strong>チーム打ち上げ飲み会（Ch.8 08_04）を起点に</strong>自然に描く。涼太が先に帰り翼も消える→結衣-沙織が残る構造が、Part 3での分岐（涼太→翼について起業、結衣-沙織→社内に残る）のリアリティを準備する</li>
+<li><strong>年齢の伝え方:</strong> 翼（28歳）と結衣（26歳）は年齢を<strong>二重に描く</strong>。初出時に明示＋別の文脈で再確認できる情報を配置する（例: 結衣なら「大学卒業してから蓮と付き合って3年」→逆算で26歳前後と分かる。翼なら入社年やサッカー部の時期から逆算可能にする）。涼太（24歳）・沙織（25歳）は行動・呼び方・態度で自然に伝える</li>
+<li>OS用語: 作中で頻出させない</li>
+<li>はじめに: 著者がフィクション内のキャラクターにインタビューした設定は<strong>禁止</strong>。著者自身の経験・視点から語る</li>
+<li>あとがき: 「おわりに」と統合。種明かし＋佐伯＝馬場の開示＋読者メッセージ＋謝辞を1本に</li>
+</ul>
+<hr>
+<h2 id="12-禁止事項"><a class="header" href="#12-禁止事項">12. 禁止事項</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">#</th><th style="text-align: left">禁止事項</th><th style="text-align: left">対策</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">1</td><td style="text-align: left">「Ch.4で教わった〜」等のメタ視点表現</td><td style="text-align: left">「以前に教わった〜」「あの時の〜」等、物語内の時間参照に変換</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left">「OS」の過剰使用</td><td style="text-align: left">佐伯との対話で概念として登場するのみ</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left">エピローグでの翼の独立</td><td style="text-align: left">予見的描写にとどめる。結衣のプロボノ活動は象徴的に描く</td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left">🚨 <strong>1章1ファイル出力</strong></td><td style="text-align: left"><strong>永久禁止</strong>。必ず1シーン=1ファイル</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<p><em>Created: 2026-02-17</em>
+<em>Updated: 2026-02-21</em>
+<em>Version: v17 (壁打ち確定)</em></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../starter/01_settings/os_theory.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../../starter/01_settings/style_guide.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../starter/01_settings/os_theory.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../../starter/01_settings/style_guide.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
+
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-abc7f01d.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

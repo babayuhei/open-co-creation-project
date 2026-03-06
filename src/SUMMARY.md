@@ -1,0 +1,17 @@
+# AI小説オープン共創プロジェクト
+
+- [なぜ作ったか](00_intro.md)
+- [制作の舞台裏](01_behind.md)
+- [AIを使った長編小説の現在地](02_current.md)
+- [AI長編小説の創作モデル](03_practice.md)
+- [フォークして参加する](04_advanced.md)
+- [SPMファイル実物](05_spm_files.md)
+  - [S: キャラクター設定](starter/01_settings/characters.md)
+  - [S: OS理論体系](starter/01_settings/os_theory.md)
+  - [S: ストーリーライン設計書](starter/01_settings/storyline.md)
+  - [S: 執筆・文体ガイドライン](starter/01_settings/style_guide.md)
+  - [S: アプリ設計書](starter/01_settings/app_design.md)
+  - [P: 全体構成概観](starter/02_plots/cross_part_overview.md)
+  - [P: 第1部サマリー（ネタバレ）](starter/02_plots/scene_summaries_part1.md)
+  - [P: 第2部サマリー（ネタバレ）](starter/02_plots/scene_summaries_part2.md)
+  - [P: 第3部サマリー（ネタバレ）](starter/02_plots/scene_summaries_part3.md)
