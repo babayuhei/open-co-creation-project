@@ -1,0 +1,12 @@
+[book]
+title = "失敗者の告白 — AI小説オープン共創プロジェクト"
+authors = ["馬場祐平"]
+language = "ja"
+src = "src"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+site-url = "/open-co-creation-project/"
+additional-css = ["src/custom.css"]
+additional-js = ["src/custom.js"]

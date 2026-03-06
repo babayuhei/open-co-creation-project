@@ -1,0 +1,749 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>S: 執筆・文体ガイドライン - 失敗者の告白 — AI小説オープン共創プロジェクト</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../src/custom-7811cac5.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../../searchindex-97d0ccb6.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc-272851a5.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">失敗者の告白 — AI小説オープン共創プロジェクト</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <blockquote>
+<p><strong>ライセンス:</strong> このファイルは <a href="https://github.com/babayuhei/confession-of-a-loser/blob/main/LICENSE-MIT">MIT License</a> で公開されています。</p>
+</blockquote>
+<hr>
+<h1 id="執筆文体ガイドライン"><a class="header" href="#執筆文体ガイドライン">執筆・文体ガイドライン</a></h1>
+<p>AIによる小説生成において、「あらすじ化」を防ぎ、読者を惹きつける「物語」を出力するためのガイドラインです。</p>
+<hr>
+<h2 id="1-執筆の基本姿勢-show-dont-tell"><a class="header" href="#1-執筆の基本姿勢-show-dont-tell">1. 執筆の基本姿勢 (Show, Don’t Tell)</a></h2>
+<ul>
+<li><strong>NG (あらすじ/説明):</strong> 「佐伯は焦りを感じた。」「会議は紛糾した。」</li>
+<li><strong>OK (描写):</strong> 「佐伯の手のひらに脂汗が滲んだ。心臓の音が耳元でドラムのように鳴り響く。」「『ふざけるな！』怒号と共に、大村が机を叩いた。コーヒーカップが跳ね、茶色い飛沫が資料を汚す。」</li>
+<li><strong>指示:</strong> 感情語（悲しい、嬉しい、焦る）を極力使わず、身体反応、情景、会話、行動を通じて状況を描写すること。</li>
+</ul>
+<h2 id="2-フォーマットとリズム"><a class="header" href="#2-フォーマットとリズム">2. フォーマットとリズム</a></h2>
+<ul>
+<li><strong>ターゲット:</strong> ビジネスパーソン / 普段小説を読み慣れていない層。</li>
+<li><strong>構成:</strong>
+<ul>
+<li>Web小説やライトノベルを意識した、読みやすい改行リズム。</li>
+<li>1段落は長くても3〜4行程度とし、頻繁に改行を入れる。</li>
+<li>会話文を多用し、テンポよく物語を進める。</li>
+</ul>
+</li>
+<li><strong>文体:</strong>
+<ul>
+<li><strong>視点:</strong> 三人称一元視点（シーンごとに視点人物を固定する）。<strong>翼と結衣で文体が異なる（Section 2-C参照）</strong></li>
+<li>現代的でシャープな文体。比喩表現はビジネスシーンやIT用語など、世界観に合ったものを用いると効果的。</li>
+</ul>
+</li>
+<li><strong>テンポの最優先原則 :</strong>
+<ul>
+<li>ビジネス小説の読者は「学び」を求めて読んでいる。描写が丁寧すぎて動きが少ないと読み疲れる。</li>
+<li><strong>描写は必要最低限に。</strong> 五感描写は1シーンにつき冒頭の2-3文で十分。以降は会話と行動でテンポを作る。</li>
+<li><strong>1シーン内に詰め込みすぎない。</strong> 1シーン＝1つの出来事・1つの感情変化に集中する。</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-出力単位と密度"><a class="header" href="#3-出力単位と密度">3. 出力単位と密度</a></h2>
+<h3 id="-絶対ルール-1シーン1ファイル"><a class="header" href="#-絶対ルール-1シーン1ファイル">🚨 絶対ルール: 1シーン=1ファイル</a></h3>
+<blockquote>
+<p><strong>原稿出力は必ず「1シーン=1ファイル」で行う。1章を1回の出力でまとめて書くことを禁止する。</strong></p>
+<p>v14で「1章1ファイル」出力を行った結果、AIの1回出力制限（≒6,000字）が章全体の上限になり、
+v13比で▲30,000字（▲27%）の大幅減となった。これは構造的な問題であり、二度と繰り返さない。</p>
+</blockquote>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">項目</th><th style="text-align: left">ルール</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><strong>出力単位</strong></td><td style="text-align: left">1シーン = 1ファイル（例: <code>chapter_01/s01.md</code>, <code>chapter_01/s02.md</code>）</td></tr>
+<tr><td style="text-align: left"><strong>通常シーン</strong></td><td style="text-align: left">4,000〜8,000字</td></tr>
+<tr><td style="text-align: left"><strong>[L]シーン</strong></td><td style="text-align: left"><strong>最低5,500字、上限なし</strong>（内容が適正字数を決める。v15水準の7,000〜8,000字が必要ならその字数を与える）</td></tr>
+<tr><td style="text-align: left"><strong>統合</strong></td><td style="text-align: left">全シーン完成後に <code>chapter_XX/full.md</code> → <code>full_manuscript.md</code> に結合（後工程）</td></tr>
+<tr><td style="text-align: left"><strong>章合計目標</strong></td><td style="text-align: left">通常章 15,000〜20,000字 / 重要章 20,000〜30,000字</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="基本方針"><a class="header" href="#基本方針">基本方針</a></h3>
+<ul>
+<li><strong>シーンの長さに下限は設けない。</strong> テンポと内容の密度を優先する。</li>
+<li><strong>目安:</strong> 1シーンあたり 4,000〜8,000文字。
+<ul>
+<li>短い場面転換シーン: 2,000字でもよい</li>
+<li>佐伯との対話シーン [L]: <strong>最低5,500字、上限なし</strong>。成功者の告白の神崎対話シーン（9,000〜21,000字）と同等の密度を目指す。What/Why/Howを必ず含むこと。<code>app_design.md</code> の設計内容を参照して書くこと</li>
+</ul>
+</li>
+<li><strong>密度の確保:</strong>
+<ul>
+<li>プロットの各要素（目的・障害）を消化するために十分な分量を割くこと。駆け足で進めない。</li>
+<li>ただし「下限を満たすための水増し描写」は厳禁。</li>
+</ul>
+</li>
+</ul>
+<h3 id="シーン数ルール"><a class="header" href="#シーン数ルール">シーン数ルール</a></h3>
+<ul>
+<li><strong>1章あたりのシーン数に制限はない。</strong> 内容に応じて2〜6シーンを自由に設計する。</li>
+<li>各シーンはscenes.mdで定義された「変化」を1つ実現することに集中する。</li>
+</ul>
+<hr>
+<h2 id="2-a-禁止反復パターン固有感覚描写ルール"><a class="header" href="#2-a-禁止反復パターン固有感覚描写ルール">2-A. 禁止反復パターン・固有感覚描写ルール</a></h2>
+<p>v16では「蛍光灯の白い光」「胸が締め付けられる」等の同一描写が複数シーンで反復され、文章密度が低下した。v15水準の描写密度を回復するため、以下のルールを設ける。</p>
+<h3 id="禁止反復パターンリスト"><a class="header" href="#禁止反復パターンリスト">禁止反復パターンリスト</a></h3>
+<p>以下の表現は全編を通じて<strong>最大使用回数を制限</strong>する。同じ意味を伝える場合は別の表現を使うこと。</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">禁止パターン</th><th style="text-align: left">上限</th><th style="text-align: left">代替の方向性</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">「蛍光灯の白い光」</td><td style="text-align: left">全編1回</td><td style="text-align: left">空間の照明は固有の光源で描写（デスクライトの影、窓の光、スマホの明滅等）</td></tr>
+<tr><td style="text-align: left">「胸が締め付けられる」</td><td style="text-align: left">全編2回</td><td style="text-align: left">胸を使うなら「胸の奥が熱い」「胸骨の裏側が痛い」等の変奏</td></tr>
+<tr><td style="text-align: left">「息が詰まる」</td><td style="text-align: left">全編3回</td><td style="text-align: left">呼吸系：「息を吹き出せない」「喜管がつかえる」「浅い息が続く」</td></tr>
+<tr><td style="text-align: left">「拳を握りしめる」</td><td style="text-align: left">全編3回</td><td style="text-align: left">手系：「爪が掌に食い込む」「指先が白くなる」「テーブルの下で指を揃む」</td></tr>
+<tr><td style="text-align: left">「背筋が凍る」</td><td style="text-align: left">全編2回</td><td style="text-align: left">寒気系：「首筋が引きつる」「肌が粟立つ」「脇腹に冷たい汗」</td></tr>
+<tr><td style="text-align: left">「琩琥色の液体」（コーヒー）</td><td style="text-align: left">全編2回</td><td style="text-align: left">カフェの描写は五感のどれかで固有化（蛙の苦さ、泡の音、カップの重さ等）</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="固有感覚描写ルール"><a class="header" href="#固有感覚描写ルール">固有感覚描写ルール</a></h3>
+<ol>
+<li><strong>各シーンに固有の感覚描写を最低1つ設計する。</strong> scenes.mdの各シーンに「描写ガイド」欄を設け、そのシーンでしか使わない五感描写を指定する</li>
+<li><strong>場面末尾は象徴的イメージで閉じる。</strong> シーンのラスト1〜2文は、そのシーンの感情を凝縮した象徴描写で終わる</li>
+<li><strong>同じ感情を表す身体反応は、2シーン連続で使えない。</strong> 翼が2シーン続けて「拳を握りしめる」のは禁止</li>
+</ol>
+<hr>
+<h2 id="2-b-キャラクター発話パターン辞書"><a class="header" href="#2-b-キャラクター発話パターン辞書">2-B. キャラクター発話パターン辞書</a></h2>
+<p>各キャラクターの発話に固有の「声」を与えるためのリファレンス。これは原稿執筆時の<strong>入力</strong>として参照する。</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">キャラ</th><th style="text-align: left">口調の特徴</th><th style="text-align: left">使う言葉</th><th style="text-align: left">使わない言葉</th><th style="text-align: left">例文</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><strong>翼</strong></td><td style="text-align: left">短文・断定的・反射的</td><td style="text-align: left">「だろ」「じゃないですか」</td><td style="text-align: left">丁寧すぎる敬語、「かもしれません」。<strong>佐伯への発話で「っす」不使用</strong>（「どうっすか」→「どうですか」、「ないっす」→「ないです」等）</td><td style="text-align: left">「それ、やります。明日から」</td></tr>
+<tr><td style="text-align: left"><strong>佐伯</strong></td><td style="text-align: left">穏やか・問いかけ型・比喩が多い。<strong>コーチングモード/人間モードの使い分けあり（下記参照）</strong></td><td style="text-align: left">「さ」「だよね」「どう思う？」「〜してみよう」</td><td style="text-align: left">「お前」（全編不使用）、「くん」付け（全編不使用）。コーチングモードでは命令形不使用</td><td style="text-align: left">「ちょっと聞きたいんだけどさ、それって——誰のためにやってるの？」</td></tr>
+<tr><td style="text-align: left"><strong>結衣</strong></td><td style="text-align: left">丁寧・配慮型・言いよどみが多い</td><td style="text-align: left">「ですよね」「すみません」「ただ」</td><td style="text-align: left">断定口調、「それは違う」</td><td style="text-align: left">「それ、私がやっておきます……ただ、少しだけ教えてもらえますか」</td></tr>
+<tr><td style="text-align: left"><strong>涼太</strong></td><td style="text-align: left">論理的・反論型・厚紳士的敬語</td><td style="text-align: left">「ですが」「論理的には」「データ上は」</td><td style="text-align: left">感情的な言葉、「とにかく」</td><td style="text-align: left">「その判断の根拠をお聞かせいただけますか」</td></tr>
+<tr><td style="text-align: left"><strong>沙織</strong></td><td style="text-align: left">控えめ・同意型・言葉が少ない</td><td style="text-align: left">「はい」「わかりました」</td><td style="text-align: left">自分からの提案、長文</td><td style="text-align: left">「」（沈黙、小さくうなずく）</td></tr>
+<tr><td style="text-align: left"><strong>蓮</strong></td><td style="text-align: left">穏やか→支配的・裏表がある</td><td style="text-align: left">「そうだよね」「俺のこと」</td><td style="text-align: left">—</td><td style="text-align: left">「結衣がそれでいいなら、いいんじゃない？ ……でも、それって本当に結衣のため？」</td></tr>
+<tr><td style="text-align: left"><strong>高城</strong></td><td style="text-align: left">簡潔・成果志向・温かさが少し</td><td style="text-align: left">「結果を出せ」「お前には期待してる」</td><td style="text-align: left">感情的な励まし</td><td style="text-align: left">「このプロジェクト、任せる。やれるか？」</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>運用ルール:</strong></p>
+<ul>
+<li>上記は「基本設定」。感情が高まるシーンでは意図的に崩す（翼が丁寧になる、涼太が感情をぶつける等）</li>
+<li>ただし穋りぎな口調は疲れるので、口調の変化は<strong>重要場面に絞る</strong></li>
+<li>佐伯の口調は全編通じて最も安定。人間モードへの切替は限定的場面のみ（下記参照）</li>
+</ul>
+<h3 id="佐伯の口調設計"><a class="header" href="#佐伯の口調設計">佐伯の口調設計</a></h3>
+<p><strong>一人称:</strong></p>
+<ul>
+<li><strong>原則「僕」</strong>。翼との通常対話・コーチングモードでは常に「僕」</li>
+<li><strong>「俺」許容: 佐伯が自身の過去の失敗・痛みを語る感情的シーンのみ</strong>（Ch.7後半、Ch.11告白等）</li>
+<li>「私」は使用しない（報告書等の文書内を除く）</li>
+</ul>
+<p><strong>小道具:</strong></p>
+<ul>
+<li>キャップ付きボールペン（ブルーブラックインク）。<strong>万年筆はNG</strong>。</li>
+<li>原稿内では「ペン」と表記。「ペン先」「ペンのキャップ」等。</li>
+</ul>
+<p><strong>呼び方（2ステップ）:</strong></p>
+<ul>
+<li>Ch.1-2: 「高橋さん」（初対面〜信頼構築初期）</li>
+<li>Ch.3以降: 「翼」（翼からの提案で切替。Ch.3冒頭付近で自然なトリガーを配置）</li>
+<li><strong>「お前」全編不使用。「くん」付け全編不使用</strong></li>
+</ul>
+<p><strong>口調モード:</strong></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">モード</th><th style="text-align: left">適用範囲</th><th style="text-align: left">命令形</th><th style="text-align: left">特徴</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><strong>コーチングモード</strong></td><td style="text-align: left">全編（佐伯がコーチとして機能している場面すべて）</td><td style="text-align: left">不使用→誘い/問いかけに変換</td><td style="text-align: left">穏やか・対等な誘い。Ch.3-4はさらに柔らかめ</td></tr>
+<tr><td style="text-align: left"><strong>人間モード</strong></td><td style="text-align: left">限定的（佐伯がコーチの枠を外れた感情的頂点のみ）</td><td style="text-align: left">許容</td><td style="text-align: left">率直な断定・命令形。Ch.11 s02訪問、Ch.11 s04告白等</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>コーチングモードの変換パターン:</strong></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">原文パターン</th><th style="text-align: left">変換後</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">「〜してみろ」</td><td style="text-align: left">「〜してみよう」</td></tr>
+<tr><td style="text-align: left">「〜しろ / 書け / 出せ」</td><td style="text-align: left">「〜してみて / 〜してみよう」</td></tr>
+<tr><td style="text-align: left">「〜するな」</td><td style="text-align: left">「〜してないか？」</td></tr>
+<tr><td style="text-align: left">「〜だろ（詰め）」</td><td style="text-align: left">「〜だろう / 〜じゃないかな」</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>人間モードの例（維持）:</strong> 「嘘をつくな」「飲め」「言ってないだろ」— これらは物語の感情的頂点を担うためそのまま残す</p>
+<h3 id="翼の佐伯への口調"><a class="header" href="#翼の佐伯への口調">翼の佐伯への口調</a></h3>
+<ul>
+<li>佐伯への発話（対面・LINE問わず）で**「っす」不使用**</li>
+<li>基本は丁寧語（「です/ます」基調）。関係深化に応じた自然な崩れはOK</li>
+<li>他キャラ（涼太等）への発話では「っす」使用可</li>
+</ul>
+<hr>
+<h2 id="2-c-翼結衣の視点文体設計"><a class="header" href="#2-c-翼結衣の視点文体設計">2-C. 翼・結衣の視点文体設計</a></h2>
+<blockquote>
+<p><strong>背景:</strong> v15 Part 1では、結衣パートが「三人称の形式を取りながら一人称独白を多用する」文体で書かれており、翼の三人称限定視点と自然に対比が生まれていた。v17ではこの方向性を設計として明示し、再現性を確保する。</p>
+</blockquote>
+<h3 id="基本方針-1"><a class="header" href="#基本方針-1">基本方針</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left"></th><th style="text-align: left">翼のシーン</th><th style="text-align: left">結衣のシーン</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><strong>基調</strong></td><td style="text-align: left">三人称限定視点</td><td style="text-align: left">三人称＋一人称独白を多用</td></tr>
+<tr><td style="text-align: left"><strong>一人称侵入</strong></td><td style="text-align: left">感情クライマックスのみ（1シーンに0〜1箇所）</td><td style="text-align: left">常時。ダッシュ付き独白が結衣パートの基本文体</td></tr>
+<tr><td style="text-align: left"><strong>独白の調子</strong></td><td style="text-align: left">断定的・反発的</td><td style="text-align: left">自問的・自己否定的</td></tr>
+<tr><td style="text-align: left"><strong>独白の例</strong></td><td style="text-align: left">「——あの人に何が分かるんだよ」「——毎回、相手が悪いということか」</td><td style="text-align: left">「——私が甘えてるだけ」「——私、何のためにこんなに頑張ってるんだろう」</td></tr>
+<tr><td style="text-align: left"><strong>思考の構造</strong></td><td style="text-align: left">問いを閉じる（怖いから）</td><td style="text-align: left">問いが浮かぶ→蓮/義務で自動打ち消し→スケジュールで上書き</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="os理論との対応"><a class="header" href="#os理論との対応">OS理論との対応</a></h3>
+<ul>
+<li><strong>翼の三人称:</strong> 自分のOSを客観視できていないことを、三人称の「外側から見ている」形式が皮肉として描く</li>
+<li><strong>結衣の一人称寄り:</strong> 世界が全部主観で構成されている（他者の評価＝自分の存在価値）感覚を、一人称独白の多さで体感させる</li>
+</ul>
+<h3 id="part進行に伴う変化クロスオーバー"><a class="header" href="#part進行に伴う変化クロスオーバー">Part進行に伴う変化（クロスオーバー）</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">Part</th><th style="text-align: left">翼</th><th style="text-align: left">結衣</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">Part 1</td><td style="text-align: left">三人称基調。独白は少ない</td><td style="text-align: left">一人称独白が頻繁。内面の声が地の文に侵入する</td></tr>
+<tr><td style="text-align: left">Part 2 中盤</td><td style="text-align: left">クライマックス（八つ当たり等）で一人称侵入が増加</td><td style="text-align: left">自覚が進むにつれ一人称侵入が徐々に減少</td></tr>
+<tr><td style="text-align: left">Part 3</td><td style="text-align: left">再び三人称に安定（OSの書き換えが進んだ）</td><td style="text-align: left">三人称が増え、独白は内省的・穏やかになる</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>クロスオーバーの意義:</strong> Part 2中盤の交差点（翼の一人称増加 ⁄ 結衣の一人称減少）が、二人のOS変容の対称性を読者に体感させる。</p>
+<hr>
+<h2 id="4-シーケンス設計原則"><a class="header" href="#4-シーケンス設計原則">4. シーケンス設計原則</a></h2>
+<h3 id="基本シーケンス-危機渇望対話実践次の危機"><a class="header" href="#基本シーケンス-危機渇望対話実践次の危機">基本シーケンス: 危機→渇望→対話→実践→次の危機</a></h3>
+<p>成功者の告白の構造分析から、ビジネス小説のメリハリは「シーンタイプの分類」ではなく<strong>シーケンス（流れ）の設計</strong>によって生まれることが判明した。以下の原則を各章の設計に適用する。</p>
+<h4 id="原則1-学びは渇望の後に来る"><a class="header" href="#原則1-学びは渇望の後に来る">原則1: 学びは渇望の後に来る</a></h4>
+<ul>
+<li>翼・結衣が壁にぶつかり、「答えが知りたい」「どうすればいいかわからない」と感じた<strong>後に</strong>、佐伯との対話（または翼から部下への「翻訳」）を配置する。</li>
+<li>先に学びを提示し、後から実践させるのは<strong>NG</strong>。「もがき→渇望→対話（学び）→不完全な実践」の順序を厳守する。</li>
+</ul>
+<h4 id="原則2-温度差でメリハリを作る"><a class="header" href="#原則2-温度差でメリハリを作る">原則2: 温度差でメリハリを作る</a></h4>
+<ul>
+<li>隣接するシーン間で<strong>感情温度の落差</strong>を設計する。</li>
+<li>高揚→絶望、日常→危機、緊張→弛緩 のコントラストが読者を引き込む。</li>
+<li>scenes.mdの各シーンに「感情温度 (-5〜+5)」を明記し、隣接シーンの温度差を確認する。</li>
+</ul>
+<h4 id="原則3-ドラマ65--学び30--メタ5"><a class="header" href="#原則3-ドラマ65--学び30--メタ5">原則3: ドラマ65% / 学び30% / メタ5%</a></h4>
+<ul>
+<li><strong>ドラマ (65%):</strong> 人間関係の衝突、仕事上の失敗、私生活の崩壊 — 物語を駆動するイベントと感情</li>
+<li><strong>学び (30%):</strong> 佐伯との対話、フレームワークの提示、気づきの言語化 — ビジネス書としての価値</li>
+<li><strong>メタ (5%):</strong> まえがき・エピローグでの著者の語り — 物語と読者をつなぐ架け橋</li>
+<li>この比率は全体の目安であり、各章の性質によって変動する。第1部序盤はドラマ多め、佐伯対話回は学び多め、でよい。</li>
+</ul>
+<h4 id="原則4-対話シーンを厚く描く"><a class="header" href="#原則4-対話シーンを厚く描く">原則4: 対話シーンを厚く描く</a></h4>
+<ul>
+<li>佐伯との対話シーン [L] は、各章で最も重要なシーン。十分な文字数を割く。</li>
+<li>成功者の告白における神崎との対話は毎回10-15ページ（文庫）＝約4,000-6,000字。</li>
+<li><strong>厚く描く ≠ 冗長に描く。</strong> 対話の密度が高いことが重要。</li>
+</ul>
+<h3 id="lマーキングルール"><a class="header" href="#lマーキングルール">[L]マーキングルール</a></h3>
+<p><strong>学びの核心を含むシーン</strong>に <code>[L]</code> マークを付ける。これにより、ドラマシーンと学びシーンの配分が可視化される。</p>
+<h4 id="定義"><a class="header" href="#定義">定義</a></h4>
+<ul>
+<li><code>[L]</code> = <strong>Learning Scene</strong> — そのシーンの主目的が「読者に学び（フレームワーク、気づき、理論）を伝えること」であるシーン</li>
+<li>具体的には: 佐伯との対話、フレームワークの解説、翼・結衣の言語化の瞬間</li>
+</ul>
+<h4 id="ルール"><a class="header" href="#ルール">ルール</a></h4>
+<ol>
+<li>scenes.mdのシーン見出しに <code>[L]</code> を付記する（例: <code>### Scene 3 [L]: 佐伯との初回セッション</code>）</li>
+<li>plot.mdでも学びシーンを明示する</li>
+<li>1章あたり [L] シーンは原則1-2個。多すぎると「座学」になる</li>
+<li>[L] シーンの<strong>前に</strong>必ず「もがき」「渇望」の描写があること</li>
+</ol>
+<h3 id="学習コンテンツ理解度ガイドライン"><a class="header" href="#学習コンテンツ理解度ガイドライン">学習コンテンツ理解度ガイドライン</a></h3>
+<blockquote>
+<p><strong>背景:</strong> 本作の学習コンテンツには「PDCAの回し方（How）」のような実践レベルのものから「なぜPDCAが機能するのか（Why深掘り）」のような抽象度の高いものまで幅がある。難テーマを提示する際に翼が即座に理解してしまうと、読者が置いていかれる。逆に、すでに読者が理解した概念で翼がいつまでも迷っていると退屈する。<strong>翼の理解速度を制御するルール</strong>を定める。</p>
+</blockquote>
+<h4 id="理解度レベル定義"><a class="header" href="#理解度レベル定義">理解度レベル定義</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">レベル</th><th style="text-align: left">名称</th><th style="text-align: left">翼の状態</th><th style="text-align: left">描写の指針</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><strong>L1</strong></td><td style="text-align: left">体験的理解</td><td style="text-align: left">やり方を知って「試せる」状態。理由は分かっていない</td><td style="text-align: left">「こうやればいいんですね」→ すぐ行動に移す。Howは掴むがWhy/Whatは表面的</td></tr>
+<tr><td style="text-align: left"><strong>L2</strong></td><td style="text-align: left">構造的理解</td><td style="text-align: left">なぜそれが機能するか（Why）の構造を言語化できる状態</td><td style="text-align: left">佐伯の問いかけに対して自分の言葉で説明を試みる。まだ不完全だが核心に近い</td></tr>
+<tr><td style="text-align: left"><strong>L3</strong></td><td style="text-align: left">応用的理解</td><td style="text-align: left">別の状況にフレームワークを転用できる状態</td><td style="text-align: left">第2部で部下に教える場面。佐伯の言葉をそのまま使うのではなく「翻訳」して相手に合わせられる</td></tr>
+<tr><td style="text-align: left"><strong>L4</strong></td><td style="text-align: left">統合的理解</td><td style="text-align: left">複数のフレームワークが自分の中で繋がり、体系として機能する状態</td><td style="text-align: left">第3部でPDCA/GROW/Growth Mindsetの限界を感じ、それらを超える枠組みを自ら掴む</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="パート別の到達目安"><a class="header" href="#パート別の到達目安">パート別の到達目安</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">パート</th><th style="text-align: left">主要FW</th><th style="text-align: left">[L]シーン終了時の到達レベル</th><th style="text-align: left">数シーン後の到達レベル</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><strong>第1部</strong></td><td style="text-align: left">PDCA</td><td style="text-align: left">L1（体験的理解）→ 実践→失敗→修正</td><td style="text-align: left">L2（Why深掘りで構造的理解に到達）</td></tr>
+<tr><td style="text-align: left"><strong>第1部</strong></td><td style="text-align: left">自分のOS</td><td style="text-align: left">L1（自分の行動パターンに名前がつく程度）</td><td style="text-align: left">L2（佐伯の問いかけで「なぜ自分はこう動くのか」に気づく）</td></tr>
+<tr><td style="text-align: left"><strong>第2部</strong></td><td style="text-align: left">PDCA（継続）</td><td style="text-align: left">—</td><td style="text-align: left">L3（部下を育てる過程で、自分の言葉でPDCAを教える。「翻訳」を通じて応用的理解に到達）</td></tr>
+<tr><td style="text-align: left"><strong>第2部</strong></td><td style="text-align: left">GROW</td><td style="text-align: left">L1→L2（佐伯との対話で構造的に理解）</td><td style="text-align: left">L3（部下に対して自分の言葉で運用）</td></tr>
+<tr><td style="text-align: left"><strong>第2部</strong></td><td style="text-align: left">Growth Mindset</td><td style="text-align: left">L1→L2</td><td style="text-align: left">L3（マネジメント場面での応用）</td></tr>
+<tr><td style="text-align: left"><strong>第3部</strong></td><td style="text-align: left">エフェクチュエーション</td><td style="text-align: left">L1（体験的に「こうするしかなかった」）</td><td style="text-align: left">L2（佐伯の言語化支援で構造的理解に到達。実践レベル（L3）は本作内では到達しない）</td></tr>
+<tr><td style="text-align: left"><strong>第3部</strong></td><td style="text-align: left">PDCA（統合）</td><td style="text-align: left">—</td><td style="text-align: left">L4（PDCAの本質的限界（Causal思考）に直面し、エフェクチュエーションと統合することで、PDCAが自分の体系の一部として機能する状態）</td></tr>
+<tr><td style="text-align: left"><strong>第3部</strong></td><td style="text-align: left">成人発達理論</td><td style="text-align: left">—（翼に直接教えるFWではない）</td><td style="text-align: left">L2相当（翼の変容を佐伯が言語化することで、読者は構造的に理解する。翼自身の実践的応用は本作の先にある）</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><strong>第3部FWの到達レベルについて:</strong>
+PDCAは3部をかけてL1→L4に到達するが、第3部で新たに登場するエフェクチュエーションと成人発達理論は<strong>L1→L2が現実的な到達レベル</strong>。1つの部だけでL3（応用的理解）に至るには実践と失敗のサイクルを描く尺が足りない。この「まだ道半ば」感が物語のリアリティと余韻を担保する。翼はすべてを悟った完成形ではなく、<strong>成長の途上にある人間</strong>として物語を終える。</p>
+</blockquote>
+<h4 id="描写ルール"><a class="header" href="#描写ルール">描写ルール</a></h4>
+<p><strong>ルール1: [L]シーンで一発理解させない</strong></p>
+<ul>
+<li>佐伯がWhat/Why/Howを厚く教えた直後の翼の状態は<strong>L1（体験的理解）が基本</strong></li>
+<li>翼は行動型なので「やり方」を掴むのは速い。しかし「なぜ」の深い理解には時間がかかる</li>
+<li>特にWhy深掘り（「PDCAの本質は仮説精度の向上である」等）は、翼がL1→L2に到達するまで<strong>複数シーンを要する</strong></li>
+</ul>
+<p><strong>ルール2: 「分かったつもり→実践で崩れる」サイクルを描く</strong></p>
+<ul>
+<li>翼が「なるほど、分かりました」と言った後、実践場面で微妙にズレた適用をする</li>
+<li>このズレこそが読者にとっての学習機会。「ああ、そこじゃないんだ」と読者が気づく</li>
+<li>佐伯は次の対話でそのズレに触れる：「前回やってみてどうだった？」→翼が自分のズレに気づく</li>
+</ul>
+<p><strong>ルール3: 第2部の「翻訳」で理解が深まる</strong></p>
+<ul>
+<li>翼がL2（構造的理解）からL3（応用的理解）に到達する契機は、<strong>部下に教えようとする場面</strong></li>
+<li>人に教えることで自分の理解の穴が見える構造を描く</li>
+<li>翼が部下に説明しようとして言葉に詰まる → 自分の理解が不十分だったと気づく → 佐伯に壁打ち → 再度部下に伝える</li>
+</ul>
+<p><strong>ルール4: Whyの難易度を段階設計する</strong></p>
+<ul>
+<li>同じFW内でもWhyの深さに段階がある。例：PDCA</li>
+</ul>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">段階</th><th style="text-align: left">Whyの深さ</th><th style="text-align: left">翼の理解タイミング</th><th style="text-align: left">提示方法</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">表層Why</td><td style="text-align: left">「仮説がないと闇雲な行動になるから」</td><td style="text-align: left">[L]シーン内で即理解（L1）</td><td style="text-align: left">佐伯の問いかけ→翼が自分で気づく</td></tr>
+<tr><td style="text-align: left">中層Why</td><td style="text-align: left">「PDCAの本質は仮説精度の向上。精度が上がれば再現性が生まれる」</td><td style="text-align: left">数シーン後の実践→失敗→振り返り</td><td style="text-align: left">翼が失敗を佐伯に報告する中で言語化される</td></tr>
+<tr><td style="text-align: left">深層Why</td><td style="text-align: left">「PDCAはCausal（因果論的）思考そのもの。不確実性の高い世界では機能しない」</td><td style="text-align: left">第3部で初めて直面する</td><td style="text-align: left">起業の失敗体験を通じて体感。佐伯がエフェクチュエーションの文脈で回収</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>ルール5: 読者の理解ペースと翼の理解を同期させる</strong></p>
+<ul>
+<li>理想は「翼より少し先に読者が気づく」状態。読者が「あ、翼まだ分かってないな」と感じる瞬間がある</li>
+<li>しかし読者を置き去りにしない。佐伯の解説（ティーチングモード）で読者にはL2の材料を提供しつつ、翼はまだL1にとどまる、という構造が基本</li>
+<li>読者が翼と一緒にL2に到達してしまう場合は、それでもよい。重要なのはL1で止まらないこと</li>
+</ul>
+<hr>
+<h2 id="5-各シーンのチェックポイント"><a class="header" href="#5-各シーンのチェックポイント">5. 各シーンのチェックポイント</a></h2>
+<p>生成時に以下の要素が含まれているか確認する。</p>
+<ul>
+<li><strong>Context:</strong> 誰が、どこで、何をしているか明確か？</li>
+<li><strong>Goal:</strong> 主人公（視点人物）の「このシーンでの目的」は明確か？</li>
+<li><strong>Conflict:</strong> 期待通りにいかない「障害」や「葛藤」が描かれているか？</li>
+<li><strong>Reaction:</strong> 障害に対するキャラクターのリアクション（思考・感情・身体反応）があるか？</li>
+</ul>
+<h3 id="完了時チェックフロー各シーン"><a class="header" href="#完了時チェックフロー各シーン">完了時チェックフロー（各シーン）</a></h3>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>Show, Don’t Tell:</strong> 感情語の直接使用を避け、身体反応・行動・情景で描写しているか？</li>
+<li><input disabled="" type="checkbox"> <strong>テンポ:</strong> 冗長な描写がないか？ 読み疲れないか？</li>
+<li><input disabled="" type="checkbox"> <strong>コーチング対話テンプレート（[L]シーン）:</strong> 佐伯が応援型コーチとして振る舞っているか？ 詰めていないか？</li>
+<li><input disabled="" type="checkbox"> <strong>シーソー構造:</strong> 仕事面と私生活面の「干渉」（因果関係）が描写されているか？</li>
+<li><input disabled="" type="checkbox"> <strong>シーケンス:</strong> もがき→渇望→対話（学び）→実践 の順序が守られているか？</li>
+<li><input disabled="" type="checkbox"> <strong>メタ表現の排除:</strong> 「Ch.3」等のメタ視点の用語が原稿内に混入していないか？</li>
+</ul>
+<hr>
+<h2 id="6-ワークフローと参照ファイル-global-workflow"><a class="header" href="#6-ワークフローと参照ファイル-global-workflow">6. ワークフローと参照ファイル (Global Workflow)</a></h2>
+<p>品質と整合性を担保するため、以下のパイプラインで工程を完了させること。
+詳細は <code>00_v17_plan.md</code> を参照。</p>
+<h3 id="設定ファイル体系-01_settings"><a class="header" href="#設定ファイル体系-01_settings">設定ファイル体系 (<code>01_settings/</code>)</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">ファイル</th><th style="text-align: left">役割</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><code>characters.md</code></td><td style="text-align: left">人物設定</td></tr>
+<tr><td style="text-align: left"><code>os_theory.md</code></td><td style="text-align: left">OS理論</td></tr>
+<tr><td style="text-align: left"><code>storyline.md</code></td><td style="text-align: left">物語設計（テーマ・構成・ルール・前提条件）</td></tr>
+<tr><td style="text-align: left"><code>style_guide.md</code></td><td style="text-align: left">文体ガイド（本ファイル）</td></tr>
+<tr><td style="text-align: left"><code>app_design.md</code></td><td style="text-align: left">アプリ設計（フレームワークWhat/Why/How + 教え方原則）</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="生成パイプライン"><a class="header" href="#生成パイプライン">生成パイプライン</a></h3>
+<ol>
+<li><strong>壁打ち:</strong> <code>app_design.md</code> のフレームワークWhat/Why/Howを人間が確定</li>
+<li><strong>シナリオ生成:</strong> settings全体 → <code>02_story/scenario.md</code></li>
+<li><strong>プロット生成:</strong> scenario + settings → <code>02_story/plots/chapter_XX.md</code></li>
+<li><strong>シーン設計:</strong> plots + settings → <code>02_story/scenes/chapter_XX.md</code>（<code>[L]</code>マーキングを含む）</li>
+<li><strong>原稿執筆:</strong> scenes + settings → <code>03_manuscripts/chapter_XX/scene_XX_YY.md</code>（🚨 1シーン=1ファイル）</li>
+<li><strong>推敲・統合:</strong> 通読→伏線整合性→[L]シーンチェックリスト検証→シーケンスチェック→統合ファイル生成</li>
+</ol>
+<ul>
+<li><strong>ルール:</strong> 執筆時は必ずシーン詳細（ビートシート）を参照し、そこで定義された「変化（Value Change）」と「理論的意図（OS）」を忠実に再現すること。</li>
+</ul>
+<hr>
+<h2 id="7-コーチング対話テンプレート"><a class="header" href="#7-コーチング対話テンプレート">7. コーチング対話テンプレート</a></h2>
+<p>佐伯のコーチングシーンは物語の核心部分であり、「成功者の告白」における神崎の対話スタイルを準拠モデルとする。佐伯は<strong>応援者</strong>であり、翼を追い込む存在ではない。</p>
+<blockquote>
+<p><strong>v17 制約:</strong> 佐伯のコーチング対話の相手は<strong>翼のみ</strong>。結衣・涼太・沙織との直接1on1は行わない。第2部では翼が佐伯から学んだことを自分の言葉で部下に伝える「翻訳」構造。詳細は <code>app_design.md</code> Section 4 参照。</p>
+</blockquote>
+<h3 id="標準フロー6ステップ"><a class="header" href="#標準フロー6ステップ">標準フロー（6ステップ）</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">Step</th><th style="text-align: left">名称</th><th style="text-align: left">佐伯のアクション</th><th style="text-align: left">翼のリアクション</th><th style="text-align: left">描写のポイント</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><strong>1</strong></td><td style="text-align: left"><strong>受け止め</strong></td><td style="text-align: left">相手の状況を穏やかに聞く。「最近どう？」「何があった？」と、対等な立場で会話を始める</td><td style="text-align: left">構えながらも、佐伯の穏やかさに少し安堵する</td><td style="text-align: left">佐伯は相手のペースに合わせる。急かさない</td></tr>
+<tr><td style="text-align: left"><strong>2</strong></td><td style="text-align: left"><strong>問いかけ</strong></td><td style="text-align: left">相手が考えたことのない角度から質問する。「それって、誰のために？」「本当にそう思ってる？」</td><td style="text-align: left">表面的な回答（「特に考えてなかった」「普通にやっただけ」）</td><td style="text-align: left">穏やかだが核心を突く質問。佐伯の口調は終始柔らかい</td></tr>
+<tr><td style="text-align: left"><strong>3</strong></td><td style="text-align: left"><strong>寄り添い</strong></td><td style="text-align: left">相手の抵抗や防御を否定しない。「そう感じるのは自然だよ」「俺もそうだったから」と共感を示す</td><td style="text-align: left">防御が少し緩む。でもまだ本音は出ない</td><td style="text-align: left"><strong>佐伯が自分の経験を少しだけ開示することで、対等な関係を築く</strong></td></tr>
+<tr><td style="text-align: left"><strong>4</strong></td><td style="text-align: left"><strong>深掘り</strong></td><td style="text-align: left">相手が落ち着いた状態で核心に触れる。「じゃあ聞くけど、本当のところは？」</td><td style="text-align: left">動揺、沈黙、あるいは感情の噴出</td><td style="text-align: left"><strong>最も重要なステップ。身体反応を丁寧に描写すること。佐伯は追い込まない — 相手が自分で扉を開けるのを待つ</strong></td></tr>
+<tr><td style="text-align: left"><strong>5</strong></td><td style="text-align: left"><strong>沈黙</strong></td><td style="text-align: left">佐伯は黙って待つ。相手が自ら気づく時間を与える</td><td style="text-align: left">内省、過去の記憶のフラッシュバック、自問</td><td style="text-align: left"><strong>会話を止め、内面描写に切り替える。沈黙の「重さ」を描く</strong></td></tr>
+<tr><td style="text-align: left"><strong>6</strong></td><td style="text-align: left"><strong>解説</strong></td><td style="text-align: left">気づきを言語化し、フレームワークのWhat/Why/Howを対話の中でしっかり解説する。「ひとついい方法があってさ」「これを知ってると全く変わる」</td><td style="text-align: left">佐伯の解説で理解が深まる。具体的数字や図解で腹落ちする</td><td style="text-align: left"><strong>ヒントだけで終わらず、仕組み・理由・使い方まで教える。</strong> 図解・数字・実演を交えて、読者が翌日職場で試せるレベルに</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="佐伯の対話におけるngパターン"><a class="header" href="#佐伯の対話におけるngパターン">佐伯の対話におけるNGパターン</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">NG</th><th style="text-align: left">理由</th><th style="text-align: left">代替</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">「お前は何から逃げている？」（初対面で）</td><td style="text-align: left">攻撃的。応援者の立場ではない</td><td style="text-align: left">「何が一番気になってる？」等の柔らかい切り口から</td></tr>
+<tr><td style="text-align: left">「それでお前は満足なのか？」（詰め口調）</td><td style="text-align: left">詰めるのは佐伯の役割ではない</td><td style="text-align: left">「自分ではどう思う？」と問いかけ、相手に委ねる</td></tr>
+<tr><td style="text-align: left">佐伯が一方的に講義する</td><td style="text-align: left">対話なく一方通行は退屈する</td><td style="text-align: left">対話のラリー（問い→反論→解説→納得）で厚く教える。厚く書くこと自体はNGではない</td></tr>
+<tr><td style="text-align: left">「答えは自分で見つけろ」（突き放す）</td><td style="text-align: left">応援者は突き放さない</td><td style="text-align: left">「一緒に考えよう」「ヒントを出すから、そこから考えてみて」</td></tr>
+<tr><td style="text-align: left">佐伯が声を荒げる/怒る</td><td style="text-align: left">キャラクター矛盾</td><td style="text-align: left">佐伯が動揺するのは黒沢関連の話題が出た時のみ。それ以外は穏やか</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="対話テンプレートの運用ルール"><a class="header" href="#対話テンプレートの運用ルール">対話テンプレートの運用ルール</a></h3>
+<ol>
+<li><strong>佐伯は応援者</strong> — 相手の味方であることが常に伝わる態度。厳しいことを言う時も「あなたのことを思って」が透ける</li>
+<li><strong>佐伯も不完全</strong> — 特に翼の言葉が自分の過去（黒沢との決裂）に触れた場合、穏やかさの裏にある痛みが一瞬漏れる</li>
+<li><strong>毎回異なるテーマ</strong> — 同じフローでも、扱うテーマ（成果、他者、組織、自分自身）によって深掘りの方向は変わる</li>
+<li><strong>対話の「後」を描く</strong> — コーチング直後ではなく、数日後に翼が行動で示す（Show, Don’t Tell原則）。第2部では翼が部下に「翻訳」する場面がこれにあたる</li>
+<li><strong>対話シーンは厚く教える</strong> — [L]シーンではWhat/Why/Howを必ず含む。<strong>最低5,500字、上限なし</strong>。成功者の告白の神崎のように、対話のラリーの中で厚く解説する</li>
+<li><strong>黒沢の描写原則</strong> — 黒沢と明らかに思える人物に対しては「壊れた」ではなく「失った」で一貫させる。佐伯自身が壊れた（一般論含む）、部下が壊れた（黒沢以外の部下一般）はOK。佐伯と黒沢の関係は対等であり、「救う／壊れる」の上下関係ではない</li>
+</ol>
+<hr>
+<h2 id="8-crisis--learning-チェック項目"><a class="header" href="#8-crisis--learning-チェック項目">8. Crisis → Learning チェック項目</a></h2>
+<p>「成功者の告白」の分析から導かれた原則：<strong>ノウハウは「危機の渦中」で提示されてこそ、読者に刺さる</strong>。各章の執筆時に以下をチェックすること。</p>
+<h3 id="各章必須チェックリスト"><a class="header" href="#各章必須チェックリスト">各章必須チェックリスト</a></h3>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>危機は具体的か？</strong> — 抽象的な「壁」ではなく、特定の人物・場面・状況による具体的な痛みが描かれているか</li>
+<li><input disabled="" type="checkbox"> <strong>危機は主人公にとって「自分ごと」か？</strong> — 他人の問題ではなく、自分のOS（行動原理）が原因で起きた危機であると認識できるか</li>
+<li><input disabled="" type="checkbox"> <strong>ノウハウは「救命ロープ」として機能しているか？</strong> — 「知っておくと便利」レベルではなく「これがなければ溺れる」レベルの切迫感で提示されているか</li>
+<li><input disabled="" type="checkbox"> <strong>ノウハウ提示の前に、十分な「もがき」が描かれているか？</strong> — 読者が「答えを知りたい」と感じるだけの焦燥感を蓄積できているか</li>
+<li><input disabled="" type="checkbox"> <strong>ノウハウ提示後に「即座の解決」をしていないか？</strong> — 知識を得てもすぐには使いこなせない「不完全な実践」の過程が描かれているか</li>
+<li><input disabled="" type="checkbox"> <strong>知識の出典は自然か？</strong> — 佐伯がいきなり講義するのではなく、対話・実体験・失敗の振り返りの中で自然に浮かび上がるか</li>
+</ul>
+<h3 id="ngパターン避けるべき構成"><a class="header" href="#ngパターン避けるべき構成">NGパターン（避けるべき構成）</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">パターン</th><th style="text-align: left">問題</th><th style="text-align: left">対策</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">「座学型」</td><td style="text-align: left">佐伯がホワイトボードで一方的に講義する</td><td style="text-align: left">対話テンプレートに沿い、翼の具体的な失敗を素材に対話で引き出す</td></tr>
+<tr><td style="text-align: left">「万能薬型」</td><td style="text-align: left">ノウハウを知った途端に問題が解決する</td><td style="text-align: left">知識→実践→失敗→修正→成功のサイクルを描く</td></tr>
+<tr><td style="text-align: left">「観客型」</td><td style="text-align: left">翼・結衣が冷静に学んでいる</td><td style="text-align: left">感情的な抵抗→崩壊→再構築のプロセスを経る</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="9-シーソー構造チェック項目"><a class="header" href="#9-シーソー構造チェック項目">9. シーソー構造チェック項目</a></h2>
+<p>「成功者の告白」の設計原則：<strong>仕事の上昇と私生活の崩壊は表裏一体</strong>。各章のプロット・シーン設計時に以下をチェックすること。</p>
+<h3 id="各章必須チェックリスト-1"><a class="header" href="#各章必須チェックリスト-1">各章必須チェックリスト</a></h3>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>この章で仕事面は上昇しているか、下降しているか？</strong> — scenario.mdの「シーソー対比表」と一致しているか確認</li>
+<li><input disabled="" type="checkbox"> <strong>仕事面と逆方向の私生活イベントが描かれているか？</strong> — 仕事が上がっているなら私生活に亀裂が入る（またはその逆）</li>
+<li><input disabled="" type="checkbox"> <strong>シーソーの「支点」は何か？</strong> — 仕事と私生活を繋ぐ因果関係は明確か</li>
+<li><input disabled="" type="checkbox"> <strong>サブストーリーの進行がメインストーリーと干渉しているか？</strong> — 私生活の出来事が仕事のパフォーマンスに影響する、またはその逆</li>
+<li><input disabled="" type="checkbox"> <strong>読者が「両方を追いたい」と感じる構成か？</strong> — 仕事パートだけ、私生活パートだけで完結していないか</li>
+</ul>
+<h3 id="注意事項"><a class="header" href="#注意事項">注意事項</a></h3>
+<ul>
+<li><strong>毎章シーソーが作動する必要はない</strong> — 特に第3部終盤では仕事と私生活が同時に上昇する「統合」の状態になってよい</li>
+<li><strong>シーソーの「落差」が物語のエンジン</strong> — 落差が大きいほど読者の感情が動く</li>
+</ul>
+<h2 id="10-os理論の描写への反映-theory-integration"><a class="header" href="#10-os理論の描写への反映-theory-integration">10. OS理論の描写への反映 (Theory Integration)</a></h2>
+<p>キャラクターの行動や思考を描写する際は、<code>os_theory.md</code> および <code>characters.md</code> の定義に従うこと。</p>
+<ul>
+<li><strong>思考依存 (佐伯など):</strong> 行動の前に「予測」「リスク計算」「定義づけ」を行う描写を挟む。</li>
+<li><strong>行動依存 (翼など):</strong> 思考する前に「体が動く」「口が出る」描写、あるいは沈黙（思考）に耐えられない焦燥感を描く。</li>
+<li><strong>視点人物のフィルタ:</strong> シーンの視点人物（POV）のOSを通して世界を見ること。例えば「他者本位」の結衣視点では、常に「相手の顔色」や「場の空気」が描写の優先順位高くなる。</li>
+</ul>
+<h3 id="v16-拡張os型の描写タイミング"><a class="header" href="#v16-拡張os型の描写タイミング">v16 拡張：OS型の描写タイミング</a></h3>
+<blockquote>
+<p>v16ではOS型（行動型/思考型、自分本位/他者本位）を<strong>第1部前半から</strong>翼の行動様式と絡めて提示する。描写上のルールは以下の通り。</p>
+</blockquote>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">パート</th><th style="text-align: left">OS型の描写レベル</th><th style="text-align: left">読者が得るもの</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><strong>第1部前半</strong></td><td style="text-align: left">翼の行動パターンとして自然に描写。佐伯が「行動型」と名指しする場面あり</td><td style="text-align: left">「人の行動には型がある」というレンズの獲得</td></tr>
+<tr><td style="text-align: left"><strong>第1部後半</strong></td><td style="text-align: left">翼が自分のパターンを自覚し始める。佐伯が思考型との対比を示唆</td><td style="text-align: left">OS自己認識の重要性</td></tr>
+<tr><td style="text-align: left"><strong>第2部</strong></td><td style="text-align: left">4象限（行動型/思考型 × 自分本位/他者本位）が部下3人で揃う。翼が各メンバーのOSの違いに気づく</td><td style="text-align: left">他者のOSを読み取るマネジメントスキル</td></tr>
+<tr><td style="text-align: left"><strong>第3部</strong></td><td style="text-align: left">翼のOS自体が変容する（行動型の暴走→バランス）</td><td style="text-align: left">OSは固定ではなく更新可能であるという認識</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>描写上の注意:</strong></p>
+<ul>
+<li>第1部前半では「OS型」「行動型」等の用語を佐伯が自然に使い始める。ただし4象限の全体像はまだ提示しない</li>
+<li>第2部で部下のOSを描写する際、<strong>翼がすぐに「こいつは思考型だ」と類型化するのはNG</strong>。翼は自分の言葉で「なぜこいつの言動が理解できないか」を悩み、佐伯との対話の中で徐々にOSの違いに気づく（理解度ガイドラインのL1→L2プロセス）</li>
+<li>各キャラクターのOSは <code>characters.md</code> の定義に従い、行動・思考・対人反応を通じて一貫して描写する</li>
+</ul>
+<hr>
+<p><em>Created: 2026-02-17</em>
+<em>Updated: 2026-02-21</em>
+<em>Version: v17 (壁打ち確定)</em></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../starter/01_settings/storyline.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../../starter/01_settings/app_design.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../starter/01_settings/storyline.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../../starter/01_settings/app_design.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
+
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-abc7f01d.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../../src/custom-4d39a0b4.js"></script>
+
+
+
+    </div>
+    </body>
+</html>

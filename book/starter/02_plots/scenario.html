@@ -1,0 +1,2386 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>P: シナリオ - 失敗者の告白 — AI小説オープン共創プロジェクト</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../src/custom-7811cac5.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../../searchindex-97d0ccb6.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc-272851a5.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">失敗者の告白 — AI小説オープン共創プロジェクト</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="統合シナリオv18"><a class="header" href="#統合シナリオv18">統合シナリオ（v18）</a></h1>
+<blockquote>
+<p><strong>生成元:</strong></p>
+<ul>
+<li><code>v18/02_story/scenario_skeleton.md</code>（骨格・承認済み）</li>
+<li><code>v18/02_story/scenario_part1.md</code>（Part 1 シナリオ・承認済み）</li>
+<li><code>v18/02_story/scenario_part2.md</code>（Part 2 シナリオ・承認済み）</li>
+<li><code>v18/02_story/scenario_part3.md</code>（Part 3 シナリオ・承認済み）</li>
+<li><code>v18/01_settings/*.md</code>（5ファイル：検証用）</li>
+<li><code>v18/00_project_principles.md</code></li>
+</ul>
+<p><strong>結合日:</strong> 2026-02-22
+<strong>Session:</strong> Phase 2 Session 2-E（シナリオ結合・検証）
+<strong>検証結果:</strong> PASS</p>
+</blockquote>
+<hr>
+<h2 id="1-全体構造"><a class="header" href="#1-全体構造">1. 全体構造</a></h2>
+<h3 id="三層構造"><a class="header" href="#三層構造">三層構造</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">層</th><th style="text-align: left">要素</th><th style="text-align: left">語り手</th><th style="text-align: left">パイプライン経路</th><th style="text-align: left">文字数目標</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">外枠</td><td style="text-align: left"><strong>はじめに</strong></td><td style="text-align: left">著者＝馬場祐平</td><td style="text-align: left"><strong>例外</strong>（scenario → 直接原稿。plot/sceneバイパス）</td><td style="text-align: left">1,500〜2,500字</td></tr>
+<tr><td style="text-align: left">内枠</td><td style="text-align: left"><strong>プロローグ</strong></td><td style="text-align: left">三人称一元（佐伯視点）</td><td style="text-align: left">通常パイプライン</td><td style="text-align: left">2,000〜3,000字</td></tr>
+<tr><td style="text-align: left">内枠</td><td style="text-align: left"><strong>第1部「自分という壁」</strong>（Ch.1〜4）</td><td style="text-align: left">三人称一元（翼~70% / 結衣~30%）</td><td style="text-align: left">通常パイプライン</td><td style="text-align: left">50,000〜55,000字</td></tr>
+<tr><td style="text-align: left">内枠</td><td style="text-align: left"><strong>第2部「他者という壁」</strong>（Ch.5〜8）</td><td style="text-align: left">三人称一元（翼~55% / 結衣~45%）</td><td style="text-align: left">通常パイプライン</td><td style="text-align: left">55,000〜60,000字</td></tr>
+<tr><td style="text-align: left">内枠</td><td style="text-align: left"><strong>第3部「世界という壁と統合」</strong>（Ch.9〜12）</td><td style="text-align: left">三人称一元（翼 / 結衣、用途に応じて）</td><td style="text-align: left">通常パイプライン</td><td style="text-align: left">50,000〜60,000字</td></tr>
+<tr><td style="text-align: left">内枠</td><td style="text-align: left"><strong>エピローグ</strong></td><td style="text-align: left">三人称一元（佐伯視点）</td><td style="text-align: left">通常パイプライン</td><td style="text-align: left">1,500〜2,500字</td></tr>
+<tr><td style="text-align: left">外枠</td><td style="text-align: left"><strong>あとがき</strong></td><td style="text-align: left">著者＝馬場祐平</td><td style="text-align: left"><strong>例外</strong>（全原稿完成後に最後に生成。plot/sceneバイパス）</td><td style="text-align: left">2,000〜3,000字</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="各部のテーマ問いアプリ"><a class="header" href="#各部のテーマ問いアプリ">各部のテーマ・問い・アプリ</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">部</th><th style="text-align: left">テーマ</th><th style="text-align: left">核心の問い</th><th style="text-align: left">主要FW</th><th style="text-align: left">時間軸</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">第1部</td><td style="text-align: left">自分のパターンに気づき、変える痛みを引き受ける</td><td style="text-align: left">「なぜ同じ失敗を繰り返すのか？」</td><td style="text-align: left">PDCA（3階層含む）+ 自分のOS + OS型導入</td><td style="text-align: left">入社〜3ヶ月目（春〜夏）</td></tr>
+<tr><td style="text-align: left">第2部</td><td style="text-align: left">異なるOSを持つ他者を理解し、チームとして成果を出す</td><td style="text-align: left">「なぜ自分のやり方が通用しないのか？」</td><td style="text-align: left">GROWモデル + Growth Mindset + AI活用振り返り</td><td style="text-align: left">4ヶ月〜15ヶ月目（夏〜翌年夏）</td></tr>
+<tr><td style="text-align: left">第3部</td><td style="text-align: left">自分の限界と向き合い、仕事と人生を統合する</td><td style="text-align: left">「成功したはずなのに、なぜ全てを失ったのか？」</td><td style="text-align: left">エフェクチュエーション + 成人発達理論（Vulnerability含む）</td><td style="text-align: left">18ヶ月〜24ヶ月目（翌年秋〜翌々年春）</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><strong>タイムスキップ:</strong> 第2部→第3部の間に約3ヶ月（副業→退職→起業本格稼働）</p>
+</blockquote>
+<hr>
+<h2 id="2-章タイトル一覧"><a class="header" href="#2-章タイトル一覧">2. 章タイトル一覧</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">#</th><th style="text-align: left">部</th><th style="text-align: left">タイトル</th><th style="text-align: left">概要（Crisis / Learning の要点）</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">0</td><td style="text-align: left">—</td><td style="text-align: left"><strong>プロローグ</strong></td><td style="text-align: left">佐伯の書斎。原稿を書き終えた早朝。冷めたコーヒー。黒沢宛の手紙を引き出しに戻す。「もう一人」の影。翼の物語の冒頭へブリッジ（円環構造の起点）</td></tr>
+<tr><td style="text-align: left">1</td><td style="text-align: left">第1部</td><td style="text-align: left"><strong>転職者</strong></td><td style="text-align: left">翼がネクスト・キャリアに入社。行動量で初期成果。結衣との出会い（同チーム）。佐伯との初対面と反発。美咲との安定した日常。結衣視点：蓮とのハネムーン期。<strong>Crisis:</strong> 量はこなすが質が伴わない壁。<strong>Learning:</strong> PDCA（業務PDCA・仮説思考の導入）</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left">第1部</td><td style="text-align: left"><strong>ナプキンの仮説</strong></td><td style="text-align: left">PDCAを業務レベルで回し始める。結衣のポストイット＝「仮説」の発見。佐伯がOS型（行動型/思考型）を翼に提示。翼と結衣の営業比較（件数型 vs 打率型）がPDCA渇望を駆動。結衣視点：蓮のコントロール開始。<strong>Crisis:</strong> 同じ壁の反復→業務を超えた問題の予兆。<strong>Learning:</strong> PDCA仮説思考の深化 + OS型（行動型/思考型）導入</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left">第1部</td><td style="text-align: left"><strong>三つの階層</strong></td><td style="text-align: left">3階層モデル（業務→スキル→OS）の発見。翼のパターン認識が始まる。結衣視点：蓮の攻撃フェーズ初出。<strong>Crisis:</strong> 業務・スキルを超えた「OSの壁」の存在。<strong>Learning:</strong> PDCA 3階層モデル + 自分のOS（パターン認識の入口）</td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left">第1部</td><td style="text-align: left"><strong>生存戦略</strong></td><td style="text-align: left">翼のOSルーツ（父の沈黙、サッカーの挫折）に佐伯が触れ始める。WILL/CAN/MUST。OS受容の概論。マネージャー昇格の提案と翼の決断。結衣視点：蓮の放置+ケア回収。認知の非対称性が確立。<strong>Crisis:</strong> 「生存戦略」だったパターンと向き合う痛み。<strong>Learning:</strong> WILL/CAN/MUST + OS受容概論</td></tr>
+<tr><td style="text-align: left">5</td><td style="text-align: left">第2部</td><td style="text-align: left"><strong>四つの象限</strong></td><td style="text-align: left">マネージャー昇格。部下3人（結衣・涼太・沙織）のOS 4象限が揃う。翼の行動型メソッドが通用しない。結衣は管理外で成果、涼太は論理で反論、沙織は動けない。美咲と同棲開始。<strong>Crisis:</strong> 「自分のやり方で全員を動かせる」幻想が崩れる。<strong>Learning:</strong> GROWモデル基礎導入 + OS 4象限の提示</td></tr>
+<tr><td style="text-align: left">6</td><td style="text-align: left">第2部</td><td style="text-align: left"><strong>裏返しの鏡</strong></td><td style="text-align: left"><strong>ダブル絶望①。</strong> チームマネジメント崩壊（3人それぞれ問題噴出）+ 父に美咲を会わせて衝突→美咲との関係にひび。佐伯が「部下の問題＝お前自身の問題」を問う。結衣視点：蓮の支配悪化。<strong>Crisis:</strong> 仕事↓↓ + 私生活↓↓ の同時崩壊。<strong>Learning:</strong> GROW深化 + マネージャーの裏返し</td></tr>
+<tr><td style="text-align: left">7</td><td style="text-align: left">第2部</td><td style="text-align: left"><strong>変われるという信念</strong></td><td style="text-align: left">涼太の「正解依存」、沙織の「行動=迷惑」、結衣の「Will不在」——各メンバーのFixed Mindset に向き合う。AI活用3点セット（壁打ち・録音聞き返し・リアル行動PDCA）のガイダンス。<strong>Crisis:</strong> GROWを正しく使ってもFixed領域が障壁。<strong>Learning:</strong> Growth Mindset（育成ステップ1-4） + AI活用振り返り</td></tr>
+<tr><td style="text-align: left">8</td><td style="text-align: left">第2部</td><td style="text-align: left"><strong>予言</strong></td><td style="text-align: left">チーム成功。涼太が自律的に動き出し、翼と思考×行動のパートナーに。沙織の小さな一歩。翼のマネージャーとしての成熟。起業決断の予兆。佐伯の「何か隠していないか。どこかでつまずく予感がする」——<strong>失敗の予言</strong>。結衣のWill不在は未解決のまま。<strong>Crisis:</strong> 成功の中の不完全さ（父との未統合）。<strong>Learning:</strong> GROW統合</td></tr>
+<tr><td style="text-align: left">9</td><td style="text-align: left">第3部</td><td style="text-align: left"><strong>飛び立つ鳥</strong></td><td style="text-align: left">翼が起業（WINGS（仮））。涼太が共同創業者として同行。高城への恩義を裏切らない別業態。結衣は翼離脱後のマネージャーに昇格しWILLへの問い再開。初期は事業好調。結婚。<strong>Crisis:</strong> 勝ちパターン（PDCA+OS理論のAIスケール）への固執が始まる。<strong>Learning:</strong> なし（[L]シーンなし。体験的対比が進行）</td></tr>
+<tr><td style="text-align: left">10</td><td style="text-align: left">第3部</td><td style="text-align: left"><strong>崩壊</strong></td><td style="text-align: left"><strong>ダブル絶望②（物語最大の谷底）。</strong> 市場急変で事業計画の前提崩壊。全額投入で余力なし→WINGS崩壊。美咲が手紙を残し失踪。翼は全てを失い連絡を絶つ。結衣：蓮との関係を清算し自立。<strong>Crisis:</strong> 仕事↓↓↓ + 私生活↓↓↓。PDCAの本質的限界を体感。<strong>Learning:</strong> なし（エフェクチュエーション「許容可能な損失」の逆行を体験）</td></tr>
+<tr><td style="text-align: left">11</td><td style="text-align: left">第3部</td><td style="text-align: left"><strong>手中の鳥</strong></td><td style="text-align: left"><strong>クライマックス。</strong> 涼太が結衣・沙織に連絡→旧チーム3人が結束→「自分たちでは翼の核心に届かない」→佐伯にバトン。佐伯が翼のもとを訪問。翼が隠していた全て（父問題の核心）を告白＝<strong>「真の告白」</strong>。佐伯も黒沢との決裂全容を開示＝<strong>Vulnerability実践</strong>。高城→佐伯育成プログラムの構造が明かされる。<strong>Crisis→Resolution:</strong> 感情的統合。<strong>Learning:</strong> Vulnerability（例外設計：8ステップ不使用）</td></tr>
+<tr><td style="text-align: left">12</td><td style="text-align: left">第3部</td><td style="text-align: left"><strong>失敗者の告白</strong></td><td style="text-align: left"><strong>統合の章。</strong> 感情的統合→生存戦略の受容（「やむを得なかった」）→構造的理解（エフェクチュエーション・成人発達理論で失敗を客観視）→行動。父との和解の始まり（「ごめん。ありがとう」）。会社復帰（経営幹部として）。美咲との復縁。<strong>Learning:</strong> エフェクチュエーション + 成人発達理論（変形適用：振り返り形式）</td></tr>
+<tr><td style="text-align: left">E</td><td style="text-align: left">—</td><td style="text-align: left"><strong>エピローグ</strong></td><td style="text-align: left">佐伯の書斎。設立届。<strong>温かい</strong>コーヒー（プロローグとの対比）。翼のメッセージ「楽しんでください」。それぞれの日常——翼：後輩に教える側＋<strong>隣に美咲</strong>。結衣：社内在籍＋ヤングケアラー支援プロボノ（リーダー的推進）。涼太：自分のチーム。沙織：小さく笑い、自分の言葉で話す。佐伯が手紙を鞄に入れる。「外は、春だった」</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<hr>
+<h2 id="はじめに著者馬場祐平"><a class="header" href="#はじめに著者馬場祐平">はじめに（著者＝馬場祐平）</a></h2>
+<blockquote>
+<p>パイプライン例外。scenario → 直接原稿化（plot/sceneバイパス）。
+ここでは<strong>トーン・構成・文字数目安・主要メッセージ</strong>のみ定義する。原稿レベルの文章は書かない。</p>
+</blockquote>
+<h3 id="トーン"><a class="header" href="#トーン">トーン</a></h3>
+<ul>
+<li>正直で飾らない語り口。「成功者ぶらない」。痛みを経験した人間が、同じ痛みを抱える読者に対等な立場で語りかける</li>
+<li>成功者の告白プロローグの<strong>半分〜3分の2程度</strong>の長さ感</li>
+</ul>
+<h3 id="構成5ビート"><a class="header" href="#構成5ビート">構成（5ビート）</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">#</th><th style="text-align: left">ビート</th><th style="text-align: left">内容</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">1</td><td style="text-align: left"><strong>著者の痛み</strong></td><td style="text-align: left">「頑張れば成果が出る。それは正しかった。しかしそれだけでは足りなかった」。著者自身のビジネス経験——部下を潰しかけた、家庭が壊れかけた等の具体的エピソードを短く。成果は出していたが「何かが噛み合わない」感覚</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left"><strong>パターンの発見</strong></td><td style="text-align: left">多くのビジネスパーソンを見てきて気づいたパターン。頑張る人ほど同じ壁にぶつかる。業務の問題だと思っているが、実は自分自身の思考・行動の癖が原因。仕事がうまくいくほどプライベートが崩れるシーソー構造。読者を巻き込むクイズ的な問いかけを1つ配置</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left"><strong>なぜ物語か</strong></td><td style="text-align: left">パターンを知識として伝えても人は変われない。自分の壁にもがいた末に掴むしかない。だから物語にした。ノウハウは埋め込んである。物語として楽しみながら翌日職場に持って帰れる武器を得てほしい</td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left"><strong>この本の使い方</strong></td><td style="text-align: left">一度目は物語として。二度目は自分への応用を考えながら。各パートが読者のキャリアフェーズ（若手→マネージャー→起業/リーダー）に対応。あとがきで種明かし。簡潔に</td></tr>
+<tr><td style="text-align: left">5</td><td style="text-align: left"><strong>ブリッジ</strong></td><td style="text-align: left">「前置きはこのくらいにして、物語をはじめよう」——プロローグへ接続</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="文字数目安"><a class="header" href="#文字数目安">文字数目安</a></h3>
+<p>1,500〜2,500字</p>
+<h3 id="主要メッセージ"><a class="header" href="#主要メッセージ">主要メッセージ</a></h3>
+<ul>
+<li>成功と失敗には共通の法則がある</li>
+<li>頑張っているのに噛み合わない人に向けた本</li>
+<li>ビジネスはワクワクするもの。学習や変容に対してポジティブになってほしい</li>
+</ul>
+<hr>
+<h2 id="プロローグ原稿"><a class="header" href="#プロローグ原稿">プロローグ「原稿」</a></h2>
+<blockquote>
+<p><strong>視点:</strong> 三人称一元（佐伯視点）
+<strong>佐伯開示レベル:</strong> —（読者に佐伯の内面を深く描かない。行動と状況描写で示す）
+<strong>時間軸:</strong> 物語本編終了直後の早朝。エピローグと同じ朝（円環構造の起点）
+<strong>文字数目標:</strong> 2,000〜3,000字（1シーンに凝縮）</p>
+</blockquote>
+<h3 id="ビート構成4ビート"><a class="header" href="#ビート構成4ビート">ビート構成（4ビート）</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">#</th><th style="text-align: left">ビート</th><th style="text-align: left">展開</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">1</td><td style="text-align: left"><strong>書き終えた朝</strong></td><td style="text-align: left">佐伯の書斎。早朝。画面にはノートPCの原稿ファイル——最後の一行を書き終えたところ。傍らにはすっかり冷めたコーヒー。佐伯はしばらく画面を見つめたまま動かない。窓の外がうっすら明るくなり始めている。原稿のタイトルは「失敗者の告白」</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left"><strong>黒沢への手紙</strong></td><td style="text-align: left">佐伯がデスクの引き出しを開ける。折り畳まれた手紙——宛先は黒沢大輔。手に取り、封筒の角を指でなぞる。読み返しはしない（内容は読者に明かさない）。数秒の沈黙の後、手紙を引き出しに戻す。「まだ、だな」と小さく呟く。手紙の存在と佐伯の逡巡だけを読者に示す</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left"><strong>「もう一人」の影</strong></td><td style="text-align: left">佐伯の視線が原稿に戻る。スクロールバーを少し動かし、ある段落で止まる。そこには「彼女」の記述がある——翼とは別の、もう一人の主人公の影。佐伯の表情が一瞬だけ柔らかくなる。（結衣の存在を1文で匂わせる。名前は出さない）</td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left"><strong>翼の物語へのブリッジ</strong></td><td style="text-align: left">佐伯がスクロールバーを一番上まで戻す。原稿の第一行が画面に映る——「四月の営業フロアは、どこかプールサイドに似ている」（仮）。佐伯が読み始める。その地の文がそのまま第1部第1章の書き出しに接続する。フェードイン的な切り替え</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="フック設計"><a class="header" href="#フック設計">フック設計</a></h3>
+<ul>
+<li><strong>冒頭2行:</strong> 「何かが完成した」感覚を画面と冷めたコーヒーで示す</li>
+<li><strong>中盤:</strong> 未送の手紙の存在と「まだ」という1語で、佐伯に未完の物語があることを示唆</li>
+<li><strong>末尾:</strong> 翼の物語の第一行へ直接接続（読者はプロローグとエピローグが同じ朝であることを後で知る）</li>
+</ul>
+<h3 id="crisis--learning"><a class="header" href="#crisis--learning">Crisis / Learning</a></h3>
+<ul>
+<li>該当なし（プロローグはフックと円環構造の起点のみ）</li>
+</ul>
+<hr>
+<h2 id="第1部自分という壁"><a class="header" href="#第1部自分という壁">第1部「自分という壁」</a></h2>
+<blockquote>
+<p><strong>テーマ:</strong> 自分のパターンに気づき、変える痛みを引き受ける
+<strong>核心の問い:</strong> 「なぜ同じ失敗を繰り返すのか？」
+<strong>時間軸:</strong> 入社〜3ヶ月目（春〜夏）
+<strong>視点比率:</strong> 翼~70% / 結衣~30%
+<strong>[L]シーン合計:</strong> 5〜6</p>
+</blockquote>
+<hr>
+<h3 id="ch1転職者"><a class="header" href="#ch1転職者">Ch.1「転職者」</a></h3>
+<h4 id="章概要"><a class="header" href="#章概要">章概要</a></h4>
+<p>翼がネクスト・キャリアに転職入社。前職（中堅メーカー営業）での閉塞感を振り切り、人材紹介という「人の人生に関わる仕事」で自分を証明しようとする。圧倒的な行動量で初期成果を出すが、「量」は回せても「質」が伴わない壁に直面する。佐伯との初対面では翼が反発。結衣との出会いは翼にとって「成績の良い同僚」という認知に留まる。</p>
+<h4 id="登場人物"><a class="header" href="#登場人物">登場人物</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">キャラクター</th><th style="text-align: left">OS型</th><th style="text-align: left">この章での役割</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">高橋 翼</td><td style="text-align: left">自分本位×行動型（コーザル行動）</td><td style="text-align: left">主人公。転職初日〜行動量で初期成果</td></tr>
+<tr><td style="text-align: left">佐伯 零一</td><td style="text-align: left">自分本位×思考型（コーザル思考）</td><td style="text-align: left">コーチ。初対面。ミステリアスな存在</td></tr>
+<tr><td style="text-align: left">結衣</td><td style="text-align: left">他者本位×行動型（受動的行動）</td><td style="text-align: left">同チーム。打率型の営業</td></tr>
+<tr><td style="text-align: left">高城 翔太</td><td style="text-align: left">統合型</td><td style="text-align: left">社長。翼を佐伯のもとへ送るトリガー</td></tr>
+<tr><td style="text-align: left">藤原 美咲</td><td style="text-align: left">—（類型外）</td><td style="text-align: left">翼の彼女。日常の安定</td></tr>
+<tr><td style="text-align: left">木下 蓮</td><td style="text-align: left">自分本位×行動型（支配目的）</td><td style="text-align: left">結衣の彼氏。ハネムーン期</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="ビート構成5ビート"><a class="header" href="#ビート構成5ビート">ビート構成（5ビート）</a></h4>
+<p><strong>ビート1: 入社初日（翼視点）</strong></p>
+<ul>
+<li>四月のネクスト・キャリア営業フロア。翼（28歳）が転職初日を迎える。前職（中堅メーカー営業2年）では行動量トップだったが、組織の天井と上司との衝突に見切りをつけた。「ここなら自分の力で勝負できる」——人材紹介業を選んだ理由は、人の人生に関わる実感と、個人の力量が成果に直結する構造への渇望</li>
+<li>高城社長の簡潔な挨拶：「行動量で殴れ。ただし考えろ」。翼は前半だけを刻む</li>
+<li>同チームに結衣（26歳）がいる。翼の第一印象は「おとなしそうだな」程度。結衣は翼に対して穏やかに「よろしくお願いします」と微笑む。翼の関心は自分の成績にしか向いていない</li>
+<li>翼は初日から電話を掛け始める。行動量は群を抜く</li>
+</ul>
+<p><strong>ビート2: 行動量の成果と壁（翼視点）</strong></p>
+<ul>
+<li>入社2〜3週間。翼は1日50件超のコール、週10件の面談をこなし、同期入社の中でトップの行動量。初月から求職者との面談数ではチーム1位</li>
+<li>しかし「成約」に至らない。面談は組めるが、求職者が途中で離脱する。「とにかく会う」ことには秀でているが、相手のニーズの深掘りや企業とのマッチング精度が甘い</li>
+<li>一方、結衣は面談数では翼の半分以下だが、成約率が異常に高い。翼は「あいつは<strong>ラッキーなだけ</strong>だ」と片付ける。結衣のデスクにはカラフルなポストイットが無数に貼られているが、翼はまだその意味に気づかない</li>
+<li><strong>壁の顕在化:</strong> 月末数字は結衣に及ばない。翼の自尊心が揺れる——「数で負けていないのに、なぜ成果で負ける？」</li>
+</ul>
+<p><strong>ビート3: 佐伯との初対面——[L]シーン：PDCA基礎導入（翼視点）</strong></p>
+<ul>
+<li>高城から「面白い人がいる。一度会ってこい」と紹介される形で、翼が佐伯と出会う。場所はオフィス近くのカフェ。佐伯は穏やかで飄々としており、翼には「何者なのかよく分からない」存在</li>
+<li>佐伯は翼の近況を聞く。翼は戦績を得意げに語るが、佐伯は数字そのものへの評価をしない。代わりに問いかける：「お前、1日50件掛けてるんだろ。1件あたり何を検証してる？」</li>
+<li>翼は答えられない。「とにかく数を打てば当たる」という信念はあるが、各アクションの仮説が立っていない</li>
+<li><strong>[L]シーン概要（PDCA業務基礎）:</strong>
+<ul>
+<li>①切実な問題：行動量はあるが成約に結びつかない</li>
+<li>②問いかけ：「数を打つのは良い。でも『何を試しているのか』がないまま打ち続けても、当たった理由が分からない」</li>
+<li>③間違い・反発：翼「PDCAくらい知ってますよ」→ 佐伯「じゃあこの1週間のCheckを教えてくれ」→ 翼が沈黙</li>
+<li>④What：PDCAの核心は<strong>Pの質</strong>。P＝計画ではなくP＝仮説。仮説のあるDoは「実験」、仮説のないDoは「ガチャ」</li>
+<li>⑤Why：「頑張っているのに成果が出ない」の正体はPDCA崩壊。やっているつもりで回していない。特にCとAが欠落している。数字で測らないと自分の都合の良いように解釈する</li>
+<li>⑥How：翼の直近1週間の営業データを素材に実演。面談→離脱した3件を取り上げ、「なぜこの求職者は離脱したか」のWhyを佐伯が問いかける形で深掘り。翼が「確かに、候補者が本当に求めていることを掘れていなかった」と気づく。佐伯はナプキンにPDCAサイクルを書き、翼がスマホで撮る</li>
+<li>⑦自己開示：なし（Lv.0。佐伯は何者かを明かさない。穏やかな問いかけのみ）</li>
+<li>⑧腹落ち：翼「……つまり俺は、ずっとDoだけ回してたってことですか」。佐伯「そう思ったなら、来週1件でいいから仮説を立ててから動いてみろ」</li>
+</ul>
+</li>
+<li>翼は佐伯に反発しつつも、「当たっている」感覚が拭えない</li>
+</ul>
+<p><strong>ビート4: 結衣視点——帰宅後のハネムーン期</strong></p>
+<ul>
+<li>結衣（26歳）の帰宅。マンションの玄関を開けると、蓮（30歳・不動産営業）が夕食を用意して待っている。笑顔で「おかえり」。テーブルには結衣の好きなパスタ</li>
+<li>蓮は穏やかで気遣いに満ちている。結衣の仕事の話を聞き、「お前はすごいよ」と褒める。結衣は安心する。この人がいるから頑張れる、と思う</li>
+<li>ただし結衣が翼の話題を出した瞬間、蓮の表情が一瞬だけ固まる。「ふーん、その翼って人、どんな人？」——声のトーンが微かに変わる。結衣はそれに気づかない（読者だけが気づくレベルの筆致）</li>
+<li><strong>DVサイクル: ハネムーン期（第1段階）。</strong> 蓮の「理想的な彼氏」としての振る舞い。結衣はまだ何の異変も感じていない</li>
+</ul>
+<p><strong>ビート5: 翼視点——美咲と父</strong></p>
+<ul>
+<li>翼の帰宅。美咲（27歳・メーカー広報）とのLINEのやりとり。「今日どうだった？」「まあまあ」「ごはん食べた？」——温かいが表面的。翼は仕事の本音を美咲に話さない。「心配させたくない」ではなく「話しても分かってもらえない」という無意識の遮断</li>
+<li>着信履歴に父（誠一郎・56歳・塾教室長）の名前。翼はスワイプして消す。一瞬、少年時代のフラッシュバック——サッカー部の試合後、ベンチにいた自分。観客席に父はいなかった。翼はその記憶を振り払うように布団に入る</li>
+<li><strong>サブストーリーA（父）:</strong> 着信無視。パターンの根源は読者にまだ見えていないが、翼の中に何かあることを示す</li>
+</ul>
+<h4 id="crisis"><a class="header" href="#crisis">Crisis</a></h4>
+<ul>
+<li>行動量（Do）では負けていないのに、成約（成果）では結衣に負ける。「量を回す」だけでは届かない壁</li>
+</ul>
+<h4 id="learning"><a class="header" href="#learning">Learning</a></h4>
+<ul>
+<li><strong>PDCA（業務PDCA基礎・仮説思考の導入）</strong> — P＝仮説であること。仮説なきDoは再現性のないガチャであること。Checkの重要性</li>
+</ul>
+<h4 id="lシーン概要"><a class="header" href="#lシーン概要">[L]シーン概要</a></h4>
+<ul>
+<li><strong>1シーン:</strong> ビート3。佐伯カフェセッション。PDCA基礎（What/Why/How）。翼のリアルな営業データを使った実演</li>
+</ul>
+<h4 id="サブストーリー進行"><a class="header" href="#サブストーリー進行">サブストーリー進行</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">サブストーリー</th><th style="text-align: left">進行状況</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">A. 翼と父</td><td style="text-align: left">着信無視。フラッシュバック（少年時代のサッカー記憶）。根源への伏線</td></tr>
+<tr><td style="text-align: left">B. 翼と美咲</td><td style="text-align: left">安定した日常。ただし仕事の本音は共有していない</td></tr>
+<tr><td style="text-align: left">D. 結衣と蓮</td><td style="text-align: left">DVサイクル第1段階：ハネムーン期。蓮は理想的な彼氏に見える</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="佐伯開示レベル"><a class="header" href="#佐伯開示レベル">佐伯開示レベル</a></h4>
+<p><strong>Lv.0</strong> — 何者か不明のミステリアスな存在。穏やかな問いかけのみ。自分の過去には一切触れない</p>
+<h4 id="シーソー状態"><a class="header" href="#シーソー状態">シーソー状態</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">面</th><th style="text-align: left">状態</th><th style="text-align: left">備考</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">仕事</td><td style="text-align: left"><strong>↑</strong></td><td style="text-align: left">行動量トップ。成約では結衣に負けるが、成長の手応えはある</td></tr>
+<tr><td style="text-align: left">私生活</td><td style="text-align: left"><strong>→</strong></td><td style="text-align: left">美咲との安定した日常。父は背景に存在するのみ</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="次章への接続"><a class="header" href="#次章への接続">次章への接続</a></h4>
+<ul>
+<li>翼がPDCAの「仮説」を意識し始め、業務レベルで小さなPDCAを回し始める</li>
+<li>結衣のポストイットの意味がまだ解読されていない（Ch.2への伏線）</li>
+<li>佐伯への不信感は残るが「あの人が言ったことは当たっていた」という体感が蓄積し始める</li>
+</ul>
+<hr>
+<h3 id="ch2ナプキンの仮説"><a class="header" href="#ch2ナプキンの仮説">Ch.2「ナプキンの仮説」</a></h3>
+<h4 id="章概要-1"><a class="header" href="#章概要-1">章概要</a></h4>
+<p>翼がPDCAを業務レベルで回し始め、確かな成果の変化を実感する。結衣のポストイット群が実は「仮説の体系」であったことに気づく瞬間（ナプキンの仮説）が、翼のPDCA理解を一段深化させる。佐伯はOS型（行動型/思考型）という「レンズ」を翼に渡し、翼は自分が「行動型」であることを初めて自覚する。</p>
+<h4 id="登場人物-1"><a class="header" href="#登場人物-1">登場人物</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">キャラクター</th><th style="text-align: left">OS型</th><th style="text-align: left">この章での役割</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">高橋 翼</td><td style="text-align: left">自分本位×行動型</td><td style="text-align: left">PDCAの実践と深化。OS型への気づき</td></tr>
+<tr><td style="text-align: left">佐伯 零一</td><td style="text-align: left">自分本位×思考型</td><td style="text-align: left">[L]シーン×2：仮説深化＋OS型導入</td></tr>
+<tr><td style="text-align: left">結衣</td><td style="text-align: left">他者本位×行動型</td><td style="text-align: left">ポストイット＝仮説の体系。翼の学びを駆動</td></tr>
+<tr><td style="text-align: left">藤原 美咲</td><td style="text-align: left">—</td><td style="text-align: left">日常描写に自然に登場</td></tr>
+<tr><td style="text-align: left">木下 蓮</td><td style="text-align: left">自分本位×行動型（支配目的）</td><td style="text-align: left">コントロール開始</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="ビート構成6ビート"><a class="header" href="#ビート構成6ビート">ビート構成（6ビート）</a></h4>
+<p><strong>ビート1: 仮説を立てて動く（翼視点）</strong></p>
+<ul>
+<li>Ch.1の佐伯セッションから1〜2週間。翼は「仮説を立ててから動く」を愚直に実践している。面談前に「この求職者が最も重視しているのは〇〇ではないか」と1行メモを書き、面談後に検証する。最初は的外れな仮説ばかりだが、3日目あたりから精度が上がり始める</li>
+<li>数字に変化が出る。面談→次のステップ（紹介先候補の提示）への移行率が明確に改善。翼は初めて「仮説の力」を実感する</li>
+<li>ただし、まだ「業務レベルの改善」に留まっている。仮説の対象が「この求職者にどう提案するか」という次の1手のみで、「自分の営業スタイル全体にどんなパターンがあるか」という構造的な問いには至っていない</li>
+</ul>
+<p><strong>ビート2: 結衣のポストイットの発見（翼視点）</strong></p>
+<ul>
+<li>ある日、翼が結衣のデスク横を通りかかった時、ポストイットの群れに目が留まる。色分けされたポストイットに書かれているのは、求職者の名前・企業名・キーワード——そして「？」マーク付きのフレーズ群。「〇〇さんは本当に年収が軸？　家族の話の時だけ声が変わった」「△△社の人事は建前と本音がズレている？　2回目の面談で確認」</li>
+<li>翼は衝撃を受ける。これは<strong>仮説のボード</strong>だ。結衣は「感覚」で営業していたのではなく、無自覚に仮説を立て、検証し、精度を上げていた。ただし結衣自身はそれを「仮説」だと認識していない——「なんとなく気になったことをメモしてるだけです」</li>
+<li>この発見を、翼は次の佐伯セッションに持ち込む</li>
+</ul>
+<p><strong>ビート3: [L]シーン①——PDCA仮説思考の深化（翼視点）</strong></p>
+<ul>
+<li>カフェでの佐伯セッション。翼が結衣のポストイットの話をする。佐伯は笑う：「良いところに気づいた。あれは天然の仮説だ」</li>
+<li><strong>[L]シーン概要（PDCA仮説深化）:</strong>
+<ul>
+<li>①切実な問題：翼のPDCAは回り始めたが、結衣の成約率にまだ届かない。仮説思考の「深さ」の差に気づいた</li>
+<li>②問いかけ：「結衣の仮説と、お前の仮説の違いは何だ？」</li>
+<li>③間違い・反発：翼「結衣のは勘です。俺のは論理的に——」佐伯「そうか？ お前の仮説は『次の1手』だけだろう。結衣のポストイットには<strong>時間軸</strong>がある」</li>
+<li>④What：仮説には深度がある。1次仮説（この面談でどう提案するか）、2次仮説（この求職者の本質的な欲求は何か）、3次仮説（自分の営業スタイルにどんな盲点があるか）。結衣は1次と2次を同時に走らせている</li>
+<li>⑤Why：1次仮説だけでは「うまくいった/いかなかった」の繰り返し。2次仮説があると「なぜうまくいったか」が構造的に理解でき、再現性が生まれる。Checkの深掘り（5回のWhy）の重要性を再強調</li>
+<li>⑥How：翼の直近の成約案件を素材に、佐伯が「なぜこの案件はうまくいった？」→「候補者のニーズを深く掘れた」→「なぜ掘れた？」→「候補者が自分から話してくれた」→「なぜ話してくれた？」→ ……とWhyを5回掘る実演。ナプキンに仮説の階層図を描く</li>
+<li>⑦自己開示：Lv.0〜1の入口。「俺も昔、数で勝負しようとした時期がある。量を回すのは正しかった。でも仮説がないまま3年回して、気づいたら中身のない3年になっていた」——短く、具体的なエピソードは語らない</li>
+<li>⑧腹落ち：翼「俺の仮説は浅かった。結衣はたぶん無意識に2次仮説を走らせてる。……悔しいけど、あれはすげえ」</li>
+</ul>
+</li>
+</ul>
+<p><strong>ビート4: [L]シーン②——OS型（行動型/思考型）導入（翼視点）</strong></p>
+<ul>
+<li>同じカフェセッションの後半、または翌週のセッション（間を空けてもよい）</li>
+<li>翼がPDCAを回す中で「誰もが同じように回せるわけではない」ことに気づく。自分は「まず動く」タイプだが、前職の上司は「まず分析する」タイプだった。同チームの他メンバーも行動の仕方が異なる</li>
+<li><strong>[L]シーン概要（OS型導入）:</strong>
+<ul>
+<li>①切実な問題：翼はPDCAのD（やりきり力）は強いが、P（仮説構築）とC（振り返り）に課題がある。なぜ自分はDが先で、PCが後回しになるのか</li>
+<li>②問いかけ：「お前は<strong>まず体が動くタイプ</strong>だろう。考える前に口が出る。沈黙が苦手だ」</li>
+<li>③間違い・反発：翼「それの何がいけないんですか？ 考えてばかりで動かない奴より——」佐伯「いい悪いの話はしていない。お前の<strong>型</strong>の話をしている」</li>
+<li>④What：人には意思決定の型がある。<strong>行動型</strong>と<strong>思考型</strong>。行動型は「まず動く」が自然で、不確実でも飛び込む。思考型は「まず考える」が自然で、分析してから動く。どちらにも強みと弱みがある</li>
+<li>⑤Why：自分の型を知ることで、PDCAの偏りに気づける。行動型はDが強いがPとCが弱くなりがち。思考型はPは立てられるがDに踏み出せない。型を知ることは「自分を責める」ためではなく「補うべきポイントを知る」ため</li>
+<li>⑥How：佐伯が翼のこれまでの行動（初日から電話を掛け始めた、面談前に仮説を書くのが後回しだった、佐伯の問いに答える前に自分の意見を先に言った）を並べ、「これが行動型のパターンだ」と実例で示す。ナプキンに行動型/思考型の対比図を描く。PDCAとの対応（行動型のD→P/C補強、思考型のP→D補強）を図示</li>
+<li>⑦自己開示：なし（Lv.0〜1を維持。佐伯は自分の型については語らない。種蒔きとして「俺はお前と正反対の型だ」と一言だけ）</li>
+<li>⑧腹落ち：翼「……俺は行動型だ。だからDoが先に来る。Pが弱いのは型のせいか」佐伯「型のせいにするな。型の<strong>傾向</strong>を知った上で、意識的に補え」</li>
+</ul>
+</li>
+<li><strong>種蒔き:</strong> 佐伯「今は型の話だけでいい。お前のその型がどこから来たのか——それはもう少し先の話だ」</li>
+</ul>
+<p><strong>ビート5: 結衣視点——蓮のコントロール開始</strong></p>
+<ul>
+<li>結衣の帰宅シーン。蓮が結衣のスマホのLINE通知（同僚からのメッセージ）をちらりと見て、「誰？」と軽く聞く。結衣が「チームの人」と答えると、蓮「最近帰り遅いよな。飲み会とか行ってないだろうな」——笑顔だが、声に圧がある</li>
+<li>結衣はすぐに「行ってないよ。ごめんね、心配させて」と謝る。蓮の表情が戻る。「気にすんなって。お前のことが大事だから聞いただけ」</li>
+<li><strong>DVサイクル: コントロール開始（第2段階）。</strong> 蓮が結衣の行動範囲と人間関係を「心配」という名目で監視し始める。結衣はこれを「愛されている証拠」と認識している。読者にだけ「これは支配の兆候だ」と感じさせる筆致</li>
+</ul>
+<p><strong>ビート6: 翼視点——同じ壁の反復の予兆</strong></p>
+<ul>
+<li>翼が仮説PDCAを2週間回した結果、数字は着実に改善。初月の壁を超え、成約も出始める。しかし翼の中に新しい違和感が芽生える——「前職でも同じだった。最初は数で勝ち、途中から壁にぶつかり、最後は環境のせいにして飛び出した」</li>
+<li>業務レベルのPDCAは回るようになった。しかし**「なぜ自分はいつも途中で壁にぶつかるのか」**という、業務を超えた問いが初めて翼の中に浮かぶ。まだ言語化はできていない——佐伯が次のセッションで拾い上げるための種</li>
+<li>美咲に「最近、仕事楽しそうだね」と言われ、「まあね」と返す。帰りの電車で、父の着信履歴を見るが、今回も折り返さない</li>
+</ul>
+<h4 id="crisis-1"><a class="header" href="#crisis-1">Crisis</a></h4>
+<ul>
+<li>業務PDCAは回り始めたが、「なぜ自分はいつも同じところで壁にぶつかるのか」という反復パターンの予兆。業務を超えた問題の存在</li>
+</ul>
+<h4 id="learning-1"><a class="header" href="#learning-1">Learning</a></h4>
+<ul>
+<li><strong>PDCA仮説思考の深化:</strong> 仮説の階層（1次→2次→3次）。Whyの5回深掘り。結衣のポストイット＝天然の仮説体系</li>
+<li><strong>OS型（行動型/思考型）導入:</strong> 人には無自覚な行動の型がある。翼は行動型。型を知ることで自分のPDCAの偏りを補える</li>
+</ul>
+<h4 id="lシーン概要-1"><a class="header" href="#lシーン概要-1">[L]シーン概要</a></h4>
+<ul>
+<li><strong>2シーン:</strong>
+<ol>
+<li>ビート3: PDCA仮説深化（結衣のポストイットを素材に）</li>
+<li>ビート4: OS型導入（行動型/思考型の2軸提示）</li>
+</ol>
+</li>
+</ul>
+<h4 id="サブストーリー進行-1"><a class="header" href="#サブストーリー進行-1">サブストーリー進行</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">サブストーリー</th><th style="text-align: left">進行状況</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">A. 翼と父</td><td style="text-align: left">着信履歴を見るが折り返さない。パターンの継続</td></tr>
+<tr><td style="text-align: left">B. 翼と美咲</td><td style="text-align: left">安定した日常。「仕事楽しそう」と美咲が気づく</td></tr>
+<tr><td style="text-align: left">D. 結衣と蓮</td><td style="text-align: left">DVサイクル第2段階：コントロール開始。行動範囲の監視</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="佐伯開示レベル-1"><a class="header" href="#佐伯開示レベル-1">佐伯開示レベル</a></h4>
+<p><strong>Lv.0〜1</strong> — 「俺も昔、数で勝負しようとした時期がある」程度の匂わせ。具体的なエピソードは明かさない</p>
+<h4 id="シーソー状態-1"><a class="header" href="#シーソー状態-1">シーソー状態</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">面</th><th style="text-align: left">状態</th><th style="text-align: left">備考</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">仕事</td><td style="text-align: left"><strong>↑</strong></td><td style="text-align: left">PDCA効果で成長加速。成約が出始め、結衣との差が縮まる</td></tr>
+<tr><td style="text-align: left">私生活</td><td style="text-align: left"><strong>→</strong></td><td style="text-align: left">美咲との安定。蓮のコントロール（結衣視点）は翼の私生活に影響なし</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="次章への接続-1"><a class="header" href="#次章への接続-1">次章への接続</a></h4>
+<ul>
+<li>「なぜ自分はいつも同じところで壁にぶつかるのか」という問い（業務→スキル→OSへの階層移行の導火線）</li>
+<li>OS型（行動型）を知ったが、「その型がどこから来たのか」はまだ明かされていない（Ch.3-4への伏線）</li>
+<li>結衣の営業手法への敬意が芽生え始める（ただし翼にとっては「すごい同僚」以上ではない）</li>
+</ul>
+<hr>
+<h3 id="ch3三つの階層"><a class="header" href="#ch3三つの階層">Ch.3「三つの階層」</a></h3>
+<h4 id="章概要-2"><a class="header" href="#章概要-2">章概要</a></h4>
+<p>翼はPDCAを業務レベルで回せるようになったが、新たな壁に直面する。業務の改善だけでは超えられない「スキルの壁」、そしてその奥にある「OSの壁」——3階層モデルの発見。佐伯は翼に「業務→スキル→OS」の3階層を提示し、翼のパターン認識が始まる。佐伯の口から初めて「大切な仲間を失った」という過去の断片が漏れる。</p>
+<h4 id="登場人物-2"><a class="header" href="#登場人物-2">登場人物</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">キャラクター</th><th style="text-align: left">OS型</th><th style="text-align: left">この章での役割</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">高橋 翼</td><td style="text-align: left">自分本位×行動型</td><td style="text-align: left">3階層の壁に直面。パターン認識の開始</td></tr>
+<tr><td style="text-align: left">佐伯 零一</td><td style="text-align: left">自分本位×思考型</td><td style="text-align: left">[L]シーン：3階層モデル＋OS認識入口。Lv.1開示</td></tr>
+<tr><td style="text-align: left">結衣</td><td style="text-align: left">他者本位×行動型</td><td style="text-align: left">翼の成長を横目で観察。自分事とは捉えていない</td></tr>
+<tr><td style="text-align: left">木下 蓮</td><td style="text-align: left">自分本位×行動型（支配目的）</td><td style="text-align: left">攻撃フェーズ初出</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="ビート構成5ビート-1"><a class="header" href="#ビート構成5ビート-1">ビート構成（5ビート）</a></h4>
+<p><strong>ビート1: スキルの壁（翼視点）</strong></p>
+<ul>
+<li>入社2ヶ月目に入り、翼のPDCA実践が軌道に乗った。面談の質が上がり、成約ペースも安定。しかし「ここから先」に壁がある</li>
+<li>翼はWhyを深掘りしていく中で、業務テクニックの問題ではなく<strong>自分のスキルそのものの限界</strong>に気づき始める。因数分解が浅い、候補者の「本音」を引き出す傾聴力が弱い、提案の構造化が甘い。これらは「やり方を変える」だけでは解決しない、能力そのものの成長が必要な領域</li>
+<li>同時に、翼は前職での自分を重ね合わせている。前職でも同じだった——最初の壁（業務レベル）は超えたが、次の壁で行き詰まり、環境のせいにして逃げた。**「また同じことをやっていないか？」**という問いが、翼を不安にさせる</li>
+</ul>
+<p><strong>ビート2: [L]シーン——3階層モデル＋自分のOS（パターン認識）（翼視点）</strong></p>
+<ul>
+<li>カフェセッション。翼が「壁にぶつかっている。しかも前職と同じ壁な気がする」と率直に佐伯に打ち明ける。これは翼にとって初めて佐伯に<strong>弱さを見せる瞬間</strong>——不信感が薄れ、警戒が緩み始めた証し</li>
+<li><strong>[L]シーン概要（3階層モデル＋パターン認識）:</strong>
+<ul>
+<li>①切実な問題：業務PDCAは回るようになった。しかし「前職でも同じ壁にぶつかった」。PDCAだけでは超えられない何かがある</li>
+<li>②問いかけ：佐伯「前の会社でも同じ壁だったって言ったよな。……<strong>同じ壁にぶつかるってことは、壁のほうじゃなくて、ぶつかりに行ってるのはお前のほうだ</strong>と思わないか？」</li>
+<li>③間違い・反発：翼「それは環境が——いや……でも確かに、どこに行っても途中で同じ感じになる」。翼が初めて自分にベクトルを向ける</li>
+<li>④What：PDCAは「何に対して回すか」で3つの階層に分かれる。<strong>業務PDCA</strong>（日々のタスク、1日〜1週間）、<strong>スキルPDCA</strong>（能力の成長、1ヶ月〜3ヶ月）、<strong>OS PDCA</strong>（自分の思考・行動パターンの書き換え、半年〜1年以上）。佐伯がナプキンに同心円3層を描く</li>
+<li>⑤Why：業務PDCAだけ回す人は「優秀な作業者」にはなれるが、成長し続ける人材にはなれない。環境が変わった時にまた同じ壁にぶつかる。翼の「前職と同じ壁」は、まさにスキルやOSが変わっていないまま場所だけ変えた結果。Whyの深掘りは自然と3階層に分かれる——業務レベルの原因、スキルレベルの原因、そしてOSレベルの原因</li>
+<li>⑥How：翼の「なぜ候補者の本音が引き出せないか」を素材に3階層で分解。業務（質問リストが不十分）→ スキル（傾聴と共感の力が弱い）→ OS（<strong>そもそも翼は「相手の話を聞く」より「自分の提案を通す」が先に来る行動パターンを持っている</strong>）。佐伯「この一番内側の円——お前の行動の<strong>型</strong>が、上2層の天井を決めている。業務やスキルをいくら磨いても、この<strong>パターン</strong>が変わらない限り、同じ壁が来る」。ナプキンの3層同心円にOS=パターンと書き込む</li>
+<li>⑦自己開示：<strong>Lv.1。</strong> 佐伯がペンを止め、少し遠い目をして言う。「……俺も昔、自分のパターンに気づけなかった。そのせいで、大切な仲間を一人失った」。一瞬の沈黙。翼が「仲間？」と聞き返すが、佐伯は「いつか話す」とだけ返す。翼はその言葉の重さを初めて佐伯に感じる</li>
+<li>⑧腹落ち：翼「業務→スキル→OS。……俺は業務の壁だと思ってたけど、その奥にスキルの壁があって、さらに奥に<strong>俺自身のパターン</strong>がある。……だから場所を変えても同じ壁にぶつかるんですか」佐伯「お前は正直だ。そう思えたなら、もう入口にはいる」</li>
+</ul>
+</li>
+</ul>
+<p><strong>ビート3: パターンを意識し始める翼（翼視点）</strong></p>
+<ul>
+<li>セッション後の翼。日常の中で自分の行動パターンを「外から見る」意識が芽生え始める。面談前に「また提案を先にしたくなっている」と気づき、意識的に候補者の話を聞く時間を長くする</li>
+<li>しかしこの意識は持続しない。疲れた日、プレッシャーがかかる場面では、すぐに「先に提案する」パターンに戻る。<strong>パターンの認知はできたが、変容には至っていない</strong></li>
+<li>翼は「パターンがどこから来ているのか」をぼんやりと考える。考えようとすると、不意に父親の顔が浮かぶ。振り払う</li>
+</ul>
+<p><strong>ビート4: 結衣視点——蓮の攻撃フェーズ初出</strong></p>
+<ul>
+<li>夜。結衣が仕事で遅くなった日。帰宅すると蓮がソファで無言でスマホを見ている。結衣が「ごめん、遅くなって」と謝ると、蓮は顔を上げず「別にいいけど。俺は待ってたけどね」と冷たい声</li>
+<li>結衣が夕食を温め直して持っていくと、蓮がようやく顔を上げ「最近お前、変わったよな」。結衣「え？ 変わった？」。蓮「なんか自信ついたって感じ。別にいいけど、<strong>調子に乗んなよ</strong>」——笑いながら、しかし目が笑っていない</li>
+<li>結衣はその言葉に胸が締まるが、蓮の「笑顔」を見て自分の受け取り方が悪いのだと処理する。「ごめんね、そんなつもりじゃなかった」</li>
+<li><strong>DVサイクル: 攻撃フェーズ初出（第3段階）。</strong> 蓮の言葉による攻撃が初めて表面化。しかし結衣はそれを認識できない。読者にとっては明確な警告サイン</li>
+</ul>
+<p><strong>ビート5: 翼視点——成果と内面の影</strong></p>
+<ul>
+<li>翼の数字が月間目標を達成。チーム内でも翼の成長が話題になる。高城が翼に一言「伸びてるな」。翼は嬉しいが、同時に「でもこれは<strong>業務の成長</strong>であって、佐伯が言っていたOS——パターン——はまだ何も変わっていない」という自覚がある</li>
+<li>結衣はチームの中で依然として安定した成績を出している。翼の中に以前の「ラッキーなだけ」という認知はなく、「あいつには俺にないものがある」程度には更新されている。ただし結衣の内面（蓮のこと、空虚さ）には全く関心がない。<strong>認知の非対称性：翼にとって結衣は「成績の良い同僚」以上ではない</strong></li>
+<li>深夜、父からのLINEメッセージ。「元気でやっているか」。翼は既読をつけ、返事をしない</li>
+</ul>
+<h4 id="crisis-2"><a class="header" href="#crisis-2">Crisis</a></h4>
+<ul>
+<li>業務・スキルを超えた**「OSの壁」の存在**。「場所を変えても同じ壁にぶつかる」パターンの自覚。しかしパターンがどこから来ているか、どう変えるかはまだ見えていない</li>
+</ul>
+<h4 id="learning-2"><a class="header" href="#learning-2">Learning</a></h4>
+<ul>
+<li><strong>PDCA 3階層モデル:</strong> 業務→スキル→OS。Whyの深掘りは自然と3階層に分かれる。OSが上2層の天井を決めている</li>
+<li><strong>自分のOS（パターン認識の入口）:</strong> 「同じ壁にぶつかるのは、壁のほうではなく自分のほう」。翼の行動型パターン（提案先行・傾聴不足）がOS由来であること</li>
+</ul>
+<h4 id="lシーン概要-2"><a class="header" href="#lシーン概要-2">[L]シーン概要</a></h4>
+<ul>
+<li><strong>1〜2シーン:</strong> ビート2。佐伯カフェセッション。3階層モデルの提示（ナプキンの同心円図）+ 翼のパターン認識開始。佐伯のLv.1自己開示（「大切な仲間を失った」）</li>
+</ul>
+<h4 id="サブストーリー進行-2"><a class="header" href="#サブストーリー進行-2">サブストーリー進行</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">サブストーリー</th><th style="text-align: left">進行状況</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">A. 翼と父</td><td style="text-align: left">父からのLINEに既読スルー。パターン認知時に父の顔がよぎる</td></tr>
+<tr><td style="text-align: left">B. 翼と美咲</td><td style="text-align: left">直接描写なし（日常は安定を維持）</td></tr>
+<tr><td style="text-align: left">D. 結衣と蓮</td><td style="text-align: left">DVサイクル第3段階：攻撃フェーズ初出。「調子に乗んなよ」</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="佐伯開示レベル-2"><a class="header" href="#佐伯開示レベル-2">佐伯開示レベル</a></h4>
+<p><strong>Lv.1</strong> — 「大切な仲間を一人失った」。断片的な痛みの開示。詳細は語らず「いつか話す」</p>
+<h4 id="シーソー状態-2"><a class="header" href="#シーソー状態-2">シーソー状態</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">面</th><th style="text-align: left">状態</th><th style="text-align: left">備考</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">仕事</td><td style="text-align: left"><strong>↑→</strong></td><td style="text-align: left">成果は出ているが、OS直面による停滞感。「また同じ壁では」という不安</td></tr>
+<tr><td style="text-align: left">私生活</td><td style="text-align: left"><strong>↓</strong></td><td style="text-align: left">翼本人の私生活は表面上安定だが、内面にOS直面の影が差す。蓮の攻撃（結衣視点）が物語の不穏さを増す</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="次章への接続-2"><a class="header" href="#次章への接続-2">次章への接続</a></h4>
+<ul>
+<li>「パターンがどこから来ているのか」——翼のOSルーツ（父の沈黙、サッカーの挫折）への探求がCh.4で開始</li>
+<li>佐伯の「大切な仲間」が誰なのかという伏線（Part 2〜3で回収）</li>
+<li>翼がパターンを認識したが変容には至っていない状態——Ch.4でWILL/CAN/MUSTとOS受容の概論へ</li>
+</ul>
+<hr>
+<h3 id="ch4生存戦略"><a class="header" href="#ch4生存戦略">Ch.4「生存戦略」</a></h3>
+<h4 id="章概要-3"><a class="header" href="#章概要-3">章概要</a></h4>
+<p>第1部のクライマックス。佐伯が翼のOSルーツに触れ始め、翼は自分のパターンが「生存戦略」——幼少期に自分を守ってくれた合理的な戦略——であったことに向き合う。WILL/CAN/MUSTのフレームで自分を構造的に理解しようとするが、「WILLは何だ？」の問いに翼は即答できない。マネージャー昇格の提案が高城から来る。翼は痛みとともに決断する。</p>
+<h4 id="登場人物-3"><a class="header" href="#登場人物-3">登場人物</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">キャラクター</th><th style="text-align: left">OS型</th><th style="text-align: left">この章での役割</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">高橋 翼</td><td style="text-align: left">自分本位×行動型</td><td style="text-align: left">OSルーツと「生存戦略」に向き合う。昇格の決断</td></tr>
+<tr><td style="text-align: left">佐伯 零一</td><td style="text-align: left">自分本位×思考型</td><td style="text-align: left">[L]シーン：WILL/CAN/MUST＋OS受容概論。Lv.1</td></tr>
+<tr><td style="text-align: left">高城 翔太</td><td style="text-align: left">統合型</td><td style="text-align: left">マネージャー昇格の提案者</td></tr>
+<tr><td style="text-align: left">結衣</td><td style="text-align: left">他者本位×行動型</td><td style="text-align: left">認知の非対称性の確立。翼の成長を横で見ている</td></tr>
+<tr><td style="text-align: left">藤原 美咲</td><td style="text-align: left">—</td><td style="text-align: left">翼の変化に対する温度差の芽生え</td></tr>
+<tr><td style="text-align: left">木下 蓮</td><td style="text-align: left">自分本位×行動型（支配目的）</td><td style="text-align: left">放置＋ケア回収</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="ビート構成6ビート-1"><a class="header" href="#ビート構成6ビート-1">ビート構成（6ビート）</a></h4>
+<p><strong>ビート1: OSのルーツに触れ始める——フラッシュバック（翼視点）</strong></p>
+<ul>
+<li>入社2ヶ月半〜3ヶ月。翼は3階層の最内層（OS）を意識しながら日常を送っている。「自分はいつもどこで同じパターンを繰り返すか」——答えに近づこうとするたびに、特定の場面が脳裏をよぎる</li>
+<li><strong>フラッシュバック①:</strong> 高校2年のサッカー部。翼はレギュラー争いの末にベンチ要員に。サッカーへの情熱は誰にも負けなかったが、「勝てない場所で消耗する」ことへの恐怖が芽生えた。結局、翼は退部を選ぶ。父・誠一郎は何も言わなかった。「やめるのか？」とも「続けろ」とも言わず、ただ黙って翼の話を聞き、最後に「お前が決めることだ」と言った。翼はその沈黙を**「お前には期待していない」**と読み取った</li>
+<li><strong>フラッシュバック②:</strong> 前職の退職日。上司に「お前、また逃げるのか」と言われた。翼は何も言い返せなかった。帰宅して父に電話した時も、誠一郎は「そうか。大丈夫なのか」としか言わなかった。翼は電話を切った後、壁を殴った</li>
+<li>翼は自分のパターンを初めて言語化する——<strong>「勝てない場所から降りる。そして新しい場所を見つけて、また同じことを繰り返す」</strong></li>
+</ul>
+<p><strong>ビート2: [L]シーン——WILL/CAN/MUST＋OS受容の概論（翼視点）</strong></p>
+<ul>
+<li>カフェセッション。翼がフラッシュバックの内容を佐伯に話す。「俺、いつも途中で降りるんです。サッカーも、前の会社も。気づいたら同じことをしてた」</li>
+<li><strong>[L]シーン概要（WILL/CAN/MUST＋OS受容概論）:</strong>
+<ul>
+<li>①切実な問題：パターン（勝てない場所から降りる）を言語化できたが、それがどこから来たのか、どうすればいいのか分からない</li>
+<li>②問いかけ：佐伯「お前のそのパターン、<strong>お前を守ってくれてたんじゃないか？</strong>」</li>
+<li>③間違い・反発：翼「守る？ 逃げてただけでしょう。弱いだけだ」佐伯「弱い？ サッカーを辞めて成績を上げた。前の会社を辞めてここに来た。お前はいつも<strong>次の場所を見つけている</strong>。それは本当に弱さか？」</li>
+<li>④What：人は幼少期〜思春期に「こうすれば自分は守られる・認められる・生き残れる」という戦略を無意識に編み出す。それが<strong>生存戦略</strong>＝OSの原型。翼の「勝てない場所から降りて、勝てる場所で勝つ」は、まさに生存戦略だった。重要なのは、生存戦略は「良い/悪い」ではなく、<strong>かつてはその人を守ってくれた合理的な戦略だった</strong>ということ</li>
+<li>⑤Why：「守ってくれたパターン」が「縛るパターン」に変わる瞬間がある。翼の生存戦略は10代の頃は合理的だった。しかし28歳の今、「降りる」パターンは翼自身の成長の天井になっている。パターンを認知しただけでは変わらない。しかし認知しなければ変わりようがない。OSを知ることは「変わるための出発点」</li>
+<li>⑥How：佐伯がWILL/CAN/MUSTを提示する。
+<ul>
+<li><strong>CAN（今の自分ができること）:</strong> 翼のCAN＝行動力、論理武装、営業での初期成果を出す力。それは父の沈黙の中で「自分の力で道を切り拓く」しかなかった少年時代の自分史から来ている</li>
+<li><strong>WILL（どうなりたいか）:</strong> 佐伯「お前のWILLは何だ？」——翼は即答できない。「成果を出したい」と言いかけるが、佐伯「それは手段だ。WILLじゃない」。翼が沈黙する。佐伯は追い込まない。「答えが出なくていい。今はWILLが見えていないという事実に気づいただけで十分だ」</li>
+<li><strong>MUST（何が足りないか）:</strong> WILLが見えないままMUSTは定義できない。しかし「WILLが見えていない」ということ自体が、今の翼にとって最も重要な認識</li>
+<li>ナプキンにWILL/CAN/MUST図、その下に「自分史」との接続を佐伯が書き込む</li>
+</ul>
+</li>
+<li>⑦自己開示：<strong>Lv.1維持。</strong> 佐伯「俺にも似たようなところがあった。自分のパターンに気づくまでに10年かかった。お前は3ヶ月で入口に立った。それは才能だ」。翼を責めず、受容の姿勢を示す</li>
+<li>⑧腹落ち：翼「……生存戦略か。俺のパターンは俺を守ってくれてた。でも今は縛ってる。……WILLが見えない。そのことが一番きついかもしれない」佐伯「きついのは正しい証拠だ。そこにいられるのは強い証拠だ」</li>
+</ul>
+</li>
+</ul>
+<p><strong>ビート3: 高城からの昇格提案（翼視点）</strong></p>
+<ul>
+<li>3ヶ月の評価面談。高城が翼に「マネージャーをやれ」と提案する。翼のチーム——結衣に加え、新人2名（涼太・沙織。まだ名前のみ）の管理</li>
+<li>翼は動揺する。「まだ自分自身が成長の途中なのに、人を見る立場になっていいのか？」。高城は「お前が完成するのを待ってたら永遠に来ないよ。未完成のまま人を育てるのがマネージャーだ」</li>
+<li>翼は佐伯に相談する（電話またはリモート。軽い相談）。佐伯は「お前が決めることだ」とだけ言う——<strong>父と同じ言葉</strong>。しかし翼はその言葉の受け取り方が前とは違う。父の時は「突き放された」と感じた。佐伯の時は「信じてもらえている」と感じる。この違いに翼自身はまだ気づいていない</li>
+</ul>
+<p><strong>ビート4: 翼の決断（翼視点）</strong></p>
+<ul>
+<li>翼はマネージャー昇格を受ける決断をする。理由は「逃げたくなかったから」。勝てない場所から降りるパターンを初めて自覚した今、「今度は降りない」という意志が芽生えている</li>
+<li>ただし、この決断の根底にあるのは「自分を変えたい」という純粋な動機と、「ここで結果を出せば証明できる」という自分本位なOSの<strong>混在</strong>。翼はまだ自分のOSを完全には超えていない。第2部への種</li>
+</ul>
+<p><strong>ビート5: 結衣視点——放置＋ケア回収＋認知の非対称性</strong></p>
+<ul>
+<li>結衣の帰宅。蓮が数日間ほとんど口を利かない冷淡な期間（放置期間）を経て、突然「ごめん、最近忙しくて余裕なかった。お前のこと好きだから」と抱きしめる。結衣は安堵で涙ぐむ</li>
+<li><strong>DVサイクル: 放置＋ケア回収（第4段階）。</strong> 蓮の攻撃→放置→ケア回収のサイクルが確立。結衣はこの「ケア」を本当の愛だと思い込んでいる。読者にはサイクルが完成したことが見える</li>
+<li>翌日のオフィス。翼のマネージャー昇格が発表される。結衣は「おめでとうございます」と穏やかに微笑む。翼は「ありがとう」と返すが、目線はすでに新しい責任に向いている。<strong>翼にとって結衣は「打率で自分に勝っていた同僚」であり、それ以上ではない。</strong> 結衣は翼の3ヶ月間の変化の過程を横で見ていたが、それを「自分事」として捉えることはない。この<strong>認知の非対称性</strong>がPart 2の緊張構造の土台となる</li>
+</ul>
+<p><strong>ビート6: 翼視点——痛みとともに歩き出す</strong></p>
+<ul>
+<li>マネージャー昇格が決まった夜。美咲と外食。翼は初めて佐伯のことを少しだけ美咲に話す。「職場に、面白い人がいてさ」。美咲は「良かったね」と微笑むが、翼の話す内容（PDCA、パターン、OS）は美咲の日常とは遠い。二人の会話に微かな温度差が生まれ始めていることに、翼はまだ気づいていない</li>
+<li>帰宅後、翼は父のLINEに初めて返信する。「元気。マネージャーになった」。短い一文。既読がつくが、父からの返信は**「そうか」<strong>の1語だけ。翼はスマホを伏せて目を瞑る。いつものパターンなら怒りが来る。しかし今は怒りではなく、もっと深い場所——</strong>「認めてほしかった」**という幼い自分の声が、ほんの一瞬だけ聞こえる。翼はそれを振り払って眠りにつく</li>
+<li>翌朝、新しいチームの名簿を受け取る。結衣、中村涼太、小野沙織——3人の名前。第2部が始まる</li>
+</ul>
+<h4 id="crisis-3"><a class="header" href="#crisis-3">Crisis</a></h4>
+<ul>
+<li>「生存戦略（勝てない場所から降りる）」だったパターンと向き合う痛み。WILLが見えない空虚さ。「認めてほしかった」という根源感情への接触</li>
+</ul>
+<h4 id="learning-3"><a class="header" href="#learning-3">Learning</a></h4>
+<ul>
+<li><strong>自分のOS（WILL/CAN/MUST）:</strong> CAN＝行動力と論理武装（自分史由来）。WILLは未確定（翼が即答できなかったこと自体が最も重要な気づき）。MUSTはWILLが見えない限り定義できない</li>
+<li><strong>OS受容の概論:</strong> 生存戦略は「良い/悪い」ではなく「かつて自分を守ってくれた合理的な戦略」。否定ではなく受容が変容の前提。ただし第1部では概論に留まり、受容の実体験は第2部以降</li>
+</ul>
+<h4 id="lシーン概要-3"><a class="header" href="#lシーン概要-3">[L]シーン概要</a></h4>
+<ul>
+<li><strong>1シーン:</strong> ビート2。佐伯カフェセッション。WILL/CAN/MUST + 「生存戦略」の概念 + OS受容の概論</li>
+</ul>
+<h4 id="サブストーリー進行-3"><a class="header" href="#サブストーリー進行-3">サブストーリー進行</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">サブストーリー</th><th style="text-align: left">進行状況</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">A. 翼と父</td><td style="text-align: left">初めてLINEに返信。父の「そうか」に「認めてほしかった」という根源感情が浮上するが、すぐに振り払う</td></tr>
+<tr><td style="text-align: left">B. 翼と美咲</td><td style="text-align: left">外食シーン。翼が佐伯の話をする。美咲との温度差の芽生え</td></tr>
+<tr><td style="text-align: left">D. 結衣と蓮</td><td style="text-align: left">DVサイクル第4段階：放置→ケア回収の完成。結衣はサイクルを愛情と誤認</td></tr>
+<tr><td style="text-align: left">（認知の非対称性）</td><td style="text-align: left"><strong>確立。</strong> 翼→結衣：「成績の良い同僚」。結衣→翼：変化を観察しているが自分事ではない</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="佐伯開示レベル-3"><a class="header" href="#佐伯開示レベル-3">佐伯開示レベル</a></h4>
+<p><strong>Lv.1</strong> — 「俺にも似たようなところがあった。自分のパターンに気づくまでに10年かかった」。Ch.3のLv.1と同水準。深掘りはしない</p>
+<h4 id="シーソー状態-3"><a class="header" href="#シーソー状態-3">シーソー状態</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">面</th><th style="text-align: left">状態</th><th style="text-align: left">備考</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">仕事</td><td style="text-align: left"><strong>↓→↑</strong></td><td style="text-align: left">OS痛み（自分のパターンとの対峙）による内面の停滞 → マネージャー昇格決断で上昇に転じる</td></tr>
+<tr><td style="text-align: left">私生活</td><td style="text-align: left"><strong>↓</strong></td><td style="text-align: left">父との関係に一応の接触が生まれたが、根源的な痛みが浮上。美咲との温度差の予兆。蓮の支配サイクルが完成（結衣視点）</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="次章への接続-3"><a class="header" href="#次章への接続-3">次章への接続</a></h4>
+<ul>
+<li><strong>マネージャー昇格（Ch.5へ）:</strong> 翼が結衣・涼太・沙織の3人を率いるチームマネジメント開始。翼の行動型メソッドが異なるOS型の部下に通用しない第2部の幕開け</li>
+<li><strong>OS型の4象限拡張（Ch.5へ）:</strong> Ch.2で獲得した行動型/思考型の2軸に、自分本位/他者本位の認知OS軸が加わる</li>
+<li><strong>結衣のDVサイクル（Ch.5以降）:</strong> 仕事の成長が蓮の支配欲を刺激する構造。Part 2で直接描写へ移行</li>
+<li><strong>翼のWILL不在（全編への伏線）:</strong> 「WILLが見えない」ことが、Part 2のマネジメント動機の脆弱さに、Part 3の勝ちパターン固執につながる</li>
+<li><strong>翼と佐伯の信頼関係:</strong> マネージャーになって困った時に自ら佐伯を頼る関係への移行準備が整った</li>
+<li><strong>父問題の内在化:</strong> 「認めてほしかった」は触れただけで終わった。未統合のまま、Part 2 Ch.6（ダブル絶望①）で開花する種</li>
+</ul>
+<hr>
+<h2 id="第2部他者という壁"><a class="header" href="#第2部他者という壁">第2部「他者という壁」</a></h2>
+<blockquote>
+<p><strong>テーマ:</strong> 異なるOSを持つ他者を理解し、チームとして成果を出す
+<strong>核心の問い:</strong> 「なぜ自分のやり方が通用しないのか？」
+<strong>時間軸:</strong> 4ヶ月〜15ヶ月目（夏〜翌年夏）
+<strong>視点比率:</strong> 翼~55% / 結衣~45%
+<strong>[L]シーン合計:</strong> 4〜7
+<strong>文字数目標:</strong> 55,000〜60,000字</p>
+</blockquote>
+<hr>
+<h3 id="ch5四つの象限"><a class="header" href="#ch5四つの象限">Ch.5「四つの象限」</a></h3>
+<h4 id="章概要-4"><a class="header" href="#章概要-4">章概要</a></h4>
+<p>マネージャー昇格初日。翼の下に結衣・涼太・沙織の3人が揃い、OS 4象限（自分本位×行動型 / 他者本位×行動型 / 自分本位×思考型 / 他者本位×思考型）が完成する。翼は第1部で成果を出した「自分のやり方」をチーム全員に適用しようとするが、誰にも通用しない。結衣は管理外で成果を出し、涼太は正論で反論し、沙織は動けない。佐伯がGROWモデルの基礎と4象限のレンズを翼に渡す。</p>
+<h4 id="登場人物-4"><a class="header" href="#登場人物-4">登場人物</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">キャラクター</th><th style="text-align: left">OS型</th><th style="text-align: left">この章での役割</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">高橋 翼</td><td style="text-align: left">自分本位×行動型（コーザル行動）</td><td style="text-align: left">マネージャーとして初めて他者を率いる。自分のやり方が通用しない壁</td></tr>
+<tr><td style="text-align: left">佐伯 零一</td><td style="text-align: left">自分本位×思考型（コーザル思考）</td><td style="text-align: left">[L]シーン：GROWモデル基礎 + OS 4象限の提示。Lv.2開示</td></tr>
+<tr><td style="text-align: left">結衣</td><td style="text-align: left">他者本位×行動型（受動的行動）</td><td style="text-align: left">翼の管理下に入るが、管理外で成果を出す。翼の苛立ちの種</td></tr>
+<tr><td style="text-align: left">中村 涼太</td><td style="text-align: left">自分本位×思考型（コーザル思考）</td><td style="text-align: left">第二新卒。論理で反論する新人。翼と正面衝突</td></tr>
+<tr><td style="text-align: left">小野 沙織</td><td style="text-align: left">他者本位×思考型</td><td style="text-align: left">前職アパレル。何をやっても動けない。翼の最難課題</td></tr>
+<tr><td style="text-align: left">藤原 美咲</td><td style="text-align: left">—（類型外）</td><td style="text-align: left">同棲開始。新しい日常</td></tr>
+<tr><td style="text-align: left">木下 蓮</td><td style="text-align: left">自分本位×行動型（支配目的）</td><td style="text-align: left">結衣の仕事量増加に反応し始める</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="ビート構成6ビート-2"><a class="header" href="#ビート構成6ビート-2">ビート構成（6ビート）</a></h4>
+<p><strong>ビート1: マネージャー初日——チームとの顔合わせ（翼視点）</strong></p>
+<ul>
+<li>入社4ヶ月目。翼がマネージャーとして初の朝礼に臨む。チーム名簿に載っていた3つの名前が目の前に揃う</li>
+<li><strong>結衣（26歳）:</strong> 翼にとっては「打率で自分に勝っていた同僚」。穏やかに「よろしくお願いします」と微笑む。翼は「結衣なら大丈夫だろう」と楽観</li>
+<li><strong>中村涼太（24歳・第二新卒）:</strong> メガバンクを1年で辞めて人材紹介に転職。初対面で「チームの数値目標の根拠を教えてもらえますか？」と質問。翼は一瞬面食らう——「こいつ、いきなりそこから来るのか」。涼太は紳士的だが、目が合うと視線を逸らさない</li>
+<li><strong>小野沙織（25歳・前職アパレル販売）:</strong> 「よ、よろしくお願いします……」。声が小さく、視線が安定しない。翼は「とにかく行動させれば殻が破れるだろう」と考える</li>
+<li>翼の内心：「俺がPDCAで成果を出した方法を伝えれば、全員伸びる」。この確信が第2部の出発点であり、最大の誤り</li>
+</ul>
+<p><strong>ビート2: 翼のメソッドが通用しない——1ヶ月目の壁（翼視点）</strong></p>
+<ul>
+<li>翼は第1部で佐伯から学んだPDCAを自分の言葉に翻訳し、チーム全員に展開する。「仮説を立ててから動け」「1日の終わりにCheckを書け」「Action数を可視化しろ」</li>
+<li><strong>結衣:</strong> 翼の指示を「はい」と聞くが、実際には自分のやり方を変えない。ポストイットによる独自の仮説管理を続け、成約率はチームトップ。翼が「結衣、Check表を出してくれ」と言うと「あ、すみません、まだまとめてなくて……」と言いよどむ。しかし数字は出ている。翼は管理できないのに成果が出ている状態に苛立つ</li>
+<li><strong>涼太:</strong> 翼の「まず動け、走りながら考えろ」に対し、「根拠が薄い仮説で動いても学習効率が悪いのでは？」と反論。翼が「じゃあお前の仮説を見せてくれ」と言うと、涼太は完璧に構造化された分析を見せるが、面談実績はゼロ。「準備が整ったら動きます」。翼は「考えてるだけじゃ何も始まらないだろ」と苛立つ</li>
+<li><strong>沙織:</strong> 翼の指示通りにコール数をこなそうとするが、電話をかける前に手が震える。1日10件がやっと。翼が「せめて30件は——」と言いかけ、沙織の目に涙が浮ぶのを見て言葉を飲み込む。何をどう言えばいいか分からない</li>
+<li>翼の自尊心が軋む——「俺のやり方は間違っていない。うまくいかないのは部下の問題だ」</li>
+</ul>
+<p><strong>ビート3: [L]シーン——GROWモデル基礎導入 + OS 4象限（翼視点）</strong></p>
+<ul>
+<li>カフェセッション。翼が佐伯に「チームがうまくいかない」と率直に打ち明ける。苛立ちが声に出ている。「俺が教えた通りにやれば成果が出るはずなんです。でも結衣は勝手にやるし、涼太は動かないし、沙織は泣く」</li>
+<li>佐伯は笑わない。ゆっくりと問いかける。「お前、全員に同じことを教えたのか？」——「はい」——「じゃあ聞くが、<strong>お前が佐伯に教わった時と同じやり方で</strong>、全員に教えたわけだ」——「そうですけど」——「<strong>お前と同じ型の人間が3人揃うと思うか？</strong>」</li>
+<li><strong>[L]シーン概要（GROWモデル基礎 + OS 4象限）:</strong>
+<ul>
+<li>①切実な問題：「自分のやり方で全員を動かせる」幻想が崩れた。3人とも翼の手法に反応しない</li>
+<li>②問いかけ：「お前は第1部で自分が行動型だと知った。じゃあ結衣は？ 涼太は？ 沙織は？ <strong>全員が行動型か？</strong>」</li>
+<li>③間違い・反発：翼「それは……でも、PDCAは型に関係なく誰にでも使えるはずでしょう？」佐伯「PDCAの原理は普遍だ。でも<strong>伝え方と順序</strong>は相手の型で変わる。お前は行動型だからDから入って成功した。<strong>全員がDから入れると思うのは、お前のOSの押し付けだ</strong>」</li>
+<li>④What：佐伯がナプキンに2本の軸を描く。縦軸＝認知OS（自分本位 / 他者本位）、横軸＝意思決定OS（行動型 / 思考型）。4象限が生まれる。「お前のチームは4つの象限が全部揃っている。こんなチームは稀だ」。翼（自分本位×行動型）、結衣（他者本位×行動型）、涼太（自分本位×思考型）、沙織（他者本位×思考型）。そしてGROWモデルの基本構造をナプキンに描く：G（Goal：目標の合意）→ R（Reality：現実の探求）→ O（Options：選択肢の探索）→ W（Will：意志の決定）。「GROWは相手の中に意識と責任感を育てるための対話の型だ。答えを教えて動かすんじゃない」</li>
+<li>⑤Why：「正しいことを言っているのに伝わらない」の正体。内容の正しさと伝わるかは別問題。相手が「今どこにいるか」を把握した上で、相手に合った順序と速度で対話する必要がある。翼が全員にDから教えたのは、行動型OSの押し付けだった。GROWは教える側のOSバイアスを抑制する。まず相手のGoalを聞く。現実を一緒に見る。選択肢を相手に考えさせる。そしてやるかどうかは相手が決める</li>
+<li>⑥How：翼のチームを例に4象限×GROWの適用を佐伯が概説する。「結衣に対して：Goalを聞いても『チームのためなら何でも』としか返ってこないだろう？ それは<strong>結衣のGoalじゃない</strong>。他者本位の型は、自分のGoalを持つこと自体が課題だ」「涼太に対して：Rは完璧に出してくるが、Optionsで『失敗しない選択肢』しか出さないだろう。Dに踏み出させるWの設計がカギだ」「沙織に対して：……正直、まだ俺も答えが見えていない。ただ、焦るな。小さく始めろ」。ナプキンに4象限ごとのGROWの力点を書き込む</li>
+<li>⑦自己開示：<strong>Lv.2。</strong> 佐伯がペンを止め、少し遠い目で言う。「俺も昔、チームを任されたことがあってな。<strong>元部下を潰しかけた</strong>。俺のやり方を押し付けた結果だった。……お前が今ぶつかっている壁は、俺が通った壁と同じだ」。翼は初めて佐伯の表情に<strong>痛み</strong>を見る。佐伯は深入りしない。「いつか全部話す。今はお前が自分のチームと向き合うことのほうが大事だ」</li>
+<li>⑧腹落ち：翼「……俺は結局、第1部と同じことをしていた。自分のパターンで全員を動かそうとしていた。PDCAの中身じゃなくて、伝え方が問題だった」佐伯「伝え方だけじゃない。<strong>お前がどういう姿勢でチームと向き合うか</strong>だ。GROWの型は教えた。でも型だけ使っても意味がない。<strong>相手を本気で理解しようとする気持ちが前提だ</strong>」</li>
+</ul>
+</li>
+</ul>
+<p><strong>ビート4: 翼のGROW初実践——涼太との衝突（翼視点）</strong></p>
+<ul>
+<li>セッション翌日。翼は涼太との1on1を試みる。GROWの型を意識して、まず「涼太、お前はどういう営業マンになりたいんだ？」（G）と聞く</li>
+<li>涼太「論理的に最適な提案ができる人材です」——翼「じゃあ今の現実は？」（R）——涼太「データ分析は進んでいますが、面談実績がありません」——翼「他にどんな方法がある？」（O）——涼太「もう少しデータを集めてから——」——翼「<strong>いつまで集め続けるんだ？</strong>」</li>
+<li>ここで翼の行動型OSが噴出する。GROWの型を使っているつもりが、Wの段階で「早く動け」という圧をかけてしまう。涼太の表情が固まる。「……やります。失敗しても責任は取ります」——しかしその声にはコミットメントではなく、上司への服従がある</li>
+<li>翼は会議室を出た後、自分のやり方がGROWの形だけ真似ていたことに気づく。「俺は問いかけたつもりで、結局<strong>追い込んでいた</strong>」</li>
+</ul>
+<p><strong>ビート5: 結衣視点——蓮の反応と仕事量の変化</strong></p>
+<ul>
+<li>結衣がマネージャー翼の下で仕事のペースと責任が増える。帰宅が遅くなる日が増え、蓮の態度が以前より冷たくなっている</li>
+<li>蓮「最近帰り遅くない？ マネージャーが変わったからって、お前が頑張る必要あるの？」。結衣「チームのために——」蓮「<strong>チームのため？ 俺のことは？</strong>」。蓮の声にはかつてのハネムーン期の優しさは消え、要求が剥き出しになっている</li>
+<li>結衣は蓮に謝りながら、同時に職場での自分の成果に微かな手応えを感じ始めている。この二つの感覚が共存する不安定さ。まだ「自分がどうしたいか」は見えていない</li>
+<li><strong>DVサイクル: 蓮の支配欲が結衣の仕事量増加（=蓮のコントロール外）で刺激されている。</strong> Part 2を通じて悪化していく起点</li>
+</ul>
+<p><strong>ビート6: 翼視点——美咲との同棲開始</strong></p>
+<ul>
+<li>マネージャー昇格を機に、翼と美咲が同棲を始める。引越しの日、段ボール箱を運びながら「これでもっと一緒にいられるね」と美咲が笑う。翼も笑うが、頭の中はチームのことでいっぱいで、美咲の言葉が上滑りしている</li>
+<li>同棲初日の夕食。美咲が「仕事、大変そうだね。何かあったら話してね」と言う。翼「大丈夫だよ。なんとかなる」——Ch.1から変わらない「本音を話さない」パターン。第2部のシーソーの私生活面「→」の起点</li>
+</ul>
+<h4 id="crisis-4"><a class="header" href="#crisis-4">Crisis</a></h4>
+<ul>
+<li>「自分のやり方で全員を動かせる」幻想の崩壊。3人の部下がそれぞれ異なる壁を持ち、翼の行動型メソッドが通用しない</li>
+</ul>
+<h4 id="learning-4"><a class="header" href="#learning-4">Learning</a></h4>
+<ul>
+<li><strong>GROWモデル基礎導入:</strong> G=Goal（目標の合意。指示ではなく相手が自分ごとに感じるGoal）、R=Reality（事実と解釈の分離、現実の共同探求）、O=Options（選択肢の探索。コーチング+ティーチングの統合）、W=Will（意志の決定。PDCAのP/Dに接続）</li>
+<li><strong>OS 4象限の提示:</strong> 認知OS（自分本位/他者本位）×意思決定OS（行動型/思考型）の4象限。チームメンバーの型の違いを構造的に理解するレンズ</li>
+</ul>
+<h4 id="lシーン概要-4"><a class="header" href="#lシーン概要-4">[L]シーン概要</a></h4>
+<ul>
+<li><strong>1〜2シーン:</strong> ビート3。佐伯カフェセッション。GROWモデル基礎（What/Why/How）+ OS 4象限の提示（ナプキンに2軸の図）。4象限ごとのGROW適用の概説</li>
+</ul>
+<h4 id="サブストーリー進行-4"><a class="header" href="#サブストーリー進行-4">サブストーリー進行</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">サブストーリー</th><th style="text-align: left">進行状況</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">A. 翼と父</td><td style="text-align: left">直接描写なし。Ch.4の「そうか」の余韻</td></tr>
+<tr><td style="text-align: left">B. 翼と美咲</td><td style="text-align: left">同棲開始。新しい日常だが、翼は仕事に頭を取られている</td></tr>
+<tr><td style="text-align: left">D. 結衣と蓮</td><td style="text-align: left">仕事量増加により蓮の態度が冷たくなる。支配の起点</td></tr>
+<tr><td style="text-align: left">涼太</td><td style="text-align: left">初登場。翼と論理で衝突。GROWの形だけの1on1で服従反応</td></tr>
+<tr><td style="text-align: left">沙織</td><td style="text-align: left">初登場。電話で手が震える。何をどう言えばいいか翼にも分からない</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="佐伯開示レベル-4"><a class="header" href="#佐伯開示レベル-4">佐伯開示レベル</a></h4>
+<p><strong>Lv.2</strong> — 「元部下を潰しかけた経験がある」。翼のマネジメント失敗と共鳴する文脈で開示。具体的詳細は語らない</p>
+<h4 id="シーソー状態-4"><a class="header" href="#シーソー状態-4">シーソー状態</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">面</th><th style="text-align: left">状態</th><th style="text-align: left">備考</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">仕事</td><td style="text-align: left"><strong>↓</strong></td><td style="text-align: left">チーム管理の壁。3人に翼のメソッドが通用しない</td></tr>
+<tr><td style="text-align: left">私生活</td><td style="text-align: left"><strong>→</strong></td><td style="text-align: left">美咲と同棲開始。新しい日常は安定しているが深い関わりはまだない</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="次章への接続-4"><a class="header" href="#次章への接続-4">次章への接続</a></h4>
+<ul>
+<li>翼がGROWの「型」を知ったが「姿勢」は伴っていない。形だけのGROWが次章で破綻する</li>
+<li>涼太との衝突が深化する（翼の行動型OSと涼太の思考型OSの根本的対立）</li>
+<li>沙織に対して翼が打つ手を見失う状態が継続する</li>
+<li>結衣は管理外で成果を出し続け、翼にとって「問題がない→問題に気づけない」構造が作られていく</li>
+<li>佐伯のLv.2開示（元部下を潰しかけた）が翼の中に残り、Ch.6のマネージャーの裏返しへの伏線</li>
+</ul>
+<hr>
+<h3 id="ch6裏返しの鏡"><a class="header" href="#ch6裏返しの鏡">Ch.6「裏返しの鏡」</a></h3>
+<h4 id="章概要-5"><a class="header" href="#章概要-5">章概要</a></h4>
+<p><strong>第2部のクライマックス。ダブル絶望①。</strong> チームマネジメントが3方面から同時崩壊し（結衣の管理不能、涼太の正式ルートでの反抗、沙織の完全停止）、同時期に父に美咲を会わせた結果が惨事となる。佐伯は「部下の問題はお前自身の問題だ」というマネージャーの裏返し構造を翼に突きつける。翼は仕事と私生活の両面が同時に崩壊する中で、初めて自分のOSの限界を身体で知る。</p>
+<h4 id="登場人物-5"><a class="header" href="#登場人物-5">登場人物</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">キャラクター</th><th style="text-align: left">OS型</th><th style="text-align: left">この章での役割</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">高橋 翼</td><td style="text-align: left">自分本位×行動型</td><td style="text-align: left">ダブル絶望①。全方位からの崩壊に直面</td></tr>
+<tr><td style="text-align: left">佐伯 零一</td><td style="text-align: left">自分本位×思考型</td><td style="text-align: left">[L]シーン：GROW深化 + マネージャーの裏返し。Lv.2-3開示</td></tr>
+<tr><td style="text-align: left">結衣</td><td style="text-align: left">他者本位×行動型</td><td style="text-align: left">成果は出すが、チームから孤立。蓮DVの悪化</td></tr>
+<tr><td style="text-align: left">中村 涼太</td><td style="text-align: left">自分本位×思考型</td><td style="text-align: left">翼に対して正式に不満を申し出る</td></tr>
+<tr><td style="text-align: left">小野 沙織</td><td style="text-align: left">他者本位×思考型</td><td style="text-align: left">完全に動けなくなり、翼が初めて「救えないかもしれない」と感じる</td></tr>
+<tr><td style="text-align: left">藤原 美咲</td><td style="text-align: left">—</td><td style="text-align: left">翼の父との食事会。翼の本性を初めて見る</td></tr>
+<tr><td style="text-align: left">父（誠一郎）</td><td style="text-align: left">—</td><td style="text-align: left">美咲との初対面。評価も否定もしない歯切れの悪い態度</td></tr>
+<tr><td style="text-align: left">木下 蓮</td><td style="text-align: left">自分本位×行動型（支配目的）</td><td style="text-align: left">DV悪化。直接描写が始まる</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="ビート構成6ビート-3"><a class="header" href="#ビート構成6ビート-3">ビート構成（6ビート）</a></h4>
+<p><strong>ビート1: チーム崩壊の全体像（翼視点）</strong></p>
+<ul>
+<li>マネージャー就任2〜3ヶ月目。翼はGROWの「型」を使ってチームと向き合おうとするが、状況は悪化の一途</li>
+<li><strong>結衣:</strong> 翼のGROWに「はい、やります」と応じるが、行動は変わらない。翼が設定した週次レポート形式に一応応じるものの、結衣の成果はレポート外のところで出ている。翼は「なぜお前の成果の出し方がこちらから見えないんだ」と苛立つが、数字は文句なし。結衣は翼に不満を言わないが、チーム内で微妙に浮いている——涼太と沙織のほうが翼のやり方に合わせようとしているから</li>
+<li><strong>涼太:</strong> 翼との1on1を重ねるうちに、涼太が正式に異議を唱える。「高橋さんのやり方は行動偏重です。僕は分析してから動いたほうが効率が良いと考えています。データを見てください」。翼は涼太のデータが正しいことが分かるだけに、反論できない。しかし「動いていない」事実も変わらない。二人の間に冷たい膠着が生まれる</li>
+<li><strong>沙織:</strong> 面談を1件もこなせないまま時間だけが過ぎる。翼の「まず小さく始めろ」というアドバイスも、沙織にとっては「小さくても迷惑をかけることに変わりない」から動けない。沙織がデスクで俯いているのを翼が見て、初めて**「俺には、この子を救えないかもしれない」**と思う。その思いがさらに翼を追い詰める</li>
+</ul>
+<p><strong>ビート2: 父との食事会——美咲を会わせて衝突（翼視点）</strong></p>
+<ul>
+<li>美咲が「ご両親に挨拶したい」と言い、翼は渋々ながら父・誠一郎との食事会をセッティングする。母は体調を理由に欠席（実際は翼と誠一郎の関係を慮って席を外した可能性）</li>
+<li>食事会は表面的には穏やかに進む。美咲が緊張しながら「翼さんにはいつもお世話になっています」と挨拶する。誠一郎は「そうか。ありがとう」と返すが、<strong>評価も否定もしない</strong>。翼の仕事についても「頑張っているんだろう」としか言わない。美咲が「翼さん、マネージャーになったんですよ」と嬉しそうに話しても、誠一郎の反応は薄い</li>
+<li>翼はこの「歯切れの悪い態度」に、幼少期から蓄積してきた怒りが噴出しかける。食事会を早々に切り上げ、帰りの車で美咲に八つ当たりする。「<strong>お前にはわからないよ、あの人のことは</strong>」。美咲は何も言い返せない。翼は自分が言った言葉のひどさに気づいているが、謝れない</li>
+<li><strong>佐伯の「お前が決めることだ」との接続:</strong> 翼は帰宅後、布団の中でふと思う——Ch.4で佐伯が「お前が決めることだ」と言った時、父と同じ言葉だったのに、なぜ受け取り方が違ったのか。答えは出ないが、**父の沈黙と佐伯の沈黙の「何か違うもの」**が初めて翼の意識に引っかかる。この気づきは言語化されないまま沈む（Part 3で回収）</li>
+</ul>
+<p><strong>ビート3: [L]シーン——GROW深化 + マネージャーの裏返し（翼視点）</strong></p>
+<ul>
+<li>カフェセッション。翼の表情が暗い。チームの状態と父との食事会の両方が重なっている</li>
+<li>翼は最初にチームの話を切り出す。「何をやってもうまくいかない。結衣は管理できない。涼太は動かない。沙織は……どうしていいかわからない」。翼の声が珍しく震えている</li>
+<li>佐伯は翼の話を黙って聞いた後、一つの問いを投げる。「お前、<strong>結衣に苛立つ理由は本当に分かっているか？</strong>」</li>
+<li><strong>[L]シーン概要（GROW深化 + マネージャーの裏返し）:</strong>
+<ul>
+<li>①切実な問題：チーム3方面から崩壊 + 私生活（父×美咲）の衝突。仕事↓↓ + 私生活↓↓ の同時崩壊</li>
+<li>②問いかけ：佐伯「お前が部下に感じている苛立ちの正体——それを正直に出してみろ」</li>
+<li>③間違い・反発：翼「苛立ちって……部下が言うこと聞かないから——」佐伯「<strong>聞かないのか、お前の思い通りにならないのか？</strong>」翼が言葉に詰まる</li>
+<li>④What：<strong>マネージャーの裏返し（Mirror Structure）。</strong> 部下一人ひとりの「壁」は、実はマネージャー自身の未統合を映し出す鏡。佐伯がナプキンに3つの鏡を描く——
+<ul>
+<li>結衣への苛立ち＝翼自身が「自分のやり方以外を認められない」こと。成果が出ているのに管理したがるのはコントロール欲求。行動型OSの押し付け</li>
+<li>涼太への苛立ち＝翼自身が「思考」を軽視してきたこと。涼太が動けないのは失敗恐怖だが、翼にとって涼太は「考えるだけで動かない奴」——それは翼が「本当は考えるべきだった場面で考えなかった後悔」の投影</li>
+<li>沙織への無力感＝翼自身の「成果＝数字」という固定観念。沙織を前にした時、「成果とは何か」が問い直される。翼の自己価値が「結果を出すこと」に縛られていることの鏡</li>
+</ul>
+</li>
+<li>⑤Why：翼が部下の問題だと思っていたものが、全て自分のOSの映し鏡だと気づく構造。「部下を変えようとする」のではなく「自分のOSの限界を見る」ことがマネジメントの本質。これはGROWの深化——GROWのR（Reality）で探求すべきは部下の現実だけでなく、<strong>教える側自身の認知バイアス</strong>。マネジメントは「部下をどう動かすか」のテクニックではなく「自分自身のOS変容」</li>
+<li>⑥How：佐伯が翼に具体的な「見方の転換」を促す。「結衣が管理外で成果を出すのは<strong>結衣の強みだ</strong>。お前はなぜそれを喜べない？」「涼太のデータ分析力を、チームのR（Reality）として活かせないか？」「沙織に対して小さな成果ではなく、<strong>小さな行動そのものを認める</strong>ことから始めろ。数字じゃない」。GROWの各ステップを翼自身に適用：G「お前はマネージャーとして何を目指してるんだ？」→R「部下3人にお前はどう見られている？」→O「お前のやり方以外にどんなアプローチがある？」→W「まず涼太と話せ。ただし<strong>教えるな。聞け</strong>」</li>
+<li>⑦自己開示：<strong>Lv.2〜3。</strong> 佐伯が静かに言う。「俺は昔、<strong>チームを変えようとして壊した</strong>。優秀な人間を集めて、全員に俺のやり方を押し付けた。成果は出た。でもチームは中から崩れた。……一番近くにいた奴が、最初に壊れた」。佐伯の目が一瞬、遠くなる。「お前が今いる場所は、俺がかつていた場所と同じだ。だから言える。<strong>今気づけたお前は、まだ間に合う</strong>」</li>
+<li>⑧腹落ち：翼が長い沈黙の後、呟く。「……部下の問題だと思っていた。全部、<strong>俺の問題だった</strong>」。佐伯「そう思えたなら、もう半分は変わっている。残りの半分は行動で証明しろ」</li>
+</ul>
+</li>
+</ul>
+<p><strong>ビート4: 結衣視点——蓮のDV悪化・直接描写</strong></p>
+<ul>
+<li>結衣の仕事量が増え、帰宅が遅くなる日が続く。蓮の態度が決定的に変わる</li>
+<li>ある夜、結衣が帰宅すると蓮がダイニングテーブルに座って待っている。目つきが冷たい。「今日はどこで何してた？」。結衣が「お客様の緊急対応で——」と説明を始めると、蓮が結衣のスマホを取り上げる。「見せろ」。結衣が「やめて」と言いかけた瞬間、蓮がスマホをテーブルに叩きつける。「<strong>お前、最近俺のこと舐めてんだろ</strong>」</li>
+<li>結衣は身体が硬直する。蓮は手を出さない。しかし声の圧、目の冷たさ、テーブルを叩くスマホの音——<strong>精神的暴力が物理的暴力のすぐ手前にある</strong>ことを読者に伝える筆致</li>
+<li>その後、蓮が急に態度を軟化させ「ごめん。仕事のストレスで」と謝る。結衣は震えながら「…うん」と答え、蓮の胸に顔を埋める。<strong>DVサイクルの加速が完成</strong></li>
+<li>翌日のオフィスで結衣はマスクで顔を隠している（泣き腫れた目）。翼は「風邪？ 気をつけろよ」とだけ声をかけ、結衣の異変に気づかない。<strong>認知の非対称性が痛みを伴う形で機能</strong></li>
+</ul>
+<p><strong>ビート5: 翼視点——美咲との関係のひび</strong></p>
+<ul>
+<li>父との食事会以降、翼と美咲の間に沈黙が増えている。翼は「お前にはわからない」と言った言葉を謝れないまま、仕事の忙しさに逃げている</li>
+<li>美咲が夕食の席で「あの日のこと、話してくれない？ お父さんとのこと」と切り出す。翼は「何もない。もういい」と遮る。美咲の表情が曇る。「翼、最近<strong>私に対しても壁を作ってない？</strong>」</li>
+<li>翼は返す言葉を持たない。美咲は「そっか」と呟いて食器を片付ける。二人の間に、同棲前にはなかった距離が生まれている</li>
+<li><strong>シーソー: 私生活↓↓。</strong> 仕事の崩壊と私生活の崩壊が同時に進行するダブル絶望①の構造</li>
+</ul>
+<p><strong>ビート6: 翼視点——佐伯の言葉を反芻する夜</strong></p>
+<ul>
+<li>深夜。翼が布団の中で佐伯の言葉を反芻する。「部下の問題は俺の問題」——頭では理解した。しかし身体が追いつかない。結衣の管理不能さ、涼太の冷たい論理、沙織の涙、父の沈黙、美咲の傷ついた目。全てが翼の中で渦を巻いている</li>
+<li>翼はスマホを取り出し、佐伯にLINEを送る。「明日、時間もらえますか」。佐伯の返信：「朝8時、いつもの場所で」。翼は初めて<strong>自分から佐伯を頼った</strong>——Part 1の申し送り「困った時に自ら佐伯を頼る関係への移行」がここで実現</li>
+<li><strong>この夜、翼は自分のOSの限界を頭ではなく身体で痛感した。ここが第2部の底。ここから上昇が始まる</strong></li>
+</ul>
+<h4 id="crisis-5"><a class="header" href="#crisis-5">Crisis</a></h4>
+<ul>
+<li><strong>ダブル絶望①。</strong> 仕事↓↓（チーム3方面崩壊：結衣の管理不能、涼太の正式反抗、沙織の完全停止）+ 私生活↓↓（父×美咲衝突→美咲との関係にひび）。翼の行動型OSの限界が、全ての関係性で同時に露呈する</li>
+</ul>
+<h4 id="learning-5"><a class="header" href="#learning-5">Learning</a></h4>
+<ul>
+<li><strong>GROW深化:</strong> GROWのR（Reality）は部下の現実だけでなく、教える側自身の認知バイアスを含む。GROWの「姿勢」——相手を本気で理解しようとする態度——が「型」以上に重要</li>
+<li><strong>マネージャーの裏返し（Mirror Structure）:</strong> 部下の壁＝マネージャー自身の未統合の鏡。結衣→コントロール欲、涼太→思考軽視の後悔、沙織→成果＝数字の固定観念。マネジメントの本質は他者の変容ではなく自己のOS変容</li>
+</ul>
+<h4 id="lシーン概要-5"><a class="header" href="#lシーン概要-5">[L]シーン概要</a></h4>
+<ul>
+<li><strong>1〜2シーン:</strong> ビート3。佐伯カフェセッション。マネージャーの裏返し構造（ナプキンに3つの鏡）。GROW深化（翼自身へのGROW適用）。佐伯Lv.2〜3開示</li>
+</ul>
+<h4 id="サブストーリー進行-5"><a class="header" href="#サブストーリー進行-5">サブストーリー進行</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">サブストーリー</th><th style="text-align: left">進行状況</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">A. 翼と父</td><td style="text-align: left">美咲を会わせて衝突。「お前が決めることだ」＝父と同じ言葉への気づき（未言語化）</td></tr>
+<tr><td style="text-align: left">B. 翼と美咲</td><td style="text-align: left">八つ当たり→沈黙→美咲の「壁を作ってない？」。関係にひび</td></tr>
+<tr><td style="text-align: left">D. 結衣と蓮</td><td style="text-align: left">DVサイクル加速。精神的暴力の直接描写。蓮のスマホ叩きつけ</td></tr>
+<tr><td style="text-align: left">涼太</td><td style="text-align: left">翼に正式に異議。冷たい膠着状態</td></tr>
+<tr><td style="text-align: left">沙織</td><td style="text-align: left">完全停止。翼が「救えないかもしれない」と初めて感じる</td></tr>
+<tr><td style="text-align: left">高城</td><td style="text-align: left">直接登場しないが、チーム数値の悪化は高城の目に触れている暗示</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="佐伯開示レベル-5"><a class="header" href="#佐伯開示レベル-5">佐伯開示レベル</a></h4>
+<p><strong>Lv.2〜3</strong> — 「チームを変えようとして壊した。一番近くにいた奴が最初に壊れた」。Ch.5のLv.2（元部下を潰しかけた）からLv.3（組織レベルの失敗）へ深化。黒沢の名前はまだ出さない</p>
+<h4 id="シーソー状態-5"><a class="header" href="#シーソー状態-5">シーソー状態</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">面</th><th style="text-align: left">状態</th><th style="text-align: left">備考</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">仕事</td><td style="text-align: left"><strong>↓↓</strong></td><td style="text-align: left">チーム3方面崩壊。翼のマネジメント初期が完全に破綻</td></tr>
+<tr><td style="text-align: left">私生活</td><td style="text-align: left"><strong>↓↓</strong></td><td style="text-align: left">父×美咲衝突→美咲との関係にひび。蓮DV悪化（結衣視点）</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="次章への接続-5"><a class="header" href="#次章への接続-5">次章への接続</a></h4>
+<ul>
+<li>翼が「部下の問題＝自分の問題」と気づいたが、<strong>実際にどう変えるか</strong>はこれから。Ch.7でGrowth Mindsetの育成ステップと部下一人ひとりのFixed領域に向き合う</li>
+<li>涼太の「正解依存」、沙織の「行動＝迷惑」、結衣の「Will不在」——各メンバーのFixed Mindsetの根源にCh.7で切り込む</li>
+<li>「お前が決めることだ」＝父と同じ言葉という気づきの種はまだ沈んでいる（Part 3で本格回収）</li>
+<li>結衣のDV悪化が第2部を通じてエスカレートし続ける</li>
+<li>佐伯の「一番近くにいた奴が壊れた」は黒沢のことだが、名前は伏せたまま。Part 3 Ch.11で全容開示</li>
+</ul>
+<hr>
+<h3 id="ch7変われるという信念"><a class="header" href="#ch7変われるという信念">Ch.7「変われるという信念」</a></h3>
+<h4 id="章概要-6"><a class="header" href="#章概要-6">章概要</a></h4>
+<p>Ch.6のダブル絶望①で底を打った翼が、もがきながら上昇を始める。佐伯からGrowth Mindsetの育成ステップを学び、涼太の「正解依存」、沙織の「行動＝迷惑」、結衣の「Will不在」——3人それぞれのFixed Mindsetの根源に向き合う。AI活用3点セット（壁打ち・録音聞き返し・リアル行動PDCA）が実践ツールとして導入される。翼自身も「人を育てる」ことへのFixed（「俺には向いていない」）に気づく。</p>
+<h4 id="登場人物-6"><a class="header" href="#登場人物-6">登場人物</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">キャラクター</th><th style="text-align: left">OS型</th><th style="text-align: left">この章での役割</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">高橋 翼</td><td style="text-align: left">自分本位×行動型</td><td style="text-align: left">各メンバーのFixed Mindsetと向き合う。自身のFixedにも気づく</td></tr>
+<tr><td style="text-align: left">佐伯 零一</td><td style="text-align: left">自分本位×思考型</td><td style="text-align: left">[L]シーン：Growth Mindset育成ステップ1-4 + AI活用。Lv.3開示</td></tr>
+<tr><td style="text-align: left">結衣</td><td style="text-align: left">他者本位×行動型</td><td style="text-align: left">Will不在が露呈する。しかし自覚には至らない</td></tr>
+<tr><td style="text-align: left">中村 涼太</td><td style="text-align: left">自分本位×思考型</td><td style="text-align: left">Fixed（正解依存＝失敗恐怖）の根源に光が当たる</td></tr>
+<tr><td style="text-align: left">小野 沙織</td><td style="text-align: left">他者本位×思考型</td><td style="text-align: left">翼にとっての最難課題。この章の終盤でようやく兆し</td></tr>
+<tr><td style="text-align: left">木下 蓮</td><td style="text-align: left">自分本位×行動型（支配目的）</td><td style="text-align: left">結衣の変化を敏感に察知。支配をエスカレートさせる</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="ビート構成5ビート-2"><a class="header" href="#ビート構成5ビート-2">ビート構成（5ビート）</a></h4>
+<p><strong>ビート1: 翼の姿勢が変わる——「教える」から「聞く」へ（翼視点）</strong></p>
+<ul>
+<li>Ch.6の佐伯セッション（マネージャーの裏返し）を経て、翼のチームへの接し方が変わり始める。以前は「俺が正解を知っている」前提で話していたが、「俺は何も分かっていなかったのかもしれない」という前提で聞くようになる</li>
+<li><strong>涼太との再対話:</strong> 翼が涼太に「お前のデータ分析、俺にも見せてくれないか。チームの現状を<strong>一緒に</strong>把握したい」と声をかける。涼太は驚くが、自分の得意領域を認められたことで少し表情が緩む。二人でチームの数値を見ながら、涼太が「ここのリードのコンバージョンが低い理由、高橋さんはどう思います？」と聞き返す——初めて翼に「対等な問い」を向けた瞬間</li>
+<li><strong>沙織への小さな変化:</strong> 翼が沙織に「無理にコールしなくていい。まず、お客さんに送るメールの文面を一緒に考えないか？」と提案する。電話というハードルを下げ、文面作成という沙織が取り組める領域から入る。沙織がかすかに頷く</li>
+<li>しかし、これらの変化はまだ表面的。根本的な壁——各メンバーのFixed Mindset——には届いていない</li>
+</ul>
+<p><strong>ビート2: [L]シーン——Growth Mindset育成ステップ + AI活用（翼視点）</strong></p>
+<ul>
+<li>カフェセッション。翼が少し明るい表情で来る。「チームとの距離が少し縮まった気がする。でも根っこのところが変わらない。涼太はデータは出すけど動かないし、沙織はメールなら書けるけど電話になると固まる。結衣に至っては何が問題なのかすら分からない」</li>
+<li>佐伯「お前は<strong>彼らが変わると信じているか？</strong>」。翼が一瞬止まる。正直に答える：「……涼太は変われると思う。でも沙織は……正直、無理なんじゃないかと思うことがある」。佐伯「その**『無理だ』がお前のFixed Mindsetだ**」</li>
+<li><strong>[L]シーン概要（Growth Mindset育成ステップ1-4 + AI活用振り返り）:</strong>
+<ul>
+<li>①切実な問題：GROWの型は学んだ。マネージャーの裏返しも知った。姿勢も変え始めた。しかし<strong>メンバーの根っこ</strong>が変わらない。特に沙織に対して翼自身が「無理なのでは」と感じ始めている</li>
+<li>②問いかけ：佐伯「お前が部下を変えられると信じていないのに、部下が変わると思うか？ <strong>教える側のMindsetが、教わる側の天井を決める</strong>」</li>
+<li>③間違い・反発：翼「でも努力だけじゃどうにもならないこともあるでしょう。沙織は性格的に営業が向いて——」佐伯「性格？ それは<strong>Fixed Mindsetの典型的な言い訳だ</strong>。お前は『営業は行動型の仕事』だと思っていないか？ それ自体がお前のOSの色眼鏡だ」</li>
+<li>④What：Growth Mindset vs Fixed Mindset。能力に対する信念の違い。スペクトラムであり、同じ人間でも領域によって混在する。翼自身にも「人を育てる」ことへのFixedがある——「俺には向いていない」という信念。そしてFixed Mindsetの育成ステップ1-4を佐伯が提示する</li>
+<li>⑤Why：Fixed Mindsetは「能力がない」のではなく「信念が固着している」。涼太の「準備できていないのに動くべきではない」は能力不足ではなく恐怖。沙織の「私が行動すると迷惑」は能力不足ではなく自己否定の信念。これらは<strong>生存戦略が強化された状態</strong>。否定して正すのではなく、探求して理解し、本人が自然と手放せるようにする</li>
+<li>⑥How：
+<ul>
+<li><strong>ステップ1（Fixed要素の発見）:</strong> GROWのRの中で「その時どう感じた？」と聞く。「自分にはできない」「向いていない」が出てくる。それを否定しない</li>
+<li><strong>ステップ2（論理構造の発見）:</strong> 「なんでそう思うんだ？」。本人にとっての筋の通った因果関係を引き出す</li>
+<li><strong>ステップ3（背景の探求）:</strong> 「いつ頃からそう思うようになった？」。生い立ちや原体験に触れる。教える側は「その背景があればそう捉えるのは当然だ」と本気で納得する</li>
+<li><strong>ステップ4（受容と変化）:</strong> 双方が「そう捉えるのは当然だった」と受け止められた時、本人が自分のFixed要素と「本来ありたい姿」の矛盾に自ら気づく。教える側が変えるのではなく、本人の中から変化が生まれる</li>
+<li><strong>AI活用3点セット（簡潔にガイダンス）:</strong> ①AI対話（壁打ち）＝対話の要約+全文をAIに投げて自己理解を深める。議論の主導権は人間。②録音聞き返し＝佐伯セッションやチームMTGの録音を聞き返す。新しい気づきは既存認知で処理しにくい。後で聴き返すと違うものが聴こえる。③リアル行動PDCA＝AI壁打ちで仮説→リアルで行動→新しい結果→再びAI壁打ちで振り返り。3つの循環がOS変容を加速する。佐伯「スマホで録っておけ。後で聴き返した時に、違うものが聴こえるから」</li>
+</ul>
+</li>
+<li>⑦自己開示：<strong>Lv.3。</strong> 佐伯が翼を見て静かに言う。「俺がかつてチームを壊した時——<strong>俺自身のFixed Mindsetが、あの時すべてを壊した</strong>。俺は自分のやり方が正しいと信じて疑わなかった。部下が壊れていくのが見えていたのに、『俺のやり方についてこれないほうが悪い』と思っていた。……あの時の俺には、Growth Mindsetがなかった」。翼は佐伯の言葉の重さに押される。佐伯が初めて<strong>自分自身の過ちを明確に認めた</strong>瞬間</li>
+<li>⑧腹落ち：翼「……俺も同じだった。沙織を見て『無理だ』と思った。それは沙織の問題じゃなくて、俺が変わることを諦めていた。<strong>俺こそがFixed Mindsetだった</strong>」佐伯「そう気づけたなら、お前は今日からGrowthだ。部下がどう変わるかは、お前がどう信じるかで変わる」</li>
+</ul>
+</li>
+</ul>
+<p><strong>ビート3: 涼太のFixed——「正解依存」との対峙（翼視点）</strong></p>
+<ul>
+<li>翼がGrowth Mindsetの育成ステップを涼太に対して実践する</li>
+<li><strong>ステップ1（Fixed発見）:</strong> 1on1で翼が「涼太、来週のクライアント面談、お前が主担当でやってみないか？」涼太「……準備が整ったら」翼「<strong>整ったってどうやって判断するんだ？</strong>」涼太「データが十分に——」翼「十分って何件分だ？」涼太が沈黙する。翼は以前のように追い込まない。ただ事実を並べる。「お前は3ヶ月間でデータを200件分析した。面談はゼロだ。<strong>何を怖がっている？</strong>」——この問いで涼太の表情が変わる</li>
+<li><strong>ステップ2（論理構造）:</strong> 涼太「……準備不足で動いたら、お客さんに迷惑がかかります。前の会社でも——」翼「前の会社で何があった？」涼太の声が小さくなる。「ゼミの発表で、準備不足のまま出て、教授に公開で論破された。それ以来、<strong>間違えることが怖い</strong>」</li>
+<li><strong>ステップ3（背景）:</strong> 翼「お前の親はどう言ってた？」涼太「……父は『恥をかくな』と。母は『涼太は頭がいいんだから、ちゃんとやれば大丈夫』と」翼はここで佐伯の言葉を思い出す——「その背景があればそう捉えるのは当然だ」。翼は涼太に言う。「そうか。<strong>お前は正解を出し続けることでしか、自分を認められなかったんだな</strong>」。涼太の目が一瞬、赤くなる</li>
+<li><strong>ステップ4（受容と変化）:</strong> 翼は涼太を責めない。「お前の分析力はチームの武器だ。それは事実だ。でもお前が本当になりたい人材って、データだけ出す人か？」涼太がしばらく考えて答える。「……違います。でも、動くのが怖い」翼「<strong>俺の隣で失敗しろ。俺がフォローする</strong>」。涼太が長い沈黙の後、「……やってみます。失敗するかもしれないけど」——この「するかもしれないけど」が、涼太のFixed→Growthへの転換の言葉</li>
+</ul>
+<p><strong>ビート4: 沙織への接近——翼の最難課題（翼視点 + 結衣の介在）</strong></p>
+<ul>
+<li>翼は沙織にもGrowth Mindsetのステップで向き合おうとするが、沙織は心を開かない。翼が「何を大切にしてる？」と聞いても、沙織は「……みなさんにご迷惑を……」としか返ってこない</li>
+<li>ここで結衣が自然に介在する場面。結衣が沙織のデスクに行き、「沙織ちゃん、ここのメール文面すごくいいね。お客さんの気持ち分かってる」と声をかける。沙織が「え……本当ですか？」と顔を上げる。結衣の言葉には「上司の管理」ではなく「隣にいる人の共感」がある。翼はその場面を見て、<strong>自分には結衣のような接し方ができないことを認識する</strong>——これが「成果とは何か」の再定義への入口</li>
+<li>翼は佐伯に「沙織に対して俺のGROWが効かない」と正直に伝える。佐伯「<strong>お前では救えない相手がいる。それを認めろ</strong>。その余白に、結衣が入った。お前がコントロールを手放した瞬間に、チームが動き始める」</li>
+<li>沙織のこの章での変化は微小。しかしメール文面のタスクを続ける中で、沙織が初めて顧客から「丁寧なメールをありがとうございます」と返信を受け取る。翼はその返信を見て「これが沙織の成果だ」と認識する——数字ではない成果の定義</li>
+</ul>
+<p><strong>ビート5: 結衣視点——蓮DV悪化と「自分はどうしたいか」の予兆</strong></p>
+<ul>
+<li>結衣は職場で沙織を気にかけるようになっている。沙織と話す時間が、結衣にとって唯一「蓮のことを忘れられる」時間になりつつある</li>
+<li>蓮のDVがさらにエスカレートしている。蓮が結衣のバッグの中身を無断でチェックする。結衣が翼から受けたチーム資料を見て「仕事のほうが楽しいんだろ。俺より」と吐き捨てる。結衣は「そんなことない。蓮が一番大事だよ」と反射的に言うが、その言葉が自分の口から出た瞬間に、<strong>自分が嘘をついていることに気づく</strong>——しかしその気づきはすぐに蓋をされる</li>
+<li>結衣の中に「自分はどうしたいのか」という問いが、かすかに、しかし確実に芽生え始めている。ただし第2部では<strong>認知の段階にとどまる</strong>。答えは出ない。変容はPart 3</li>
+<li><strong>翼との認知非対称性は継続。</strong> 翼は結衣を「成果を出してくれる頼もしいチームメイト」と認識しているが、結衣の内面（蓮のDV、Will不在の苦しみ）には全く気づいていない。結衣のマスクの理由も、涙の痕も、翼の視界に入っていない</li>
+</ul>
+<h4 id="crisis-6"><a class="header" href="#crisis-6">Crisis</a></h4>
+<ul>
+<li>GROWを正しく使ってもFixed領域が障壁。翼自身にも「人を育てる」ことのFixedがある（「俺には向いていない」「沙織は無理なのでは」）。教える側のMindsetが教わる側の天井を決めるという構造的課題</li>
+</ul>
+<h4 id="learning-6"><a class="header" href="#learning-6">Learning</a></h4>
+<ul>
+<li><strong>Growth Mindset（育成ステップ1-4）:</strong> ①Fixed要素の発見→②論理構造の発見→③背景の探求→④双方の受容と自然な変化。Fixed Mindsetは「否定して正す」のではなく「探求して理解し、本人が自然と手放せる」ようにする</li>
+<li><strong>AI活用振り返り（3点セット）:</strong> ①AI対話（壁打ち）、②録音聞き返し、③リアル行動PDCA。3つの循環がOS変容を加速する。佐伯「後で聴き返した時に、違うものが聴こえるから」</li>
+</ul>
+<h4 id="lシーン概要-6"><a class="header" href="#lシーン概要-6">[L]シーン概要</a></h4>
+<ul>
+<li><strong>1〜2シーン:</strong> ビート2。佐伯カフェセッション。Growth Mindset（What/Why/How + 育成ステップ1-4）+ AI活用3点セット。佐伯Lv.3開示</li>
+</ul>
+<h4 id="サブストーリー進行-6"><a class="header" href="#サブストーリー進行-6">サブストーリー進行</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">サブストーリー</th><th style="text-align: left">進行状況</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">A. 翼と父</td><td style="text-align: left">直接描写なし。Ch.6の衝突の余波が翼の中に残る</td></tr>
+<tr><td style="text-align: left">B. 翼と美咲</td><td style="text-align: left">Ch.6のひびが修復されていない。美咲との関係修復の模索が始まるが不完全</td></tr>
+<tr><td style="text-align: left">D. 結衣と蓮</td><td style="text-align: left">DV悪化継続。バッグ無断チェック。結衣が「嘘をついている自分」に瞬間的に気づく</td></tr>
+<tr><td style="text-align: left">涼太</td><td style="text-align: left">Fixed（正解依存）の根源に光が当たる。「やってみます。失敗するかもしれないけど」</td></tr>
+<tr><td style="text-align: left">沙織</td><td style="text-align: left">メール文面タスクで小さな成果。翼が「数字ではない成果」を認識する入口</td></tr>
+<tr><td style="text-align: left">結衣と沙織</td><td style="text-align: left">結衣が沙織をケアする関係が自然に生まれる</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="佐伯開示レベル-6"><a class="header" href="#佐伯開示レベル-6">佐伯開示レベル</a></h4>
+<p><strong>Lv.3</strong> — 「俺自身のFixed Mindsetが、あの時すべてを壊した」。初めて佐伯が自分の過ちを<strong>信念レベルで</strong>認める。Ch.5-6の実例断片からCh.7で内面構造の告白へ深化</p>
+<h4 id="シーソー状態-6"><a class="header" href="#シーソー状態-6">シーソー状態</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">面</th><th style="text-align: left">状態</th><th style="text-align: left">備考</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">仕事</td><td style="text-align: left"><strong>↑</strong></td><td style="text-align: left">涼太との関係改善開始。沙織に微小な変化。チームが少しずつ動き始める</td></tr>
+<tr><td style="text-align: left">私生活</td><td style="text-align: left"><strong>→</strong></td><td style="text-align: left">美咲との関係修復模索（不完全）。蓮DV悪化（結衣視点）は継続</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="次章への接続-6"><a class="header" href="#次章への接続-6">次章への接続</a></h4>
+<ul>
+<li>涼太が「やってみます」と宣言。Ch.8で実際に行動に移し、成功体験を得る</li>
+<li>沙織の微小な変化がCh.8で「小さな一歩」（自分の意見を初めて伝える）に結実する</li>
+<li>結衣のWill不在は未解決のまま。翼にも解決できない。Part 3への最大の伏線</li>
+<li>AI活用3点セットが翼とチーム全体に浸透し始め、Ch.8のチーム成功の基盤に</li>
+<li>佐伯のLv.3開示で「佐伯もかつてFixed Mindsetで壊した」が明かされた——Ch.8の「予言」で佐伯が翼の隠し事を察知する伏線</li>
+</ul>
+<hr>
+<h3 id="ch8予言"><a class="header" href="#ch8予言">Ch.8「予言」</a></h3>
+<h4 id="章概要-7"><a class="header" href="#章概要-7">章概要</a></h4>
+<p>第2部の最終章。チームが結実する。涼太が自律的に動き出し、翼と思考×行動のパートナー関係を築く。沙織がチーム会議で初めて自分の意見を伝える——小さいが確かな一歩。GROWの統合としてチームの成功が言語化される。翼のマネージャーとしての成熟。しかし成功の裏に未解決の問題が残る。佐伯は翼の中に何かが「隠されている」ことを察知し、**「失敗の予言」**を残す。</p>
+<h4 id="登場人物-7"><a class="header" href="#登場人物-7">登場人物</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">キャラクター</th><th style="text-align: left">OS型</th><th style="text-align: left">この章での役割</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">高橋 翼</td><td style="text-align: left">自分本位×行動型</td><td style="text-align: left">チーム成功。マネージャーとしての成熟。しかし父との未統合が残る</td></tr>
+<tr><td style="text-align: left">佐伯 零一</td><td style="text-align: left">自分本位×思考型</td><td style="text-align: left">[L]シーン：GROW統合。「失敗の予言」。Lv.3</td></tr>
+<tr><td style="text-align: left">結衣</td><td style="text-align: left">他者本位×行動型</td><td style="text-align: left">成果は安定。しかしWill不在は未解決。蓮DV悪化が表面化しない</td></tr>
+<tr><td style="text-align: left">中村 涼太</td><td style="text-align: left">自分本位×思考型</td><td style="text-align: left">自律的行動。翼とのパートナー関係。成長の体現</td></tr>
+<tr><td style="text-align: left">小野 沙織</td><td style="text-align: left">他者本位×思考型</td><td style="text-align: left">「小さな一歩」——自分の意見を初めてチームに伝える</td></tr>
+<tr><td style="text-align: left">藤原 美咲</td><td style="text-align: left">—</td><td style="text-align: left">翼との関係の脆い修復。美咲の笑顔に翼が安堵するが問題は残る</td></tr>
+<tr><td style="text-align: left">高城 翔太</td><td style="text-align: left">統合型</td><td style="text-align: left">チーム成果を評価。翼の起業志向に何かを感じる</td></tr>
+<tr><td style="text-align: left">木下 蓮</td><td style="text-align: left">自分本位×行動型（支配目的）</td><td style="text-align: left">結衣のチーム成功に脅威を感じ、支配を強化</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="ビート構成6ビート-4"><a class="header" href="#ビート構成6ビート-4">ビート構成（6ビート）</a></h4>
+<p><strong>ビート1: 涼太が動く（翼視点）</strong></p>
+<ul>
+<li>Ch.7で「やってみます。失敗するかもしれないけど」と言った涼太が、初めてクライアント面談に単独で挑む。翼は別室で待機し、涼太がSOSを出したらすぐに入れる体制を取る</li>
+<li>面談の結果：完璧ではない。涼太の分析力は際立つが、クロージングの瞬間に言葉が詰まる。翼が途中からフォローに入り、二人で一つの成約を勝ち取る</li>
+<li>面談後、涼太が「高橋さん、僕一人じゃまだ無理でした」。翼「俺一人でもこの案件は取れなかった。<strong>お前の分析がなかったら、そもそもこの提案は作れていない</strong>」。涼太が初めて「翼に認められた」——だけでなく「自分の思考が翼の行動と噛み合った」ことを実感する</li>
+<li>この瞬間、翼と涼太の関係が「上司-部下」から「思考×行動のパートナー」へ転換する。翼にとっても、涼太の思考力を認めることが「自分に足りなかったCAPの補完」になっている。Part 2→Part 3接続：涼太がWINGS（仮）共同創業者として同行する種蒔き</li>
+</ul>
+<p><strong>ビート2: 沙織の小さな一歩（翼視点）</strong></p>
+<ul>
+<li>チーム週次ミーティング。翼が各メンバーに今週の振り返りを求める場面。結衣が滑らかに報告し、涼太がデータ付きで報告する。沙織の番が来る</li>
+<li>沙織は俯いたまま「……今週は、メール対応を12件しました」と報告する。翼が「ありがとう。顧客の反応はどうだった？」と聞くと、沙織が少し声を大きくして「あの……一つだけ、提案があるんですけど」。チーム全員が沙織を見る</li>
+<li>「メールの文面で、お客様の名前の後に<strong>前回の面談でお話しされたキーワード</strong>を入れたら、返信率が上がったんです。……これ、みなさんにも使えるかな、と思って……」。声は小さい。顔は真っ赤。しかし自分の言葉で、自分の発見を、チームに伝えた——<strong>これが沙織の「小さな一歩」</strong></li>
+<li>翼は一瞬言葉を失い、それから「沙織、<strong>それめちゃくちゃいい</strong>」と本気で言う。涼太が「データで裏付けが取れるか確認してみます」と返す。結衣が「私もやってみるね」と微笑む。沙織の目に涙が浮かぶが、今度は苦しさではなく、<strong>自分が認められた実感</strong>の涙</li>
+<li>翼は佐伯の言葉を思い出す：「成果とは何か。数字だけが成果じゃない」。沙織の成約件数はまだゼロに近い。しかし「チームメンバーに自分の発見を伝えた」こと自体が、沙織の成果だ</li>
+</ul>
+<p><strong>ビート3: [L]シーン——GROW統合（翼視点）</strong></p>
+<ul>
+<li>
+<p>カフェセッション。翼の表情がCh.6とは別人のように明るい。チームの変化を報告する。涼太の面談成功、沙織の提案、チーム数値の改善</p>
+</li>
+<li>
+<p>佐伯は静かに聞き、最後に「良いチームだ」と言う。翼「佐伯さんのおかげです」佐伯「俺は何もしていない。お前が変わっただけだ」</p>
+</li>
+<li>
+<p><strong>[L]シーン概要（GROW統合）:</strong></p>
+<ul>
+<li>①切実な問題：ここではCrisisではなく「成功の言語化」。翼がチームとして成果を出した体験を構造的に振り返る</li>
+<li>②問いかけ：佐伯「この半年でお前とチームに何が起きたか、<strong>お前の言葉で</strong>整理してみろ」</li>
+<li>③間違い・反発：なし（このシーンは対立ではなく統合）</li>
+<li>④What：翼がGROWの体験を言語化する。「GROWは型じゃなくて、姿勢だった。相手を信じて問いかけて、一緒に考えて、本人に決めさせる。<strong>答えを教えることじゃなかった</strong>」。そして「Growth Mindsetが前提だった。俺が変われると信じなかったら、誰も変わらなかった」</li>
+<li>⑤Why：佐伯がGROWとPDCAの循環構造を振り返る。GROWのWで出た行動計画がPDCAのP/Dに接続し、PDCAの結果がGROWのRにフィードバックされる。翼自身がこの循環を体験し、部下に実践し、チームとして回した。「お前はGROWを教わったのではなく、<strong>GROWを生きた</strong>」</li>
+<li>⑥How：佐伯がAI活用の効果を確認。翼が「スマホの録音聞き返しが一番効いた。涼太との1on1を録音して聞き返したら、<strong>俺が涼太の話を遮っている瞬間</strong>が3回あった。気づいてなかった」佐伯「それがCheckだ。自分の認知の外にあるものを、テクノロジーが可視化してくれる。でも気づくのは人間だ」</li>
+<li>⑦自己開示：Lv.3維持。このシーンでは新しい開示はなし。しかし佐伯の表情に<strong>影</strong>がある。翼の成功を喜びながら、何かを見抜いている</li>
+<li>⑧腹落ち：翼「俺はマネージャーとして成長できた。でもまだ終わりじゃない」佐伯「……ああ。まだ終わりじゃない」——佐伯の声に含意がある</li>
+</ul>
+</li>
+<li>
+<p><strong>「失敗の予言」:</strong> セッション終了間際。翼が席を立とうとした時、佐伯が呼び止める。「翼」。下の名前で呼ばれたのは初めてだ。翼が振り返る。佐伯の目が真剣だ</p>
+<ul>
+<li>佐伯「お前に一つだけ聞く。<strong>何か隠していないか</strong>」</li>
+<li>翼の表情が硬くなる。「……何の話ですか」</li>
+<li>佐伯「チームは良くなった。お前も成長した。でも俺には引っかかっているものがある。<strong>お前の中に、まだ触れていない場所がある</strong>。それが何なのか、お前が一番分かっているはずだ」</li>
+<li>翼は答えない。父との未統合。WILLの不在。佐伯の問いかけに対して、翼は沈黙で応じる。沈黙が答えだということを、佐伯は知っている</li>
+<li>佐伯「いいか。<strong>どこかでつまずく予感がする</strong>。俺の言葉が外れることを祈っている。でも外れなかった時——そのときは、隠していたものを全部出す覚悟をしろ」</li>
+<li>翼は曖昧に頷いて店を出る。夏の夕暮れ。翼の背中に佐伯が呟く（翼には聞こえない）：「……頼むから、俺と同じ轍を踏むなよ」</li>
+</ul>
+</li>
+</ul>
+<p><strong>ビート4: チーム成功の描写（翼視点）</strong></p>
+<ul>
+<li>翼のチームが四半期目標を達成する。結衣の安定した成約、涼太の分析に基づく戦略立案、沙織のメール対応による関係構築——三者三様の強みが噛み合ったチーム成果</li>
+<li>高城が翼に「面白いチームを作ったな」と声をかける。翼は高城の言葉に、かつて入社初日に言われた「行動量で殴れ。ただし考えろ」を重ね合わせる。「考えろ」の意味が、あの時とは全く違って聞こえる</li>
+<li>翼の中に起業への志向が芽生え始めている。成功体験がPDCA+OS理論+GROWの確信を強め、「これをもっと大きなスケールで実践したい」という衝動が生まれている。その衝動の根底にあるのが「純粋な志（WILL）」なのか「成果で自分を証明したい」という自分本位のOSなのか——翼自身は区別がついていない。<strong>これがPart 3の崩壊の種</strong></li>
+</ul>
+<p><strong>ビート5: 結衣視点——Will不在の未解決と蓮DV</strong></p>
+<ul>
+<li>結衣は翼のチーム内で安定した成果を出し続けている。周囲から見れば「問題のない優秀な営業」。しかし結衣の内面では、Ch.7で瞬間的に感じた「嘘をついている自分」への気づきが、消えずに残っている</li>
+<li>翼がチーム全体で振り返りミーティングをする中で、涼太と沙織それぞれの変化が語られる。結衣は笑顔で「すごいね」と言う。しかしその笑顔の裏で、**「私にはあの二人のような『変化』がない。だって私には変わるべきものが見えていない」**という空虚さがある</li>
+<li>蓮のDVは継続。表面的には落ち着いた時期に入っているが、蓮が結衣の帰宅時間を厳しく管理し、職場の人間関係への干渉が巧妙化している。結衣は蓮と自分の関係を「仕方のないもの」として受け入れている——<strong>Will不在の最も深い表れ</strong></li>
+<li><strong>Part 3への種蒔き:</strong> 結衣のWill不在は第2部では「翼も佐伯も解決できない」問題として残される。第3部で翼が離脱した後、結衣がマネージャーに昇格し、「自分のWILLで動く」必要に迫られることで変容が始まる</li>
+</ul>
+<p><strong>ビート6: 翼視点——起業の予兆と美咲との脆い修復</strong></p>
+<ul>
+<li>翼が帰宅し、美咲に四半期目標達成を報告する。美咲が「おめでとう」と笑って、二人でワインを開ける。Ch.6の衝突以降、美咲との関係は表面的に修復されている。しかし翼は父のことを美咲に話していない。美咲も聞かない。<strong>蓋をした問題が二人の間に横たわっている</strong></li>
+<li>翼はワインを飲みながら、ふと漏らす。「俺、いつか自分の会社をやりたいかもしれない」。美咲は少し驚いた顔で「翼がやりたいなら、応援するよ」と返す。しかしその言葉が「本心からの応援」なのか「翼の話題に合わせる習慣」なのか、翼にも美咲にも分からない</li>
+<li>翼のスマホに父からの不在着信。翼は着信を見て、一瞬だけスワイプを止める——が、結局無視して画面を伏せる。第1部Ch.1と同じパターン。<strong>父との関係は、翼がどれだけ成長しても、触れられないまま残っている</strong></li>
+<li>窓の外は夏の終わり。翼のマネージャーとしての第2部が終わる。成功した。しかし佐伯の予言が翼の耳に残っている——「何か隠していないか。どこかでつまずく予感がする」</li>
+</ul>
+<h4 id="crisis-7"><a class="header" href="#crisis-7">Crisis</a></h4>
+<ul>
+<li>成功の中の不完全さ。父との未統合。WILLの不在。翼自身が「なぜ起業したいのか」の根源的動機を問えていないまま、成功体験に基づく確信が膨らんでいる</li>
+</ul>
+<h4 id="learning-7"><a class="header" href="#learning-7">Learning</a></h4>
+<ul>
+<li><strong>GROW統合:</strong> GROWは型ではなく姿勢。答えを教えることではなく、相手を信じて問いかけ、一緒に考え、本人に決めさせること。GROW×PDCAの循環構造。AI活用の効果とCheckの多層化</li>
+</ul>
+<h4 id="lシーン概要-7"><a class="header" href="#lシーン概要-7">[L]シーン概要</a></h4>
+<ul>
+<li><strong>1シーン:</strong> ビート3。佐伯カフェセッション。GROW統合の振り返り + 佐伯の「失敗の予言」</li>
+</ul>
+<h4 id="サブストーリー進行-7"><a class="header" href="#サブストーリー進行-7">サブストーリー進行</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">サブストーリー</th><th style="text-align: left">進行状況</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">A. 翼と父</td><td style="text-align: left">不在着信を再び無視。Ch.1と同じパターンの反復。父問題は未統合のまま</td></tr>
+<tr><td style="text-align: left">B. 翼と美咲</td><td style="text-align: left">表面的修復。しかし父のことは共有されていない。起業の話に美咲の本心は不明</td></tr>
+<tr><td style="text-align: left">D. 結衣と蓮</td><td style="text-align: left">DV継続。蓮の管理が巧妙化。Will不在の最深部</td></tr>
+<tr><td style="text-align: left">涼太</td><td style="text-align: left">自律的行動。翼とのパートナー関係成立。共同創業の種蒔き</td></tr>
+<tr><td style="text-align: left">沙織</td><td style="text-align: left">「小さな一歩」で初めて自分の意見をチームに伝えた。成果の再定義</td></tr>
+<tr><td style="text-align: left">高城</td><td style="text-align: left">チーム成果を評価。翼の起業志向に気配を感じている</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="佐伯開示レベル-7"><a class="header" href="#佐伯開示レベル-7">佐伯開示レベル</a></h4>
+<p><strong>Lv.3</strong> — Ch.7で到達したLv.3を維持。新たな開示はないが、「失敗の予言」として翼の中の未統合を言い当てる。佐伯自身の経験に基づく直感</p>
+<h4 id="シーソー状態-7"><a class="header" href="#シーソー状態-7">シーソー状態</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">面</th><th style="text-align: left">状態</th><th style="text-align: left">備考</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">仕事</td><td style="text-align: left"><strong>↑↑</strong></td><td style="text-align: left">チーム目標達成。涼太パートナー化。沙織の小さな一歩。翼のマネージャー成熟</td></tr>
+<tr><td style="text-align: left">私生活</td><td style="text-align: left"><strong>→（問題含み）</strong></td><td style="text-align: left">美咲との表面的修復。父未統合。結衣DV継続。起業衝動の根源が問われていない</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="次章への接続-7"><a class="header" href="#次章への接続-7">次章への接続</a></h4>
+<ul>
+<li><strong>佐伯の「失敗の予言」（Ch.9-10へ）:</strong> 「何か隠していないか。どこかでつまずく予感がする」。Ch.10で的中する</li>
+<li><strong>起業の予兆（Ch.9へ）:</strong> 翼がWINGS（仮）を起業。涼太が共同創業者として同行</li>
+<li><strong>涼太の同行（Ch.9へ）:</strong> 思考×行動のパートナーとして翼と共に起業の道へ</li>
+<li><strong>結衣のWill不在（Ch.9へ）:</strong> 翼離脱後にマネージャー昇格→WILLの問いに改めて向き合う</li>
+<li><strong>父との未統合（Ch.10-12へ）:</strong> 起業崩壊と同時に父問題が再燃→Ch.12で和解の始まり</li>
+<li><strong>美咲との脆弱な修復（Ch.9-10へ）:</strong> 結婚→起業ストレスで再び亀裂→Ch.10で美咲失踪</li>
+<li><strong>佐伯の自己開示（Ch.11へ）:</strong> Lv.3まで到達。Ch.11で黒沢との決裂全容をLv.4として開示</li>
+</ul>
+<hr>
+<h2 id="第3部世界という壁と統合"><a class="header" href="#第3部世界という壁と統合">第3部「世界という壁と統合」</a></h2>
+<blockquote>
+<p><strong>テーマ:</strong> 自分の限界と向き合い、仕事と人生を統合する
+<strong>核心の問い:</strong> 「成功したはずなのに、なぜ全てを失ったのか？」
+<strong>時間軸:</strong> 18ヶ月〜24ヶ月目（翌年秋〜翌々年春）
+<strong>タイムスキップ:</strong> 第2部終了（15ヶ月目・翌年夏）から約3ヶ月（副業→退職→起業本格稼働）を経て第3部開始
+<strong>視点:</strong> 三人称一元（翼 / 結衣、用途に応じて）
+<strong>[L]シーン合計:</strong> 2（Ch.11: 1（例外設計）、Ch.12: 1（変形適用））</p>
+</blockquote>
+<hr>
+<h3 id="ch9飛び立つ鳥"><a class="header" href="#ch9飛び立つ鳥">Ch.9「飛び立つ鳥」</a></h3>
+<h4 id="章概要-8"><a class="header" href="#章概要-8">章概要</a></h4>
+<p>翼がネクスト・キャリアを退職し、涼太と共に起業（WINGS（仮））。AI×人材育成コンサルティング——翼がPart 1-2で学んだPDCA・OS理論・チームマネジメントの知見を、AIツールでスケールさせるビジネスモデル。高城への恩義から人材紹介業には参入せず、法人向けの組織開発支援を選ぶ。結衣は翼の退職後にマネージャーに昇格し、「他者のために動く」から「自分で判断する」立場への転換を迫られる。翼と美咲は結婚。初期は事業好調だが、翼のPDCA＋OS理論への過信——「勝ちパターン固執」が静かに始まっている。</p>
+<h4 id="登場人物-8"><a class="header" href="#登場人物-8">登場人物</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">キャラクター</th><th style="text-align: left">OS型</th><th style="text-align: left">この章での役割</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">高橋 翼</td><td style="text-align: left">自分本位×行動型（コーザル行動）</td><td style="text-align: left">主人公。起業家として再出発</td></tr>
+<tr><td style="text-align: left">中村 涼太</td><td style="text-align: left">自分本位×思考型（コーザル思考）</td><td style="text-align: left">WINGS共同創業者。戦略・データ担当</td></tr>
+<tr><td style="text-align: left">佐藤 結衣</td><td style="text-align: left">他者本位×行動型（受動的行動）</td><td style="text-align: left">マネージャー昇格。WILLの問い再開</td></tr>
+<tr><td style="text-align: left">藤原 美咲</td><td style="text-align: left">—（類型外）</td><td style="text-align: left">翼の妻。結婚。翼の没頭への不安</td></tr>
+<tr><td style="text-align: left">高城 翔太</td><td style="text-align: left">統合型</td><td style="text-align: left">翼の退職を受け入れる。器の大きさ</td></tr>
+<tr><td style="text-align: left">佐伯 零一</td><td style="text-align: left">自分本位×思考型（コーザル思考）</td><td style="text-align: left">直接シーン少。翼の報告を聞く程度</td></tr>
+<tr><td style="text-align: left">木下 蓮</td><td style="text-align: left">自分本位×行動型（支配目的）</td><td style="text-align: left">結衣視点で登場。関係に変化の兆し</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="ビート構成5ビート-3"><a class="header" href="#ビート構成5ビート-3">ビート構成（5ビート）</a></h4>
+<p><strong>ビート1: 退職と旅立ち（翼視点）</strong></p>
+<ul>
+<li>タイムスキップ冒頭。翼が高城の執務室で退職を告げる。「自分でやりたいことが見つかりました」。高城は翼の顔を数秒見つめ、「やれるのか」と短く問う。翼は「行動量で殴ります」と答える。高城は鼻で笑う——しかしその目は真剣で、どこか嬉しそうでもある。「負けたら戻ってこい。席は空けておく」——高城の言葉を翼は社交辞令と受け取る（この言葉がCh.12で回収される伏線）</li>
+<li>涼太が翼に同行を決意。「高橋さんの行動力と、僕の分析力。このチームなら勝てます」。Part 2のパートナー関係が起業の土台に。涼太の動機は「正解のない世界に自分から踏み込む」挑戦——Fixed Mindsetからの脱却の証</li>
+<li>翼は退職前に佐伯とカフェで最後の報告。佐伯は穏やかに聞き、「楽しめよ」とだけ言う。Ch.8の「失敗の予言」を翼に繰り返さない。佐伯の表情にはかすかな影——しかし翼はそれに気づかない</li>
+</ul>
+<p><strong>ビート2: 結衣のマネージャー昇格（結衣視点）</strong></p>
+<ul>
+<li>翼の退職後、結衣がチームマネージャーに昇格。高城から直接の辞令。「佐藤、やれるか」。結衣は「はい」と答える——しかし内心は「いつもの『はい』と何が違うんだろう」。他者の期待に応える「はい」か、自分の意志による「はい」か、自分でも分からない</li>
+<li>マネージャーとして最初のチームMTG。沙織と新メンバーを率いる。翼がいた時は翼の判断に適応すればよかった。今は自分が決める番。「——私、何がしたいんだろう」。WILLの問いがPart 2の伏線から本格的に再起動する</li>
+<li>蓮との関係に微妙な変化。結衣の昇格を蓮は表面上は祝うが、「マネージャーとか大変そうだね。無理しないほうがいいんじゃない？」——支配のパターンが結衣の成長を押し戻そうとする。しかしPart 2で「嘘をついている自分」に気づいた結衣は、以前のように蓮の言葉に完全には飲み込まれない。違和感が育ち始めている</li>
+</ul>
+<p><strong>ビート3: WINGS始動（翼視点）</strong></p>
+<ul>
+<li>WINGS（仮）設立。業態はAI×組織開発コンサルティング。企業のマネージャー層に対して、PDCA・OS理論を基盤とした育成プログラムをAIツールと組み合わせて提供する。翼がPart 1-2で体得した「行動量×仮説検証×OS認知」を、AIで再現性を付与してスケールさせる発想</li>
+<li>自己資金（貯蓄）+涼太の出資で共同創業。VC投資・融資・補助金は受けない——「自分たちの手元にあるもので始める」（エフェクチュエーション「手中の鳥」原則を無意識に一部実践しているが、「許容可能な損失」原則は完全に無視している構造）</li>
+<li>初期は好調。翼の営業力（行動量）と涼太の戦略（ターゲティング・データ分析）が噛み合い、数社の法人契約を獲得。翼は「やっぱり俺たちはいける」と確信を深める。PDCAを精緻に回し、AI活用でCheckの精度も高い——<strong>しかし、その全てが「仮説が正しい」前提で回っている</strong>。仮説の前提そのものを疑う視座が欠けている</li>
+</ul>
+<p><strong>ビート4: 結婚と過信（翼視点）</strong></p>
+<ul>
+<li>翼と美咲の結婚。美咲は翼の起業を「やりたいようにやって」と応援する（Part 1冒頭の転職時と同じ言葉——美咲の一貫した姿勢）。しかし今回は結婚という生活共同体の上での起業であり、美咲の不安は転職時より深い</li>
+<li>結婚式の支出+事業への追加投資。翼は手元資金のほぼ全額を会社に注ぎ込む。美咲が「貯金、大丈夫？」と聞くと、翼は「半年で回収できる。計画通りだ」と断定する。PDCAの P（計画）への過信。美咲の表情が一瞬曇るが、翼はそれを見ていない</li>
+<li>翼は「今度こそ全てうまくいく」と感じている。仕事も私生活も上昇基調。Part 2のチーム成功体験が「俺のやり方は正しい」という確信を強化している——これが勝ちパターン固執の正体。翼の起業動機の核には「自分の力で証明したい」というOS（自分本位×行動型）が未統合のまま駆動している</li>
+</ul>
+<p><strong>ビート5: 暗雲の予兆（翼視点）</strong></p>
+<ul>
+<li>事業は順調だが、翼の働き方がPart 1冒頭に回帰している。行動量で殴る。休みなし。美咲との夕食の時間が減る。「もう少しだけ」「これが落ち着いたら」——翼の口癖に美咲は何も言わなくなる</li>
+<li>父・誠一郎からの不在着信。翼は画面を見て、一瞬手を止めるが——スワイプして消す。Ch.1と同じパターン。マネージャーを経て家族や仲間のことを考えられるようになったはずの翼が、起業という「自分の夢」に没頭した途端に父の問題を避ける。OS変容の不完全さが露呈している</li>
+<li>佐伯のCh.8での言葉がフラッシュバックする——「何か隠していないか。どこかでつまずく予感がする」。翼はその声を振り払うように涼太に電話をかけ、翌日のプレゼン準備の話を始める</li>
+</ul>
+<h4 id="crisis-8"><a class="header" href="#crisis-8">Crisis</a></h4>
+<ul>
+<li>勝ちパターン（PDCA+OS理論のAIスケール）への固執が始まる。Ch.8で佐伯が看破した「起業動機の根源を問えていない」問題が、成功の進行と共に肥大化している</li>
+<li>「許容可能な損失」を無視した全額投入。エフェクチュエーション原則との体験的対比が進行</li>
+</ul>
+<h4 id="learning-8"><a class="header" href="#learning-8">Learning</a></h4>
+<ul>
+<li>なし（[L]シーンなし。佐伯との正式なセッションは行われない。翼の体験そのものがFWの体験的対比として進行する）</li>
+</ul>
+<h4 id="サブストーリー進行-8"><a class="header" href="#サブストーリー進行-8">サブストーリー進行</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">サブストーリー</th><th style="text-align: left">進行状況</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">A. 翼と父</td><td style="text-align: left">不在着信を再び無視。Ch.1→Ch.8→Ch.9と同じパターンの反復。起業に没頭し、問題の先送りが加速</td></tr>
+<tr><td style="text-align: left">B. 翼と美咲</td><td style="text-align: left">結婚。しかし翼の没頭が増し、美咲との時間が減少。「もう少し、もう少し」が美咲の我慢の限界に向かう</td></tr>
+<tr><td style="text-align: left">D. 結衣と蓮</td><td style="text-align: left">結衣のマネージャー昇格が蓮の支配欲を刺激。しかし結衣は以前と異なり違和感を持ち始めている</td></tr>
+<tr><td style="text-align: left">涼太</td><td style="text-align: left">WINGS共同創業者。思考×行動のパートナーとして翼と起業。初期は機能するが、Ch.10での衝突の種蒔き</td></tr>
+<tr><td style="text-align: left">沙織</td><td style="text-align: left">結衣のチームに残留。結衣の昇格を静かに支える存在として安定</td></tr>
+<tr><td style="text-align: left">高城</td><td style="text-align: left">翼の退職を送り出し、「負けたら戻ってこい」。Ch.12の伏線</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="佐伯開示レベル-8"><a class="header" href="#佐伯開示レベル-8">佐伯開示レベル</a></h4>
+<p><strong>—（直接シーン少）</strong> — 佐伯との正式セッションなし。退職前の報告で「楽しめよ」と送り出すのみ。翼が起業で独り立ちし、佐伯との距離が物理的にも心理的にも開く</p>
+<h4 id="シーソー状態-8"><a class="header" href="#シーソー状態-8">シーソー状態</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">面</th><th style="text-align: left">状態</th><th style="text-align: left">備考</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">仕事</td><td style="text-align: left"><strong>↑</strong></td><td style="text-align: left">WINGS設立・初期好調。法人契約獲得。翼と涼太の相補性が機能</td></tr>
+<tr><td style="text-align: left">私生活</td><td style="text-align: left"><strong>↑</strong></td><td style="text-align: left">結婚。<strong>一時的両面上昇</strong>（Ch.10の落差を最大化する設計）</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="次章への接続-8"><a class="header" href="#次章への接続-8">次章への接続</a></h4>
+<ul>
+<li><strong>勝ちパターン固執（Ch.10へ）:</strong> PDCA＋OS理論のAIスケールという「武器」への過信。仮説の前提を疑えない構造</li>
+<li><strong>全額投入（Ch.10へ）:</strong> 「許容可能な損失」を無視した全額投入が、崩壊時の余力ゼロに直結</li>
+<li><strong>美咲の我慢の限界（Ch.10へ）:</strong> 翼の没頭と父問題の無視が、美咲の離脱の導火線</li>
+<li><strong>涼太の提言（Ch.10へ）:</strong> 涼太は思考型として市場リスクを分析しているが、翼がその声を聞けるか</li>
+<li><strong>結衣のWILL問い直し（Ch.10結衣視点へ）:</strong> マネージャーとしての判断を重ねる中で「自分は何をしたいのか」が明確化していく</li>
+</ul>
+<hr>
+<h3 id="ch10崩壊"><a class="header" href="#ch10崩壊">Ch.10「崩壊」</a></h3>
+<h4 id="章概要-9"><a class="header" href="#章概要-9">章概要</a></h4>
+<p><strong>ダブル絶望②——物語最大の谷底。</strong> AI業界の急速な市場変動により、WINGSの事業計画の前提が根底から覆る。大手プレイヤーが類似の人材育成AIサービスを無料/低価格で投入し、WINGSの差別化が消失。翼はPDCAで打開策を模索するが、仮説の「前提」が崩壊した世界ではPDCAそのものが機能しない。全額投入で余力ゼロ——事業崩壊。同時に、起業ストレスと父問題の未統合が美咲との関係を破壊し、美咲が手紙を残して去る。翼は全てを失い、連絡を絶つ。一方、結衣はこの時期に蓮との関係を清算し、「自分のWILLで生きる」転換を果たす。</p>
+<h4 id="登場人物-9"><a class="header" href="#登場人物-9">登場人物</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">キャラクター</th><th style="text-align: left">OS型</th><th style="text-align: left">この章での役割</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">高橋 翼</td><td style="text-align: left">自分本位×行動型（コーザル行動）</td><td style="text-align: left">全てを失う。連絡を絶つ</td></tr>
+<tr><td style="text-align: left">中村 涼太</td><td style="text-align: left">自分本位×思考型（コーザル思考）</td><td style="text-align: left">撤退を提言するが翼が聞かない。衝突</td></tr>
+<tr><td style="text-align: left">藤原 美咲</td><td style="text-align: left">—（類型外）</td><td style="text-align: left">手紙を残して去る</td></tr>
+<tr><td style="text-align: left">佐藤 結衣</td><td style="text-align: left">他者本位×行動型（受動的行動）</td><td style="text-align: left">蓮との関係を清算。自立</td></tr>
+<tr><td style="text-align: left">木下 蓮</td><td style="text-align: left">自分本位×行動型（支配目的）</td><td style="text-align: left">結衣に清算を突きつけられる</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="ビート構成6ビート-5"><a class="header" href="#ビート構成6ビート-5">ビート構成（6ビート）</a></h4>
+<p><strong>ビート1: 市場の急変（翼視点）</strong></p>
+<ul>
+<li>WINGSの事業が半年を過ぎた頃、AI業界に激震。大手テック企業が「AI×人材育成」領域に参入。無料トライアルや低価格サブスクリプションで市場を席巻。WINGSが提供していたサービスの8割が、大手の機能に包含される</li>
+<li>翼の反応——「PDCAだ。Planを修正する」。新たな差別化軸を模索。しかし市場の変化速度が翼の仮説検証サイクルを上回っている。Planを立て直す前に前提が再び変わる。<strong>因果論（コーザル）の限界</strong>——予測に基づく行動は、予測の前提が安定していることが条件。起業の世界ではその前提が保証されない</li>
+<li>涼太がデータ分析の結果を翼に突きつける。「高橋さん、このまま続けても勝ち目はない。ピボットするか、撤退するか、今判断すべきです」。涼太の分析は正確——Part 2で論理的に反論していた涼太の「思考の強さ」が、今度は翼を止めようとする</li>
+</ul>
+<p><strong>ビート2: 翼の悪あがき（翼視点）</strong></p>
+<ul>
+<li>翼は涼太の提言を聞けない。「まだやれる。行動量が足りないだけだ」——Part 1冒頭の翼に回帰している。佐伯から学んだはずのPDCA、OS認知、チームマネジメント——全てが「武器」として翼のOSに統合されたがゆえに、その武器を手放すことができない</li>
+<li>翼は営業活動を倍増させる。しかし法人顧客の反応は「御社のサービス、○○（大手名）でカバーできるんですよね？」。値下げ、機能追加、新規ターゲット——打ち手を連発するが、全てPDCAの延長線上。<strong>「予測できない世界」に対してPDCA的対処を繰り返す</strong>ことの虚しさ</li>
+<li>涼太との関係にも亀裂。涼太が「もう無理です。データが全てを語っている」と再度言うと、翼は「データじゃなくて、お前はどうしたいんだ。一緒にやるって決めただろ」と感情をぶつける。涼太は黙る——Part 2で「やります。失敗するかもしれないけど」と言って踏み出したパートナー関係が、翼の固執によって軋む。涼太は去らない。しかし目が死んでいく</li>
+</ul>
+<p><strong>ビート3: 崩壊（翼視点）</strong></p>
+<ul>
+<li>資金が底をつく。WINGSの口座残高と翼個人の口座残高が、同時にゼロに近づく。全額投入したから。結婚の支出もあった上で。エフェクチュエーション「許容可能な損失」原則——失ってもいい範囲で始める——の完全な逆行を翼は体験することになる</li>
+<li>WINGS事業停止の決断。翼が涼太に「……すまなかった」と一言。涼太は「僕も自分で選んで来ました」と答えるが、声は震えている。二人の間に長い沈黙</li>
+<li>翼は家に帰る。暗いリビング。スーツのまま床に座り込む。スマホの画面に佐伯の連絡先が映る。しかし指は動かない。「——あの人に何と言えばいい？ 『全部失敗しました』って？」</li>
+</ul>
+<p><strong>ビート4: 美咲の手紙（翼視点）</strong></p>
+<ul>
+<li>翼が帰宅すると、リビングのテーブルに封筒。美咲の字。鍵と結婚指輪が添えてある——いや、指輪はない。手紙だけ。手紙を開く</li>
+<li>美咲の手紙の要旨（原稿では翼の目を通して断片的に読ませる）：
+<ul>
+<li>「あなたが好きです。それは今も変わらない」</li>
+<li>「でも、今のあなたのそばにいると、私が壊れてしまう」</li>
+<li>「あなたはお父さんのことを『何も言わなかった』と怒っていたけど、あなたも私に何も言わなかったよね。大事なこと、全部一人で抱えて。私のことは『いるだけでいい存在』として扱って」</li>
+<li>「あなたが本当に向き合うべきものは、会社のことじゃないと思う」</li>
+<li>「私は少し離れて、自分のことを考えます。あなたも、考えてほしい」</li>
+</ul>
+</li>
+<li>翼は手紙を握りしめたまま動けない。美咲の言葉がPart 2 Ch.6の帰路——「お前にはわからない」と八つ当たりした夜と重なる。あの時のひびが、起業のストレスで再び裂けた。いや——最初から修復されていなかった。翼は父のパターン（「代償を見ようとしない」）を美咲に対して再現していたことに、手紙を通じて初めて突きつけられる</li>
+</ul>
+<p><strong>ビート5: 連絡断絶（翼視点）</strong></p>
+<ul>
+<li>翼がマンションに一人。スマホの電源を切る。佐伯から、涼太から、高城から、父から——全ての着信を遮断。食事もろくに取らない。暗い部屋でただ天井を見ている</li>
+<li>フラッシュバックが断片的に押し寄せる——サッカーの試合でのミス、父の沈黙、高城の「やれるのか」、佐伯の「何か隠していないか」、涼太の「もう無理です」、美咲の手紙——全てが翼の中で混濁する</li>
+<li>「——俺は、何をやっても同じなんだ」。Part 1冒頭で翼が振り払おうとしていた無力感が、全ての武装を剥がされた状態で、剥き出しのまま翼を覆う。物語最大の谷底</li>
+</ul>
+<p><strong>ビート6: 結衣の決断（結衣視点）</strong></p>
+<ul>
+<li>同時期。結衣はマネージャーとして3ヶ月が経過。翼のようなカリスマ性はないが、結衣なりの方法——メンバー一人ひとりの感情と状況を読み、最適な配置と声かけを行う——でチームを回し始めている。成果は出ている。「他者本位」のOSが、今度は「自分の判断で」他者を活かす形に転換しつつある</li>
+<li>蓮との決定的な場面。結衣が仕事で遅くなった夜、蓮が「最近、俺のこと放置してるよね。マネージャーとかやって調子乗ってない？」と言う。以前の結衣なら「ごめんね」と謝ったはずのその言葉に、結衣は黙って蓮の顔を見る。——以前と何かが違う。蓮の言葉が「空虚」に聞こえる。蓮は結衣を心配しているのではない。自分のコントロール下に置きたいだけだ。WILLの問い——「私は何がしたいの？」——が、蓮への違和感と結びつく</li>
+<li>結衣が蓮に告げる。「蓮さん、もう終わりにしよう」。静かな声。蓮は一瞬凍りつき、「何言ってんの？ お前、俺がいなかったらどうなるかわかってる？」と常套句を返す。結衣の中でダッシュ付き独白が流れる——「——わかってる。わかってるから、終わりにするの」。結衣は初めて、他者の期待や恐怖ではなく、<strong>自分の意志で</strong>NOを選ぶ。蓮との共依存の鎖を、自分の手で断ち切る。これが結衣の物語のクライマックス</li>
+<li>結衣はアパートをまとめ始めながら、ふと思う。「——高橋さん、元気かな」。翼の起業のことは噂で聞いている。うまくいっているのだと思っていた。（Ch.11への伏線——涼太からの連絡で翼の状況を知ることになる）</li>
+</ul>
+<h4 id="crisis-9"><a class="header" href="#crisis-9">Crisis</a></h4>
+<ul>
+<li><strong>ダブル絶望②（物語最大の谷底）:</strong> 仕事↓↓↓（WINGS崩壊・資金ゼロ）+ 私生活↓↓↓（美咲失踪・全ての人間関係断絶）</li>
+<li>PDCAの本質的限界——因果論の前提が崩壊する世界ではPDCAが機能しない——を翼が痛みとして体感</li>
+<li>エフェクチュエーション「許容可能な損失」原則の逆行を身をもって経験</li>
+</ul>
+<h4 id="learning-9"><a class="header" href="#learning-9">Learning</a></h4>
+<ul>
+<li>なし（[L]シーンなし。失敗体験そのものが「学び」の原材料。この体験がCh.12で佐伯によって構造化される）</li>
+</ul>
+<h4 id="サブストーリー進行-9"><a class="header" href="#サブストーリー進行-9">サブストーリー進行</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">サブストーリー</th><th style="text-align: left">進行状況</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">A. 翼と父</td><td style="text-align: left">連絡断絶の中に父の着信も含まれる。翼は父の問題を意識的に避けているのではなく、全てを遮断している。父問題の再燃はCh.11で「真の告白」として結実</td></tr>
+<tr><td style="text-align: left">B. 翼と美咲</td><td style="text-align: left">美咲が手紙を残して去る。翼は手紙を読むが、動けない。美咲は翼を責めていない——「考えてほしい」と求めている。復縁の種はここにある</td></tr>
+<tr><td style="text-align: left">D. 結衣と蓮</td><td style="text-align: left">結衣が蓮に「終わりにしよう」と告げる。共依存からの脱却。結衣のPart 3クライマックス</td></tr>
+<tr><td style="text-align: left">涼太</td><td style="text-align: left">WINGS崩壊。翼への「すまなかった」に「自分で選んだ」と返す。翼との関係は傷ついたが切れてはいない。Ch.11で旧チーム結束の起点になる</td></tr>
+<tr><td style="text-align: left">沙織</td><td style="text-align: left">直接描写なし。結衣のチームで安定して働いている（Ch.11で涼太の連絡に応じて登場）</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="佐伯開示レベル-9"><a class="header" href="#佐伯開示レベル-9">佐伯開示レベル</a></h4>
+<p><strong>—（直接シーン少）</strong> — 翼が連絡を絶っているため、佐伯との直接的なやりとりはない。佐伯は翼の状況を察知しているが、自分からは動かない——翼が自分で立ち上がる瞬間を待つコーチの姿勢を維持。ただしCh.11で旧チームからのバトンを受ける</p>
+<h4 id="シーソー状態-9"><a class="header" href="#シーソー状態-9">シーソー状態</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">面</th><th style="text-align: left">状態</th><th style="text-align: left">備考</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">仕事</td><td style="text-align: left"><strong>↓↓↓</strong></td><td style="text-align: left">WINGS崩壊。資金ゼロ。事業停止</td></tr>
+<tr><td style="text-align: left">私生活</td><td style="text-align: left"><strong>↓↓↓</strong></td><td style="text-align: left">美咲失踪。全連絡遮断。物語最大の谷底</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="次章への接続-9"><a class="header" href="#次章への接続-9">次章への接続</a></h4>
+<ul>
+<li><strong>翼の孤立（Ch.11へ）:</strong> 連絡を絶った翼のもとに、誰が・どうやって辿り着くか——旧チームの結束と佐伯への橋渡し</li>
+<li><strong>美咲の手紙（Ch.12へ）:</strong> 「あなたが本当に向き合うべきものは、会社のことじゃないと思う」——美咲の言葉がCh.11の「真の告白」を導く伏線</li>
+<li><strong>結衣の自立（Ch.11, エピローグへ）:</strong> 蓮を清算した結衣が、旧チーム結束に自分の意志で参加する</li>
+<li><strong>涼太の存在（Ch.11へ）:</strong> 翼と最も近くにいた涼太が、崩壊の深刻さを知る最初の人間。旧チーム結束の起点</li>
+<li><strong>PDCAの限界体験（Ch.12へ）:</strong> 因果論の失敗をCh.12でエフェクチュエーションとして構造化する材料</li>
+</ul>
+<hr>
+<h3 id="ch11手中の鳥"><a class="header" href="#ch11手中の鳥">Ch.11「手中の鳥」</a></h3>
+<h4 id="章概要-10"><a class="header" href="#章概要-10">章概要</a></h4>
+<p><strong>クライマックス。</strong> 涼太が結衣・沙織に連絡し、翼が連絡を絶っている事実を伝える。旧翼チーム3人が結束し、翼を助けようとするが、「自分たちでは翼の核心（父問題）に届かない」と認識し、佐伯にバトンを渡す。佐伯が翼のもとを訪問。翼は佐伯の前で初めて全てを吐き出す——サッカーの挫折、父の沈黙、母フィルター、「勝てる場所でしか戦えない」自分。<strong>「真の告白」</strong>。佐伯もまた、黒沢との決裂の全容を翼に語る——<strong>Vulnerability実践</strong>。互いの弱さをさらけ出す対話の中で、翼は感情的統合の端緒を掴む。高城→佐伯育成プログラムの存在が明かされ、翼はこれまでの全てが一つの構造の中にあったことを知る。</p>
+<h4 id="登場人物-10"><a class="header" href="#登場人物-10">登場人物</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">キャラクター</th><th style="text-align: left">OS型</th><th style="text-align: left">この章での役割</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">高橋 翼</td><td style="text-align: left">自分本位×行動型（コーザル行動）</td><td style="text-align: left">「真の告白」。全てをさらけ出す</td></tr>
+<tr><td style="text-align: left">佐伯 零一</td><td style="text-align: left">自分本位×思考型（コーザル思考）</td><td style="text-align: left">Lv.4全容開示。Vulnerability実践</td></tr>
+<tr><td style="text-align: left">中村 涼太</td><td style="text-align: left">自分本位×思考型（コーザル思考）</td><td style="text-align: left">旧チーム結束の起点。佐伯へのバトン渡し</td></tr>
+<tr><td style="text-align: left">佐藤 結衣</td><td style="text-align: left">他者本位×行動型（受動的行動）</td><td style="text-align: left">旧チーム結束に参加。自分の意志で動く</td></tr>
+<tr><td style="text-align: left">小野 沙織</td><td style="text-align: left">他者本位×思考型</td><td style="text-align: left">旧チーム結束に参加。小さくうなずく</td></tr>
+<tr><td style="text-align: left">高城 翔太</td><td style="text-align: left">統合型</td><td style="text-align: left">育成プログラムの背景として言及</td></tr>
+<tr><td style="text-align: left">黒沢 大輔</td><td style="text-align: left">自分本位×行動型（コーザル実行）</td><td style="text-align: left">佐伯の語りの中で全容が明かされる</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="ビート構成5ビート-4"><a class="header" href="#ビート構成5ビート-4">ビート構成（5ビート）</a></h4>
+<p><strong>ビート1: 旧チームの結束（涼太→結衣→沙織視点）</strong></p>
+<ul>
+<li>WINGS崩壊から数週間後。涼太が結衣に連絡する。「佐藤さん、高橋さんが連絡つかないんです。会社も畳んで、美咲さんも……。僕が何回連絡しても出ない」。涼太の声には焦りと罪悪感がある——パートナーとして翼のそばにいたのに、止められなかった</li>
+<li>結衣が「……わかりました。沙織ちゃんにも連絡、取っていいですか」。結衣はマネージャーとして、かつてのチームメンバーに連絡を取る判断を<strong>自分で</strong>下す。以前の結衣なら「誰かに相談してから」だったはずのその瞬間が、WILL変容の証拠</li>
+<li>3人が集まる（カフェか、結衣がマネージャーとして使っている会議室か——plot生成時に確定）。涼太が翼の状況を説明する。結衣は翼と同じチームにいた時のことを思い出す。仕事の話は通じた。でも翼の「本当のこと」——家族のこと、心の奥のこと——は翼が誰にも見せなかった</li>
+<li>涼太が切り出す。「僕たちだけでは、高橋さんの一番深いところには届かないと思う。高橋さんが本当に信頼している人は——」。3人の視線が交わる。結衣が「佐伯さん、ですよね」。沙織が小さくうなずく。涼太が佐伯に連絡する。<strong>Part 2でのチームビルディングの成果が、翼自身のために発動する構造</strong></li>
+</ul>
+<p><strong>ビート2: 佐伯の訪問（佐伯→翼視点）</strong></p>
+<ul>
+<li>佐伯が翼のマンションの前に立つ。涼太から状況を聞いた佐伯は、すぐには動かなかった——1日待った。翼が自分で出てくるのを。しかし出てこなかった。佐伯は来ることを決めた</li>
+<li>インターホンを押す。応答なし。佐伯は扉の前に座り、スマホからメッセージを送る。「外にいる。出てこなくていい。聞こえてるなら、鍵だけ開けてくれ」。長い沈黙。カチャリ、とロックが解除される</li>
+<li>荒れた部屋。カーテンが閉まったまま。翼はリビングの隅に座っている。佐伯を見ない。佐伯は何も言わずキッチンに立ち、コーヒーを淹れ始める。沈黙が続く。「……来るなって言ったのに」「言ってないだろ。無視してただけだ」。コーヒーの香りが部屋に広がる。翼の目が初めて少し動く</li>
+<li>佐伯がコーヒーを翼の前に置き、向かいに座る。「涼太くんたちが心配してた」。翼は黙っている。「話したくないなら話さなくていい。ただ、コーヒーだけは飲め。まずいけど」。翼がカップに手を伸ばす。その手が震えている</li>
+</ul>
+<p><strong>ビート3: 真の告白（翼→佐伯 — [L]シーン前半 — 例外設計: 8ステップ不使用）</strong></p>
+<ul>
+<li>翼がコーヒーを一口飲んだ後、堰を切ったように語り始める。最初は会社の話——市場が変わった、資金が尽きた、美咲が出ていった。しかし話しているうちに、翼自身が気づく——<strong>「俺が話したいのは、そのことじゃない」</strong></li>
+<li>翼が核心に触れ始める。「……俺、サッカーやってたんですよ。高校の時」。佐伯は静かに待つ。翼がサッカー部の記憶を語る——中途半端なコミット、好きなことに全力を出せなかった自分、公式戦でのミス、チームの敗北、そして——「父親が、何も言わなかった」</li>
+<li>父の沈黙の意味が、今この瞬間、翼の中で変わる。翼はずっと「傍観された」と思っていた。でも本当は——父も統合できていなかった。「好きなことをやっていい」と信じる自分と、「現実は甘くない」を知っている自分の間で、父もまた言葉を失っていたのだ。翼はそれを「裏切り」だと受け取り、「傍観するな。お前が何か言え」と求めていた。しかし今、全てを失った翼自身が——何も言えない人間になっている</li>
+<li>翼が佐伯の言葉を思い出す。Ch.4で佐伯が言った「お前が決めることだ」——そしてCh.6で翼がかすかに感じた「父の沈黙と佐伯の沈黙の違い」。あの時は言語化できなかった。今、翼はわかる。<strong>父の沈黙は「統合できない苦しみ」からの逃避だった。佐伯の沈黙は「翼を信じている」からの委託だった。同じ言葉でも、その裏にある感情が全く違った。</strong>「お前が決めることだ」の回収</li>
+<li>翼が泣く。「俺は……勝てる場所でしか戦えなかった。サッカーも。仕事も。起業も。全部、負けない場所を選んでただけだ」。これが**「真の告白」**——タイトル「失敗者の告白」の第一の意味。翼が自分自身の生存戦略を、初めて言葉にする</li>
+</ul>
+<p><strong>ビート4: 佐伯の告白（佐伯→翼 — [L]シーン後半 — Vulnerability実践）</strong></p>
+<ul>
+<li>佐伯がしばらく黙った後、口を開く。「……俺の話を、してもいいか」。今までの佐伯とは違うトーン。コーチの穏やかさではなく、一人の人間としての声</li>
+<li>佐伯がLv.4全容開示——黒沢大輔との物語。大学時代の出会い。1社目の起業での喧嘩別れ。2社目の再挑戦。外部コンサルタントへの依存——「師匠」として慕った相手に、いつしか承認を求めるようになり、意思決定の全てを委ねた。気づけば「自分で考える」ことをやめていた。軽度の抑うつ。「事業の重圧のせいだと思っていた。でも本当は——権威に服従することで、俺自身のOSが止まっていたんだ」</li>
+<li>佐伯がコンサルを独断で切った。黒沢に事前に相談しなかった。黒沢が怒ったのは意思決定の中身ではなく——「なぜ話し合わなかったのか」。佐伯が答えられなかった理由。「説明できなかった。自分に何が起きていたか、自分でもわかっていなかったから」。黒沢は翌月、退任届を出した。<strong>佐伯は止めなかった</strong></li>
+<li>「10年経って、やっとわかった。あの時、何が起きていたのか。なぜ俺は説明できなかったのか。——俺には父親がいなかった。権威との付き合い方のモデルを持っていなかった。だから師匠に出会った時、依存するか反発するかの二択しかなかった。対等に向き合う、ということができなかった」</li>
+<li>佐伯が翼を見る。「お前と俺は似てるよ。お前は父親がいたのに距離を取った。俺は父親がいなかったから距離の取り方を知らなかった。どっちも——統合できなかった」。<strong>コーチの仮面が外れる瞬間</strong>。「俺だって失敗者だ。失敗者の告白——あれは、お前の話じゃなく、<strong>俺自身の話</strong>なんだ」</li>
+<li><strong>この対話は「教える/学ぶ」ではない。互いにさらけ出す対話。Vulnerability実践。</strong> 二人が同じ地平に立つ。コーチとクライアントの構造が溶解し、二人の人間が弱さを共有する。<strong>8ステップは不使用</strong>——佐伯は問いかけも、ティーチングもしない。ただ自分の物語を語る。翼もただ自分の物語を語った。その交差が、感情的統合の入口になる</li>
+</ul>
+<p><strong>ビート5: 高城→佐伯育成プログラムの開示（佐伯→翼視点）</strong></p>
+<ul>
+<li>対話の終盤。佐伯が少し間を置いてから、「……もう一つ、話しておかないといけないことがある」と切り出す</li>
+<li>高城が佐伯に「若手育成のプログラム作成とコーチング」を意図的に依頼していた構造。高城と佐伯は翼が入社した当初から定期的にMTGし、プログラムの内容を深め、翼の成長を共に見守っていた。佐伯は「コーチ」としてだけでなく、高城の経営パートナーとして翼の育成に関わっていた</li>
+<li>翼は驚く——「じゃあ、あの人は……最初から？」。佐伯は「ああ。高城さんはお前の可能性を最初から信じていた。俺に『こいつを頼む』と言ったんだ。お前がネクスト・キャリアに入社した日にな」</li>
+<li>高城の器の大きさが立ち上がる。Ch.9で翼に「負けたら戻ってこい」と言った言葉が、社交辞令ではなく本心だったことが確定する。翼は「……あの人には、勝てないな」と小さく笑う。物語の中で翼が初めて見せる、負けを認めることを含んだ穏やかな笑い</li>
+</ul>
+<h4 id="crisis--resolution"><a class="header" href="#crisis--resolution">Crisis → Resolution</a></h4>
+<ul>
+<li>翼の「真の告白」= 感情的統合の入口。全ての武装を解除した翼が、自分の生存戦略を初めて言語化する</li>
+<li>佐伯のVulnerability = コーチの仮面を脱いだ対等な開示。「俺だって失敗者だ」</li>
+<li>Resolution: 底からの感情的回復の<strong>始まり</strong>（完了ではない）。構造的理解はCh.12で行う</li>
+</ul>
+<h4 id="learning-10"><a class="header" href="#learning-10">Learning</a></h4>
+<ul>
+<li><strong>Vulnerability</strong> — 成人発達理論の文脈における実践知。Stage 4→5への移行の鍵。翼と佐伯が互いにさらけ出す対話として体現される</li>
+<li><strong>例外設計:</strong> 8ステップテンプレート不使用。「教える/学ぶ」構造ではなく「互いにさらけ出す」構造。What/Why/Howは佐伯の語りと翼の語りの交差から自然に立ち上がる</li>
+</ul>
+<h4 id="lシーン概要-8"><a class="header" href="#lシーン概要-8">[L]シーン概要</a></h4>
+<ul>
+<li><strong>1シーン（例外設計: 8ステップ不使用）:</strong> ビート3〜4。翼の真の告白 + 佐伯のLv.4全容開示。互いのVulnerabilityが交差する対話。「教える」のではなく「共にさらけ出す」</li>
+</ul>
+<h4 id="サブストーリー進行-10"><a class="header" href="#サブストーリー進行-10">サブストーリー進行</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">サブストーリー</th><th style="text-align: left">進行状況</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">A. 翼と父</td><td style="text-align: left">翼が父の沈黙の意味を再解釈。「傍観ではなく、父も統合できなかった」。「お前が決めることだ」の回収完了。Ch.12の和解の始まりへ</td></tr>
+<tr><td style="text-align: left">B. 翼と美咲</td><td style="text-align: left">直接描写なし。ただし美咲の手紙の言葉（「あなたが本当に向き合うべきもの」）がCh.11の告白を導いた構造</td></tr>
+<tr><td style="text-align: left">C. 佐伯と黒沢</td><td style="text-align: left">全容開示。外部コンサル依存→独断解約→黒沢退任→佐伯が止めなかった。手紙は完成しているが渡せていない</td></tr>
+<tr><td style="text-align: left">涼太</td><td style="text-align: left">旧チーム結束の起点。佐伯へのバトン渡し。翼の核心には届かないが、「届ける人を選ぶ」判断ができた成長</td></tr>
+<tr><td style="text-align: left">結衣</td><td style="text-align: left">旧チーム結束に自分の意志で参加。WILLの転換を行動で示す</td></tr>
+<tr><td style="text-align: left">沙織</td><td style="text-align: left">旧チーム結束に涼太の連絡で参加。小さくうなずく——しかしそこにいること自体がPart 2からの成長</td></tr>
+<tr><td style="text-align: left">高城</td><td style="text-align: left">育成プログラムの背景構造が開示。経営者としての器の大きさ</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="佐伯開示レベル-10"><a class="header" href="#佐伯開示レベル-10">佐伯開示レベル</a></h4>
+<p><strong>Lv.4（全容開示）</strong> — 黒沢との決裂全容。外部コンサルへの服従→機能停止→独断解約→黒沢退任。コーチの仮面の告白。「俺だって失敗者だ」。Vulnerability実践としての自己開示</p>
+<h4 id="シーソー状態-10"><a class="header" href="#シーソー状態-10">シーソー状態</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">面</th><th style="text-align: left">状態</th><th style="text-align: left">備考</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">仕事</td><td style="text-align: left"><strong>→（底）</strong></td><td style="text-align: left">底のまま。ただし旧チームの結束が外的支援の始まり</td></tr>
+<tr><td style="text-align: left">私生活</td><td style="text-align: left"><strong>→（底）</strong></td><td style="text-align: left">底のまま。ただし翼の内面に感情的統合の兆し。<strong>底からの回復の始まり</strong></td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="次章への接続-10"><a class="header" href="#次章への接続-10">次章への接続</a></h4>
+<ul>
+<li><strong>感情的統合の継続（Ch.12へ）:</strong> Ch.11で感情的統合の入口に到達。Ch.12では佐伯が翼の体験を構造的に言語化する振り返りへ</li>
+<li><strong>父との和解（Ch.12へ）:</strong> 「お前が決めることだ」の回収完了。翼が父に会いに行く準備</li>
+<li><strong>会社復帰の可能性（Ch.12へ）:</strong> 高城が教育プログラムの依頼者だったこと + 「負けたら戻ってこい」の伏線回収</li>
+<li><strong>美咲への返答（Ch.12へ）:</strong> 美咲の手紙に対して翼が何をするか——翼自身の変容を行動で示す</li>
+<li><strong>佐伯の起業（エピローグへ）:</strong> 佐伯が翼との対話を通じて自分自身の「実業への再挑戦」を決意する伏線</li>
+</ul>
+<hr>
+<h3 id="ch12失敗者の告白"><a class="header" href="#ch12失敗者の告白">Ch.12「失敗者の告白」</a></h3>
+<h4 id="章概要-11"><a class="header" href="#章概要-11">章概要</a></h4>
+<p><strong>統合の章。</strong> Ch.11の「真の告白」による感情的統合を起点に、翼は「生存戦略の受容」→「構造的理解」→「行動」のプロセスを辿る。佐伯とのカフェセッション（変形適用）で、翼の起業体験をエフェクチュエーション・成人発達理論のフレームで構造化。「勝ちパターン固執」を「愚かさ」ではなく「生存戦略」として受容する——Stage 5萌芽への扉。父・誠一郎との対面では「ごめん。ありがとう」。完了ではなく始まり。高城に連絡し、経営幹部として会社復帰。美咲への手紙を書き、復縁。タイトル「失敗者の告白」の意味が完成する——翼の告白であり、佐伯の告白であり、あらゆる「失敗」を通じて成長した人間たちの物語。</p>
+<h4 id="登場人物-11"><a class="header" href="#登場人物-11">登場人物</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">キャラクター</th><th style="text-align: left">OS型</th><th style="text-align: left">この章での役割</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">高橋 翼</td><td style="text-align: left">自分本位×行動型（コーザル行動）</td><td style="text-align: left">統合。行動に踏み出す</td></tr>
+<tr><td style="text-align: left">佐伯 零一</td><td style="text-align: left">自分本位×思考型（コーザル思考）</td><td style="text-align: left">振り返り形式のセッション。Lv.4維持</td></tr>
+<tr><td style="text-align: left">高橋 誠一郎</td><td style="text-align: left">自分本位×行動型（脆弱版）</td><td style="text-align: left">翼との対面。和解の始まり</td></tr>
+<tr><td style="text-align: left">高城 翔太</td><td style="text-align: left">統合型</td><td style="text-align: left">翼の復帰を受け入れる。「やっとか」</td></tr>
+<tr><td style="text-align: left">藤原 美咲</td><td style="text-align: left">—（類型外）</td><td style="text-align: left">翼の手紙を受け取る。復縁</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="ビート構成5ビート-5"><a class="header" href="#ビート構成5ビート-5">ビート構成（5ビート）</a></h4>
+<p><strong>ビート1: 生存戦略の受容（翼視点）</strong></p>
+<ul>
+<li>Ch.11の告白から数日後。翼は部屋を片付け始めている。まだ立ち直ったわけではないが、何かが変わった——自分の中の「闘い続けなければならない」という強迫が、少しだけ緩んでいる</li>
+<li>翼がCh.11での自分の言葉を反芻する。「勝てる場所でしか戦えなかった」——あの言葉は自己否定のように聞こえたが、今は少し違う感触がある。勝てる場所を選ぶこと自体は「生存戦略」だった。サッカーで傷ついた自分を、これ以上傷つけないための。そしてその戦略のおかげで、翼はここまで来ることができた。PDCAもOS理論もチームマネジメントも——全て「勝てる場所での武器」だった。問題は武器そのものではなく、<strong>武器だけで全てを解決できると信じたこと</strong></li>
+<li>「——愚かだったんじゃない。やむを得なかったんだ。でも、それだけじゃ届かない場所があった」。翼が自分の生存戦略を「否定」ではなく「受容」する瞬間。成人発達理論Stage 5萌芽の入口</li>
+</ul>
+<p><strong>ビート2: カフェセッション — 振り返り（翼×佐伯 — [L]シーン — 変形適用）</strong></p>
+<ul>
+<li>佐伯が翼をいつものカフェに誘う。「たまには外に出ろ」。久しぶりのカフェ。佐伯がいつも通りコーヒーを頼む。翼も同じものを頼む。<strong>ナプキンは今回は使わない</strong>——ナプキンは「教える道具」であり、今回は「振り返りの対話」だから</li>
+<li>佐伯が切り出す。「お前の起業の話、全部聞いた。少し整理してみないか」。翼がうなずく</li>
+<li><strong>エフェクチュエーションの構造化（翼の体験を佐伯が言語化する手助けをする）:</strong>
+<ul>
+<li>「手中の鳥」——「お前が持っていたもので始めたのは正しかった。PDCA、チームマネジメント、涼太との相補性。手元のリソースから始めるのは起業の基本だ」</li>
+<li>「許容可能な損失」——「ただ、お前は全額突っ込んだ。失ってもいい範囲という発想がなかった。なぜだと思う？」。翼が考える。「……負けるつもりがなかったからっす。PDCAで計画を立てれば、失敗しないと思ってた」。佐伯「それがPDCAの限界だ。仮説が成り立つ前提が崩れる世界では、PDCAだけでは戦えない。予測の外側で生き延びる方法が、もう一つある」——エフェクチュエーションの概念を、翼の実体験に紐づけて提示</li>
+<li>「レモネード」——「失敗から何が残った？」。翼はしばらく考え、「……涼太が、まだ一緒にいてくれた。結衣も、沙織も、連絡してきてくれた。俺が育てたつもりのチームに、逆に助けられた」。佐伯が「それがレモネードだ。予想外の出来事——それが悪いことであっても——から価値を見つけること」</li>
+</ul>
+</li>
+<li><strong>成人発達理論の構造化（翼の成長を佐伯が振り返る）:</strong>
+<ul>
+<li>佐伯が翼のPart 1〜3の変容を振り返る。「お前が入社した頃——周りの期待と自分の実力のギャップに苦しんでた。あの頃のお前は、誰かの正解を探してた」（Stage 3的）。「それがPDCAを学んで、自分で仮説を立てて行動するようになった。チームを率いて、自分のやり方で成果を出した」（Stage 4的）。「そして起業して全てを失った。お前が作った体系が通用しない世界に放り出された」（Stage 4の限界）</li>
+<li>佐伯が翼を見る。「今のお前は、自分が作った体系ごと手放そうとしてる。自分のパターンを——愚かだったと責めるのではなく、それも自分だったと認めようとしてる。それは、ほとんどの大人が到達しない場所だ」（Stage 5萌芽）。佐伯は「成人発達理論」という用語は使わない。翼の体験をそのまま言語化する形で、読者が後から「あれがStage移行だったのか」と気づく構造</li>
+<li>翼が「……佐伯さん。俺は、あの時の起業は後悔してないです。失敗だったけど、あれがなかったら多分、この場所には来てない」。佐伯が「それでいい。失敗の意味は、後からしかわからない。大事なのは——<strong>次に何をやるか、だよ</strong>」</li>
+</ul>
+</li>
+<li><strong>この[L]シーンは「変形適用」:</strong> 8ステップの①=翼の起業体験全体、②=佐伯の問いかけ、④⑤⑥=佐伯が翼の体験を構造化する振り返り形式。佐伯主導のティーチングではなく、翼の体験を佐伯が振り返りながら構造化する</li>
+</ul>
+<p><strong>ビート3: 父との和解の始まり（翼視点）</strong></p>
+<ul>
+<li>翼が実家に向かう。電車の中で、美咲の手紙の一節を思い出す——「あなたが本当に向き合うべきものは、会社のことじゃないと思う」。翼はわかっている。会社のことじゃない。父のこと</li>
+<li>実家の玄関。母・律子が出迎える。律子の様子がCh.6（食事会で不在だった）から少し変わっている——髪を切り、以前より明るい表情。律子なりに自分の人生を歩み始めている気配がある（Ch.6「欠席」との整合性——母もまた、自分の人生を再構築している最中）。「お父さん、奥にいるわよ」</li>
+<li>父・誠一郎の書斎。教材が積まれた部屋。父は翼を見て、一瞬驚いたがすぐに視線を外す。いつものパターン——言葉を探せない父。翼はそれを「逃避」と読んでいた。しかし今は少し違う。父もまた、何を言えばいいかわからないのだ</li>
+<li>長い沈黙。翼が口を開く。「父さん。俺、会社やって、失敗した」。父が翼を見る。翼が続ける。「金も全部なくなった。嫁さんにも出ていかれた」。父の表情が歪む——心配、後悔、そして「お前を止められなかった」という無力感が混じった顔</li>
+<li>翼が言う。「父さんがサッカーの時、何も言わなかったこと、ずっと怒ってた。でも——今はわかる。言えなかったんだよな。父さんも」。父の目に涙が浮かぶ。翼も泣いている。「ごめん。ありがとう」。父が何かを言いかける——しかし言葉にならない。代わりに、不器用に翼の肩に手を置く</li>
+<li><strong>完了ではない。始まり。</strong> 父と翼の間の何十年もの断絶が、この一瞬で解決されるわけがない。しかし「お前が決めることだ」と言い続けた父の言葉の奥に、不器用な愛があったことを、翼は初めて受け取った。そして翼自身の「ごめん」は、父を責め続けた自分への謝罪でもある</li>
+</ul>
+<p><strong>ビート4: 会社復帰（翼視点）</strong></p>
+<ul>
+<li>翼が高城に電話をかける。「高城さん。……戻りたいんですが」。高城は「やっとか」と短く答える。翼は「すみません」と言いかけるが、高城が遮る。「謝るな。お前がそこまで行って帰ってきたことに意味がある。経営幹部として戻れ。お前にしかできない仕事がある」</li>
+<li>高城の「席は空けておく」（Ch.9）が伏線回収される。高城は最初から、翼がいつか戻ってくることを視野に入れていた——あるいは、戻ってこない可能性も含めて「器」を用意していた。エフェクチュエーションの実践者としての高城の一貫性</li>
+<li>翼がネクスト・キャリアに復帰。経営幹部として。ただし翼がやりたいのは経営戦略ではない——「後輩の育成」。翼が佐伯から受け取ったものを、自分の形で次の世代に伝える。佐伯→翼→後輩という育成の連鎖が生まれる。高城→佐伯の育成プログラムが、翼を経由して組織に根付く構造</li>
+</ul>
+<p><strong>ビート5: 美咲との復縁（翼視点）</strong></p>
+<ul>
+<li>翼が美咲に手紙を書く。美咲がCh.10で残した手紙への返答。翼の手紙の要旨（全文は原稿で描く。ここでは構造のみ）：
+<ul>
+<li>「全部失った。会社も、金も、お前との生活も」</li>
+<li>「でも、失って初めてわかったことがある。お前が言ってた通りだった。俺が本当に向き合うべきだったのは、会社のことじゃなかった」</li>
+<li>「父のこと、話せなかった。お前にも、誰にも。一人で抱えて、お前を『いるだけでいい存在』にしてしまった。それは父さんが母さんにしたことと同じだった」</li>
+<li>「もう一度、一緒にいてほしい。今度は、ちゃんと話す」</li>
+</ul>
+</li>
+<li>美咲と翼の再会。場所はplot生成時に確定。美咲は翼の手紙を読んでいる。翼の顔を見て、何かが変わったことに気づく。「……痩せたね」。翼は「いろいろあった」と笑う。美咲が「聞かせてよ。全部」。翼は「長くなるぞ」。美咲が「いいよ。時間はあるから」</li>
+<li>復縁。ただし翼と美咲の関係は「元に戻る」のではない。翼が自分の弱さを美咲に見せられるようになった——Vulnerabilityの日常的実践。美咲は翼の話を全て聞き、「最初からそう言ってくれたらよかったのに」と微笑む。翼は「……言えなかったんだ。でも、もう言える」</li>
+</ul>
+<h4 id="crisis-10"><a class="header" href="#crisis-10">Crisis</a></h4>
+<ul>
+<li>なし（統合の章。Crisisの解決プロセスそのもの）</li>
+</ul>
+<h4 id="learning-11"><a class="header" href="#learning-11">Learning</a></h4>
+<ul>
+<li><strong>エフェクチュエーション:</strong> 手中の鳥・許容可能な損失・レモネード原則を翼の実体験に紐づけて構造化。予測（因果論）の限界と、不確実性の中での生き方</li>
+<li><strong>成人発達理論:</strong> Stage 3→4→5萌芽の移行を翼の物語として振り返り。勝ちパターン固執の受容＝Stage 5への扉</li>
+<li><strong>変形適用:</strong> 8ステップのうち①=体験全体、②=問いかけ、④⑤⑥=振り返りによる構造化。佐伯が教えるのではなく、翼の体験から意味を引き出す</li>
+</ul>
+<h4 id="lシーン概要-9"><a class="header" href="#lシーン概要-9">[L]シーン概要</a></h4>
+<ul>
+<li><strong>1シーン（変形適用）:</strong> ビート2。佐伯カフェセッション。翼の起業体験をエフェクチュエーション + 成人発達理論のフレームで構造化する振り返り形式</li>
+</ul>
+<h4 id="サブストーリー進行-11"><a class="header" href="#サブストーリー進行-11">サブストーリー進行</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">サブストーリー</th><th style="text-align: left">進行状況</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">A. 翼と父</td><td style="text-align: left">実家訪問。「ごめん。ありがとう」。和解の<strong>始まり</strong>（完了ではない）</td></tr>
+<tr><td style="text-align: left">B. 翼と美咲</td><td style="text-align: left">手紙→再会→復縁。翼が弱さを見せられるようになった</td></tr>
+<tr><td style="text-align: left">C. 佐伯と黒沢</td><td style="text-align: left">直接描写なし。Ch.11で全容開示済み。手紙はまだ渡せていない（エピローグで行動に移す）</td></tr>
+<tr><td style="text-align: left">涼太</td><td style="text-align: left">直接描写なし（エピローグで自分のチームを持つ到達点を描写）</td></tr>
+<tr><td style="text-align: left">結衣</td><td style="text-align: left">直接描写なし（エピローグで到達点を描写）</td></tr>
+<tr><td style="text-align: left">沙織</td><td style="text-align: left">直接描写なし（エピローグで到達点を描写）</td></tr>
+<tr><td style="text-align: left">高城</td><td style="text-align: left">翼の復帰を「やっとか」で受け入れる。経営幹部として復帰させる。器の大きさの完成形</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="佐伯開示レベル-11"><a class="header" href="#佐伯開示レベル-11">佐伯開示レベル</a></h4>
+<p><strong>Lv.4（維持）</strong> — Ch.11で全容開示済み。新規の開示はないが、翼の失敗体験をフレームワークで構造化する中で、自身の失敗も重ね合わせた統合的な語り。「俺も失敗者だ」——タイトルの意味が完成する</p>
+<h4 id="シーソー状態-11"><a class="header" href="#シーソー状態-11">シーソー状態</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">面</th><th style="text-align: left">状態</th><th style="text-align: left">備考</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">仕事</td><td style="text-align: left"><strong>↑↑</strong></td><td style="text-align: left">会社復帰（経営幹部として）。後輩指導開始</td></tr>
+<tr><td style="text-align: left">私生活</td><td style="text-align: left"><strong>↑↑</strong></td><td style="text-align: left">父との和解の始まり。美咲との復縁。<strong>統合</strong></td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="次章への接続-11"><a class="header" href="#次章への接続-11">次章への接続</a></h4>
+<ul>
+<li><strong>エピローグへ:</strong> 翼の復帰・後輩指導＋美咲が隣にいる。結衣のヤングケアラー支援プロボノ。涼太の自分のチーム。沙織の小さな笑顔。佐伯の起業。黒沢への手紙</li>
+<li><strong>佐伯の決断（エピローグへ）:</strong> 翼との対話を通じて、佐伯自身が「実業への再挑戦」を決意する</li>
+</ul>
+<hr>
+<h2 id="エピローグ"><a class="header" href="#エピローグ">エピローグ</a></h2>
+<blockquote>
+<p><strong>視点:</strong> 三人称一元（佐伯視点）
+<strong>時間軸:</strong> 物語本編終了直後の早朝 = プロローグと同じ朝（円環構造の閉じ）
+<strong>文字数目標:</strong> 1,500〜2,500字（1シーンに凝縮）
+<strong>佐伯開示レベル:</strong> —（行動で語る。読者は佐伯の変容を行動から読み取る）</p>
+</blockquote>
+<h3 id="ビート構成5ビート-6"><a class="header" href="#ビート構成5ビート-6">ビート構成（5ビート）</a></h3>
+<p><strong>ビート1: 温かいコーヒー</strong></p>
+<ul>
+<li>佐伯の書斎。早朝。窓の外がうっすら明るくなり始めている。パソコンの画面には原稿ファイル——「失敗者の告白」の最後のページ。プロローグと同じ朝。しかしプロローグで<strong>冷めていた</strong>コーヒーが、今回は<strong>温かい</strong>。湯気が立ちのぼる。佐伯がカップを手に取り、一口飲む。苦い。しかし温かい</li>
+</ul>
+<p><strong>ビート2: 設立届と翼のメッセージ</strong></p>
+<ul>
+<li>デスクの横に、一枚の書類。「設立届」——佐伯の3社目の会社。社名は読者に委ねる（佐伯の物語の次章は読者の想像の中にある）。佐伯はこれまで避けてきた「泥臭い行動（Execution）」に、再び踏み出す。「正しい武器で武装して勝つ」のではなく、「生身の自分で傷つきながら共創する」起業</li>
+<li>スマホに翼からのメッセージ。「佐伯さん、楽しんでください」。短い一言。佐伯は小さくメッセージを見つめ、机の上にスマホを置く。翼がPart 1で佐伯に反発し、Part 2で頼るようになり、Part 3で対等に語り合った——その全てが、この一言に凝縮されている</li>
+</ul>
+<p><strong>ビート3: それぞれの日常</strong></p>
+<ul>
+<li>佐伯の視線が原稿に戻り、スクロールする。原稿の中の言葉と、現在の彼らの日常が重なる切り替え（プロローグの手法と対称）：
+<ul>
+<li><strong>翼:</strong> ネクスト・キャリアで後輩の指導にあたっている。新人の報告を聞きながら、かつての自分と重ねている。表情は穏やかだが、目は真剣。——<strong>隣に美咲がいる。</strong> 会社の近くで待ち合わせ。翼が「終わった」と言い、美咲が「おつかれさま」と笑う。二人で歩き出す</li>
+<li><strong>結衣:</strong> 社内に在籍しながら、ヤングケアラー支援のプロボノ活動をリーダー的に推進している。自身のヤングケアラー経験を活かし、支援プログラムの企画・運営に関わる。チームMTGで結衣が発言している——「私がやりたいのは——」。WILLを自分の言葉で語る結衣。蓮の影はない</li>
+<li><strong>涼太:</strong> 自分のチームを率いている。メンバーに「データ上はこっちが正しいけど、お前はどう思う？」と問いかけている。翼と佐伯から受け取った「問いかける」姿勢が、涼太の形で再生産されている</li>
+<li><strong>沙織:</strong> 小さく笑い、自分の言葉で話している。劇的な変貌ではない。しかし会議の席で、沙織が「……私は、こう思います」と口を開く。声は小さいが、確かに自分の言葉</li>
+</ul>
+</li>
+</ul>
+<p><strong>ビート4: 手紙を鞄に</strong></p>
+<ul>
+<li>佐伯がデスクの引き出しを開ける。プロローグで引き出しに<strong>戻した</strong>手紙——黒沢大輔宛の手紙。封筒の角を指でなぞる。プロローグと同じ動作。しかし今回は、手紙を引き出しに戻さない。鞄に入れる</li>
+<li>「和解は届かなくてもいい。自分が変わったことが答えだ」——佐伯の内面を地の文で描写するのではなく、「手紙を鞄に入れる」という<strong>行動</strong>で示す。読者はプロローグとの対比から、佐伯の内的変容を読み取る</li>
+<li>佐伯が鞄を手に取り、書斎の電気を消す。部屋が暗くなる。パソコンの画面だけがうっすら光っている</li>
+</ul>
+<p><strong>ビート5: 春</strong></p>
+<ul>
+<li>佐伯が玄関を開ける。一歩、外に踏み出す。冬が終わり、春の空気。「外は、春だった」——最後の一文。物語の終わり</li>
+</ul>
+<h3 id="フック設計円環構造の閉じ"><a class="header" href="#フック設計円環構造の閉じ">フック設計（円環構造の閉じ）</a></h3>
+<ul>
+<li><strong>プロローグとの対比:</strong>
+<ul>
+<li>コーヒー: 冷めた → 温かい</li>
+<li>手紙: 引き出しに戻す → 鞄に入れる</li>
+<li>佐伯の状態: 書斎に留まる → 外に踏み出す</li>
+<li>季節: 早朝の薄暗さ → 春の光</li>
+</ul>
+</li>
+<li><strong>円環かつ螺旋:</strong> プロローグと同じ朝＝同じ時間軸だが、佐伯の内面は変容している。円環構造でありながら、一段上のステージにいる</li>
+</ul>
+<hr>
+<h2 id="あとがき著者馬場祐平"><a class="header" href="#あとがき著者馬場祐平">あとがき（著者＝馬場祐平）</a></h2>
+<blockquote>
+<p>パイプライン例外。全原稿完成後に最後に生成する。
+ここでは<strong>トーン・構成・文字数目安</strong>のみ定義する。原稿レベルの文章は書かない。</p>
+</blockquote>
+<h3 id="トーン-1"><a class="header" href="#トーン-1">トーン</a></h3>
+<ul>
+<li>「はじめに」と対をなす語り。物語を読み終えた読者に対して、著者が「種明かし」と「もう一歩」を伝える</li>
+<li>感傷的になりすぎず、しかし温かい。「これは物語だが、ここに書いたことは全て本当のことだ」という姿勢</li>
+<li>佐伯＝馬場であることを示唆し、フィクションとノンフィクションの境界を溶かす</li>
+</ul>
+<h3 id="構成5ビート-1"><a class="header" href="#構成5ビート-1">構成（5ビート）</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">#</th><th style="text-align: left">ビート</th><th style="text-align: left">内容</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">1</td><td style="text-align: left"><strong>種明かし</strong></td><td style="text-align: left">物語に埋め込んだフレームワークの一覧と、各Partとの対応。読者が「あのシーンはこういう意味だったのか」と再読の動機を得る構成。ただし長々と解説せず、ポイントを絞る</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left"><strong>佐伯＝著者の開示</strong></td><td style="text-align: left">「この物語の『失敗者』は、私自身です」。佐伯の起業失敗・黒沢との決裂が著者自身の体験に基づくことを示唆。フィクションと現実の境界を意図的に曖昧にする</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left"><strong>読者へのメッセージ</strong></td><td style="text-align: left">「ビジネスはワクワクするもの」「失敗は破滅ではなく、次のステージへの切符」「あなたが今いる場所が、出発点」——著者としての願い（v18_memo.md の「最重要ゴール」と一致させる）</td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left"><strong>AI活用の開示</strong></td><td style="text-align: left">この物語がAIを活用して書かれたこと。しかし「AIに書かせた」のではなく「想いを込め、人の手をかけた手作りの作品」であること。佐伯の執筆設定（storyline.md Section 10）との接続</td></tr>
+<tr><td style="text-align: left">5</td><td style="text-align: left"><strong>謝辞とブリッジ</strong></td><td style="text-align: left">関係者への感謝。「この物語でたった一つだけ覚えておいてほしいことがある。それは——楽しんでください」。翼のメッセージと円環する終わり方</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="文字数目安-1"><a class="header" href="#文字数目安-1">文字数目安</a></h3>
+<p>2,000〜3,000字</p>
+<h3 id="構成上の注意"><a class="header" href="#構成上の注意">構成上の注意</a></h3>
+<ul>
+<li>「おわりに」と統合した1本の構成（storyline.md 確定事項に準拠）</li>
+<li>種明かし＋佐伯＝著者の開示＋読者メッセージ＋AI開示＋謝辞を1本の流れで</li>
+<li>「はじめに」で投げかけた問い（「頑張っているのに噛み合わない人に向けた本」）に対する著者の回答を含む</li>
+</ul>
+<hr>
+<h2 id="付録骨格テーブル"><a class="header" href="#付録骨格テーブル">付録（骨格テーブル）</a></h2>
+<h2 id="3-fw配置表"><a class="header" href="#3-fw配置表">3. FW配置表</a></h2>
+<blockquote>
+<p>FW名は app_design.md の正式名称に準拠。積層順（下位→上位）が物語進行と整合していることを検証済み。</p>
+</blockquote>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">章</th><th style="text-align: left">FW名</th><th style="text-align: left">[L]シーン数（見込み）</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">Ch.1</td><td style="text-align: left">PDCA（業務PDCA基礎・仮説思考の導入）</td><td style="text-align: left">1</td></tr>
+<tr><td style="text-align: left">Ch.2</td><td style="text-align: left">PDCA（仮説思考の深化）+ 自分のOS：OS型（行動型/思考型）導入</td><td style="text-align: left">2</td></tr>
+<tr><td style="text-align: left">Ch.3</td><td style="text-align: left">PDCA 3階層モデル + 自分のOS（パターン認識の入口）</td><td style="text-align: left">1〜2</td></tr>
+<tr><td style="text-align: left">Ch.4</td><td style="text-align: left">自分のOS（WILL/CAN/MUST + 受容の概論）</td><td style="text-align: left">1</td></tr>
+<tr><td style="text-align: left">Ch.5</td><td style="text-align: left">GROWモデル（基礎導入）+ OS 4象限の提示</td><td style="text-align: left">1〜2</td></tr>
+<tr><td style="text-align: left">Ch.6</td><td style="text-align: left">GROWモデル（深化）+ マネージャーの裏返し（教訓構造）</td><td style="text-align: left">1〜2</td></tr>
+<tr><td style="text-align: left">Ch.7</td><td style="text-align: left">Growth Mindset（育成ステップ1-4）+ AI活用振り返り（3点セット）</td><td style="text-align: left">1〜2</td></tr>
+<tr><td style="text-align: left">Ch.8</td><td style="text-align: left">GROWモデル（統合：チーム成功の言語化）</td><td style="text-align: left">1</td></tr>
+<tr><td style="text-align: left">Ch.9</td><td style="text-align: left">—（FW学習シーンなし。エフェクチュエーション原則の体験的対比が進行）</td><td style="text-align: left">0</td></tr>
+<tr><td style="text-align: left">Ch.10</td><td style="text-align: left">—（PDCAの限界を体験。エフェクチュエーション「許容可能な損失」の逆行を体感）</td><td style="text-align: left">0</td></tr>
+<tr><td style="text-align: left">Ch.11</td><td style="text-align: left">成人発達理論（Vulnerability as 実践知）※例外設計：8ステップ不使用</td><td style="text-align: left">1</td></tr>
+<tr><td style="text-align: left">Ch.12</td><td style="text-align: left">エフェクチュエーション + 成人発達理論 ※変形適用：振り返り形式</td><td style="text-align: left">1</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>積層順の検証:</strong></p>
+<pre><code>Part 1: PDCA（業務→仮説→3階層）→ 自分のOS（型→パターン→WILL/CAN/MUST）
+  → 個人の武器を手に入れる
+
+Part 2: GROWモデル → マネージャーの裏返し → Growth Mindset → AI活用振り返り
+  → 他者を育てる技術を獲得する
+
+Part 3: Vulnerability → エフェクチュエーション + 成人発達理論
+  → 「武器では戦えない世界がある」ことを学ぶ
+</code></pre>
+<p>Part 1 で個人の基盤（PDCA+OS認知）→ Part 2 でチーム適用（GROW+Mindset）→ Part 3 で限界突破（Vulnerability+統合理論）。下位から上位への積層順は整合。</p>
+<p><strong>[L]シーン合計:</strong> 10〜14（Part 1: 5〜6、Part 2: 4〜7、Part 3: 2）</p>
+<hr>
+<h2 id="4-サブストーリー到達点"><a class="header" href="#4-サブストーリー到達点">4. サブストーリー到達点</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">キャラクター</th><th style="text-align: left">サブストーリー</th><th style="text-align: left">Part 1 到達点</th><th style="text-align: left">Part 2 到達点</th><th style="text-align: left">Part 3 到達点</th><th style="text-align: left">エピローグ</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><strong>結衣</strong></td><td style="text-align: left">D. 蓮との共依存からの自覚</td><td style="text-align: left">DVサイクルの伏線的描写（ハネムーン期→コントロール→攻撃初出→放置+ケア回収）。翼を「成績の良い同僚」としてのみ認知</td><td style="text-align: left">仕事での成長が蓮の支配欲を刺激→DVサイクル悪化。「自分はどうしたいか」に向き合い始めるが答えが出ない</td><td style="text-align: left">マネージャー昇格→WILLの問いに改めて向き合う→蓮との関係を清算。「他者のために」から「自分のWILLで」への転換</td><td style="text-align: left">社内在籍＋ヤングケアラー支援プロボノをリーダー兼ビジネスプロデューサーとして推進。蓮の影なし</td></tr>
+<tr><td style="text-align: left"><strong>涼太</strong></td><td style="text-align: left">正解依存からの脱却</td><td style="text-align: left">（未登場）</td><td style="text-align: left">翼と正面から論理的に対立→Fixed Mindset（失敗恐怖）への気づき→「やります。失敗するかもしれないけど」→翼と思考×行動のパートナーに</td><td style="text-align: left">翼と共にWINGS起業→事業崩壊後、結衣・沙織に連絡し旧チーム結束の起点→佐伯へのバトン渡し</td><td style="text-align: left">自分のチームを持つ</td></tr>
+<tr><td style="text-align: left"><strong>沙織</strong></td><td style="text-align: left">行動=迷惑からの脱却</td><td style="text-align: left">（未登場）</td><td style="text-align: left">どのアプローチでも成果が出ない（翼の最難課題）→終盤で小さな一歩（初めて自分の意見を伝える）＝「成果とは何か」の再定義</td><td style="text-align: left">旧チーム結束に参加（涼太の連絡で）</td><td style="text-align: left">小さく笑い、自分の言葉で話す</td></tr>
+<tr><td style="text-align: left"><strong>黒沢</strong></td><td style="text-align: left">C. 佐伯との贖罪と再出発</td><td style="text-align: left">直接登場なし。佐伯の回想に「かつての相棒」として断片的に</td><td style="text-align: left">佐伯のLv.2-3自己開示で「組織の失敗」として断片言及</td><td style="text-align: left">Ch.11で佐伯が全容告白（外部コンサル服従→独断解約→黒沢の退任→決裂）。手紙を完成</td><td style="text-align: left">佐伯が手紙を引き出しから取り出し鞄に入れる。「和解は届かなくてもいい。自分が変わったことが答えだ」</td></tr>
+<tr><td style="text-align: left"><strong>高城</strong></td><td style="text-align: left">経営者の器</td><td style="text-align: left">翼を佐伯のもとへ送る。絶対的な壁／視座の高さとして存在</td><td style="text-align: left">マネージャー昇格の判断者。翼がどんな論理武装でも勝てない存在</td><td style="text-align: left">Ch.11-12で育成プログラムの背景構造が明かされる。翼の会社復帰の受け皿（経営幹部として）</td><td style="text-align: left">佐伯起業の文脈で暗示</td></tr>
+<tr><td style="text-align: left"><strong>美咲</strong></td><td style="text-align: left">B. 翼のパートナーとの関係</td><td style="text-align: left">日常描写に自然に登場。翼の「帰る場所」としての安定</td><td style="text-align: left">同棲開始→父に美咲を会わせて衝突→「お前にはわからない」と八つ当たり→関係にひび</td><td style="text-align: left">結婚→起業ストレス＋父問題再燃→手紙を残して失踪→翼の深い反省→<strong>復縁</strong></td><td style="text-align: left"><strong>翼の隣にいる</strong></td></tr>
+<tr><td style="text-align: left"><strong>父（誠一郎）</strong></td><td style="text-align: left">A. 権威との和解</td><td style="text-align: left">着信を無視。フラッシュバック。パターンの根源として認知が始まる</td><td style="text-align: left">美咲を会わせて衝突（評価も否定もしない歯切れの悪い反応）。母の変化の気配。未統合のまま問題内包</td><td style="text-align: left">起業崩壊・美咲離脱と同時に本質的葛藤が再燃→和解の始まり（「ごめん。ありがとう」）。完了ではなく始まり</td><td style="text-align: left">（直接言及なし。翼の変容そのものが答え）</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="5-佐伯自己開示レベル配置"><a class="header" href="#5-佐伯自己開示レベル配置">5. 佐伯自己開示レベル配置</a></h2>
+<blockquote>
+<p>storyline.md の「自己開示の段階設計」（app_design.md Section 4）に基づく。累積的に深化するが、各章内で一定の揺れ（同レベル維持）は許容。</p>
+</blockquote>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">章</th><th style="text-align: left">開示レベル</th><th style="text-align: left">内容概要</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">プロローグ</td><td style="text-align: left">—</td><td style="text-align: left">黒沢への手紙の<strong>存在</strong>を読者に示す。佐伯の内面は深く描かない</td></tr>
+<tr><td style="text-align: left">Ch.1</td><td style="text-align: left">Lv.0</td><td style="text-align: left">何者か不明のミステリアスな存在。穏やかな問いかけのみ</td></tr>
+<tr><td style="text-align: left">Ch.2</td><td style="text-align: left">Lv.0〜1</td><td style="text-align: left">「俺も昔、数で勝負しようとした時期がある」程度の匂わせ</td></tr>
+<tr><td style="text-align: left">Ch.3</td><td style="text-align: left">Lv.1</td><td style="text-align: left">「大切な仲間を一人失った」と断片的に漏れる</td></tr>
+<tr><td style="text-align: left">Ch.4</td><td style="text-align: left">Lv.1</td><td style="text-align: left">翼のパターンに触れる際「俺にも似たようなところがあった」</td></tr>
+<tr><td style="text-align: left">Ch.5</td><td style="text-align: left">Lv.2</td><td style="text-align: left">「元部下を潰しかけた経験がある」——翼のマネジメント失敗と共鳴</td></tr>
+<tr><td style="text-align: left">Ch.6</td><td style="text-align: left">Lv.2〜3</td><td style="text-align: left">「チームを変えようとして壊した」。組織レベルの失敗実例</td></tr>
+<tr><td style="text-align: left">Ch.7</td><td style="text-align: left">Lv.3</td><td style="text-align: left">「俺自身のFixed Mindsetが、あの時すべてを壊した」</td></tr>
+<tr><td style="text-align: left">Ch.8</td><td style="text-align: left">Lv.3</td><td style="text-align: left">翼の起業決断に対し自身の起業失敗を重ねた「予感」として表出</td></tr>
+<tr><td style="text-align: left">Ch.9</td><td style="text-align: left">—</td><td style="text-align: left">佐伯の直接シーン少。翼の起業が主軸</td></tr>
+<tr><td style="text-align: left">Ch.10</td><td style="text-align: left">—</td><td style="text-align: left">佐伯の直接シーン少。崩壊が主軸</td></tr>
+<tr><td style="text-align: left">Ch.11</td><td style="text-align: left"><strong>Lv.4</strong></td><td style="text-align: left"><strong>全容開示。</strong> 黒沢との決裂全容（外部コンサル→服従→機能停止→独断解約→黒沢退任）。コーチの仮面の告白。Vulnerability実践</td></tr>
+<tr><td style="text-align: left">Ch.12</td><td style="text-align: left">Lv.4</td><td style="text-align: left">統合的開示。翼の失敗をエフェクチュエーション・成人発達理論のフレームで構造化。「俺も失敗者だ」——タイトルの意味が完成</td></tr>
+<tr><td style="text-align: left">エピローグ</td><td style="text-align: left">—</td><td style="text-align: left">手紙を鞄に入れる。行動で語る（実践としてのVulnerability）</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="6-シーソー推移表"><a class="header" href="#6-シーソー推移表">6. シーソー推移表</a></h2>
+<blockquote>
+<p>storyline.md の「シーソー原則」に基づく。「仕事が上がれば私生活が下がる」原則を基本とし、ダブル絶望（両面↓↓）と統合（両面↑↑）を所定の位置に配置。</p>
+</blockquote>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">章</th><th style="text-align: left">仕事面</th><th style="text-align: left">私生活面</th><th style="text-align: left">備考</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">プロローグ</td><td style="text-align: left">—</td><td style="text-align: left">—</td><td style="text-align: left">円環構造の起点。静かな書斎</td></tr>
+<tr><td style="text-align: left">Ch.1</td><td style="text-align: left">↑</td><td style="text-align: left">→</td><td style="text-align: left">営業成績の上昇。美咲との安定した日常</td></tr>
+<tr><td style="text-align: left">Ch.2</td><td style="text-align: left">↑</td><td style="text-align: left">→</td><td style="text-align: left">PDCA効果で成長加速。蓮のコントロール開始（結衣視点）は翼の私生活に影響なし</td></tr>
+<tr><td style="text-align: left">Ch.3</td><td style="text-align: left">↑→</td><td style="text-align: left">↓</td><td style="text-align: left">成果は出るが壁に直面（停滞感）。OS直面の痛みが内面に影。蓮の攻撃フェーズ（結衣視点）</td></tr>
+<tr><td style="text-align: left">Ch.4</td><td style="text-align: left">↓→↑</td><td style="text-align: left">↓</td><td style="text-align: left">OS痛み→マネージャー昇格決断で上昇。内面の葛藤は継続</td></tr>
+<tr><td style="text-align: left">Ch.5</td><td style="text-align: left">↓</td><td style="text-align: left">→</td><td style="text-align: left">チーム管理で壁。美咲と同棲開始（新しい日常）</td></tr>
+<tr><td style="text-align: left">Ch.6</td><td style="text-align: left"><strong>↓↓</strong></td><td style="text-align: left"><strong>↓↓</strong></td><td style="text-align: left"><strong>ダブル絶望①。</strong> チーム崩壊 + 父×美咲衝突→美咲との関係にひび</td></tr>
+<tr><td style="text-align: left">Ch.7</td><td style="text-align: left">↑</td><td style="text-align: left">→</td><td style="text-align: left">各メンバーとの関係改善開始。美咲との関係修復模索</td></tr>
+<tr><td style="text-align: left">Ch.8</td><td style="text-align: left">↑↑</td><td style="text-align: left">→（問題含み）</td><td style="text-align: left">チーム成功。ただし父との未統合が残る。起業準備</td></tr>
+<tr><td style="text-align: left">Ch.9</td><td style="text-align: left">↑</td><td style="text-align: left">↑</td><td style="text-align: left">起業初期好調 + 結婚。<strong>一時的両面上昇</strong>（Ch.10の落差を最大化する設計）</td></tr>
+<tr><td style="text-align: left">Ch.10</td><td style="text-align: left"><strong>↓↓↓</strong></td><td style="text-align: left"><strong>↓↓↓</strong></td><td style="text-align: left"><strong>ダブル絶望②（物語最大の谷底）。</strong> 事業崩壊 + 美咲失踪</td></tr>
+<tr><td style="text-align: left">Ch.11</td><td style="text-align: left">→（底）</td><td style="text-align: left">→（底）</td><td style="text-align: left">旧チーム結束→佐伯訪問→真の告白。底からの<strong>感情的回復の始まり</strong></td></tr>
+<tr><td style="text-align: left">Ch.12</td><td style="text-align: left"><strong>↑↑</strong></td><td style="text-align: left"><strong>↑↑</strong></td><td style="text-align: left"><strong>統合。</strong> 会社復帰（経営幹部）+ 美咲復縁 + 父和解の始まり</td></tr>
+<tr><td style="text-align: left">エピローグ</td><td style="text-align: left">↑↑</td><td style="text-align: left">↑↑</td><td style="text-align: left">統合された静かな朝。全員の到達点が描かれる</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>検証:</strong> ダブル絶望①（Ch.6）→ダブル絶望②（Ch.10）で絶望度がエスカレート（↓↓ → ↓↓↓）。Ch.9の一時的両面上昇は、Ch.10の落差を意図的に最大化する設計。物語最大の谷底（Ch.10）の後に統合（Ch.12）で仕事・私生活が同時上昇。</p>
+<hr>
+<h2 id="7-部間接続点"><a class="header" href="#7-部間接続点">7. 部間接続点</a></h2>
+<h3 id="part-1--part-2-の接続"><a class="header" href="#part-1--part-2-の接続">Part 1 → Part 2 の接続</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">要素</th><th style="text-align: left">Part 1 での植え付け</th><th style="text-align: left">Part 2 での展開</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><strong>マネージャー昇格</strong></td><td style="text-align: left">Ch.4で昇格決断</td><td style="text-align: left">Ch.5で実際に昇格。打率で負けていた結衣を管理する構造的皮肉</td></tr>
+<tr><td style="text-align: left"><strong>OS型の拡張</strong></td><td style="text-align: left">Ch.2で行動型/思考型の2軸を獲得</td><td style="text-align: left">Ch.5で部下3人のOS 4象限が揃う。認知OSの「自分本位/他者本位」軸が追加</td></tr>
+<tr><td style="text-align: left"><strong>父問題の内在</strong></td><td style="text-align: left">Ch.4で佐伯がルーツに触れ始める（種蒔き）</td><td style="text-align: left">Ch.6で父に美咲を会わせて衝突（種の開花）。未統合のままPart 3へ</td></tr>
+<tr><td style="text-align: left"><strong>結衣のDVサイクル</strong></td><td style="text-align: left">Ch.1-4で各章1段階ずつ進行（伏線的レベル）</td><td style="text-align: left">Ch.5-8で仕事の成長が蓮の支配欲を刺激。結衣視点で直接描写</td></tr>
+<tr><td style="text-align: left"><strong>認知の非対称性</strong></td><td style="text-align: left">Ch.4終了時：翼は結衣を「成績の良い同僚」としか認知していない</td><td style="text-align: left">Ch.5で翼が結衣の管理者に。非対称がチームマネジメント緊張の土台</td></tr>
+<tr><td style="text-align: left"><strong>翼の信頼関係</strong></td><td style="text-align: left">Part 1後半：佐伯にだけ本音が出る関係</td><td style="text-align: left">Part 2：困った時に自ら佐伯を頼る関係へ</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="part-2--part-3-の接続"><a class="header" href="#part-2--part-3-の接続">Part 2 → Part 3 の接続</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">要素</th><th style="text-align: left">Part 2 での植え付け</th><th style="text-align: left">Part 3 での展開</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><strong>佐伯の「失敗の予言」</strong></td><td style="text-align: left">Ch.8で「何か隠していないか。どこかでつまずく予感がする」</td><td style="text-align: left">Ch.10で的中。翼が勝ちパターンに固執した結果の崩壊</td></tr>
+<tr><td style="text-align: left"><strong>起業の予兆</strong></td><td style="text-align: left">Ch.8で翼の起業準備の予兆</td><td style="text-align: left">Ch.9でWINGS（仮）起業→Ch.10で崩壊</td></tr>
+<tr><td style="text-align: left"><strong>涼太の同行</strong></td><td style="text-align: left">Ch.8で翼と涼太が思考×行動のパートナーに</td><td style="text-align: left">Ch.9で涼太が共同創業→Ch.10崩壊後に旧チーム結束の起点</td></tr>
+<tr><td style="text-align: left"><strong>結衣のWill不在</strong></td><td style="text-align: left">Ch.8でWill不在が未解決のまま</td><td style="text-align: left">Ch.9で翼離脱→マネージャー昇格→WILLの問いに改めて向き合う</td></tr>
+<tr><td style="text-align: left"><strong>父との未統合</strong></td><td style="text-align: left">Ch.6-8で問題含みのまま内包</td><td style="text-align: left">Ch.10で起業崩壊と同時に父問題再燃→Ch.12で和解の始まり</td></tr>
+<tr><td style="text-align: left"><strong>美咲との脆弱な修復</strong></td><td style="text-align: left">Ch.6でひび→Ch.7-8で修復模索（不完全）</td><td style="text-align: left">Ch.9結婚→Ch.10で美咲失踪→Ch.12復縁</td></tr>
+<tr><td style="text-align: left"><strong>佐伯の自己開示</strong></td><td style="text-align: left">Lv.3まで（断片的な失敗実例）</td><td style="text-align: left">Ch.11でLv.4全容開示。黒沢との決裂全容</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="伏線マッピングpart横断"><a class="header" href="#伏線マッピングpart横断">伏線マッピング（Part横断）</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">伏線</th><th style="text-align: left">植え付け</th><th style="text-align: left">回収</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">コーヒーの温冷対比</td><td style="text-align: left">プロローグ（冷めたコーヒー）</td><td style="text-align: left">エピローグ（温かいコーヒー）</td></tr>
+<tr><td style="text-align: left">黒沢への手紙</td><td style="text-align: left">プロローグ（引き出しに戻す）</td><td style="text-align: left">Part 1-2（佐伯の断片的開示）→ Ch.11（全容）→ エピローグ（鞄に入れる）</td></tr>
+<tr><td style="text-align: left">翼のサッカー挫折 / 父の沈黙</td><td style="text-align: left">Part 1（フラッシュバック・パターン認知）</td><td style="text-align: left">Ch.11（真の告白で全容）</td></tr>
+<tr><td style="text-align: left">結衣のポストイット</td><td style="text-align: left">Ch.2（仮説の具体例）</td><td style="text-align: left">Part 2（結衣の直観的PDCAの裏付け）</td></tr>
+<tr><td style="text-align: left">高城→佐伯育成プログラム</td><td style="text-align: left">Part 2（佐伯がなぜ関与しているかの不自然さ——暗示）</td><td style="text-align: left">Ch.11-12（背景構造の開示）</td></tr>
+<tr><td style="text-align: left">佐伯の「失敗の予言」</td><td style="text-align: left">Ch.8</td><td style="text-align: left">Ch.10（的中）</td></tr>
+<tr><td style="text-align: left">美咲の手紙</td><td style="text-align: left">Ch.10（美咲が残して出ていく）</td><td style="text-align: left">Ch.12（翼が自身の行動を反省→復縁）</td></tr>
+<tr><td style="text-align: left">「もう一人」の影（結衣）</td><td style="text-align: left">プロローグ（1文で匂わせ）</td><td style="text-align: left">Part 1以降で結衣が二重主人公として立ち上がる</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="付録a-シーソー推移表全章検証済み"><a class="header" href="#付録a-シーソー推移表全章検証済み">付録A: シーソー推移表（全章・検証済み）</a></h2>
+<blockquote>
+<p>storyline.md「シーソー原則」に基づく。骨格テーブル（Section 6）と各Part シナリオの章末シーソーを三点突合し、全一致を確認。</p>
+</blockquote>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">#</th><th style="text-align: left">章</th><th style="text-align: left">仕事面</th><th style="text-align: left">私生活面</th><th style="text-align: left">備考</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">0</td><td style="text-align: left">プロローグ</td><td style="text-align: left">—</td><td style="text-align: left">—</td><td style="text-align: left">円環構造の起点。静かな書斎</td></tr>
+<tr><td style="text-align: left">1</td><td style="text-align: left">Ch.1「転職者」</td><td style="text-align: left">↑</td><td style="text-align: left">→</td><td style="text-align: left">営業成績の上昇。美咲との安定した日常</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left">Ch.2「ナプキンの仮説」</td><td style="text-align: left">↑</td><td style="text-align: left">→</td><td style="text-align: left">PDCA効果で成長加速。蓮のコントロール開始（結衣視点）は翼の私生活に影響なし</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left">Ch.3「三つの階層」</td><td style="text-align: left">↑→</td><td style="text-align: left">↓</td><td style="text-align: left">成果は出るが壁に直面（停滞感）。OS直面の痛みが内面に影。蓮の攻撃フェーズ（結衣視点）</td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left">Ch.4「生存戦略」</td><td style="text-align: left">↓→↑</td><td style="text-align: left">↓</td><td style="text-align: left">OS痛み→マネージャー昇格決断で上昇。内面の葛藤は継続</td></tr>
+<tr><td style="text-align: left">5</td><td style="text-align: left">Ch.5「四つの象限」</td><td style="text-align: left">↓</td><td style="text-align: left">→</td><td style="text-align: left">チーム管理で壁。美咲と同棲開始（新しい日常）</td></tr>
+<tr><td style="text-align: left">6</td><td style="text-align: left">Ch.6「裏返しの鏡」</td><td style="text-align: left"><strong>↓↓</strong></td><td style="text-align: left"><strong>↓↓</strong></td><td style="text-align: left"><strong>ダブル絶望①。</strong> チーム崩壊 + 父×美咲衝突→美咲との関係にひび</td></tr>
+<tr><td style="text-align: left">7</td><td style="text-align: left">Ch.7「変われるという信念」</td><td style="text-align: left">↑</td><td style="text-align: left">→</td><td style="text-align: left">各メンバーとの関係改善開始。美咲との関係修復模索（不完全）</td></tr>
+<tr><td style="text-align: left">8</td><td style="text-align: left">Ch.8「予言」</td><td style="text-align: left">↑↑</td><td style="text-align: left">→（問題含み）</td><td style="text-align: left">チーム成功。ただし父との未統合が残る。起業準備</td></tr>
+<tr><td style="text-align: left">9</td><td style="text-align: left">Ch.9「飛び立つ鳥」</td><td style="text-align: left">↑</td><td style="text-align: left">↑</td><td style="text-align: left">起業初期好調 + 結婚。<strong>一時的両面上昇</strong>（Ch.10の落差を最大化する設計）</td></tr>
+<tr><td style="text-align: left">10</td><td style="text-align: left">Ch.10「崩壊」</td><td style="text-align: left"><strong>↓↓↓</strong></td><td style="text-align: left"><strong>↓↓↓</strong></td><td style="text-align: left"><strong>ダブル絶望②（物語最大の谷底）。</strong> 事業崩壊 + 美咲失踪</td></tr>
+<tr><td style="text-align: left">11</td><td style="text-align: left">Ch.11「手中の鳥」</td><td style="text-align: left">→（底）</td><td style="text-align: left">→（底）</td><td style="text-align: left">旧チーム結束→佐伯訪問→真の告白。底からの<strong>感情的回復の始まり</strong></td></tr>
+<tr><td style="text-align: left">12</td><td style="text-align: left">Ch.12「失敗者の告白」</td><td style="text-align: left"><strong>↑↑</strong></td><td style="text-align: left"><strong>↑↑</strong></td><td style="text-align: left"><strong>統合。</strong> 会社復帰（経営幹部）+ 美咲復縁 + 父和解の始まり</td></tr>
+<tr><td style="text-align: left">E</td><td style="text-align: left">エピローグ</td><td style="text-align: left">↑↑</td><td style="text-align: left">↑↑</td><td style="text-align: left">統合された静かな朝。全員の到達点が描かれる</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>検証結果:</strong> 骨格 × Part 1 × Part 2 × Part 3 すべて一致。✅</p>
+<hr>
+<h2 id="付録b-感情曲線翼結衣"><a class="header" href="#付録b-感情曲線翼結衣">付録B: 感情曲線（翼＋結衣）</a></h2>
+<blockquote>
+<p>各章の翼・結衣の感情的状態を -3〜+3 のスケールで表現。シーソー推移と補完的に機能する。</p>
+</blockquote>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">#</th><th style="text-align: left">章</th><th style="text-align: left">翼の感情曲線</th><th style="text-align: left">翼の主要感情</th><th style="text-align: left">結衣の感情曲線</th><th style="text-align: left">結衣の主要感情</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">0</td><td style="text-align: left">プロローグ</td><td style="text-align: left">—</td><td style="text-align: left">—</td><td style="text-align: left">—</td><td style="text-align: left">—</td></tr>
+<tr><td style="text-align: left">1</td><td style="text-align: left">Ch.1</td><td style="text-align: left">+1</td><td style="text-align: left">自信と焦り。行動量の手応え</td><td style="text-align: left">0</td><td style="text-align: left">穏やかな日常。蓮との安定</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left">Ch.2</td><td style="text-align: left">+2</td><td style="text-align: left">仮説の力を実感。成長の喜び</td><td style="text-align: left">0→-1</td><td style="text-align: left">蓮のコントロール開始。微かな違和感</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left">Ch.3</td><td style="text-align: left">+1→0</td><td style="text-align: left">成長しつつもOS直面の不安</td><td style="text-align: left">-1</td><td style="text-align: left">蓮の攻撃初出。自己否定の強化</td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left">Ch.4</td><td style="text-align: left">-1→+1</td><td style="text-align: left">生存戦略の痛み→昇格決断の覚悟</td><td style="text-align: left">-1</td><td style="text-align: left">DVサイクル完成。しかし自覚なし</td></tr>
+<tr><td style="text-align: left">5</td><td style="text-align: left">Ch.5</td><td style="text-align: left">-1</td><td style="text-align: left">チーム管理の壁。自信喪失の始まり</td><td style="text-align: left">-1</td><td style="text-align: left">蓮の態度冷却。仕事量増加</td></tr>
+<tr><td style="text-align: left">6</td><td style="text-align: left">Ch.6</td><td style="text-align: left"><strong>-3</strong></td><td style="text-align: left"><strong>ダブル絶望①。全方位から崩壊</strong></td><td style="text-align: left"><strong>-2</strong></td><td style="text-align: left"><strong>蓮DV悪化。精神的暴力の直接描写</strong></td></tr>
+<tr><td style="text-align: left">7</td><td style="text-align: left">Ch.7</td><td style="text-align: left">+1</td><td style="text-align: left">もがきながらの上昇。GM育成実践</td><td style="text-align: left">-2→-1</td><td style="text-align: left">「嘘をついている自分」への気づき</td></tr>
+<tr><td style="text-align: left">8</td><td style="text-align: left">Ch.8</td><td style="text-align: left">+2</td><td style="text-align: left">チーム成功の手応え。起業の予兆</td><td style="text-align: left">-1</td><td style="text-align: left">Will不在。空虚さ。蓮DV継続</td></tr>
+<tr><td style="text-align: left">9</td><td style="text-align: left">Ch.9</td><td style="text-align: left">+2</td><td style="text-align: left">起業好調。結婚。高揚感</td><td style="text-align: left">0→+1</td><td style="text-align: left">マネージャー昇格。WILL再起動</td></tr>
+<tr><td style="text-align: left">10</td><td style="text-align: left">Ch.10</td><td style="text-align: left"><strong>-3</strong></td><td style="text-align: left"><strong>ダブル絶望②。全て失う</strong></td><td style="text-align: left">+1→<strong>+2</strong></td><td style="text-align: left"><strong>蓮清算。自立。結衣のクライマックス</strong></td></tr>
+<tr><td style="text-align: left">11</td><td style="text-align: left">Ch.11</td><td style="text-align: left">-3→-1</td><td style="text-align: left">真の告白。感情的統合の入口</td><td style="text-align: left">+2</td><td style="text-align: left">旧チーム結束に自分の意志で参加</td></tr>
+<tr><td style="text-align: left">12</td><td style="text-align: left">Ch.12</td><td style="text-align: left">+2</td><td style="text-align: left">統合。受容。行動への踏み出し</td><td style="text-align: left">+2</td><td style="text-align: left">WILLを語る結衣</td></tr>
+<tr><td style="text-align: left">E</td><td style="text-align: left">エピローグ</td><td style="text-align: left">+2</td><td style="text-align: left">穏やかな確信。美咲が隣に</td><td style="text-align: left">+2</td><td style="text-align: left">「私がやりたいのは——」</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>設計意図:</strong> 翼と結衣の曲線は意図的に非同期。Ch.10で翼が最大の谷底に沈む時、結衣は自立のクライマックスを迎える。この非同期が「二重主人公」構造の物語的効果を最大化する。</p>
+<hr>
+<h2 id="付録c-サブストーリー追跡表全キャラ全章"><a class="header" href="#付録c-サブストーリー追跡表全キャラ全章">付録C: サブストーリー追跡表（全キャラ×全章）</a></h2>
+<blockquote>
+<p>骨格Section 4（サブストーリー到達点）を章単位に展開。各Part シナリオの章末サブストーリー進行表を統合。</p>
+</blockquote>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">#</th><th style="text-align: left">章</th><th style="text-align: left">A.翼と父</th><th style="text-align: left">B.翼と美咲</th><th style="text-align: left">C.佐伯と黒沢</th><th style="text-align: left">D.結衣と蓮</th><th style="text-align: left">涼太</th><th style="text-align: left">沙織</th><th style="text-align: left">高城</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">0</td><td style="text-align: left">Pro</td><td style="text-align: left">—</td><td style="text-align: left">—</td><td style="text-align: left">手紙→引き出しに戻す</td><td style="text-align: left">—</td><td style="text-align: left">—</td><td style="text-align: left">—</td><td style="text-align: left">—</td></tr>
+<tr><td style="text-align: left">1</td><td style="text-align: left">Ch.1</td><td style="text-align: left">着信無視。サッカーFB</td><td style="text-align: left">安定した日常。本音非共有</td><td style="text-align: left">佐伯Lv.0</td><td style="text-align: left">ハネムーン期</td><td style="text-align: left">—</td><td style="text-align: left">—</td><td style="text-align: left">入社時挨拶</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left">Ch.2</td><td style="text-align: left">着信履歴→折返さず</td><td style="text-align: left">「仕事楽しそう」</td><td style="text-align: left">Lv.0-1「数で勝負した」</td><td style="text-align: left">コントロール開始</td><td style="text-align: left">—</td><td style="text-align: left">—</td><td style="text-align: left">—</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left">Ch.3</td><td style="text-align: left">父のLINE既読スルー</td><td style="text-align: left">—</td><td style="text-align: left">Lv.1「仲間を失った」</td><td style="text-align: left">攻撃フェーズ初出</td><td style="text-align: left">—</td><td style="text-align: left">—</td><td style="text-align: left">—</td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left">Ch.4</td><td style="text-align: left">LINE返信→「そうか」</td><td style="text-align: left">外食。温度差の芽生え</td><td style="text-align: left">Lv.1維持</td><td style="text-align: left">放置+ケア回収</td><td style="text-align: left">名簿に名前</td><td style="text-align: left">名簿に名前</td><td style="text-align: left">昇格提案</td></tr>
+<tr><td style="text-align: left">5</td><td style="text-align: left">Ch.5</td><td style="text-align: left">直接描写なし</td><td style="text-align: left">同棲開始</td><td style="text-align: left">Lv.2「元部下を潰した」</td><td style="text-align: left">蓮の態度冷却</td><td style="text-align: left">初登場。論理反論</td><td style="text-align: left">初登場。動けない</td><td style="text-align: left">—</td></tr>
+<tr><td style="text-align: left">6</td><td style="text-align: left">Ch.6</td><td style="text-align: left">美咲紹介→衝突。「お前が決めることだ」気づき（未言語化）</td><td style="text-align: left">八つ当たり→ひび</td><td style="text-align: left">Lv.2-3「チーム壊した」</td><td style="text-align: left">スマホ叩き。DV悪化</td><td style="text-align: left">冷たい膠着</td><td style="text-align: left">完全停止</td><td style="text-align: left">—</td></tr>
+<tr><td style="text-align: left">7</td><td style="text-align: left">Ch.7</td><td style="text-align: left">直接描写なし</td><td style="text-align: left">修復模索（不完全）</td><td style="text-align: left">Lv.3「Fixed Mindsetが壊した」</td><td style="text-align: left">バッグチェック。「嘘の自覚」</td><td style="text-align: left">「やってみます」</td><td style="text-align: left">メール文面で微小成果</td><td style="text-align: left">—</td></tr>
+<tr><td style="text-align: left">8</td><td style="text-align: left">Ch.8</td><td style="text-align: left">不在着信再び無視</td><td style="text-align: left">表面的修復。起業の話</td><td style="text-align: left">Lv.3維持。「失敗の予言」</td><td style="text-align: left">DV表面小康。Will不在最深</td><td style="text-align: left">パートナー化。自律行動</td><td style="text-align: left">初めて自分の意見</td><td style="text-align: left">チーム評価</td></tr>
+<tr><td style="text-align: left">9</td><td style="text-align: left">Ch.9</td><td style="text-align: left">不在着信再び無視</td><td style="text-align: left">結婚。翼没頭</td><td style="text-align: left">—（直接シーン少）</td><td style="text-align: left">蓮の支配＋結衣の違和感</td><td style="text-align: left">WINGS共同創業</td><td style="text-align: left">結衣チームで安定</td><td style="text-align: left">退職送出</td></tr>
+<tr><td style="text-align: left">10</td><td style="text-align: left">Ch.10</td><td style="text-align: left">全連絡遮断に含まれる</td><td style="text-align: left">手紙を残して失踪</td><td style="text-align: left">—</td><td style="text-align: left"><strong>「終わりにしよう」→自立</strong></td><td style="text-align: left">WINGS崩壊。「自分で選んだ」</td><td style="text-align: left">—</td><td style="text-align: left">—</td></tr>
+<tr><td style="text-align: left">11</td><td style="text-align: left">Ch.11</td><td style="text-align: left">父の沈黙を再解釈。「お前が決めることだ」回収</td><td style="text-align: left">—</td><td style="text-align: left"><strong>Lv.4全容開示。Vulnerability</strong></td><td style="text-align: left">—</td><td style="text-align: left">旧チーム結束の起点</td><td style="text-align: left">旧チーム参加</td><td style="text-align: left">育成PG開示</td></tr>
+<tr><td style="text-align: left">12</td><td style="text-align: left">Ch.12</td><td style="text-align: left"><strong>「ごめん。ありがとう」和解の始まり</strong></td><td style="text-align: left"><strong>手紙→復縁</strong></td><td style="text-align: left">Lv.4維持</td><td style="text-align: left">—</td><td style="text-align: left">—</td><td style="text-align: left">—</td><td style="text-align: left"><strong>「やっとか」復帰</strong></td></tr>
+<tr><td style="text-align: left">E</td><td style="text-align: left">Epi</td><td style="text-align: left">（翼の変容が答え）</td><td style="text-align: left"><strong>翼の隣にいる</strong></td><td style="text-align: left">手紙を鞄に</td><td style="text-align: left">蓮の影なし</td><td style="text-align: left">自分のチーム</td><td style="text-align: left">小さく笑う</td><td style="text-align: left">—</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="付録d-crisis--learning-マッピング"><a class="header" href="#付録d-crisis--learning-マッピング">付録D: Crisis → Learning マッピング</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">#</th><th style="text-align: left">章</th><th style="text-align: left">Crisis（危機・葛藤）</th><th style="text-align: left">Learning（学習内容）</th><th style="text-align: left">[L]シーン数</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">0</td><td style="text-align: left">プロローグ</td><td style="text-align: left">—</td><td style="text-align: left">—</td><td style="text-align: left">0</td></tr>
+<tr><td style="text-align: left">1</td><td style="text-align: left">Ch.1</td><td style="text-align: left">量はこなすが質が伴わない壁</td><td style="text-align: left">PDCA（業務基礎・仮説思考の導入）</td><td style="text-align: left">1</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left">Ch.2</td><td style="text-align: left">同じ壁の反復→業務を超えた問題の予兆</td><td style="text-align: left">PDCA仮説思考の深化 + OS型（行動型/思考型）導入</td><td style="text-align: left">2</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left">Ch.3</td><td style="text-align: left">業務・スキルを超えた「OSの壁」の存在</td><td style="text-align: left">PDCA 3階層モデル + 自分のOS（パターン認識の入口）</td><td style="text-align: left">1</td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left">Ch.4</td><td style="text-align: left">生存戦略パターンと向き合う痛み。WILLの不在</td><td style="text-align: left">WILL/CAN/MUST + OS受容概論</td><td style="text-align: left">1</td></tr>
+<tr><td style="text-align: left">5</td><td style="text-align: left">Ch.5</td><td style="text-align: left">「自分のやり方で全員を動かせる」幻想の崩壊</td><td style="text-align: left">GROWモデル基礎導入 + OS 4象限の提示</td><td style="text-align: left">1〜2</td></tr>
+<tr><td style="text-align: left">6</td><td style="text-align: left">Ch.6</td><td style="text-align: left"><strong>ダブル絶望①。</strong> 仕事↓↓ + 私生活↓↓ の同時崩壊</td><td style="text-align: left">GROW深化 + マネージャーの裏返し（Mirror Structure）</td><td style="text-align: left">1〜2</td></tr>
+<tr><td style="text-align: left">7</td><td style="text-align: left">Ch.7</td><td style="text-align: left">GROWを使ってもFixed領域が障壁。教える側のMindset</td><td style="text-align: left">Growth Mindset（育成ステップ1-4）+ AI活用振り返り（3点セット）</td><td style="text-align: left">1〜2</td></tr>
+<tr><td style="text-align: left">8</td><td style="text-align: left">Ch.8</td><td style="text-align: left">成功の中の不完全さ（父との未統合、WILLの不在）</td><td style="text-align: left">GROW統合（チーム成功の言語化）</td><td style="text-align: left">1</td></tr>
+<tr><td style="text-align: left">9</td><td style="text-align: left">Ch.9</td><td style="text-align: left">勝ちパターン固執の開始。「許容可能な損失」無視</td><td style="text-align: left">—（[L]シーンなし。体験的対比が進行）</td><td style="text-align: left">0</td></tr>
+<tr><td style="text-align: left">10</td><td style="text-align: left">Ch.10</td><td style="text-align: left"><strong>ダブル絶望②。</strong> 仕事↓↓↓ + 私生活↓↓↓。PDCAの本質的限界</td><td style="text-align: left">—（失敗体験そのものが学びの原材料）</td><td style="text-align: left">0</td></tr>
+<tr><td style="text-align: left">11</td><td style="text-align: left">Ch.11</td><td style="text-align: left">翼の「真の告白」＝感情的統合の入口</td><td style="text-align: left">Vulnerability（例外設計：8ステップ不使用）</td><td style="text-align: left">1</td></tr>
+<tr><td style="text-align: left">12</td><td style="text-align: left">Ch.12</td><td style="text-align: left">なし（統合の章。Crisis解決プロセスそのもの）</td><td style="text-align: left">エフェクチュエーション + 成人発達理論（変形適用：振り返り形式）</td><td style="text-align: left">1</td></tr>
+<tr><td style="text-align: left">E</td><td style="text-align: left">エピローグ</td><td style="text-align: left">—</td><td style="text-align: left">—</td><td style="text-align: left">0</td></tr>
+<tr><td style="text-align: left"></td><td style="text-align: left"><strong>合計</strong></td><td style="text-align: left"></td><td style="text-align: left"></td><td style="text-align: left"><strong>10〜14</strong></td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="付録e-fw積層順と章対応"><a class="header" href="#付録e-fw積層順と章対応">付録E: FW積層順と章対応</a></h2>
+<blockquote>
+<p>app_design.md の正式FW名に準拠。下位→上位の積層順が物語進行と整合していることを検証済み。</p>
+</blockquote>
+<h3 id="fw積層構造"><a class="header" href="#fw積層構造">FW積層構造</a></h3>
+<pre><code>Part 1（個人の武器を手に入れる）
+  └─ PDCA（業務→仮説→3階層）→ 自分のOS（型→パターン→WILL/CAN/MUST）
+
+Part 2（他者を育てる技術を獲得する）
+  └─ GROWモデル → マネージャーの裏返し → Growth Mindset → AI活用振り返り
+
+Part 3（「武器では戦えない世界がある」ことを学ぶ）
+  └─ Vulnerability → エフェクチュエーション + 成人発達理論
+</code></pre>
+<h3 id="fw--章-対応表"><a class="header" href="#fw--章-対応表">FW × 章 対応表</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">章</th><th style="text-align: left">FW名（app_design.md正式名称）</th><th style="text-align: left">[L]シーン数</th><th style="text-align: left">適用方式</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">Ch.1</td><td style="text-align: left">PDCA（業務PDCA基礎・仮説思考の導入）</td><td style="text-align: left">1</td><td style="text-align: left">8ステップ標準</td></tr>
+<tr><td style="text-align: left">Ch.2</td><td style="text-align: left">PDCA（仮説思考の深化）+ 自分のOS：OS型（行動型/思考型）導入</td><td style="text-align: left">2</td><td style="text-align: left">8ステップ標準</td></tr>
+<tr><td style="text-align: left">Ch.3</td><td style="text-align: left">PDCA 3階層モデル + 自分のOS（パターン認識の入口）</td><td style="text-align: left">1</td><td style="text-align: left">8ステップ標準</td></tr>
+<tr><td style="text-align: left">Ch.4</td><td style="text-align: left">自分のOS（WILL/CAN/MUST + 受容の概論）</td><td style="text-align: left">1</td><td style="text-align: left">8ステップ標準</td></tr>
+<tr><td style="text-align: left">Ch.5</td><td style="text-align: left">GROWモデル（基礎導入）+ OS 4象限の提示</td><td style="text-align: left">1〜2</td><td style="text-align: left">8ステップ標準</td></tr>
+<tr><td style="text-align: left">Ch.6</td><td style="text-align: left">GROWモデル（深化）+ マネージャーの裏返し（教訓構造）</td><td style="text-align: left">1〜2</td><td style="text-align: left">8ステップ標準</td></tr>
+<tr><td style="text-align: left">Ch.7</td><td style="text-align: left">Growth Mindset（育成ステップ1-4）+ AI活用振り返り（3点セット）</td><td style="text-align: left">1〜2</td><td style="text-align: left">8ステップ標準</td></tr>
+<tr><td style="text-align: left">Ch.8</td><td style="text-align: left">GROWモデル（統合：チーム成功の言語化）</td><td style="text-align: left">1</td><td style="text-align: left">8ステップ標準</td></tr>
+<tr><td style="text-align: left">Ch.9</td><td style="text-align: left">—（FW学習シーンなし。エフェクチュエーション原則の体験的対比）</td><td style="text-align: left">0</td><td style="text-align: left">—</td></tr>
+<tr><td style="text-align: left">Ch.10</td><td style="text-align: left">—（PDCAの限界体験。「許容可能な損失」の逆行体感）</td><td style="text-align: left">0</td><td style="text-align: left">—</td></tr>
+<tr><td style="text-align: left">Ch.11</td><td style="text-align: left">成人発達理論（Vulnerability as 実践知）</td><td style="text-align: left">1</td><td style="text-align: left"><strong>例外設計</strong>（8ステップ不使用）</td></tr>
+<tr><td style="text-align: left">Ch.12</td><td style="text-align: left">エフェクチュエーション + 成人発達理論</td><td style="text-align: left">1</td><td style="text-align: left"><strong>変形適用</strong>（振り返り形式）</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>検証結果:</strong> app_design.md のFW名・積層順・適用方式と完全一致。✅</p>
+<hr>
+<h2 id="付録f-佐伯自己開示レベル推移"><a class="header" href="#付録f-佐伯自己開示レベル推移">付録F: 佐伯自己開示レベル推移</a></h2>
+<blockquote>
+<p>app_design.md Section 4（佐伯対話モード設計）に基づく。累積的に深化する。</p>
+</blockquote>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">#</th><th style="text-align: left">章</th><th style="text-align: left">開示レベル</th><th style="text-align: left">開示内容</th><th style="text-align: left">対話モード</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">0</td><td style="text-align: left">プロローグ</td><td style="text-align: left">—</td><td style="text-align: left">手紙の存在を読者に示すのみ</td><td style="text-align: left">—</td></tr>
+<tr><td style="text-align: left">1</td><td style="text-align: left">Ch.1</td><td style="text-align: left">Lv.0</td><td style="text-align: left">何者か不明。穏やかな問いかけ</td><td style="text-align: left">コーチング</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left">Ch.2</td><td style="text-align: left">Lv.0〜1</td><td style="text-align: left">「数で勝負しようとした時期がある」</td><td style="text-align: left">コーチング + ティーチング</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left">Ch.3</td><td style="text-align: left">Lv.1</td><td style="text-align: left">「大切な仲間を一人失った」</td><td style="text-align: left">ティーチング + 自己開示（断片）</td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left">Ch.4</td><td style="text-align: left">Lv.1</td><td style="text-align: left">「俺にも似たようなところがあった」</td><td style="text-align: left">コーチング + 自己開示（断片）</td></tr>
+<tr><td style="text-align: left">5</td><td style="text-align: left">Ch.5</td><td style="text-align: left">Lv.2</td><td style="text-align: left">「元部下を潰しかけた経験がある」</td><td style="text-align: left">ティーチング + 自己開示</td></tr>
+<tr><td style="text-align: left">6</td><td style="text-align: left">Ch.6</td><td style="text-align: left">Lv.2〜3</td><td style="text-align: left">「チームを変えようとして壊した。一番近くにいた奴が壊れた」</td><td style="text-align: left">コーチング + ティーチング + 自己開示</td></tr>
+<tr><td style="text-align: left">7</td><td style="text-align: left">Ch.7</td><td style="text-align: left">Lv.3</td><td style="text-align: left">「俺自身のFixed Mindsetが、あの時すべてを壊した」</td><td style="text-align: left">ティーチング + 自己開示（信念レベル）</td></tr>
+<tr><td style="text-align: left">8</td><td style="text-align: left">Ch.8</td><td style="text-align: left">Lv.3</td><td style="text-align: left">新規開示なし。「失敗の予言」として翼の未統合を言当てる</td><td style="text-align: left">コーチング</td></tr>
+<tr><td style="text-align: left">9</td><td style="text-align: left">Ch.9</td><td style="text-align: left">—</td><td style="text-align: left">直接シーン少。「楽しめよ」と送り出す</td><td style="text-align: left">—</td></tr>
+<tr><td style="text-align: left">10</td><td style="text-align: left">Ch.10</td><td style="text-align: left">—</td><td style="text-align: left">直接シーン少。翼が連絡断絶</td><td style="text-align: left">—</td></tr>
+<tr><td style="text-align: left">11</td><td style="text-align: left">Ch.11</td><td style="text-align: left"><strong>Lv.4</strong></td><td style="text-align: left"><strong>全容開示：黒沢との決裂全容。外部コンサル服従→独断解約→黒沢退任。「俺だって失敗者だ」</strong></td><td style="text-align: left"><strong>Vulnerability実践</strong>（コーチの仮面を外す）</td></tr>
+<tr><td style="text-align: left">12</td><td style="text-align: left">Ch.12</td><td style="text-align: left">Lv.4</td><td style="text-align: left">統合的開示。翼の体験をFWで構造化しながら自身の失敗も重ね合わせる</td><td style="text-align: left">振り返り対話</td></tr>
+<tr><td style="text-align: left">E</td><td style="text-align: left">エピローグ</td><td style="text-align: left">—</td><td style="text-align: left">手紙を鞄に入れる（行動で語る）</td><td style="text-align: left">—</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>検証結果:</strong> 骨格Section 5 × 各Part シナリオの章末開示レベル × app_design.md Section 4 すべて一致。✅</p>
+<hr>
+<h2 id="検証レポートsession-2-e"><a class="header" href="#検証レポートsession-2-e">検証レポート（Session 2-E）</a></h2>
+<h3 id="step-2-e-2-骨格との突合チェック"><a class="header" href="#step-2-e-2-骨格との突合チェック">Step 2-E-2: 骨格との突合チェック</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">検証項目</th><th style="text-align: left">結果</th><th style="text-align: left">詳細</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">章タイトル一致</td><td style="text-align: left">✅</td><td style="text-align: left">全14ユニット（Pro, Ch.1-12, Epi）が骨格と完全一致</td></tr>
+<tr><td style="text-align: left">FW配置一致</td><td style="text-align: left">✅</td><td style="text-align: left">全12章のFW名・[L]シーン数が骨格テーブルと一致</td></tr>
+<tr><td style="text-align: left">佐伯開示レベル一致</td><td style="text-align: left">✅</td><td style="text-align: left">全14ユニットの開示レベルが骨格テーブルと一致</td></tr>
+<tr><td style="text-align: left">サブストーリー到達点一致</td><td style="text-align: left">✅</td><td style="text-align: left">7キャラ×3Part到達点が骨格テーブルと一致</td></tr>
+<tr><td style="text-align: left">シーソー推移一致</td><td style="text-align: left">✅</td><td style="text-align: left">全14ユニットの仕事/私生活状態が骨格テーブルと一致</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="step-2-e-3-settings-との整合性チェック"><a class="header" href="#step-2-e-3-settings-との整合性チェック">Step 2-E-3: settings との整合性チェック</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">検証項目</th><th style="text-align: left">結果</th><th style="text-align: left">詳細</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">characters.md: OS型</td><td style="text-align: left">✅</td><td style="text-align: left">翼(自分本位×行動型), 結衣(他者本位×行動型), 涼太(自分本位×思考型), 沙織(他者本位×思考型), 佐伯(自分本位×思考型), 蓮(自分本位×行動型/支配), 高城(統合型), 黒沢(自分本位×行動型/コーザル実行), 美咲(類型外), 誠一郎(自分本位×行動型/脆弱版) — 全一致</td></tr>
+<tr><td style="text-align: left">characters.md: 職業</td><td style="text-align: left">✅</td><td style="text-align: left">翼=RA/CA両面型→マネージャー→起業→経営幹部復帰。結衣=CA→マネージャー。涼太=第二新卒→WINGSパートナー。沙織=前職アパレル。全一致</td></tr>
+<tr><td style="text-align: left">characters.md: 関係性</td><td style="text-align: left">✅</td><td style="text-align: left">翼×美咲(彼女→同棲→結婚→失踪→復縁), 結衣×蓮(DV共依存→清算), 佐伯×黒沢(決裂), 翼×父(未統合→和解の始まり) — 全一致</td></tr>
+<tr><td style="text-align: left">storyline.md: テーマ</td><td style="text-align: left">✅</td><td style="text-align: left">3部テーマ(自分/他者/世界と統合)が正確に反映</td></tr>
+<tr><td style="text-align: left">storyline.md: 核心メッセージ</td><td style="text-align: left">✅</td><td style="text-align: left">5点すべて物語構造に組込み済み</td></tr>
+<tr><td style="text-align: left">storyline.md: ルール</td><td style="text-align: left">✅</td><td style="text-align: left">シーソー原則, 佐伯チーム直接コーチング禁止, Stage 5=萌芽のみ, 父和解=始まりのみ — 全遵守</td></tr>
+<tr><td style="text-align: left">storyline.md: 禁止事項</td><td style="text-align: left">✅</td><td style="text-align: left">OSAI/SARAI不使用, 佐伯のチームへの直接介入なし, 結衣DV加害描写の節度維持, 安易な解決なし</td></tr>
+<tr><td style="text-align: left">app_design.md: FW正式名称</td><td style="text-align: left">✅</td><td style="text-align: left">8FW全てapp_design.mdの正式名称と一致</td></tr>
+<tr><td style="text-align: left">app_design.md: What/Why/How</td><td style="text-align: left">✅</td><td style="text-align: left">全[L]シーンでWhat/Why/Howの要点がapp_design.mdの定義に準拠</td></tr>
+<tr><td style="text-align: left">app_design.md: 8ステップ</td><td style="text-align: left">✅</td><td style="text-align: left">Part 1-2は①-⑧標準適用, Ch.11=例外設計, Ch.12=変形適用</td></tr>
+<tr><td style="text-align: left">os_theory.md: OS型定義</td><td style="text-align: left">✅</td><td style="text-align: left">2軸(認知OS/意思決定OS)の定義が正しく使用。4象限マッピング正確</td></tr>
+<tr><td style="text-align: left">os_theory.md: 成熟モデル</td><td style="text-align: left">✅</td><td style="text-align: left">Stage 3→4→5萌芽のプロセスが物語アークと整合</td></tr>
+<tr><td style="text-align: left">会社名: WINGS（仮）</td><td style="text-align: left">✅</td><td style="text-align: left">翼の起業会社名として統一使用</td></tr>
+<tr><td style="text-align: left">会社名: 佐伯の会社</td><td style="text-align: left">✅</td><td style="text-align: left">社名未定で統一（エピローグ設立届で社名は読者に委ねる）</td></tr>
+<tr><td style="text-align: left">禁止語: OSAI/SARAI</td><td style="text-align: left">✅</td><td style="text-align: left">使用なし</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="step-2-e-4-part間接続点チェック"><a class="header" href="#step-2-e-4-part間接続点チェック">Step 2-E-4: Part間接続点チェック</a></h3>
+<h4 id="part-1--part-2-接続6要素"><a class="header" href="#part-1--part-2-接続6要素">Part 1 → Part 2 接続（6要素）</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">接続要素</th><th style="text-align: left">Part 1植え付け</th><th style="text-align: left">Part 2展開</th><th style="text-align: left">接続</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">マネージャー昇格</td><td style="text-align: left">Ch.4で昇格決断</td><td style="text-align: left">Ch.5で就任。結衣を管理する構造的皮肉</td><td style="text-align: left">✅</td></tr>
+<tr><td style="text-align: left">OS型の4象限拡張</td><td style="text-align: left">Ch.2で行動型/思考型の2軸</td><td style="text-align: left">Ch.5で4象限（認知OS軸追加）。涼太・沙織のOS型提示</td><td style="text-align: left">✅</td></tr>
+<tr><td style="text-align: left">父問題の内在</td><td style="text-align: left">Ch.4で佐伯がルーツに触れ始める</td><td style="text-align: left">Ch.6で父×美咲衝突。「お前が決めることだ」気づき（未言語化）</td><td style="text-align: left">✅</td></tr>
+<tr><td style="text-align: left">結衣DV</td><td style="text-align: left">Ch.1-4で各段階進行（伏線）</td><td style="text-align: left">Ch.5-8で直接描写。蓮スマホ叩きつけ、バッグチェック</td><td style="text-align: left">✅</td></tr>
+<tr><td style="text-align: left">認知の非対称性</td><td style="text-align: left">Ch.4で確立</td><td style="text-align: left">Ch.5-8で翼が結衣の内面に気づかない構造が継続</td><td style="text-align: left">✅</td></tr>
+<tr><td style="text-align: left">翼の信頼関係</td><td style="text-align: left">Part 1後半：佐伯にだけ本音</td><td style="text-align: left">Ch.6で翼が自ら佐伯にLINEを送る</td><td style="text-align: left">✅</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="part-2--part-3-接続7要素"><a class="header" href="#part-2--part-3-接続7要素">Part 2 → Part 3 接続（7要素）</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">接続要素</th><th style="text-align: left">Part 2植え付け</th><th style="text-align: left">Part 3展開</th><th style="text-align: left">接続</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">佐伯の「失敗の予言」</td><td style="text-align: left">Ch.8</td><td style="text-align: left">Ch.9フラッシュバック→Ch.10で的中</td><td style="text-align: left">✅</td></tr>
+<tr><td style="text-align: left">起業の予兆</td><td style="text-align: left">Ch.8で翼の起業志向</td><td style="text-align: left">Ch.9でWINGS設立→Ch.10で崩壊</td><td style="text-align: left">✅</td></tr>
+<tr><td style="text-align: left">涼太の同行</td><td style="text-align: left">Ch.8でパートナー化</td><td style="text-align: left">Ch.9共同創業→Ch.10崩壊→Ch.11旧チーム結束起点</td><td style="text-align: left">✅</td></tr>
+<tr><td style="text-align: left">結衣のWill不在</td><td style="text-align: left">Ch.5-8で未解決</td><td style="text-align: left">Ch.9マネージャー昇格→WILL再開→Ch.10蓮清算→自立</td><td style="text-align: left">✅</td></tr>
+<tr><td style="text-align: left">父との未統合</td><td style="text-align: left">Ch.6衝突→Ch.8不在着信無視</td><td style="text-align: left">Ch.9再び無視→Ch.11真の告白→Ch.12和解の始まり</td><td style="text-align: left">✅</td></tr>
+<tr><td style="text-align: left">美咲との脆弱な修復</td><td style="text-align: left">Ch.6ひび→Ch.7-8表面的修復</td><td style="text-align: left">Ch.9結婚→Ch.10失踪→Ch.12復縁</td><td style="text-align: left">✅</td></tr>
+<tr><td style="text-align: left">佐伯の自己開示</td><td style="text-align: left">Lv.3まで</td><td style="text-align: left">Ch.11でLv.4全容開示</td><td style="text-align: left">✅</td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="伏線マッピングpart横断8件"><a class="header" href="#伏線マッピングpart横断8件">伏線マッピング（Part横断・8件）</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">伏線</th><th style="text-align: left">植え付け</th><th style="text-align: left">回収</th><th style="text-align: left">状態</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left">コーヒーの温冷対比</td><td style="text-align: left">プロローグ（冷）</td><td style="text-align: left">エピローグ（温）</td><td style="text-align: left">✅</td></tr>
+<tr><td style="text-align: left">黒沢への手紙</td><td style="text-align: left">プロローグ（引き出しに戻す）</td><td style="text-align: left">Part 1-2断片→Ch.11全容→エピ（鞄に入れる）</td><td style="text-align: left">✅</td></tr>
+<tr><td style="text-align: left">サッカー挫折/父の沈黙</td><td style="text-align: left">Part 1（フラッシュバック）</td><td style="text-align: left">Ch.11（真の告白で全容）</td><td style="text-align: left">✅</td></tr>
+<tr><td style="text-align: left">結衣のポストイット</td><td style="text-align: left">Ch.2</td><td style="text-align: left">Part 2（結衣の直観的PDCAの裏付け）</td><td style="text-align: left">✅</td></tr>
+<tr><td style="text-align: left">高城→佐伯育成プログラム</td><td style="text-align: left">Part 2（暗示）</td><td style="text-align: left">Ch.11-12（開示）</td><td style="text-align: left">✅</td></tr>
+<tr><td style="text-align: left">佐伯の「失敗の予言」</td><td style="text-align: left">Ch.8</td><td style="text-align: left">Ch.10（的中）</td><td style="text-align: left">✅</td></tr>
+<tr><td style="text-align: left">美咲の手紙</td><td style="text-align: left">Ch.10</td><td style="text-align: left">Ch.12（翼が返答→復縁）</td><td style="text-align: left">✅</td></tr>
+<tr><td style="text-align: left">「もう一人」の影（結衣）</td><td style="text-align: left">プロローグ</td><td style="text-align: left">Part 1以降で二重主人公化</td><td style="text-align: left">✅</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="step-2-e-6-検証結果"><a class="header" href="#step-2-e-6-検証結果">Step 2-E-6: 検証結果</a></h3>
+<p><strong>検証PASS</strong></p>
+<p>全チェック項目がPASS。矛盾・不整合は検出されなかった。修正の必要なし。</p>
+<hr>
+<p><em>統合日: 2026-02-22</em>
+<em>Session: v18 Phase 2 Session 2-E</em>
+<em>検証結果: PASS</em></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../starter/02_plots/cross_part_overview.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../../starter/02_plots/chapters/prologue.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../starter/02_plots/cross_part_overview.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../../starter/02_plots/chapters/prologue.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
+
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-abc7f01d.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../../src/custom-4d39a0b4.js"></script>
+
+
+
+    </div>
+    </body>
+</html>

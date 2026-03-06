@@ -1,0 +1,819 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>P: シーンサマリー - 失敗者の告白 — AI小説オープン共創プロジェクト</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../src/custom-7811cac5.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../../searchindex-97d0ccb6.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc-272851a5.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">失敗者の告白 — AI小説オープン共創プロジェクト</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="失敗者の告白v23-全シーンサマリー"><a class="header" href="#失敗者の告白v23-全シーンサマリー">『失敗者の告白』v23 全シーンサマリー</a></h1>
+<hr>
+<h2 id="scene-00_01-九階"><a class="header" href="#scene-00_01-九階">Scene 00_01: 九階</a></h2>
+<h3 id="あらすじ3-5文"><a class="header" href="#あらすじ3-5文">あらすじ（3-5文）</a></h3>
+<p>十二月の深夜、翼は新宿の高層マンション九階のベランダに裸足で立ち、眼下の東京の夜景を見つめている。美咲が去り、会社も失い、仲間との繋がりも自ら断った翼は「楽になれる」という思考に侵食されている。手すりを握りしめながら、翼は記憶を巻き戻し始める——全てが始まった四月の転職初日へと。プロローグとして物語の結末（最悪の地点）を先に提示し、「なぜここに至ったか」を読者に問いかける構造。</p>
+<h3 id="登場人物"><a class="header" href="#登場人物">登場人物</a></h3>
+<ul>
+<li><strong>高橋翼</strong>: 主人公。全てを失い、九階のベランダで死の淵に立つ</li>
+<li><strong>美咲</strong>: 翼の恋人（既に去っている）。手紙と鍵だけが残されている</li>
+<li><strong>仲間</strong>: 翼の会社の仲間（既に離散）。最後まで丁寧だった</li>
+</ul>
+<h3 id="時系列"><a class="header" href="#時系列">時系列</a></h3>
+<ul>
+<li><strong>時期</strong>: 十二月、深夜</li>
+<li><strong>場所</strong>: 新宿の高層マンション九階のベランダ</li>
+</ul>
+<h3 id="ビートシーンの転換点"><a class="header" href="#ビートシーンの転換点">ビート（シーンの転換点）</a></h3>
+<ol>
+<li>翼が裸足でベランダに立ち、死を意識している（現在の絶望）</li>
+<li>美咲がいなくなった部屋の空虚さ——靴箱が空、手紙と鍵だけ残る</li>
+<li>会社の崩壊と仲間の喪失——AIに市場を奪われ、繋がりを自ら断った</li>
+<li>「楽になれる」という思考が到来し、記憶が四月の転職初日へ巻き戻る</li>
+</ol>
+<h3 id="pdca層"><a class="header" href="#pdca層">PDCA層</a></h3>
+<ul>
+<li>OSのPDCA（自己パターンの帰結として全崩壊に至った最終地点）</li>
+</ul>
+<h3 id="翼の内的変化"><a class="header" href="#翼の内的変化">翼の内的変化</a></h3>
+<ul>
+<li><strong>シーン開始時</strong>: 死を意識するほどの絶望状態。感覚が麻痺し始めている</li>
+<li><strong>シーン終了時</strong>: 記憶が四月へ巻き戻り、「そこから全てが始まった」と物語の起点に接続</li>
+</ul>
+<hr>
+<h2 id="scene-01_01-四月の営業フロア"><a class="header" href="#scene-01_01-四月の営業フロア">Scene 01_01: 四月の営業フロア</a></h2>
+<!-- [v23] B案語り順序で改稿済み -->
+<h3 id="あらすじ3-5文-1"><a class="header" href="#あらすじ3-5文-1">あらすじ（3-5文）</a></h3>
+<p>二十八歳の高橋翼は人材紹介会社ネクスト・キャリアに転職初日を迎える。1社目の中堅メーカー法人営業を2年で辞め、2社目のIT企業も1年で退社——「行動量で数字を出し、壁にぶつかり、環境のせいにして辞める」パターンを繰り返してきた。3社のエージェントに登録したが、1社目は流れ作業、2社目は案件ゴリ押し——求職者としての失望の末、Xで見つけた高城翔太の投稿がきっかけで3社目としてネクスト・キャリアに辿り着く。高城との面談で「なぜ辞めたいのか」の先まで深掘りされ、「こういう人間になりたい」と思って入社を決める。一方でYouTubeの業界暴露動画を見た不安を抱えつつ初日を迎え、高城の「行動量で殴れ、ただし考えろ」の後半を聞き流す。向かいの結衣は電話対応時に別人のような集中を見せるが、翼はその意味を考えない。三週間後、コール数1,247件・面談22件とチームトップの行動量を叩き出し「やれる」と確信するが、Doリストに仮説は一行もない。</p>
+<h3 id="登場人物-1"><a class="header" href="#登場人物-1">登場人物</a></h3>
+<ul>
+<li><strong>高橋翼</strong>: 28歳。前職2社（中堅メーカー法人営業2年→IT企業法人営業1年）退社→3社エージェント体験→高城面談で入社決意。行動量で勝負するスタイルに確信を持つ</li>
+<li><strong>高城翔太</strong>: ネクスト・キャリア社長。ポロシャツ姿・社長室なし。翼の面談で人生レベルの深掘りを行い、求職者としての翼のCA観原体験を作る</li>
+<li><strong>佐藤結衣</strong>: 26歳、翼の半年先輩。三色のポストイットでデスクを管理。電話対応時の声のトーン切替にプロとしての別の顔が覗く</li>
+</ul>
+<h3 id="時系列-1"><a class="header" href="#時系列-1">時系列</a></h3>
+<ul>
+<li><strong>時期</strong>: 四月（転職初日〜三週間目）。回想で転職活動期間（二月〜三月頃）を含む</li>
+<li><strong>場所</strong>: ネクスト・キャリア本社オフィス（現在軸）、オンライン面談・オフィス面談（回想）</li>
+</ul>
+<h3 id="ビートシーンの転換点-1"><a class="header" href="#ビートシーンの転換点-1">ビート（シーンの転換点）</a></h3>
+<ol>
+<li>転職初日、プールサイドのような営業フロアに翼が立つ</li>
+<li>【回想】前職の天井→3社エージェント体験（求職者目線の業界導入）</li>
+<li>【回想】高城面談で「否定されるより無視が怖い」と初めて言語化→「こういう人間になりたい」</li>
+<li>【回想】YouTube業界ネガ動画→高城面談は本物だったか？ 不安を抱えて出社</li>
+<li>高城の「行動量で殴れ、ただし考えろ」——翼は後半を聞き流す</li>
+<li>結衣の電話対応でプロの切替を目撃するが、確かめない（A-3ギャップ伏線）</li>
+<li>三週間後、KPIでチームトップ。結衣の面談数を横目で見るが「自分が上」と流す（M3ライバル伏線）</li>
+<li>「やれる」——しかし手帳に仮説はゼロ。高城面談のような深掘りの痕跡もない（M2種蒔き）</li>
+</ol>
+<h3 id="pdca層-1"><a class="header" href="#pdca層-1">PDCA層</a></h3>
+<ul>
+<li>タスクのPDCA（Doのみ肥大。PlanもCheckも存在しない状態）</li>
+<li><strong>M2伏線</strong>: 高城面談で「聴く」の原体験を持ちながら、自分の面談ではDoリスト消化に終始している矛盾</li>
+</ul>
+<h3 id="翼の内的変化-1"><a class="header" href="#翼の内的変化-1">翼の内的変化</a></h3>
+<ul>
+<li><strong>シーン開始時</strong>: 求職者として失望→高城面談で「こういう人間になりたい」→YouTube不安→それでも飛び込む</li>
+<li><strong>シーン終了時</strong>: 数字のトップに立ち、自信が強化される。高城面談の記憶は「動機」として封印され、自分の面談には適用されない</li>
+</ul>
+<hr>
+<h2 id="scene-01_02-全落ち"><a class="header" href="#scene-01_02-全落ち">Scene 01_02: 全落ち</a></h2>
+<h3 id="あらすじ3-5文-2"><a class="header" href="#あらすじ3-5文-2">あらすじ（3-5文）</a></h3>
+<!-- [v23] 改稿反映 -->
+<p>翼のスカウト返信率が12%から3%に急落する。面談は22件組めているが成約はゼロ。月末のKPI発表で結衣が4件成約する中、翼は0件と突きつけられ、椅子の座面を握る指先が冷たくなる。高城は翼に「そのパターン、何回目だ」と問い詰め、外部コーチ・佐伯への相談か、社長の個人案件の独立担当かを提示するが、翼は「一人でやります」と拒否する。</p>
+<h3 id="登場人物-2"><a class="header" href="#登場人物-2">登場人物</a></h3>
+<ul>
+<li><strong>高橋翼</strong>: 面談22件・成約ゼロの現実を突きつけられる</li>
+<li><strong>高城翔太</strong>: 翼の行動パターンの繰り返しを見抜き、佐伯を紹介しようとする</li>
+<li><strong>佐藤結衣</strong>: 面談15件・成約4件。翼の半分以下の行動量で結果を出している</li>
+</ul>
+<h3 id="時系列-2"><a class="header" href="#時系列-2">時系列</a></h3>
+<ul>
+<li><strong>時期</strong>: 四月後半〜月末金曜日</li>
+<li><strong>場所</strong>: ネクスト・キャリア本社オフィス、会議室</li>
+</ul>
+<h3 id="ビートシーンの転換点-2"><a class="header" href="#ビートシーンの転換点-2">ビート（シーンの転換点）</a></h3>
+<ol>
+<li>スカウト返信率の急落（12%→3%）——翼は「タイミングの問題だ」と自分に言い聞かせる</li>
+<li>面談で候補者が他社エージェントを選ぶパターンの繰り返し</li>
+<li>KPI発表：翼0件、結衣4件——翼の耳が止まる</li>
+<li>高城の「そのパターン、何回目だ」と佐伯の紹介→翼は「一人でやる」と拒否</li>
+</ol>
+<h3 id="pdca層-2"><a class="header" href="#pdca層-2">PDCA層</a></h3>
+<ul>
+<li>タスクのPDCA（PlanなきDoの限界が数字として露呈）</li>
+</ul>
+<h3 id="翼の内的変化-2"><a class="header" href="#翼の内的変化-2">翼の内的変化</a></h3>
+<ul>
+<li><strong>シーン開始時</strong>: 「量を増やせばいい」という楽観的な自信</li>
+<li><strong>シーン終了時</strong>: 高城の「何回目だ」が頭に反響。自信の表面に亀裂が入るが、まだ認められない</li>
+</ul>
+<hr>
+<h2 id="scene-01_03-棘"><a class="header" href="#scene-01_03-棘">Scene 01_03: 棘</a></h2>
+<h3 id="あらすじ3-5文-3"><a class="header" href="#あらすじ3-5文-3">あらすじ（3-5文）</a></h3>
+<!-- [v23] 改稿反映 -->
+<p>休憩室で缶コーヒーを買う翼の前に、コーチの佐伯零一が偶然を装って現れる。佐伯は穏やかな態度で翼の転職歴を聞き、「毎回、相手が悪いということ？」と静かに問いかける。背もたれに寄りかからず前傾もしない座り方、広くも狭くもない歩幅——佐伯の身体的存在感が、高城とは異なる圧のなさを伝える。佐伯は名刺を一枚残して去り、翼は「捨てるために取った」と自分に言い訳しながら、名刺をポケットにしまう。</p>
+<h3 id="登場人物-3"><a class="header" href="#登場人物-3">登場人物</a></h3>
+<ul>
+<li><strong>高橋翼</strong>: 高城の言葉がまだ頭にこびりついている状態</li>
+<li><strong>佐伯零一</strong>: 40代半ば。外部コーチ。穏やかで押しつけない態度。肩書きのない名刺</li>
+</ul>
+<h3 id="時系列-3"><a class="header" href="#時系列-3">時系列</a></h3>
+<ul>
+<li><strong>時期</strong>: 高城との面談の翌日、昼休み</li>
+<li><strong>場所</strong>: ネクスト・キャリア社内の休憩室・自販機前</li>
+</ul>
+<h3 id="ビートシーンの転換点-3"><a class="header" href="#ビートシーンの転換点-3">ビート（シーンの転換点）</a></h3>
+<ol>
+<li>翼が「何がパターンだ」と高城の言葉に内心反発している</li>
+<li>佐伯が自然に現れ、翼の転職歴を聞く</li>
+<li>「毎回、相手が悪いということ？」——穏やかだが、跳ね返す壁がなく内側に入る問い</li>
+<li>名刺を「捨てるために取った」が、捨てない</li>
+</ol>
+<h3 id="pdca層-3"><a class="header" href="#pdca層-3">PDCA層</a></h3>
+<ul>
+<li>OSのPDCA（佐伯の問いが翼の自己パターンに初めて触れる）</li>
+</ul>
+<h3 id="翼の内的変化-3"><a class="header" href="#翼の内的変化-3">翼の内的変化</a></h3>
+<ul>
+<li><strong>シーン開始時</strong>: 高城への反発、自己防衛モード</li>
+<li><strong>シーン終了時</strong>: 佐伯の棘が内側に刺さったまま残る。名刺を捨てなかった行為が無意識の変化の兆し</li>
+</ul>
+<hr>
+<h2 id="scene-01_04-それぞれの夜①"><a class="header" href="#scene-01_04-それぞれの夜①">Scene 01_04: それぞれの夜①</a></h2>
+<h3 id="あらすじ3-5文-4"><a class="header" href="#あらすじ3-5文-4">あらすじ（3-5文）</a></h3>
+<!-- [v23] 改稿反映 -->
+<p>【翼パート】帰宅した翼は靴も脱がずベッドに倒れ込む。美咲にLINEで「まあまあ」と嘘をつき、「電話する？」という誘いも「明日でいい」と断る。佐伯や成約ゼロのことは一切話さない。父・誠一郎の不在着信を慣れた手つきで削除する。少年時代のサッカーの試合後、観客席に父がいなかった記憶がフラッシュバックし、佐伯の「毎回、相手が悪いということか」という声だけが暗闇に残る。
+【結衣パート】結衣は帰宅すると恋人・蓮がペペロンチーノとワインを用意して待っている。玄関には蓮のスニーカーが並ぶ。蓮の穏やかな態度に安心する結衣だが、仕事の話で「高橋さん」と言ったのに蓮が「翼」と下の名前を拾う微妙な違和感がある。蓮のフォークが一瞬止まり、声のトーンが変わるが、結衣はそれを「心配性なだけ」と処理して見ないことにする。</p>
+<h3 id="登場人物-4"><a class="header" href="#登場人物-4">登場人物</a></h3>
+<ul>
+<li><strong>高橋翼</strong>: 美咲に嘘をつき、父の着信を削除。孤立を深める</li>
+<li><strong>美咲</strong>: 翼の恋人。心配するLINEを送るが、翼は感情を届けない</li>
+<li><strong>高橋誠一郎</strong>: 翼の父。不在着信一件</li>
+<li><strong>佐藤結衣</strong>: 成約4件を出した日の夜、恋人のもとへ帰る</li>
+<li><strong>蓮</strong>: 結衣の恋人。30歳、不動産営業。穏やかだが、結衣の仕事仲間の名前に微かな反応を見せる</li>
+</ul>
+<h3 id="時系列-4"><a class="header" href="#時系列-4">時系列</a></h3>
+<ul>
+<li><strong>時期</strong>: 四月末、夜</li>
+<li><strong>場所</strong>: 翼の1Kの自宅／結衣と蓮のマンション</li>
+</ul>
+<h3 id="ビートシーンの転換点-4"><a class="header" href="#ビートシーンの転換点-4">ビート（シーンの転換点）</a></h3>
+<ol>
+<li>【翼】美咲に嘘をつく→父の着信削除→サッカーの記憶→佐伯の声が残る</li>
+<li>【結衣】蓮の温かい食卓に帰る→仕事の成果を報告する→安心と承認</li>
+<li>【結衣】「高橋さん」→蓮が「翼」と拾う→フォーク停止→声のトーン変化</li>
+<li>【結衣】「心配性なだけ」と処理→違和感を見ないことにする</li>
+</ol>
+<h3 id="pdca層-4"><a class="header" href="#pdca層-4">PDCA層</a></h3>
+<ul>
+<li>OSのPDCA（翼の回避パターンと、結衣の順応パターンが対比的に描かれる）</li>
+</ul>
+<h3 id="翼の内的変化-4"><a class="header" href="#翼の内的変化-4">翼の内的変化</a></h3>
+<ul>
+<li><strong>シーン開始時</strong>: 疲弊と自己防衛。誰にも本当のことを話さない</li>
+<li><strong>シーン終了時</strong>: 佐伯の声だけが暗闇に残る。拒否しきれていない自分がいる</li>
+</ul>
+<hr>
+<h2 id="scene-02_01-ナプキンの一枚目"><a class="header" href="#scene-02_01-ナプキンの一枚目">Scene 02_01: ナプキンの一枚目</a></h2>
+<h3 id="あらすじ3-5文-5"><a class="header" href="#あらすじ3-5文-5">あらすじ（3-5文）</a></h3>
+<p>翼は高城に改めて二択を突きつけられ（佐伯のコーチングか、ツテ案件か）、成約ゼロの現実を見せられて渋々コーチングを選ぶ。結衣の数字を見た瞬間、腹の底が熱くなる。カフェMILLで佐伯と初の正式セッション。佐伯はナプキンにPDCAサイクルを描き、「仮説のないDoはガチャ」「Pは計画ではなく仮説」と核心を突く。因数分解では翼自身が業種ごとの違いに気づき、5回Whyで「掘れてなかった」と自覚する瞬間に美咲の電話が一瞬よぎる。翼は「ずっとDoだけ回してた」と自覚するが、ナプキンはカウンターに残したまま帰る。</p>
+<h3 id="登場人物-5"><a class="header" href="#登場人物-5">登場人物</a></h3>
+<ul>
+<li><strong>高橋翼</strong>: 成約ゼロの現実を突きつけられコーチングを受け入れる</li>
+<li><strong>佐伯零一</strong>: ナプキンにPDCA・因数分解・C-1/C-2を描いて教える</li>
+<li><strong>高城翔太</strong>: 翼に二択を提示。翼の名刺保持を見抜いている</li>
+</ul>
+<h3 id="時系列-5"><a class="header" href="#時系列-5">時系列</a></h3>
+<ul>
+<li><strong>時期</strong>: 五月中旬（高城面談の3日後）</li>
+<li><strong>場所</strong>: 高城のオフィス → カフェMILL</li>
+</ul>
+<h3 id="ビートシーンの転換点-5"><a class="header" href="#ビートシーンの転換点-5">ビート（シーンの転換点）</a></h3>
+<ol>
+<li>高城に成約ゼロの現実（翼0件 vs 結衣3件/打率9.7%）を突きつけられ、コーチングを選択</li>
+<li>佐伯がPDCAの核心「P＝仮説」を教え、「Do＝ガチャ vs Do＝実験」を示す</li>
+<li>因数分解とC-1/C-2の概念→翼のCheckが欠落していたことが判明</li>
+<li>5回のWhyで候補者離脱の原因を分解→「掘れてなかった」「ずっとDoだけ回してた」と自覚→美咲の電話が一瞬よぎる（A-6）→ナプキンを残して帰る</li>
+</ol>
+<h3 id="pdca層-5"><a class="header" href="#pdca層-5">PDCA層</a></h3>
+<ul>
+<li>タスクのPDCA（PDCA自体の概念的理解。仮説→実験→検証のサイクルを初めて学ぶ）</li>
+</ul>
+<h3 id="翼の内的変化-5"><a class="header" href="#翼の内的変化-5">翼の内的変化</a></h3>
+<ul>
+<li><strong>シーン開始時</strong>: 渋々の受け入れ。反発しつつも数字に抗えない</li>
+<li><strong>シーン終了時</strong>: 「ずっとDoだけ回していた」と自覚。ナプキンを持ち帰らない＝まだ完全には受容していない</li>
+</ul>
+<hr>
+<h2 id="scene-02_02-天然の仮説"><a class="header" href="#scene-02_02-天然の仮説">Scene 02_02: 天然の仮説</a></h2>
+<h3 id="あらすじ3-5文-6"><a class="header" href="#あらすじ3-5文-6">あらすじ（3-5文）</a></h3>
+<p>佐伯の助言に従い、翼は一件だけ仮説を立てて面談に臨む実験を始める。二週間で移行率が20%改善する。翼は結衣のデスクのポストイットを改めて観察し、それが全て「仮説」であることに気づく。佐伯にポストイットの写真を見せると、佐伯は結衣の仮説を「天然の仮説」と呼び、仮説には3層のピラミッド（行動・構造・自己パターン）があると教える。翼は行動レベル、結衣は構造レベルで仮説を走らせていた。</p>
+<h3 id="登場人物-6"><a class="header" href="#登場人物-6">登場人物</a></h3>
+<ul>
+<li><strong>高橋翼</strong>: 一件仮説の実験で手応えを得る。結衣のポストイットの本質に気づく</li>
+<li><strong>佐藤結衣</strong>: ポストイットが「天然の仮説」＝理論を知らず感覚で実践していた</li>
+<li><strong>佐伯零一</strong>: 仮説の3層ピラミッド（行動・構造・自己パターン）を教える</li>
+</ul>
+<h3 id="時系列-6"><a class="header" href="#時系列-6">時系列</a></h3>
+<ul>
+<li><strong>時期</strong>: 五月後半〜六月初旬（佐伯セッション2回目）</li>
+<li><strong>場所</strong>: ネクスト・キャリアオフィス → カフェMILL</li>
+</ul>
+<h3 id="ビートシーンの転換点-6"><a class="header" href="#ビートシーンの転換点-6">ビート（シーンの転換点）</a></h3>
+<ol>
+<li>一件仮説の実験で面談の空気が変わる体験（ガチャと実験の違い）</li>
+<li>結衣のポストイットの再発見——三色が候補者の仮説・企業情報・面談後の気づきに対応</li>
+<li>佐伯「天然の仮説」——理論なしで構造の仮説を走らせる結衣の凄さ</li>
+<li>5回のWhyで翼の行動パターン（自己開示→信頼→深い対話→精度の高い仮説）が浮上。無自覚の武器に名前がつく</li>
+<li>3層ピラミッドの提示。最下層「自己パターン」は「もう少し先の話」と保留</li>
+</ol>
+<h3 id="pdca層-6"><a class="header" href="#pdca層-6">PDCA層</a></h3>
+<ul>
+<li>タスクのPDCA → スキルのPDCA（仮説の階層の存在を知り、タスクレベルからスキルレベルへの橋を認識）</li>
+</ul>
+<h3 id="翼の内的変化-6"><a class="header" href="#翼の内的変化-6">翼の内的変化</a></h3>
+<ul>
+<li><strong>シーン開始時</strong>: 仮説実験の成功で少し自信回復。「追いつける」と感覚的に思う</li>
+<li><strong>シーン終了時</strong>: 結衣との差が「量ではなく仮説の深さ」であることを認め、悩しさと好奇心が共存。「自分をさらけ出す」気づきの瞬間、美咲への問いが一瞬よぎる（A-6）</li>
+</ul>
+<hr>
+<h2 id="scene-02_03-行動型のレンズ"><a class="header" href="#scene-02_03-行動型のレンズ">Scene 02_03: 行動型のレンズ</a></h2>
+<h3 id="あらすじ3-5文-7"><a class="header" href="#あらすじ3-5文-7">あらすじ（3-5文）</a></h3>
+<p>佐伯は翼の「質問されて0.5秒以内に嗋り始める」癖を指摘し、「型」の概念を導入する。ナプキンに「行動型」と「思考型」の対比表を描き、PDCAの四文字がP/C（思考）とD/A（行動）に分かれることを示す。翼の歪んだPDCA（Doだけ肥大）を図にし、翼は「これ、俺じゃないですか」と認める。結衣も同じ行動型なのに自分にはないものを持っていると気づく。佐伯は自分も正反対の思考型だと仕かめかし、「型がどこから来たのか」は先の話だと保留する。</p>
+<h3 id="登場人物-7"><a class="header" href="#登場人物-7">登場人物</a></h3>
+<ul>
+<li><strong>高橋翼</strong>: 自分の行動型パターンを認識。反射的な否定→受容の過程</li>
+<li><strong>佐伯零一</strong>: 行動型/思考型の対比と歪んだPDCAを図示。自身の型も仄めかす</li>
+</ul>
+<h3 id="時系列-7"><a class="header" href="#時系列-7">時系列</a></h3>
+<ul>
+<li><strong>時期</strong>: 六月上旬（セッション2回目の続き、同日）</li>
+<li><strong>場所</strong>: カフェMILL</li>
+</ul>
+<h3 id="ビートシーンの転換点-7"><a class="header" href="#ビートシーンの転換点-7">ビート（シーンの転換点）</a></h3>
+<ol>
+<li>「0.5秒以内に喋り始める」——翼の反射的行動を指摘、翼が即座に否定→自己証明</li>
+<li>行動型/思考型の対比表とPDCAの思考/行動分離</li>
+<li>歪んだPDCAの図——翼は「これ、俺じゃないですか」と自認</li>
+<li>佐伯が「型は生まれつきではない」と否定。起源の問いを残す</li>
+</ol>
+<h3 id="pdca層-7"><a class="header" href="#pdca層-7">PDCA層</a></h3>
+<ul>
+<li>OSのPDCA（行動型という自己パターンの認知。まだ「知る」段階）</li>
+</ul>
+<h3 id="翼の内的変化-7"><a class="header" href="#翼の内的変化-7">翼の内的変化</a></h3>
+<ul>
+<li><strong>シーン開始時</strong>: 自分のやり方に自覚なし。「考えてばかりで動かないよりマシ」</li>
+<li><strong>シーン終了時</strong>: 自分が行動型であることを認める。ナプキンをポケットに入れる＝受容の進展</li>
+</ul>
+<hr>
+<h2 id="scene-02_04-それぞれの夜②"><a class="header" href="#scene-02_04-それぞれの夜②">Scene 02_04: それぞれの夜②</a></h2>
+<h3 id="あらすじ3-5文-8"><a class="header" href="#あらすじ3-5文-8">あらすじ（3-5文）</a></h3>
+<p>【翼パート】帰りの総武線で、翼は成績の伸びを感じつつも既視感に襲われる。前職でも最初は伸びて壁にぶつかり環境のせいにして辞めるパターンの繰り返し。美咲に「まあね」とだけ返し、母からのLINE（「お父さんのことなんだけど」）を既読スルーし、父の不在着信をまたスワイプして消す。同じ壁・同じパターン・同じ回避に気づき始めるがまだ言語化できない。
+【結衣パート】帰宅した結衣に蓮が「最近帰り遅いよな」「飲み会とか行ってないだろうな」と確認する。冗談めかした口調だが目は笑っていない。結衣は「行ってないよ。ごめんね、心配させて」と反射的に謝る。蓮の腕に引き寄せられ安堵するが、「大丈夫」を自分に言い聞かせるように繰り返す。</p>
+<h3 id="登場人物-8"><a class="header" href="#登場人物-8">登場人物</a></h3>
+<ul>
+<li><strong>高橋翼</strong>: パターンの繰り返しに既視感。父の着信を回避</li>
+<li><strong>美咲</strong>: LINEで「最近、仕事楽しそうだね」——翼は「まあね」としか返せない</li>
+<li><strong>翼の母</strong>: LINEで「お父さんのことなんだけど」——翼は既読スルー（M7母フィルターの初出）</li>
+<li><strong>佐藤結衣</strong>: 仕事の成長を感じつつ、蓮の反応に身体が先に緊張する</li>
+<li><strong>蓮</strong>: 結衣の帰りの遅さ・LINEの通知に反応。「飲み会とか行ってないだろうな」</li>
+</ul>
+<h3 id="時系列-8"><a class="header" href="#時系列-8">時系列</a></h3>
+<ul>
+<li><strong>時期</strong>: 六月、平日夜</li>
+<li><strong>場所</strong>: 総武線車内・翼の自宅 ／ 結衣と蓮のマンション</li>
+</ul>
+<h3 id="ビートシーンの転換点-8"><a class="header" href="#ビートシーンの転換点-8">ビート（シーンの転換点）</a></h3>
+<ol>
+<li>【翼】成績上昇の手応え→しかし前職と同じパターンの既視感</li>
+<li>【翼】美咲への返信が浅い→父の着信を回避→同じ行動の反復</li>
+<li>【結衣】蓮のLINE通知チェック→「誰？」→帰りの遅さへの詰問</li>
+<li>【結衣】「ごめんね」と反射的に謝る→蓮に抱き寄せられ安堵→「大丈夫」と自己暗示</li>
+</ol>
+<h3 id="pdca層-8"><a class="header" href="#pdca層-8">PDCA層</a></h3>
+<ul>
+<li>OSのPDCA（同じパターンの反復を翼が認識し始める。結衣は蓮への順応パターンに無自覚）</li>
+</ul>
+<h3 id="翼の内的変化-8"><a class="header" href="#翼の内的変化-8">翼の内的変化</a></h3>
+<ul>
+<li><strong>シーン開始時</strong>: 成績の伸びに口角が上がる</li>
+<li><strong>シーン終了時</strong>: 「同じ壁、同じパターン、同じ回避」——ピラミッドの底辺に触れかけるが、まだ言語化できない</li>
+</ul>
+<hr>
+<h2 id="scene-03_01-スキルの壁"><a class="header" href="#scene-03_01-スキルの壁">Scene 03_01: スキルの壁</a></h2>
+<h3 id="あらすじ3-5文-9"><a class="header" href="#あらすじ3-5文-9">あらすじ（3-5文）</a></h3>
+<p>六月。翼の成績は着実に伸び、面談→移行率41%・月3件成約に達している。しかし候補者の本音を引き出す力——傾聴力、因数分解力、提案の構造化力——において壁にぶつかる。前職でも同じ壁で行き詰まった記憶が蘇り、「深さがない」と言われた過去と重なる。翼は佐伯のナプキン写真の最下層「自己パターン」を見つめ、今度は佐伯に会いたいと感じる。</p>
+<h3 id="登場人物-9"><a class="header" href="#登場人物-9">登場人物</a></h3>
+<ul>
+<li><strong>高橋翼</strong>: スキルの壁に直面。前職の上司の「深さがない」がフラッシュバック</li>
+<li><strong>佐藤結衣</strong>: ポストイットを続けている。翼の視界に映るが直接会話なし</li>
+</ul>
+<h3 id="時系列-9"><a class="header" href="#時系列-9">時系列</a></h3>
+<ul>
+<li><strong>時期</strong>: 六月（入社三ヶ月目）</li>
+<li><strong>場所</strong>: ネクスト・キャリアオフィス、面談ルーム</li>
+</ul>
+<h3 id="ビートシーンの転換点-9"><a class="header" href="#ビートシーンの転換点-9">ビート（シーンの転換点）</a></h3>
+<ol>
+<li>成績上昇を確認（移行率41%、月3件成約）</li>
+<li>候補者の本音を引き出せない壁——3件の面談失敗を段階的に描写: ①経理女性（35歳）5回Whyの奥を分解できない、②SE男性（28歳）提案は正しいが刺さらない、③7秒の沈黙に耐えきれず自分が喋って埋める。Checkノートの記述が毎回同じ「本音が見えない」の繰り返し</li>
+<li>前職の「深さがない」がフラッシュバック→同じ壁の認識</li>
+<li>佐伯に「会いたい」と感じる——翼にとって新しい感覚</li>
+</ol>
+<h3 id="pdca層-9"><a class="header" href="#pdca層-9">PDCA層</a></h3>
+<ul>
+<li>スキルのPDCA（タスクPDCAの限界を体感し、スキルの壁を認識）</li>
+</ul>
+<h3 id="翼の内的変化-9"><a class="header" href="#翼の内的変化-9">翼の内的変化</a></h3>
+<ul>
+<li><strong>シーン開始時</strong>: 成績上昇で自信がある</li>
+<li><strong>シーン終了時</strong>: スキルの壁を認識。今回は逃げずに佐伯を頼ろうとする</li>
+</ul>
+<hr>
+<h2 id="scene-03_02-三層の同心円"><a class="header" href="#scene-03_02-三層の同心円">Scene 03_02: 三層の同心円</a></h2>
+<h3 id="あらすじ3-5文-10"><a class="header" href="#あらすじ3-5文-10">あらすじ（3-5文）</a></h3>
+<p>代々木公園を佐伯と歩きながら、翼は「前職と同じ壁にぶつかっている」と告白し、「翼でいい」と呼び名を変える。佐伯は横並びで歩きながら「大切な仲間を一人、失った」と初めて自身の痛みを覗かせる。カフェMILLに着席後、佐伯はナプキンに三重の同心円（タスク／スキル／OS）を描き、「同じ壁にぶつかるのはスキルやOSが変わっていないまま環境だけ変えたから」と指摘する。Whyの深掘りで翼の退職パターンを三層に分解し、OS層「考えるのが怖い」に到達。佐伯は「自分も大切な仲間を一人失った」と初めて自身の痛みを覗かせる。</p>
+<h3 id="登場人物-10"><a class="header" href="#登場人物-10">登場人物</a></h3>
+<ul>
+<li><strong>高橋翼</strong>: 壁の正体がOSにあると気づき始める。「翼」と呼ばれることを選ぶ</li>
+<li><strong>佐伯零一</strong>: 同心円モデルを描く。自分の失敗（仲間の喪失）を仄めかす</li>
+</ul>
+<h3 id="時系列-10"><a class="header" href="#時系列-10">時系列</a></h3>
+<ul>
+<li><strong>時期</strong>: 六月中旬（セッション3回目）</li>
+<li><strong>場所</strong>: 代々木公園（前半・散歩） → カフェMILL（後半・着席）</li>
+</ul>
+<h3 id="ビートシーンの転換点-10"><a class="header" href="#ビートシーンの転換点-10">ビート（シーンの転換点）</a></h3>
+<ol>
+<li>佐伯の「駅で待ってる」——いつもの「朝8時、いつもの場所で」ではない変化</li>
+<li>代々木公園を横並びで歩きながら「前職と同じ壁」の告白→「翼でいい」（距離の縮まり）</li>
+<li>佐伯が歩きながら「大切な仲間を一人、失った」と仄めかす——横を向いたまま漏らす佐伯らしさ</li>
+<li>カフェMILLに着席。同心円（タスク/スキル/OS）の描写→「壁にぶつかりに行っているのは翼の方」</li>
+<li>5回のWhyで退職パターンをOS層まで分解→「考えるのが怖かった」</li>
+</ol>
+<h3 id="pdca層-10"><a class="header" href="#pdca層-10">PDCA層</a></h3>
+<ul>
+<li>OSのPDCA（三層モデルの概念的理解。自分のパターンが天井を決めていると認知）</li>
+</ul>
+<h3 id="翼の内的変化-10"><a class="header" href="#翼の内的変化-10">翼の内的変化</a></h3>
+<ul>
+<li><strong>シーン開始時</strong>: 壁の原因が分からず焦りがある</li>
+<li><strong>シーン終了時</strong>: 同心円の最内層に自分のパターンがあると「知った」。まだ変えられないが、入口にいる</li>
+</ul>
+<hr>
+<h2 id="scene-03_03-パターンを見る目"><a class="header" href="#scene-03_03-パターンを見る目">Scene 03_03: パターンを見る目</a></h2>
+<h3 id="あらすじ3-5文-11"><a class="header" href="#あらすじ3-5文-11">あらすじ（3-5文）</a></h3>
+<p>翼は面談前に「提案を急ぐな。まず聞け」とメモし、意識的にパターン修正を試みる。3件の面談を段階的に描写——面談1: 5秒の沈黙で本音を引き出す成功、だが即座にDoが動いて資料を出しかけ止まる（成功と失敗が同じ面談に同居）。面談2: 候補者に壁ができたことに気づくが遅い。面談3: 案件リストを開いてしまい通話後にようやく気づく（最も退行）。帰りの電車で「沈黙が怖い」理由が、幼少期の父との無言の食卓に遡ることにフラッシュバックで気づくが、イヤホンで思考を遮断する。</p>
+<h3 id="登場人物-11"><a class="header" href="#登場人物-11">登場人物</a></h3>
+<ul>
+<li><strong>高橋翼</strong>: パターン修正を意識的に実行→成功→しかし疲労時に戻る→父の食卓記憶</li>
+<li><strong>高橋誠一郎</strong>: フラッシュバックで登場。食卓で翼を見ない父</li>
+</ul>
+<h3 id="時系列-11"><a class="header" href="#時系列-11">時系列</a></h3>
+<ul>
+<li><strong>時期</strong>: 七月頃</li>
+<li><strong>場所</strong>: ネクスト・キャリア面談ルーム → 帰りの電車</li>
+</ul>
+<h3 id="ビートシーンの転換点-11"><a class="header" href="#ビートシーンの転換点-11">ビート（シーンの転換点）</a></h3>
+<ol>
+<li>面談1: 5秒の沈黙で候補者の本音を引き出す成功→だがDoが動いて資料を出しかける（成功と失敗が同居）</li>
+<li>面談2: 候補者に壁ができたことに気づくが遅い→3段階の退行グラデーション</li>
+<li>面談3: 案件リストを開いてしまい通話後に気づく（最も退行＝OSレベルの変更の困難さ）</li>
+<li>帰りの電車で「沈黙が怖い」→幼少期の食卓の記憶がフラッシュバック</li>
+<li>イヤホンで思考を遮断——あの食卓の記憶に「まだ近づきたくない」</li>
+</ol>
+<h3 id="pdca層-11"><a class="header" href="#pdca層-11">PDCA層</a></h3>
+<ul>
+<li>OSのPDCA（パターン認知→行動修正の試み→疲労時の回帰→根源の食卓記憶に到達しかける）</li>
+</ul>
+<h3 id="翼の内的変化-11"><a class="header" href="#翼の内的変化-11">翼の内的変化</a></h3>
+<ul>
+<li><strong>シーン開始時</strong>: パターンを意識して修正する前向きな姿勢</li>
+<li><strong>シーン終了時</strong>: 父の食卓記憶に触れてイヤホンで遮断。OSの根にある痛みに近づいたが、まだ耐えられない</li>
+</ul>
+<hr>
+<h2 id="scene-03_04-それぞれの夜③"><a class="header" href="#scene-03_04-それぞれの夜③">Scene 03_04: それぞれの夜③</a></h2>
+<h3 id="あらすじ3-5文-12"><a class="header" href="#あらすじ3-5文-12">あらすじ（3-5文）</a></h3>
+<p>【翼パート】高城から「伸びてるな」と初めて肩を叩かれるが、翼は同心円の最内層が変わっていないことを意識する。結衣の電話での核心的質問に「すげえな」と認める。夜、父のLINE「元気でやっているか」に既読をつけたまま返信できない——前は「返す気がない」だったが、今は「何を打てばいいか分からない」に変わっている。
+【結衣パート】夜九時に帰宅すると蓮が「俺は待ってた」「調子に乗んなよ」と言う。口元は笑っているが目は笑っていない。結衣は「ごめんね、そんなつもりじゃなかった」と成長したことを謝る。蓮の沈黙の冷淡さと、結衣の自己否定パターンが深まる。</p>
+<h3 id="登場人物-12"><a class="header" href="#登場人物-12">登場人物</a></h3>
+<ul>
+<li><strong>高橋翼</strong>: 高城の承認を得るが内面の空白に気づく。父のLINEに返信できない</li>
+<li><strong>高城翔太</strong>: 「伸びてるな」と初めて明確な承認</li>
+<li><strong>佐藤結衣</strong>: 仕事の成長が見えるが、蓮との関係で萎縮</li>
+<li><strong>蓮</strong>: 「調子に乗んなよ」——笑顔で言う支配的な一言</li>
+<li><strong>高橋誠一郎</strong>: LINE「元気でやっているか」</li>
+</ul>
+<h3 id="時系列-12"><a class="header" href="#時系列-12">時系列</a></h3>
+<ul>
+<li><strong>時期</strong>: 七〜八月頃</li>
+<li><strong>場所</strong>: ネクスト・キャリアオフィス → 翼の自宅 ／ 結衣と蓮のマンション</li>
+</ul>
+<h3 id="ビートシーンの転換点-12"><a class="header" href="#ビートシーンの転換点-12">ビート（シーンの転換点）</a></h3>
+<ol>
+<li>【翼】高城の肩叩き承認→でも最内層は変わっていない</li>
+<li>【翼】父のLINEに既読→返信できない→「返す気がない」から「何を打つか分からない」へ</li>
+<li>【結衣】蓮「調子に乗んなよ」→口元は笑み、目は笑っていない</li>
+<li>【結衣】成長を謝罪→テレビの笑い声の中で口元だけの笑顔</li>
+</ol>
+<h3 id="pdca層-12"><a class="header" href="#pdca層-12">PDCA層</a></h3>
+<ul>
+<li>OSのPDCA（翼＝父への反応が微変化。結衣＝蓮への順応パターンの深化）</li>
+</ul>
+<h3 id="翼の内的変化-12"><a class="header" href="#翼の内的変化-12">翼の内的変化</a></h3>
+<ul>
+<li><strong>シーン開始時</strong>: 高城の承認で一瞬口角が上がる</li>
+<li><strong>シーン終了時</strong>: 父のLINEに返信「できない」。回避ではなく「分からない」——内側の微かな変化</li>
+</ul>
+<hr>
+<h2 id="scene-04_01-フラッシュバック"><a class="header" href="#scene-04_01-フラッシュバック">Scene 04_01: フラッシュバック</a></h2>
+<h3 id="あらすじ3-5文-13"><a class="header" href="#あらすじ3-5文-13">あらすじ（3-5文）</a></h3>
+<p>九月の帰りの電車で、翼はイヤホンを外して思考と向き合う。記憶が高校二年のサッカー部に遡る——スタメンに入れず、努力で埋まらない身体能力の差、準決勝でのミスパス、退部届。食卓で父に「サッカー、やめた」と告げると「お前が決めることだ」と返された夜。前職の最終日、上司の「お前、また逃げるのか」。翼は「勝てない場所から降りて、新しい場所で同じことを繰り返す」という自分のパターンを声にならない言葉で認識する。</p>
+<h3 id="登場人物-13"><a class="header" href="#登場人物-13">登場人物</a></h3>
+<ul>
+<li><strong>高橋翼</strong>: 過去のフラッシュバック——サッカー部退部、前職退職、父との食卓</li>
+<li><strong>高橋誠一郎</strong>: 「お前が決めることだ」——翼には空洞に聞こえた言葉</li>
+<li><strong>翼の母</strong>: 「せっかく続けたのに」と言いかけて父に止められる</li>
+<li><strong>前職の上司</strong>: 「お前、また逃げるのか」</li>
+</ul>
+<h3 id="時系列-13"><a class="header" href="#時系列-13">時系列</a></h3>
+<ul>
+<li><strong>時期</strong>: 九月、帰りの電車</li>
+<li><strong>場所</strong>: 帰りの電車内（フラッシュバック：高校のグラウンド、食卓、前職オフィス）</li>
+</ul>
+<h3 id="ビートシーンの転換点-13"><a class="header" href="#ビートシーンの転換点-13">ビート（シーンの転換点）</a></h3>
+<ol>
+<li>イヤホンを外す＝前回と違い、思考から逃げない選択</li>
+<li>サッカー部フラッシュバック——努力で埋まらない差、退部、受験への切り替え</li>
+<li>父の「お前が決めることだ」——空洞の響き。拳を握った夜</li>
+<li>前職上司「また逃げるのか」→「勝てない場所から降りる」パターンの言語化</li>
+</ol>
+<h3 id="pdca層-13"><a class="header" href="#pdca層-13">PDCA層</a></h3>
+<ul>
+<li>OSのPDCA（生存戦略の起源を記憶から掘り起こす段階）</li>
+</ul>
+<h3 id="翼の内的変化-13"><a class="header" href="#翼の内的変化-13">翼の内的変化</a></h3>
+<ul>
+<li><strong>シーン開始時</strong>: イヤホンを外す——沈黙と向き合う覚悟</li>
+<li><strong>シーン終了時</strong>: 「勝てない場所から降りる」パターンを認識。佐伯に声に出せるか分からないが、出さなければと思う</li>
+</ul>
+<hr>
+<h2 id="scene-04_02-生存戦略"><a class="header" href="#scene-04_02-生存戦略">Scene 04_02: 生存戦略</a></h2>
+<h3 id="あらすじ3-5文-14"><a class="header" href="#あらすじ3-5文-14">あらすじ（3-5文）</a></h3>
+<p>翼は佐伯にサッカー退部と前職退職の記憶を打ち明ける。佐伯は「翼を守ってくれてたんじゃないか」と、逃げではなく生存戦略として翼のパターンをリフレームする。「十六歳の翼にとっては合理的な戦略だった。それは守ったんだ」——翼の過去が別の光で照らされる。しかし「守ってくれたパターンが、ある時から縛るパターンに変わる」と佐伯は指摘。WILL/CAN/MUSTのフレームワークで、翼のCANが自分史（父の不在）から生えていることを示すが、WILLの欄にはインクの点しか残らない。</p>
+<h3 id="登場人物-14"><a class="header" href="#登場人物-14">登場人物</a></h3>
+<ul>
+<li><strong>高橋翼</strong>: 過去のパターンを受容し始める。WILLが見えない現実に直面</li>
+<li><strong>佐伯零一</strong>: 「生存戦略」の概念を教える。自身もパターン認知に20年かかったと明かす</li>
+</ul>
+<h3 id="時系列-14"><a class="header" href="#時系列-14">時系列</a></h3>
+<ul>
+<li><strong>時期</strong>: 九月中旬（セッション4回目）</li>
+<li><strong>場所</strong>: カフェMILL</li>
+</ul>
+<h3 id="ビートシーンの転換点-14"><a class="header" href="#ビートシーンの転換点-14">ビート（シーンの転換点）</a></h3>
+<ol>
+<li>翼がサッカーと退職の記憶を語り、涙を見せる</li>
+<li>佐伯「守ってくれてたんじゃないか」——リフレーム。翼の過去への新しい視角</li>
+<li>「守っていたパターンが縛るパターンに変わる」——現在の限界の説明</li>
+<li>WILL/CAN/MUST→WILLが空白（インクの点のみ）→佐伯「20年かかった」</li>
+</ol>
+<h3 id="pdca層-14"><a class="header" href="#pdca層-14">PDCA層</a></h3>
+<ul>
+<li>OSのPDCA（パターンの認知→受容の段階。「否定するな」「受容が先」）</li>
+</ul>
+<h3 id="翼の内的変化-14"><a class="header" href="#翼の内的変化-14">翼の内的変化</a></h3>
+<ul>
+<li><strong>シーン開始時</strong>: パターンを「逃げ」として自責している</li>
+<li><strong>シーン終了時</strong>: パターンを「十六歳の自分を守った戦略」として受容し始める。WILLの空白に向き合う</li>
+</ul>
+<hr>
+<h2 id="scene-04_03-マネージャーの提案"><a class="header" href="#scene-04_03-マネージャーの提案">Scene 04_03: マネージャーの提案</a></h2>
+<h3 id="あらすじ3-5文-15"><a class="header" href="#あらすじ3-5文-15">あらすじ（3-5文）</a></h3>
+<p>九月。高城が翼にマネージャー昇格を提案する。チームは結衣・中村涼太・小野沙織の三名。翼は「まだ自分自身が変わっていない」と躊躇うが、高城は「未完成のまま人を育てるのがマネージャーだ」と返す。退勤後、翼は佐伯に電話する。佐伯は「翼が決めることだ」と言い、翼が電話してきたこと自体が「一人で決める」パターンの外にある行動だと指摘する。</p>
+<h3 id="登場人物-15"><a class="header" href="#登場人物-15">登場人物</a></h3>
+<ul>
+<li><strong>高橋翼</strong>: マネージャー昇格の提案に躊躇→佐伯に電話</li>
+<li><strong>高城翔太</strong>: 「未完成のまま育てるのがマネージャーだ」</li>
+<li><strong>佐伯零一</strong>: 「翼が決めることだ」——父と同じ構造の言葉だが、翼の反応は真逆</li>
+</ul>
+<h3 id="時系列-15"><a class="header" href="#時系列-15">時系列</a></h3>
+<ul>
+<li><strong>時期</strong>: 九月中旬</li>
+<li><strong>場所</strong>: 高城のオフィス → 退勤後の歩道（佐伯に電話）</li>
+</ul>
+<h3 id="ビートシーンの転換点-15"><a class="header" href="#ビートシーンの転換点-15">ビート（シーンの転換点）</a></h3>
+<ol>
+<li>高城「マネージャーをやれ」→翼の躊躇</li>
+<li>高城「未完成のまま育てるのがマネージャーだ」——佐伯の「出発点」と共鳴</li>
+<li>翼が佐伯に電話する——「一人で決める」パターンの外に出た行動</li>
+<li>佐伯「翼が決めることだ」——父の「お前が決めることだ」と同構造だが、身体反応が真逆</li>
+</ol>
+<h3 id="pdca層-15"><a class="header" href="#pdca層-15">PDCA層</a></h3>
+<ul>
+<li>OSのPDCA（「一人で抱え込む」パターンから「他者に相談する」への無自覚な変化）</li>
+</ul>
+<h3 id="翼の内的変化-15"><a class="header" href="#翼の内的変化-15">翼の内的変化</a></h3>
+<ul>
+<li><strong>シーン開始時</strong>: WILLの空白に不安を抱えたまま</li>
+<li><strong>シーン終了時</strong>: マネージャーの提案を保留。佐伯に電話した事実＝パターンの外に出た最初のステップ</li>
+</ul>
+<hr>
+<h2 id="scene-04_04-決断"><a class="header" href="#scene-04_04-決断">Scene 04_04: 決断</a></h2>
+<h3 id="あらすじ3-5文-16"><a class="header" href="#あらすじ3-5文-16">あらすじ（3-5文）</a></h3>
+<p>深夜一時。翼はスマホのカメラロールで半年分のナプキン写真を振り返る。PDCAサイクル、仮説のピラミッド、歪んだPDCA、三層の同心円、WILL/CAN/MUST。WILLのインクの点を見つめ、「今度は降りない」と内心で決める。翌朝、高城に「やります」と一言。高城は「そうか」と返す——父と同じ三文字だが、翼の中での響きが違う。</p>
+<h3 id="登場人物-16"><a class="header" href="#登場人物-16">登場人物</a></h3>
+<ul>
+<li><strong>高橋翼</strong>: ナプキン写真を振り返り、マネージャーを受ける決断</li>
+<li><strong>高城翔太</strong>: 「そうか」——翼に力を与える二文字</li>
+</ul>
+<h3 id="時系列-16"><a class="header" href="#時系列-16">時系列</a></h3>
+<ul>
+<li><strong>時期</strong>: 九月中旬〜下旬、深夜一時→翌朝</li>
+<li><strong>場所</strong>: 翼の自宅 → 翌朝の電話</li>
+</ul>
+<h3 id="ビートシーンの転換点-16"><a class="header" href="#ビートシーンの転換点-16">ビート（シーンの転換点）</a></h3>
+<ol>
+<li>深夜、ナプキン写真を時系列で振り返る（半年の成長の可視化）</li>
+<li>WILLのインクの点——「答えが出なくていい」の反芻</li>
+<li>「今度は降りない」——声には出さないが、小さな決意</li>
+<li>翌朝「やります」→高城「そうか」——父と同じ言葉だが響きが違う</li>
+</ol>
+<h3 id="pdca層-16"><a class="header" href="#pdca層-16">PDCA層</a></h3>
+<ul>
+<li>OSのPDCA（「降りる」パターンから「留まる」への意志的転換の出発点）</li>
+</ul>
+<h3 id="翼の内的変化-16"><a class="header" href="#翼の内的変化-16">翼の内的変化</a></h3>
+<ul>
+<li><strong>シーン開始時</strong>: WILLの空白への不安と、パターンを繰り返す恐怖</li>
+<li><strong>シーン終了時</strong>: 「今度は降りない」——声にならない決意。まだ確信ではないが、方向は決まった</li>
+</ul>
+<hr>
+<h2 id="scene-04_05-それぞれの夜④"><a class="header" href="#scene-04_05-それぞれの夜④">Scene 04_05: それぞれの夜④</a></h2>
+<h3 id="あらすじ3-5文-17"><a class="header" href="#あらすじ3-5文-17">あらすじ（3-5文）</a></h3>
+<p>【翼パート】美咲と昇格祝いのディナー。翼は佐伯のことを少しだけ話すが、美咲が「その人のこと、すごく信頼してるんだね」と微かに鋭い反応を見せる。帰宅後、翼は父に「元気。マネージャーになった」と初めてLINEを送信する。父の返信は「そうか。おめでとう」——翼の胸に幼い声で「認めてほしかった」が浮かぶが、すぐに消える。
+【結衣パート】蓮が三日間口を利かなくなる。結衣はオムライスにケチャップで蓮の名前を描くが手をつけてもらえない。四日目に蓮が「ごめん。仕事が忙しくて余裕なかった」と抱きしめる——結衣は安堵して泣く。しかし抱きしめている蓮の目は虚空を見つめ、感情がない。
+【合流】翌朝、高城が翼のマネージャー昇格を発表。結衣が「おめでとうございます」と微笑む。二人は互いの夜を何も知らないまま、新チームとしてスタートする。</p>
+<h3 id="登場人物-17"><a class="header" href="#登場人物-17">登場人物</a></h3>
+<ul>
+<li><strong>高橋翼</strong>: 父にLINEを初送信。マネージャーとしてチームを率いることに</li>
+<li><strong>美咲</strong>: 翼の変化を感じ取る。佐伯への信頼に微かな反応</li>
+<li><strong>高橋誠一郎</strong>: 「そうか。おめでとう」——翼が待ち望んでいた言葉</li>
+<li><strong>佐藤結衣</strong>: 蓮の沈黙→抱擁→安堵→翌朝は何事もなかったかのように仕事</li>
+<li><strong>蓮</strong>: 三日間の無言→謝罪→抱擁。しかし抱擁中の目は虚空＝感情操作（ケア回収）</li>
+<li><strong>中村涼太・小野沙織</strong>: 新チームメンバーとして名前が登場</li>
+</ul>
+<h3 id="時系列-17"><a class="header" href="#時系列-17">時系列</a></h3>
+<ul>
+<li><strong>時期</strong>: 九月末〜十月初旬</li>
+<li><strong>場所</strong>: イタリアンレストラン → 翼の自宅 ／ 結衣と蓮のマンション → ネクスト・キャリアオフィス</li>
+</ul>
+<h3 id="ビートシーンの転換点-17"><a class="header" href="#ビートシーンの転換点-17">ビート（シーンの転換点）</a></h3>
+<ol>
+<li>【翼】美咲とのディナー→佐伯への信頼を嗅ぎ取られる</li>
+<li>【翼】父にLINE「元気。マネージャーになった」→「そうか。おめでとう」→「認めてほしかった」</li>
+<li>【結衣】蓮の三日間の無言→四日目の抱擁と謝罪→蓮の目が虚空を見つめている</li>
+<li>【合流】マネージャー発表。互いの夜を知らないまま二・五メートルの距離でスタート</li>
+</ol>
+<h3 id="pdca層-17"><a class="header" href="#pdca層-17">PDCA層</a></h3>
+<ul>
+<li>OSのPDCA（翼＝父への行動が変化。結衣＝蓮のケア回収にパターンとして組み込まれている）</li>
+</ul>
+<h3 id="翼の内的変化-17"><a class="header" href="#翼の内的変化-17">翼の内的変化</a></h3>
+<ul>
+<li><strong>シーン開始時</strong>: マネージャー決断後の静かな覚悟</li>
+<li><strong>シーン終了時</strong>: 父にLINEを送った。新チームの名簿を前に「未完成のまま」のスタート。ナプキンが少し黄ばみ始めている＝時間の経過と成長の物理的証拠</li>
+</ul>
+<hr>
+<h2 id="全体構造メモ"><a class="header" href="#全体構造メモ">全体構造メモ</a></h2>
+<h3 id="第一部のアーク"><a class="header" href="#第一部のアーク">第一部のアーク</a></h3>
+<ul>
+<li><strong>翼の成長曲線</strong>: Do偏重 → PDCA理解 → 仮説の実践 → 型の認知 → 同心円モデル → 生存戦略の受容 → マネージャー決断</li>
+<li><strong>PDCA層の進行</strong>: タスクPDCA（Ch1-2） → スキルPDCA（Ch3） → OS PDCA（Ch4）</li>
+<li><strong>結衣の裏アーク</strong>: 仕事の成長 ↔ 蓮の支配の深化（対照的な進行）</li>
+<li><strong>佐伯の開示</strong>: 段階的に自身の痛みを明かす（仲間の喪失→20年→詳細は「いつか話す」）</li>
+<li><strong>ナプキンの蓄積</strong>: カウンターに残す→写真を撮る→ポケットに入れる→印刷して貼る（翼の受容の物理的メタファー）</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../starter/02_plots/chapters/prologue.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../starter/02_plots/chapters/prologue.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
+
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-abc7f01d.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../../src/custom-4d39a0b4.js"></script>
+
+
+
+    </div>
+    </body>
+</html>
