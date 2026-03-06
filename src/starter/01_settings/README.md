@@ -60,7 +60,7 @@ storyline.md → os_theory.md → characters.md → style_guide.md → app_desig
 
 本プロジェクトでは **1シーン1ファイル**で管理しています（例：`03_manuscripts/01_01_四月の営業フロア.md`）。S層（設定ファイル）はMIT Licenseで公開していますが、M層（原稿）は小説本体として公開しています。
 
-→ **小説本体はこちら：** [失敗者の告白](https://babayuhei.github.io/confession-of-a-loser-workspace/)
+→ **小説本体はこちら：** [失敗者の告白](https://babayuhei.github.io/confession-of-a-loser/)
 
 ---
 

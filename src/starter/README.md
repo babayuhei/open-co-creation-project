@@ -15,8 +15,8 @@ starter/
 ### 1. このリポジトリをフォーク・クローン
 
 ```bash
-git clone https://github.com/<your-username>/confession-of-a-loser-starter.git
-cd confession-of-a-loser-starter
+git clone https://github.com/<your-username>/open-co-creation-project.git
+cd open-co-creation-project
 ```
 
 ### 2. 原稿ファイル（M層）を取得する（任意）
@@ -52,7 +52,7 @@ S（settings）→ P（scenario → chapters → scenes）→ M（manuscripts）
 3. 生成したい章の `02_plots/scene_summaries_partN.md` を指定
 4. 1シーンずつ生成・確認・修正のループを回す
 
-詳しいプロセスは「[AI長編小説の創作モデル](https://babayuhei.github.io/confession-of-a-loser-ocp/03_practice.html)」を参照してください。
+詳しいプロセスは「[AI長編小説の創作モデル](https://babayuhei.github.io/open-co-creation-project/03_practice.html)」を参照してください。
 
 ## ライセンス
 
