@@ -47,7 +47,7 @@
 
 - **読んだ感想・指摘** → [Issue](https://github.com/babayuhei/open-co-creation-project/issues) を立ててください
 - **誤字脱字の修正** → Pull Request を送ってください
-- **設計ファイルを使って自分の小説を書く** → フォークして自由に使えます（MIT License）
+- **設計ファイルを使って自分の小説を書く** → [スターターリポジトリ](https://github.com/babayuhei/open-co-creation-starter)をフォークして自由に使えます（MIT License）
 
 > 2026年3月31日まで公開修正期間として改稿を続けています。4月以降に正式版リリース予定（現在はベータ版）。
 
@@ -55,15 +55,20 @@
 
 ## スターターキットとして使う
 
-`src/starter/` 以下の設定ファイル・プロットファイルをフォークし、自分の小説に書き換えて使えます。
+設定ファイル・プロットファイルだけを独立リポジトリとして切り出しています。フォークして自分の小説に書き換えて使えます。
+
+**→ [open-co-creation-starter](https://github.com/babayuhei/open-co-creation-starter)**
 
 ```bash
-# このリポジトリをフォーク・クローン
-git clone https://github.com/<your-username>/open-co-creation-project.git
-cd open-co-creation-project
+# スターターリポジトリをフォーク・クローン
+git clone https://github.com/<your-username>/open-co-creation-starter.git
+cd open-co-creation-starter
+
+# 原稿（M層）を参照用に取得（任意）
+git clone https://github.com/babayuhei/confession-of-a-loser.git 03_manuscripts
 
 # 設定ファイルを編集してAIに読み込ませる
-# 詳しい手順は src/starter/README.md を参照
+# 詳しい手順は README.md を参照
 ```
 
 AIへの投入順序:
