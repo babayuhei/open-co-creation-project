@@ -1,11 +1,5 @@
 # AI小説オープン共創プロジェクト
 
-[小説『失敗者の告白』→](novel_link.md)
-
----
-
-# AI小説オープン共創プロジェクト
-
 - [なぜ作ったか](00_intro.md)
 - [制作の舞台裏](01_behind.md)
 - [AIを使った長編小説の現在地](02_current.md)
@@ -18,6 +12,3 @@
   - [S: 執筆・文体ガイドライン](starter/01_settings/style_guide.md)
   - [S: アプリ設計書](starter/01_settings/app_design.md)
   - [P: 全体構成概観](starter/02_plots/cross_part_overview.md)
-  - [P: 第1部サマリー（ネタバレ）](starter/02_plots/scene_summaries_part1.md)
-  - [P: 第2部サマリー（ネタバレ）](starter/02_plots/scene_summaries_part2.md)
-  - [P: 第3部サマリー（ネタバレ）](starter/02_plots/scene_summaries_part3.md)
