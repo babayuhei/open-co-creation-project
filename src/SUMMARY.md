@@ -1,5 +1,11 @@
 # AI小説オープン共創プロジェクト
 
+[小説『失敗者の告白』](https://babayuhei.github.io/confession-of-a-loser/)
+
+---
+
+# AI小説オープン共創プロジェクト
+
 - [なぜ作ったか](00_intro.md)
 - [制作の舞台裏](01_behind.md)
 - [AIを使った長編小説の現在地](02_current.md)
