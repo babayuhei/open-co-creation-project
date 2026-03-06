@@ -1,6 +1,6 @@
 # AI小説オープン共創プロジェクト
 
-[小説『失敗者の告白』](https://babayuhei.github.io/confession-of-a-loser/)
+[小説『失敗者の告白』→](novel_link.md)
 
 ---
 
