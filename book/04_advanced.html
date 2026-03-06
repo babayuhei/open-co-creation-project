@@ -28,6 +28,7 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="src/custom-cb616fe5.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -35,10 +36,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-0f03ee5e.js";
+            window.path_to_searchindex_js = "searchindex-1cd9e578.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-d5ed1544.js"></script>
+        <script src="toc-86e5b968.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -181,28 +182,26 @@
 <p>「参加してほしい」というよりは、「もし気が向いたら乗ってきてもらえると面白いことになりそう」というスタンスです。</p>
 <hr>
 <h2 id="リポジトリ構造"><a class="header" href="#リポジトリ構造">リポジトリ構造</a></h2>
-<pre><code>confession-of-a-loser/
-├── public/               ← mdBook（小説本文）
-│   └── src/
-│       ├── settings/     ← S層の実体（MIT License）
-│       └── [章ファイル群] ← M層の実体（CC BY-NC-ND 4.0）
-├── public/project/       ← mdBook（このドキュメント）
-│   └── src/
-│       ├── settings/     ← S層（閲覧用コピー）
-│       └── plots/        ← P層（閲覧用コピー・MIT License）
-├── starter/              ← フォーク用スターターキット
-│   ├── README.md         ← 使い方・ライセンス説明
-│   ├── 01_settings/      → symlink: public/project/src/settings/
-│   ├── 02_plots/         → symlink: public/project/src/plots/
-│   └── 03_manuscripts/   → symlink: public/src/
-├── v23/                  ← 制作作業ディレクトリ（個人情報含む・非公開）
-└── OLD/                  ← v1〜v22のアーカイブ
+<p>このプロジェクトは2つのリポジトリに分かれています。</p>
+<p><strong>① open-co-creation-project（このリポジトリ）</strong> — 制作ドキュメント・設定ファイル・プロットファイル</p>
+<pre><code>open-co-creation-project/
+├── src/
+│   ├── 00_intro.md 〜 05_spm_files.md  ← 制作ドキュメント
+│   └── starter/
+│       ├── 01_settings/   ← S層: 設定ファイル（MIT License）
+│       └── 02_plots/      ← P層: プロットサマリー（MIT License）
+├── book/                  ← mdBookビルド済みHTML
+└── .github/workflows/     ← GitHub Actions（自動デプロイ）
 </code></pre>
-<p><code>starter/</code> 以下の symlink 経由でアクセスできるファイルは MIT License（設定・プロット）または CC BY-NC-ND 4.0（本文原稿）でライセンスされています。</p>
+<p><strong>② confession-of-a-loser</strong> — 小説本文（M層）</p>
+<pre><code>confession-of-a-loser/
+└── public/src/            ← M層: 原稿ファイル（CC BY-NC-ND 4.0）
+</code></pre>
+<p>設定ファイル・プロットファイルは MIT License で公開しています。小説本文は CC BY-NC-ND 4.0（改変禁止・非商用のみ）です。</p>
 <hr>
 <h2 id="issueで感想や指摘を伝える"><a class="header" href="#issueで感想や指摘を伝える">Issueで感想や指摘を伝える</a></h2>
 <p>GitHubアカウントがあれば、Issueを使って参加できます。</p>
-<p><a href="https://github.com/babayuhei/confession-of-a-loser/issues/new/choose">Issues</a> を開くと、4つのテンプレートを選べます。</p>
+<p><a href="https://github.com/babayuhei/open-co-creation-project/issues">Issues</a> を開いて、フィードバックを送れます。小説本文に関するIssueは<a href="https://github.com/babayuhei/confession-of-a-loser/issues/new/choose">小説リポジトリ</a>でも受け付けています。</p>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -225,24 +224,24 @@
 <p>「面白い」「つまらない」だけでなく、「この部分のリアリティが足りない」「この論理展開が飛躍に感じる」という観察が、改稿の材料になります。</p>
 <hr>
 <h2 id="pull-requestで設定ファイルを改善する"><a class="header" href="#pull-requestで設定ファイルを改善する">Pull Requestで設定ファイルを改善する</a></h2>
-<p>設定ファイル（MIT License）を直接編集して改善を提案することもできます。</p>
-<pre><code class="language-bash"># 1. リポジトリをフォーク（GitHubのUIで）
+<p>設定ファイル（MIT License）を直接編集して改善を提案することもできます。設定ファイルは独立リポジトリ <a href="https://github.com/babayuhei/open-co-creation-starter">open-co-creation-starter</a> で管理しています。</p>
+<pre><code class="language-bash"># 1. スターターリポジトリをフォーク（GitHubのUIで）
 
 # 2. クローン
-git clone https://github.com/&lt;your-username&gt;/confession-of-a-loser.git
+git clone https://github.com/&lt;your-username&gt;/open-co-creation-starter.git
 
 # 3. ブランチを切る
 git checkout -b improve/characters-yui-backstory
 
 # 4. 設定ファイルを編集する
-# （例: starter/01_settings/characters.md）
+# （例: 01_settings/characters.md）
 
 # 5. コミット・プッシュ・PR作成
 git add .
 git commit -m "settings: 結衣の形成背景に大学時代のエピソードを追加"
 git push origin improve/characters-yui-backstory
 </code></pre>
-<p>Pull Requestをマージする前に、貢献者ライセンス合意（CLA）へのコメント確認が必要です。詳細は <a href="https://github.com/babayuhei/confession-of-a-loser/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> を参照してください。</p>
+<p>Pull Requestをマージする前に、貢献者ライセンス合意（CLA）へのコメント確認が必要です。詳細は <a href="https://github.com/babayuhei/open-co-creation-starter/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> を参照してください。</p>
 <p>本文（原稿）へのPRは現時点では受け付けていません。本文はCC BY-NC-ND 4.0（改変禁止）のため、改稿は僕が行います。</p>
 <hr>
 <h2 id="ライセンスの境界線"><a class="header" href="#ライセンスの境界線">ライセンスの境界線</a></h2>
@@ -278,7 +277,7 @@ git push origin improve/characters-yui-backstory
 <h2 id="公開修正期間"><a class="header" href="#公開修正期間">公開修正期間</a></h2>
 <p><strong>2026年3月31日まで</strong>、積極的に改稿を続けています。この期間中に届いたIssueは優先的に検討します。</p>
 <p>ぜひ、何か気になることがあれば気軽にIssueを送ってみてください。</p>
-<p><strong>→ <a href="https://github.com/babayuhei/confession-of-a-loser/issues/new/choose">Issueを作成する</a></strong></p>
+<p><strong>→ <a href="https://github.com/babayuhei/open-co-creation-project/issues">Issueを作成する</a></strong></p>
 <hr>
 <ul>
 <li><a href="00_intro.html">①なぜ作ったか</a> — プロジェクトの動機と経緯</li>
@@ -322,22 +321,6 @@ git push origin improve/characters-yui-backstory
         <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
         <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
         <script>
@@ -354,6 +337,7 @@ git push origin improve/characters-yui-backstory
         <script src="book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
+        <script src="src/custom-9dea3e97.js"></script>
 
 
 

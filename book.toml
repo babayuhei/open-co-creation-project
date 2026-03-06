@@ -8,3 +8,5 @@ src = "src"
 default-theme = "light"
 preferred-dark-theme = "navy"
 site-url = "/open-co-creation-project/"
+additional-css = ["src/custom.css"]
+additional-js = ["src/custom.js"]
