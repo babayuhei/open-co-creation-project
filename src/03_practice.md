@@ -32,16 +32,16 @@ AI小説の作り方に興味がある方、特に「どうやって一貫性を
 
 | ファイル | 役割 |
 |:--------|:-----|
-| [storyline.md](../settings/storyline.md) | 作品コンセプト・核心メッセージ・全体構成 |
-| [characters.md](../settings/characters.md) | 各キャラクターのOS・形成背景・変容プロセス |
-| [style_guide.md](../settings/style_guide.md) | 文体ルール・NG表現・キャラクター別口調設計 |
+| [storyline.md](starter/01_settings/storyline.md) | 作品コンセプト・核心メッセージ・全体構成 |
+| [characters.md](starter/01_settings/characters.md) | 各キャラクターのOS・形成背景・変容プロセス |
+| [style_guide.md](starter/01_settings/style_guide.md) | 文体ルール・NG表現・キャラクター別口調設計 |
 
 **ビジネス小説特有の2要素:**
 
 | ファイル | 役割 |
 |:--------|:-----|
-| [os_theory.md](../settings/os_theory.md) | OS理論の体系（自分本位↔他者本位、思考型↔行動型の4象限）|
-| [app_design.md](../settings/app_design.md) | 学習フレームワーク（PDCA・GROW等）の埋め込み設計 |
+| [os_theory.md](starter/01_settings/os_theory.md) | OS理論の体系（自分本位↔他者本位、思考型↔行動型の4象限）|
+| [app_design.md](starter/01_settings/app_design.md) | 学習フレームワーク（PDCA・GROW等）の埋め込み設計 |
 
 **読み順:**
 ```
@@ -62,7 +62,7 @@ storyline.md → os_theory.md → characters.md → style_guide.md → app_desig
 
 ## P: Plots（中間生成物）
 
-[plots/](../plots/scene_summaries_part1.md) フォルダに、全シーンのサマリーを置いています。P層は内部でさらに3段階の粒度に分かれます。
+[plots/](starter/02_plots/scene_summaries_part1.md) フォルダに、全シーンのサマリーを置いています。P層は内部でさらに3段階の粒度に分かれます。
 
 | 粒度 | 内容 | 例 |
 |:---------|:------|:----|
@@ -108,7 +108,7 @@ plots層はほぼ完全にAI自動生成です。characters.mdとstoryline.mdを
 | ⑦ | 実践・失敗 | 翼が試してうまくいかない |
 | ⑧ | 統合 | 気づきが定着し、次の壁へ向かう |
 
-詳細は[アプリ設計書](../settings/app_design.md)に書いています。
+詳細は[アプリ設計書](starter/01_settings/app_design.md)に書いています。
 
 ---
 
